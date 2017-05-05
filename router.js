@@ -17,6 +17,7 @@ module.exports = function(app) {
           name: 'belt_type',
           title: 'Belt Type',
           options: ['Transport Belt', 'Fast Transport Belt', 'Express Transport Belt'],
+          default: 2,
           checkbox: {
             name: 'undergroundBelts',
             info: 'Use underground belts'
@@ -48,6 +49,19 @@ module.exports = function(app) {
           options: ['0', '1', '2'],
           default: 1,
           info: 'Side-by-side space between miners.'
+        },
+        {
+          title: 'Use stack inserters',
+          checkbox: {
+            name: 'useStackInserters',
+            info: 'Use stack inserters between the buffer chests and the cargo wagon',
+            checked: true
+          }
+        },
+        {
+          type: 'header',
+          title: 'Defenses',
+          header: true
         },
         {
           type: 'input',
@@ -108,7 +122,7 @@ module.exports = function(app) {
     });
   });
 
-  const CONVERT_BELT_TYPE = {
+  const CONVERT_BELT_NAME = {
     'Transport Belt': '',
     'Fast Transport Belt': 'fast',
     'Express Transport Belt': 'express'
@@ -133,15 +147,20 @@ module.exports = function(app) {
         res.end();
         return;
       }
-      req.body.beltType = req.body.custom_belt_type || CONVERT_BELT_TYPE[req.body.belt_type];
-      req.body.trainDirection = CONVERT_DIRECTIONS[req.body.trainDirection];
-      req.body.minedOreDirection = CONVERT_DIRECTIONS[req.body.minedOreDirection];
+      const opt = {};
+      Object.keys(req.body).forEach(key => obj[key] = req.body[key]);
 
-      console.log(req.body);
+      opt.beltName = opt.custom_belt_type || CONVERT_BELT_NAME[opt.belt_type];
+      opt.trainDirection = CONVERT_DIRECTIONS[opt.trainDirection];
+      opt.minedOreDirection = CONVERT_DIRECTIONS[opt.minedOreDirection];
+      opt.undergroundBelts = opt.undergroundBelts == 'on';
+
+      console.log(opt);
       const string = generator.outpost(req.body.blueprint, req.body);
       res.send('{"string": "'+string+'" }');
       res.end();
     } catch (e) {
+      console.log(e);
       res.send('{"error": "'+e.message+'"}');
       res.end();
     }
