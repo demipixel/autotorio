@@ -52,7 +52,7 @@ var FORM_DATA = <%- JSON.stringify(formElements) %>;
         <% if (e.checkbox) { %>
           <div class="checkbox">
             <label>
-              <input type="checkbox" name="<%= e.checkbox.name %>" id="<%= e.name %>" <%- e.checkbox.checked ? 'checked' : '' %>> <%= e.checkbox.info %>
+              <input type="checkbox" name="<%= e.checkbox.name %>" id="<%= e.checkbox.name %>" <%- e.checkbox.checked ? 'checked' : '' %>> <%= e.checkbox.info %>
             </label>
           </div>
         <% } %>
@@ -65,6 +65,7 @@ var FORM_DATA = <%- JSON.stringify(formElements) %>;
       <div class="col-lg-10 col-lg-offset-2">
         <!-- <button type="reset" class="btn btn-default">Cancel</button> -->
         <button type="submit" class="btn btn-primary">Get Outpost Blueprint</button>
+        <button type="button" style="margin-left: 10px;" onClick="getSettingsURL()" class="btn btn-info">Get Settings URL</button>
       </div>
     </div>
   </fieldset>
