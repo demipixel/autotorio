@@ -2,6 +2,10 @@ const generator = require('factorio-generators');
 
 module.exports = function(app) {
 
+  app.get('/github', (req, res) => {
+    res.render('github.html');
+  });
+
   app.get('*', (req, res) => {
     res.render('outpost.html', {
       formElements: [
@@ -67,7 +71,7 @@ module.exports = function(app) {
           title: 'Bot based',
           checkbox: {
             name: 'botBased',
-            info: 'Removes all belts and uses passive providers and requester chests instead.'
+            info: 'Removes all belts and uses passive providers and requester chests instead. Does not include roboports.'
           }
         },
         {
@@ -76,6 +80,13 @@ module.exports = function(app) {
           title: 'Ore Type',
           options: ['Iron Ore', 'Copper Ore', 'Coal', 'Stone', 'Uranium Ore'],
           info: 'If "bot based" is enabled, you must provide an ore type for the requester chests.'
+        },
+        {
+          type: 'input',
+          name: 'customRequestItem',
+          title: 'Custom Ore Type (Optional)',
+          placeholder: 'example_ore',
+          info: 'Only necessary when using mods with custom ore names'
         },
         {
           type: 'header',
@@ -126,6 +137,7 @@ module.exports = function(app) {
           type: 'input',
           name: 'locomotiveCount',
           title: 'Locomotive Count',
+          info: 'Number of locomotives at the beginning of the train.',
           placeholder: '2',
 
           number: true,
@@ -184,7 +196,7 @@ module.exports = function(app) {
       opt.trainDirection = CONVERT_DIRECTIONS[opt.trainDirection];
       opt.minedOreDirection = CONVERT_DIRECTIONS[opt.minedOreDirection];
       opt.undergroundBelts = opt.undergroundBelts == 'on';
-      opt.requestItem = (opt.requestItem || '').split(' ').join('_').toLowerCase();
+      opt.requestItem = opt.customRequestItem || (opt.requestItem || '').split(' ').join('_').toLowerCase();
 
       console.log(opt);
       const string = generator.outpost(req.body.blueprint, opt);
