@@ -148,7 +148,7 @@ module.exports = function(app) {
         return;
       }
       const opt = {};
-      Object.keys(req.body).forEach(key => obj[key] = req.body[key]);
+      Object.keys(req.body).forEach(key => opt[key] = req.body[key]);
 
       opt.beltName = opt.custom_belt_type || CONVERT_BELT_NAME[opt.belt_type];
       opt.trainDirection = CONVERT_DIRECTIONS[opt.trainDirection];
