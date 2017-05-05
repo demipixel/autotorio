@@ -1,11 +1,11 @@
 
 function submitForm(form) {
   try {
-  if ($('.error-block:visible').length > 0) {
+  if ($('.error-block:visible').length > 0 || !$('#blueprint').val()) {
     BootstrapDialog.show({
       type: BootstrapDialog.TYPE_DANGER,
       title: 'Error',
-      message: 'You need to fix some errors!',
+      message: !$('#blueprint').val() ? 'You must provide a blueprint string!' : 'You need to fix some errors!',
     });
   } else {
     BootstrapDialog.show({
