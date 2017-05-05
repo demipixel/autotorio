@@ -1,0 +1,73 @@
+<% include header.html %>
+
+<script>
+
+var FORM_DATA = <%- JSON.stringify(formElements) %>;
+
+</script>
+
+<form class="form-horizontal" onsubmit="submitForm(this); return false;">
+  <fieldset>
+    <legend>Outpost Generator</legend>
+      <%
+      formElements.forEach(e => {
+      %>
+      <div class="form-group">
+        <label class="col-lg-2 control-label"><%- (e.header ? '<h4>' : '') + e.title + (e.header ? '</h4>' : '') %></label>
+        <div class="col-lg-10">
+
+        <% if (e.type == 'textarea') { %>
+
+        <textarea class="form-control" rows="3" name="<%= e.name %>" id="<%= e.name %>" <%- e.placeholder ? 'placeholder="'+e.placeholder+'"' : '' %>></textarea>
+
+        <% } else if (e.type == 'select') { %>
+
+        <select class="form-control" name="<%= e.name %>" id="<%= e.name %>">
+          <% e.options.forEach((o, i) => { %>
+          <option <%- e.default == i ? 'selected="selected"' : '' %> value="<%= o %>"><%= o %></option>
+          <% }) %>
+        </select>
+
+        <% } else if (e.type == 'radio') { %>
+
+        <div class="radio" id="<%= e.name %>">
+          <% e.options.forEach(o => { %>
+          <fieldset id="<%= e.name %>">
+            <label>
+              <input type="radio" name="<%= e.name %>" value="<%= o.value %>">
+              <%= o.name %>
+            </label>
+          <fieldset>
+          <% }) %>
+        </div>
+
+        <% } else if (e.type == 'input') { %>
+        <input type="input" name="<%= e.name %>" id="<%= e.name %>" class="form-control" <%- e.placeholder ? 'placeholder="'+e.placeholder+'"' : '' %>>
+
+        <% } %>
+        <span class="help-block error-block" style="display: none"></span>
+        <% if (e.info) { %>
+        <span class="info-block"><%= e.info %></span>
+        <% } %>
+        <% if (e.checkbox) { %>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="<%= e.checkbox.name %>" id="<%= e.name %>" <%- e.checkbox.checked ? 'checked' : '' %>> <%= e.checkbox.info %>
+            </label>
+          </div>
+        <% } %>
+        </div>
+      </div>
+      <% }) %>
+      
+    </div>
+    <div class="form-group">
+      <div class="col-lg-10 col-lg-offset-2">
+        <!-- <button type="reset" class="btn btn-default">Cancel</button> -->
+        <button type="submit" class="btn btn-primary">Get Outpost Blueprint</button>
+      </div>
+    </div>
+  </fieldset>
+</form>
+
+<% include footer.html %>
