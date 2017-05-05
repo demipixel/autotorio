@@ -60,8 +60,45 @@ module.exports = function(app) {
         },
         {
           type: 'header',
+          title: 'Bots',
+          header: true
+        },
+        {
+          title: 'Bot based',
+          checkbox: {
+            name: 'botBased',
+            info: 'Removes all belts and uses passive providers and requester chests instead.'
+          }
+        },
+        {
+          type: 'select',
+          name: 'requestItem',
+          title: 'Ore Type',
+          options: ['Iron Ore', 'Copper Ore', 'Coal', 'Stone', 'Uranium Ore'],
+          info: 'If "bot based" is enabled, you must provide an ore type for the requester chests.'
+        },
+        {
+          type: 'header',
           title: 'Defenses',
           header: true
+        },
+        {
+          title: 'Use Laser Turrets',
+          checkbox: {
+            name: 'laserTurrets',
+            info: '',
+            checked: true
+          }
+        },
+        {
+          type: 'input',
+          name: 'turretSpacing',
+          title: 'Turret Spacing',
+          placeholder: '8',
+
+          number: true,
+          minimum: 2,
+          maximum: 9
         },
         {
           type: 'input',
@@ -72,21 +109,6 @@ module.exports = function(app) {
 
           number: true,
           minimum: 3
-        },
-        {
-          type: 'input',
-          name: 'turretSpacing',
-          title: 'Turret Spacing',
-          placeholder: '8',
-          checkbox: {
-            name: 'laserTurrets',
-            info: 'Use laser turrets instead of gun turrets.',
-            checked: true
-          },
-
-          number: true,
-          minimum: 2,
-          maximum: 9
         },
         {
           type: 'header',
@@ -118,6 +140,14 @@ module.exports = function(app) {
           number: true,
           minimum: 1
         },
+        {
+          type: 'textarea',
+          name: 'balancer',
+          title: 'Balancer Blueprint String (Optional)',
+          placeholder: 'Blueprint string here...',
+          info: 'If a balancer of NxN is not available (where N is the # of cargo wagons), put a blueprint string of a balancer here. '+
+                'The balancer should be made of express belt and be facing upwards. This is not required if bot-based.'
+        }
       ]
     });
   });
@@ -154,9 +184,10 @@ module.exports = function(app) {
       opt.trainDirection = CONVERT_DIRECTIONS[opt.trainDirection];
       opt.minedOreDirection = CONVERT_DIRECTIONS[opt.minedOreDirection];
       opt.undergroundBelts = opt.undergroundBelts == 'on';
+      opt.requestItem = (opt.requestItem || '').split(' ').join('_').toLowerCase();
 
       console.log(opt);
-      const string = generator.outpost(req.body.blueprint, req.body);
+      const string = generator.outpost(req.body.blueprint, opt);
       res.send('{"string": "'+string+'" }');
       res.end();
     } catch (e) {
