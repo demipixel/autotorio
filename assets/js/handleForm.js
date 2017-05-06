@@ -8,6 +8,7 @@ function submitForm(form) {
         message: !$('#blueprint').val() ? 'You must provide a blueprint string!' : 'You need to fix some errors!',
       });
     } else {
+      var triedSelect = false;
       BootstrapDialog.show({
         title: 'Outpots Blueprint String',
         message: 'Loading...',
@@ -20,6 +21,7 @@ function submitForm(form) {
             success: function(data) {
               console.log(data);
               dialog.getModalBody().html('<textarea class="form-control" rows=10>'+(data.error || data.string)+'</textarea>');
+              if (triedSelect) dialog.getModalBody().find('textarea').select();
             },
             error: function(data) {
               console.log(data);
@@ -28,6 +30,7 @@ function submitForm(form) {
         },
         onshown: function(dialog) {
           dialog.getModalBody().find('textarea').select();
+          triedSelect = true;
         }
       })
     }
