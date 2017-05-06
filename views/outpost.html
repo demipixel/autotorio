@@ -49,7 +49,7 @@ var FORM_DATA = <%- JSON.stringify(formElements) %>;
         <% } %>
         <span class="help-block error-block" style="display: none"></span>
         <% if (e.info) { %>
-        <span class="info-block"><%= e.info %></span>
+        <span class="info-block"><%- e.info %></span>
         <% } %>
         <% if (e.checkbox) { %>
           <div class="checkbox">

@@ -68,8 +68,9 @@ module.exports = function(app) {
           name: 'balancer',
           title: 'Balancer Blueprint String (Optional)',
           placeholder: 'Blueprint string here...',
-          info: 'If a balancer of NxN is not available (where N is the # of cargo wagons), put a blueprint string of a balancer here. '+
-                'The balancer should be made of express belt and be facing upwards. This is not required if bot-based.'
+          info: 'If a balancer of NxN is not available (where N is the # of cargo wagons), put a blueprint string of a balancer here.<br>'+
+                'The balancer should be made of express belt and be facing upwards. If it is not "inline", make sure it sticks out to right and increase "wall space"<br>'+
+                'This is not required if bot-based.'
         },
         {
           type: 'header',
