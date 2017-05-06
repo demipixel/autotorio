@@ -1,4 +1,5 @@
 const generator = require('factorio-generators');
+const moment = require('moment');
 
 module.exports = function(app) {
 
@@ -86,7 +87,7 @@ module.exports = function(app) {
           name: 'customRequestItem',
           title: 'Custom Ore Type (Optional)',
           placeholder: 'example_ore',
-          info: 'Only necessary when using mods with custom ore names'
+          info: 'Only necessary when using mods with custom ore names.'
         },
         {
           type: 'header',
@@ -159,7 +160,54 @@ module.exports = function(app) {
           placeholder: 'Blueprint string here...',
           info: 'If a balancer of NxN is not available (where N is the # of cargo wagons), put a blueprint string of a balancer here. '+
                 'The balancer should be made of express belt and be facing upwards. This is not required if bot-based.'
-        }
+        },
+        {
+          type: 'header',
+          title: 'Tiles',
+          header: true
+        },
+        {
+          type: 'select',
+          name: 'concrete',
+          title: 'Tiles',
+          options: ['None', 'Stone Path', 'Concrete', 'Hazard Concrete Left', 'Hazard Concrete Right'],
+          info: 'Covers the entire area surrounded by the walls in the specified tile type.'
+        },
+        {
+          type: 'input',
+          name: 'customConcrete',
+          title: 'Custom Tiles (Optional)',
+          placeholder: 'example_concrete',
+          info: 'Only necessary when using mods with custom tile names.'
+        },
+        {
+          type: 'select',
+          name: 'borderConcrete',
+          title: 'Border Tiles',
+          options: ['None', 'Stone Path', 'Concrete', 'Hazard Concrete Left', 'Hazard Concrete Right'],
+          info: 'Covers the walls and tile inside with the specified tile type.'
+        },
+        {
+          type: 'input',
+          name: 'customBorderConcrete',
+          title: 'Custom Border Tiles (Optional)',
+          placeholder: 'example_concrete',
+          info: 'Only necessary when using mods with custom tile names.'
+        },
+        {
+          type: 'select',
+          name: 'trackConcrete',
+          title: 'Track Tiles',
+          options: ['None', 'Stone Path', 'Concrete', 'Hazard Concrete Left', 'Hazard Concrete Right'],
+          info: 'Covers and surrounds tracks with the specified tile type.'
+        },
+        {
+          type: 'input',
+          name: 'customTrackConcrete',
+          title: 'Custom Track Tiles (Optional)',
+          placeholder: 'example_concrete',
+          info: 'Only necessary when using mods with custom tile names.'
+        },
       ]
     });
   });
@@ -182,7 +230,16 @@ module.exports = function(app) {
     Left: 3
   };
 
+  const CONVERT_TILE = {
+    'None': '',
+    'Stone Path': 'stone_path',
+    'Concrete': 'concrete',
+    'Hazard Concrete Left': 'hazard_concrete_left',
+    'Hazard Concrete Right': 'hazard_concrete_right'
+  };
+
   app.post('/outpost/string', (req, res) => {
+    LOG('Outpost request made');
     try {
       if (!req.body.blueprint) {
         res.send('{"error": "You must provide a blueprint string." }');
@@ -198,7 +255,10 @@ module.exports = function(app) {
       opt.undergroundBelts = opt.undergroundBelts == 'on';
       opt.requestItem = opt.customRequestItem || (opt.requestItem || '').split(' ').join('_').toLowerCase();
 
-      console.log(opt);
+      opt.concrete = opt.customConcrete || CONVERT_TILE[opt.concrete];
+      opt.borderConcrete = opt.customBorderConcrete || CONVERT_TILE[opt.borderConcrete];
+      opt.trackConcrete = opt.customTrackConcrete || CONVERT_TILE[opt.trackConcrete];
+
       const string = generator.outpost(req.body.blueprint, opt);
       res.send('{"string": "'+string+'" }');
       res.end();
@@ -209,4 +269,8 @@ module.exports = function(app) {
     }
   });
 
+}
+
+function LOG(...args) {
+  console.log('['+moment().format('MMMM Do YYYY, h:mm:ss a')+']', ...args);
 }
