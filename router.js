@@ -95,12 +95,11 @@ module.exports = function(app) {
           header: true
         },
         {
-          title: 'Use Laser Turrets',
-          checkbox: {
-            name: 'laserTurrets',
-            info: '',
-            checked: true
-          }
+          type: 'select',
+          name: 'turretType',
+          title: 'Turret Type',
+          options: ['None', 'Gun Turrets', 'Laser Turrets'],
+          default: 2
         },
         {
           type: 'input',
@@ -111,6 +110,13 @@ module.exports = function(app) {
           number: true,
           minimum: 2,
           maximum: 9
+        },
+        {
+          title: 'Walls Enabled',
+          checkbox: {
+            name: 'walls',
+            checked: true
+          }
         },
         {
           type: 'input',
@@ -252,8 +258,14 @@ module.exports = function(app) {
       opt.beltName = opt.custom_belt_type || CONVERT_BELT_NAME[opt.belt_type];
       opt.trainDirection = CONVERT_DIRECTIONS[opt.trainDirection];
       opt.minedOreDirection = CONVERT_DIRECTIONS[opt.minedOreDirection];
+      opt.botBased = opt.botBased == 'on';
       opt.undergroundBelts = opt.undergroundBelts == 'on';
+      opt.walls = opt.walls == 'on';
+      opt.exitRoute = opt.exitRoute == 'on';
       opt.requestItem = opt.customRequestItem || (opt.requestItem || '').split(' ').join('_').toLowerCase();
+
+      opt.turrets = opt.turretType != 'None';
+      opt.laserTurrets = opt.turretType == 'Laser Turrets';
 
       opt.concrete = opt.customConcrete || CONVERT_TILE[opt.concrete];
       opt.borderConcrete = opt.customBorderConcrete || CONVERT_TILE[opt.borderConcrete];
@@ -263,7 +275,7 @@ module.exports = function(app) {
       res.send('{"string": "'+string+'" }');
       res.end();
     } catch (e) {
-      console.log(e);
+      LOG('Outpost error', e.message);
       res.send('{"error": "'+e.message+'"}');
       res.end();
     }
