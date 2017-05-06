@@ -69,7 +69,7 @@ module.exports = function(app) {
           title: 'Balancer Blueprint String (Optional)',
           placeholder: 'Blueprint string here...',
           info: 'If a balancer of NxN is not available (where N is the # of cargo wagons), put a blueprint string of a balancer here.<br>'+
-                'The balancer should be made of express belt and be facing upwards. If it is not "inline", make sure it sticks out to right and increase "wall space"<br>'+
+                'The balancer should be made of express belt and be facing upwards. If it is not "inline", make sure it sticks out to right and increase "wall space".<br>'+
                 'This is not required if bot-based.'
         },
         {
@@ -90,6 +90,12 @@ module.exports = function(app) {
           title: 'Ore Type',
           options: ['Iron Ore', 'Copper Ore', 'Coal', 'Stone', 'Uranium Ore'],
           info: 'If "bot based" is enabled, you must provide an ore type for the requester chests.'
+        },
+        {
+          type: 'input',
+          name: 'requestAmount',
+          title: 'Request Amount',
+          placeholder: '4800'
         },
         {
           type: 'input',
