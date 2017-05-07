@@ -14,7 +14,7 @@ var FORM_DATA = <%- JSON.stringify(formElements) %>;
       <%
       formElements.forEach(e => {
       %>
-      <div class="form-group">
+      <div class="form-group <%- e.activate %>">
         <label class="col-lg-2 control-label"><%- (e.header ? '<h4>' : '') + e.title + (e.header ? '</h4>' : '') %></label>
         <div class="col-lg-10">
 

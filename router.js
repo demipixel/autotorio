@@ -18,6 +18,14 @@ module.exports = function(app) {
           info: 'Place two walls, one at each corner of the ore patch, and then place a blueprint string of the walls here.'
         },
         {
+          title: 'Modded',
+          checkbox: {
+            name: 'modded',
+            info: '(Shows options for modded entity names)',
+            activator: 'mod'
+          }
+        },
+        {
           type: 'select',
           name: 'belt_type',
           title: 'Belt Type',
@@ -33,7 +41,8 @@ module.exports = function(app) {
           name: 'custom_belt_type',
           title: 'Custom Belt Type (Optional)',
           placeholder: 'example_transport_belt',
-          info: 'Only necessary when using mods with custom belt names.'
+          info: 'Only necessary when using mods with custom belt names.',
+          activate: 'mod'
         },
         {
           type: 'select',
@@ -44,16 +53,24 @@ module.exports = function(app) {
         {
           type: 'select',
           name: 'minedOreDirection',
-          title: 'Ore Travel',
-          options: ['Down', 'Up', 'Right', 'Left']
+          title: 'Train Enter From',
+          options: ['Bottom', 'Top', 'Right', 'Left']
         },
         {
           type: 'select',
           name: 'minerSpace',
           title: 'Miner Space',
-          options: ['0', '1', '2'],
+          options: ['0', '1', '2', '3', '4', '5'],
           default: 1,
           info: 'Side-by-side space between miners.'
+        },
+        {
+          type: 'input',
+          name: 'miningDrillName',
+          title: 'Custom Mining Drill Name (optional)',
+          placeholder: 'example_mining_drill',
+          info: 'Only necessary when using mods with custom mining drill names.',
+          activate: 'mod'
         },
         {
           title: 'Use stack inserters',
@@ -64,11 +81,19 @@ module.exports = function(app) {
           }
         },
         {
+          title: 'Include Radar',
+          checkbox: {
+            name: 'includeRadar',
+            checked: true
+          }
+        },
+        {
           type: 'textarea',
           name: 'balancer',
           title: 'Balancer Blueprint String (Optional)',
           placeholder: 'Blueprint string here...',
           info: 'If a balancer of NxN is not available (where N is the # of cargo wagons), put a blueprint string of a balancer here.<br>'+
+                'Only balancers for 1, 2, and 4 cargo wagons are provided.<br>'+
                 'The balancer should be made of express belt and be facing upwards. If it is not "inline", make sure it sticks out to right and increase "wall space".<br>'+
                 'This is not required if bot-based.'
         },
@@ -102,7 +127,8 @@ module.exports = function(app) {
           name: 'customRequestItem',
           title: 'Custom Ore Type (Optional)',
           placeholder: 'example_ore',
-          info: 'Only necessary when using mods with custom ore names.'
+          info: 'Only necessary when using mods with custom ore names.',
+          activate: 'mod'
         },
         {
           type: 'header',
@@ -200,7 +226,8 @@ module.exports = function(app) {
           name: 'customConcrete',
           title: 'Custom Tiles (Optional)',
           placeholder: 'example_concrete',
-          info: 'Only necessary when using mods with custom tile names.'
+          info: 'Only necessary when using mods with custom tile names.',
+          activate: 'mod'
         },
         {
           type: 'select',
@@ -214,7 +241,8 @@ module.exports = function(app) {
           name: 'customBorderConcrete',
           title: 'Custom Border Tiles (Optional)',
           placeholder: 'example_concrete',
-          info: 'Only necessary when using mods with custom tile names.'
+          info: 'Only necessary when using mods with custom tile names.',
+          activate: 'mod'
         },
         {
           type: 'select',
@@ -228,7 +256,8 @@ module.exports = function(app) {
           name: 'customTrackConcrete',
           title: 'Custom Track Tiles (Optional)',
           placeholder: 'example_concrete',
-          info: 'Only necessary when using mods with custom tile names.'
+          info: 'Only necessary when using mods with custom tile names.',
+          activate: 'mod'
         },
       ]
     });
@@ -271,21 +300,22 @@ module.exports = function(app) {
       const opt = {};
       Object.keys(req.body).forEach(key => opt[key] = req.body[key]);
 
-      opt.beltName = opt.custom_belt_type || CONVERT_BELT_NAME[opt.belt_type];
+      opt.beltName = (opt.modded && opt.custom_belt_type) || CONVERT_BELT_NAME[opt.belt_type];
       opt.trainDirection = CONVERT_DIRECTIONS[opt.trainDirection];
       opt.minedOreDirection = CONVERT_DIRECTIONS[opt.minedOreDirection];
       opt.botBased = opt.botBased == 'on';
+      opt.includeRadar = opt.includeRadar == 'on';
       opt.undergroundBelts = opt.undergroundBelts == 'on';
       opt.walls = opt.walls == 'on';
       opt.exitRoute = opt.exitRoute == 'on';
-      opt.requestItem = opt.customRequestItem || (opt.requestItem || '').split(' ').join('_').toLowerCase();
+      opt.requestItem = (opt.modded && opt.customRequestItem) || (opt.requestItem || '').split(' ').join('_').toLowerCase();
 
       opt.turrets = opt.turretType != 'None';
       opt.laserTurrets = opt.turretType == 'Laser Turrets';
 
-      opt.concrete = opt.customConcrete || CONVERT_TILE[opt.concrete];
-      opt.borderConcrete = opt.customBorderConcrete || CONVERT_TILE[opt.borderConcrete];
-      opt.trackConcrete = opt.customTrackConcrete || CONVERT_TILE[opt.trackConcrete];
+      opt.concrete = (opt.modded && opt.customConcrete) || CONVERT_TILE[opt.concrete];
+      opt.borderConcrete = (opt.modded && opt.customBorderConcrete) || CONVERT_TILE[opt.borderConcrete];
+      opt.trackConcrete = (opt.modded && opt.customTrackConcrete) || CONVERT_TILE[opt.trackConcrete];
 
       const string = generator.outpost(req.body.blueprint, opt);
       res.send('{"string": "'+string+'" }');

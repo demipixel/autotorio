@@ -80,6 +80,20 @@ $(document).ready(function() {
   FORM_DATA.forEach(function(element) {
     if (getUrlParameter(element.name)) $('#'+element.name).val(getUrlParameter(element.name));
     if (element.checkbox && getUrlParameter(element.checkbox.name)) $('#'+element.checkbox.name).prop('checked', getUrlParameter(element.checkbox.name) == 'true');
+
+    if (element.checkbox && element.checkbox.activator) {
+      $('#'+element.checkbox.name).change(function() {
+        console.log('Eh?');
+        if ($('#'+element.checkbox.name).is(':checked')) {
+          $('.'+element.checkbox.activator).slideDown();
+        } else {
+          $('.'+element.checkbox.activator).slideUp();
+        }
+      });
+    }
+
+    if (element.activate) $('.'+element.activate).hide();
+
     if (element.type != 'input') return;
 
     $('#'+element.name).keyup(function() {
