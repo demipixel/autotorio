@@ -106,7 +106,8 @@ module.exports = function(app) {
           title: 'Bot based',
           checkbox: {
             name: 'botBased',
-            info: 'Removes all belts and uses passive providers and requester chests instead. Does not include roboports.'
+            info: 'Removes all belts and uses passive providers and requester chests instead. Does not include roboports.',
+            activator: 'bots'
           }
         },
         {
@@ -114,13 +115,8 @@ module.exports = function(app) {
           name: 'requestItem',
           title: 'Ore Type',
           options: ['Iron Ore', 'Copper Ore', 'Coal', 'Stone', 'Uranium Ore'],
-          info: 'If "bot based" is enabled, you must provide an ore type for the requester chests.'
-        },
-        {
-          type: 'input',
-          name: 'requestAmount',
-          title: 'Request Amount',
-          placeholder: '4800'
+          info: 'If "bot based" is enabled, you must provide an ore type for the requester chests.',
+          activate: 'bots'
         },
         {
           type: 'input',
@@ -128,7 +124,14 @@ module.exports = function(app) {
           title: 'Custom Ore Type (Optional)',
           placeholder: 'example_ore',
           info: 'Only necessary when using mods with custom ore names.',
-          activate: 'mod'
+          activate: 'mod bots'
+        },
+        {
+          type: 'input',
+          name: 'requestAmount',
+          title: 'Request Amount',
+          placeholder: '4800',
+          activate: 'bots'
         },
         {
           type: 'header',
@@ -156,7 +159,8 @@ module.exports = function(app) {
           title: 'Walls Enabled',
           checkbox: {
             name: 'walls',
-            checked: true
+            checked: true,
+            activator: 'walls'
           }
         },
         {
@@ -164,6 +168,7 @@ module.exports = function(app) {
           name: 'wallThickness',
           title: 'Wall Thickness',
           placeholder: '1',
+          activate: 'walls',
 
           number: true,
           minimum: 1
@@ -184,11 +189,20 @@ module.exports = function(app) {
           header: true
         },
         {
+          title: 'Include Train Station',
+          checkbox: {
+            name: 'includeTrainStation',
+            checked: true,
+            activator: 'trainStation'
+          }
+        },
+        {
           title: 'Provide exit route',
           checkbox: {
             name: 'exitRoute',
             info: 'Useful for single-headed trains (with locomotives on a single side)'
-          }
+          },
+          activate: 'trainStation'
         },
         {
           type: 'input',
@@ -196,6 +210,7 @@ module.exports = function(app) {
           title: 'Locomotive Count',
           info: 'Number of locomotives at the beginning of the train.',
           placeholder: '2',
+          activate: 'trainStation',
 
           number: true,
           minimum: 1
@@ -205,6 +220,7 @@ module.exports = function(app) {
           name: 'cargoWagonCount',
           title: 'Cargo Wagon Count',
           placeholder: '4',
+          activate: 'trainStation',
 
           number: true,
           minimum: 1
@@ -307,6 +323,7 @@ module.exports = function(app) {
       opt.includeRadar = opt.includeRadar == 'on';
       opt.undergroundBelts = opt.undergroundBelts == 'on';
       opt.walls = opt.walls == 'on';
+      opt.includeTrainStation = opt.includeTrainStation == 'on';
       opt.exitRoute = opt.exitRoute == 'on';
       opt.requestItem = (opt.modded && opt.customRequestItem) || (opt.requestItem || '').split(' ').join('_').toLowerCase();
 

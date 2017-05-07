@@ -66,6 +66,8 @@ function getSettingsURL() {
 $(document).ready(function() {
   $('#minedOreDirection').show().find('option[value=Left],[value=Right]').hide();
 
+  var activators = {};
+
   $trainDirection = $('#trainDirection');
   $trainDirection.change(function() {
     if ($trainDirection.val() == 'Top' || $trainDirection.val() == 'Bottom') {
@@ -82,17 +84,28 @@ $(document).ready(function() {
     if (element.checkbox && getUrlParameter(element.checkbox.name)) $('#'+element.checkbox.name).prop('checked', getUrlParameter(element.checkbox.name) == 'true');
 
     if (element.checkbox && element.checkbox.activator) {
+      activators[element.checkbox.activator] = element.checkbox.checked;
       $('#'+element.checkbox.name).change(function() {
-        console.log('Eh?');
-        if ($('#'+element.checkbox.name).is(':checked')) {
-          $('.'+element.checkbox.activator).slideDown();
+        var isChecked = $('#'+element.checkbox.name).is(':checked');
+        activators[element.checkbox.activator] = isChecked;
+        if (isChecked) {
+          var notActivators = Object.keys(activators).map(function(key) {
+            return !activators[key] ? '.'+key : '.not-'+key;
+          }).join(',');
+          console.log(notActivators);
+          $('.'+element.checkbox.activator).not(notActivators).slideDown();
+          $('.not-'+element.checkbox.activator).slideUp();
         } else {
           $('.'+element.checkbox.activator).slideUp();
+          $('.not-'+element.checkbox.activator).slideDown();
         }
       });
     }
 
-    if (element.activate) $('.'+element.activate).hide();
+    if (element.activate) {
+      if (!activators[element.activate]) $('.'+element.activate).hide();
+      else $('.not-'+element.activate).hide();
+    }
 
     if (element.type != 'input') return;
 
