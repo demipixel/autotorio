@@ -58,6 +58,13 @@ var FORM_DATA = <%- JSON.stringify(formElements) %>;
             </label>
           </div>
         <% } %>
+        <% if (e.buttons) {
+          e.buttons.forEach(button => { %>
+
+          <button type="button" style="margin-left: 10px;" onClick="getSettingsURL()" class="btn btn-info">Get Settings URL</button>
+
+        <% })
+         } %>
         </div>
       </div>
       <% }) %>
@@ -67,7 +74,7 @@ var FORM_DATA = <%- JSON.stringify(formElements) %>;
       <div class="col-lg-10 col-lg-offset-2">
         <!-- <button type="reset" class="btn btn-default">Cancel</button> -->
         <button type="submit" class="btn btn-primary">Get Outpost Blueprint</button>
-        <button type="button" style="margin-left: 10px;" onClick="getSettingsURL()" class="btn btn-info">Get Settings URL</button>
+         <button type="button" style="margin-left: 10px;" onClick="getSettingsURL()" class="btn btn-info">Get Settings URL</button>
       </div>
     </div>
   </fieldset>
