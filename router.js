@@ -7,8 +7,9 @@ module.exports = function(app) {
     res.render('github.html');
   });
 
-  app.get('*', (req, res) => {
-    res.render('outpost.html', {
+  app.get('/outpost', (req, res) => {
+    res.render('form.html', {
+      page: 'outpost',
       formElements: [
         {
           type: 'textarea',
@@ -277,6 +278,42 @@ module.exports = function(app) {
         },
       ]
     });
+  });
+
+  /*app.get('/blueprint', (req, res) => {
+    res.render('form.html', {
+      page: 'blueprint',
+      formElements: [
+        {
+          type: 'textarea',
+          name: 'blueprint',
+          title: 'Blueprint String',
+          placeholder: 'Blueprint string here...',
+          info: 'This is the blueprint to modify.'
+        },
+        {
+          title: 'Flip Along X Axis',
+          checkbox: {
+            name: 'flipX'
+          }
+        },
+        {
+          title: 'Flip Along Y Axis',
+          checkbox: {
+            name: 'flipY'
+          }
+        },{
+          buttons: [
+            {
+
+            }
+          ]
+        }]
+    });
+  });*/
+
+  app.get('*', (req, res) => {
+    res.redirect('outpost');
   });
 
   const CONVERT_BELT_NAME = {

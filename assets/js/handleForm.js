@@ -19,12 +19,13 @@ function submitForm(form) {
             data: $(form).serializeArray(),
             dataType: 'json',
             success: function(data) {
-              console.log(data);
+              ga('send', 'event', 'request', 'outpost', data.error ? 'fail' : 'success');
               dialog.getModalBody().html('<textarea class="form-control" rows=10>'+(data.error || data.string)+'</textarea>');
               if (triedSelect) dialog.getModalBody().find('textarea').select();
             },
             error: function(data) {
-              console.log(data);
+              dialog.getModalBody().html('Error connecting to server!');
+              ga('send', 'event', 'request', 'outpost', 'error');
             }
           });
         },
