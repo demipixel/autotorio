@@ -24,6 +24,7 @@
 
 <!-- Custom JS -->
 <script src="/assets/js/handleForm.js"></script>
+<script src="/assets/js/replacer.js"></script>
 
 </head>
 <body>
@@ -66,7 +67,7 @@
       </form>-->
       <ul class="nav navbar-nav navbar-right">
         <li><a href="https://www.paypal.me/DemiPixel">Donate</a></li>
-        <li><a href="/github">Github</a></li>
+        <li class="<%= page == 'github' ? 'active' : ''%>"><a href="/github">Github</a></li>
       </ul>
     </div>
   </div>

@@ -1,15 +1,47 @@
 const generator = require('factorio-generators');
 const moment = require('moment');
+const fs = require('fs');
+
+/*const PREVENT_KEYWORD = [
+  'worm', 'spitter', 'biter', 'alien',
+  'coral', 'pita', 'grass', 'asterisk', 'bush', 'dirt', 'tree', 'fluff', 'cane', 'trunk', 'garballo', 'root',
+  'remnants', 'loader', 'scorchmark', 'wreck', 'water',
+  'market', 'player', 'plane', 'coin', 'background', 'computer', 'immunity', 'crude-oil'
+];
+let factorioItems = ['includes:transport_belt', 'includes:underground_belt', 'includes:splitter'];
+let modules = [];
+
+fs.readdir('./assets/img/factorio-icons/', (err, files) => {
+  factorioItems =
+    factorioItems.concat(files.filter(file => file.slice(-4) == '.png')
+         .filter(file => {
+          let ret = true;
+          PREVENT_KEYWORD.forEach(keyword => {
+            if (!ret) return;
+            if (file.includes(keyword)) ret = false;
+          });
+          return ret;
+         })
+         .map(file => file.slice(0, -4)));
+
+  modules = factorioItems.filter(item => item.includes('module'));
+});*/
+
 
 module.exports = function(app) {
 
   app.get('/github', (req, res) => {
-    res.render('github.html');
+    res.render('github.html', {
+      page: 'github'
+    });
   });
 
   app.get('/outpost', (req, res) => {
     res.render('form.html', {
       page: 'outpost',
+      title: 'Outpost Generator',
+      submitButton: 'Get Outpost Blueprint',
+      selections: {},
       formElements: [
         {
           type: 'textarea',
@@ -281,8 +313,22 @@ module.exports = function(app) {
   });
 
   /*app.get('/blueprint', (req, res) => {
+    const ENTITY_REPLACER_DEFAULT = 'inserter,fast-inserter includes:transport-belt,express-transport-belt includes:underground-belt,express-underground-belt includes:splitter,express-splitter small-electric-pole,medium-electric-pole';
     res.render('form.html', {
       page: 'blueprint',
+      title: 'Blueprint Tool',
+      submitButton: 'Get Blueprint',
+      selections: {
+        entities: factorioItems,
+        recipes: factorioItems,
+        modules: modules,
+
+        map: {
+          'includes:transport_belt': 'All Belts',
+          'includes:underground_belt': 'All Underground Belts',
+          'includes:splitter': 'All Splitters'
+        }
+      },
       formElements: [
         {
           type: 'textarea',
@@ -303,17 +349,36 @@ module.exports = function(app) {
             name: 'flipY'
           }
         },{
+          title: '',
           buttons: [
             {
-
+              text: '<span aria-hidden="true" class="fa fa-plus fa-fw"></span>New Entity Replacer',
+              type: 'success',
+              onClick: 'createReplacer(\'entityReplacer\',\'entities\')'
+            },
+            {
+              text: '<span aria-hidden="true" class="fa fa-plus fa-fw"></span>New Modded Entity Replacer',
+              type: 'warning',
+              onClick: 'createReplacer(\'entityReplacer\',\'entities\', true)'
+            },
+            {
+              text: '<span aria-hidden="true" class="fa fa-arrow-circle-up fa-fw"></span>Upgrader Preset',
+              type: 'info',
+              onClick: 'loadReplacer(\'entityReplacer\',\'entities\', \''+ENTITY_REPLACER_DEFAULT+'\')'
             }
           ]
-        }]
+        },
+        {
+          type: 'div',
+          name: 'entityReplacer',
+          title: ''
+        }
+      ]
     });
   });*/
 
   app.get('*', (req, res) => {
-    res.redirect('outpost');
+    res.redirect('/outpost');
   });
 
   const CONVERT_BELT_NAME = {

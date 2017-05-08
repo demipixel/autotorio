@@ -3,6 +3,7 @@
 <script>
 
 var FORM_DATA = <%- JSON.stringify(formElements) %>;
+var OPTIONS = <%- JSON.stringify(selections) %>;
 
 </script>
 
@@ -10,7 +11,7 @@ var FORM_DATA = <%- JSON.stringify(formElements) %>;
 
 <form class="form-horizontal" onsubmit="submitForm(this); return false;">
   <fieldset>
-    <legend>Outpost Generator</legend>
+    <legend><%- title %></legend>
       <%
       formElements.forEach(e => {
       %>
@@ -46,6 +47,8 @@ var FORM_DATA = <%- JSON.stringify(formElements) %>;
         <% } else if (e.type == 'input') { %>
         <input type="input" name="<%= e.name %>" id="<%= e.name %>" class="form-control" <%- e.placeholder ? 'placeholder="'+e.placeholder+'"' : '' %>>
 
+        <% } else if (e.type == 'div') { %>
+          <div id="<%= e.name %>"></div>
         <% } %>
         <span class="help-block error-block" style="display: none"></span>
         <% if (e.info) { %>
@@ -61,7 +64,7 @@ var FORM_DATA = <%- JSON.stringify(formElements) %>;
         <% if (e.buttons) {
           e.buttons.forEach(button => { %>
 
-          <button type="button" style="margin-left: 10px;" onClick="getSettingsURL()" class="btn btn-info">Get Settings URL</button>
+          <button type="button" style="margin-left: 10px;" onClick="<%- button.onClick %>" class="btn btn-<%- button.type ? button.type : 'primary' %>"><%- button.text %></button>
 
         <% })
          } %>
@@ -73,7 +76,7 @@ var FORM_DATA = <%- JSON.stringify(formElements) %>;
     <div class="form-group">
       <div class="col-lg-10 col-lg-offset-2">
         <!-- <button type="reset" class="btn btn-default">Cancel</button> -->
-        <button type="submit" class="btn btn-primary">Get Outpost Blueprint</button>
+        <button type="submit" class="btn btn-primary"><%= submitButton %></button>
          <button type="button" style="margin-left: 10px;" onClick="getSettingsURL()" class="btn btn-info">Get Settings URL</button>
       </div>
     </div>
