@@ -522,6 +522,7 @@ module.exports = function(app) {
   });
 
   app.post('/blueprint/string', (req, res) => {
+    LOG('Blueprint Tool request made');
     try {
       if (!req.body.blueprint) {
         res.send('{"error": "You must provide a blueprint string." }');
@@ -557,7 +558,7 @@ module.exports = function(app) {
       res.send('{"string": "'+string+'" }');
       res.end();
     } catch (e) {
-      LOG('Outpost error', e.message);
+      LOG('Blueprint Tool error', e.message);
       res.send('{"error": "'+e.message+'"}');
       res.end();
     }
