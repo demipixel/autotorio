@@ -16,7 +16,7 @@ var OPTIONS = <%- JSON.stringify(selections) %>;
       formElements.forEach(e => {
       %>
       <div class="form-group <%- e.activate %>">
-        <label class="col-lg-2 control-label"><%- (e.header ? '<h4>' : '') + e.title + (e.header ? '</h4>' : '') %></label>
+        <label class="col-lg-2 control-label"><%- (e.header ? '<h4>' : '') + (e.title ? e.title : '') + (e.header ? '</h4>' : '') %></label>
         <div class="col-lg-10">
 
         <% if (e.type == 'textarea') { %>
@@ -48,12 +48,9 @@ var OPTIONS = <%- JSON.stringify(selections) %>;
         <input type="input" name="<%= e.name %>" id="<%= e.name %>" class="form-control" <%- e.placeholder ? 'placeholder="'+e.placeholder+'"' : '' %>>
 
         <% } else if (e.type == 'div') { %>
-          <div id="<%= e.name %>"></div>
+          <div id="<%= e.name %>" <%- e.replacer ? 'data-replacer="'+e.replacer+'"' : '' %>></div>
         <% } %>
         <span class="help-block error-block" style="display: none"></span>
-        <% if (e.info) { %>
-        <span class="info-block"><%- e.info %></span>
-        <% } %>
         <% if (e.checkbox) { %>
           <div class="checkbox">
             <label>
@@ -67,7 +64,14 @@ var OPTIONS = <%- JSON.stringify(selections) %>;
           <button type="button" style="margin-left: 10px;" onClick="<%- button.onClick %>" class="btn btn-<%- button.type ? button.type : 'primary' %>"><%- button.text %></button>
 
         <% })
-         } %>
+        }
+        if (e.info) { %>
+        <span class="info-block"><%- e.info %></span>
+        <% }
+        if (e.hr) { %>
+        <hr>
+        <% } %>
+
         </div>
       </div>
       <% }) %>

@@ -2,18 +2,19 @@ const generator = require('factorio-generators');
 const moment = require('moment');
 const fs = require('fs');
 
-/*const PREVENT_KEYWORD = [
+const PREVENT_KEYWORD = [
   'worm', 'spitter', 'biter', 'alien',
   'coral', 'pita', 'grass', 'asterisk', 'bush', 'dirt', 'tree', 'fluff', 'cane', 'trunk', 'garballo', 'root',
   'remnants', 'loader', 'scorchmark', 'wreck', 'water',
   'market', 'player', 'plane', 'coin', 'background', 'computer', 'immunity', 'crude-oil'
 ];
-let factorioItems = ['includes:transport_belt', 'includes:underground_belt', 'includes:splitter'];
-let modules = [];
+let factorioItems = ['includes:transport-belt', 'includes:underground-belt', 'includes:splitter'];
+let factorioRecipes = [];
+let modules = ['includes:module', 'includes:effectivity-module', 'includes:productivity-module', 'includes:speed-module'];
 
 fs.readdir('./assets/img/factorio-icons/', (err, files) => {
-  factorioItems =
-    factorioItems.concat(files.filter(file => file.slice(-4) == '.png')
+  const items =
+    files.filter(file => file.slice(-4) == '.png')
          .filter(file => {
           let ret = true;
           PREVENT_KEYWORD.forEach(keyword => {
@@ -22,10 +23,13 @@ fs.readdir('./assets/img/factorio-icons/', (err, files) => {
           });
           return ret;
          })
-         .map(file => file.slice(0, -4)));
+         .map(file => file.slice(0, -4));
 
-  modules = factorioItems.filter(item => item.includes('module'));
-});*/
+  factorioItems = factorioItems.concat(items);
+  factorioRecipes = factorioRecipes.concat(items);
+
+  modules = modules.concat(factorioItems.filter(item => item.includes('module')).sort());
+});
 
 
 module.exports = function(app) {
@@ -103,6 +107,21 @@ module.exports = function(app) {
           title: 'Custom Mining Drill Name (optional)',
           placeholder: 'example_mining_drill',
           info: 'Only necessary when using mods with custom mining drill names.',
+          activate: 'mod'
+        },
+        {
+          type: 'select',
+          name: 'module',
+          title: 'Modules',
+          options: ['None', 'Speed Module', 'Speed Module 2', 'Speed Module 3', 'Effectivity Module', 'Effectivity Module 2', 'Effectivity Module 3', 'Productivity Module', 'Productivity Module 2', 'Productivity Module 3'],
+          info: 'If chosen, inserts 3 of the selected module in each miner.'
+        },
+        {
+          type: 'input',
+          name: 'customModule',
+          title: 'Custom Module Name',
+          placeholder: 'example_module_name_2',
+          info: 'Only necessary when using mods with custom module names.',
           activate: 'mod'
         },
         {
@@ -312,7 +331,7 @@ module.exports = function(app) {
     });
   });
 
-  /*app.get('/blueprint', (req, res) => {
+  app.get('/blueprint', (req, res) => {
     const ENTITY_REPLACER_DEFAULT = 'inserter,fast-inserter includes:transport-belt,express-transport-belt includes:underground-belt,express-underground-belt includes:splitter,express-splitter small-electric-pole,medium-electric-pole';
     res.render('form.html', {
       page: 'blueprint',
@@ -320,13 +339,18 @@ module.exports = function(app) {
       submitButton: 'Get Blueprint',
       selections: {
         entities: factorioItems,
-        recipes: factorioItems,
+        recipes: factorioRecipes,
         modules: modules,
 
         map: {
-          'includes:transport_belt': 'All Belts',
-          'includes:underground_belt': 'All Underground Belts',
-          'includes:splitter': 'All Splitters'
+          'includes:transport-belt': 'All Belts',
+          'includes:underground-belt': 'All Undergrounds',
+          'includes:splitter': 'All Splitters',
+
+          'includes:module': 'All Modules',
+          'includes:effectivity-module': 'All Effectivity Modules',
+          'includes:productivity-module': 'All Productivity Modules',
+          'includes:speed-module': 'All Speed Modules'
         }
       },
       formElements: [
@@ -349,7 +373,6 @@ module.exports = function(app) {
             name: 'flipY'
           }
         },{
-          title: '',
           buttons: [
             {
               text: '<span aria-hidden="true" class="fa fa-plus fa-fw"></span>New Entity Replacer',
@@ -371,11 +394,59 @@ module.exports = function(app) {
         {
           type: 'div',
           name: 'entityReplacer',
-          title: ''
+          replacer: 'entities'
+        },
+        { hr: true },
+        {
+          buttons: [
+            {
+              text: '<span aria-hidden="true" class="fa fa-plus fa-fw"></span>New Recipe Replacer',
+              type: 'success',
+              onClick: 'createReplacer(\'recipeReplacer\',\'recipes\')'
+            },
+            {
+              text: '<span aria-hidden="true" class="fa fa-plus fa-fw"></span>New Modded Recipe Replacer',
+              type: 'warning',
+              onClick: 'createReplacer(\'recipeReplacer\',\'recipes\', true)'
+            }
+          ]
+        },
+        {
+          type: 'div',
+          name: 'recipeReplacer',
+          replacer: 'recipes'
+        },
+        { hr: true },
+        {
+          buttons: [
+            {
+              text: '<span aria-hidden="true" class="fa fa-plus fa-fw"></span>New Module Replacer',
+              type: 'success',
+              onClick: 'createReplacer(\'moduleReplacer\',\'modules\')'
+            },
+            {
+              text: '<span aria-hidden="true" class="fa fa-plus fa-fw"></span>New Modded Module Replacer',
+              type: 'warning',
+              onClick: 'createReplacer(\'moduleReplacer\',\'modules\', true)'
+            }
+          ]
+        },
+        {
+          type: 'div',
+          name: 'moduleReplacer',
+          replacer: 'modules'
+        },
+        { hr: true },
+        {
+          title: 'Return Modified Only',
+          checkbox: {
+            name: 'modifiedOnly',
+            info: 'Only include entities in the blueprint that were modified'
+          }
         }
       ]
     });
-  });*/
+  });
 
   app.get('*', (req, res) => {
     res.redirect('/outpost');
@@ -421,6 +492,9 @@ module.exports = function(app) {
       opt.beltName = (opt.modded && opt.custom_belt_type) || CONVERT_BELT_NAME[opt.belt_type];
       opt.trainDirection = CONVERT_DIRECTIONS[opt.trainDirection];
       opt.minedOreDirection = CONVERT_DIRECTIONS[opt.minedOreDirection];
+
+      opt.module = (opt.modded && opt.customModule) || opt.module != 'None' ? ((opt.modded && customModule) || opt.module).split(' ').join('_').toLowerCase() : null;
+
       opt.botBased = opt.botBased == 'on';
       opt.includeRadar = opt.includeRadar == 'on';
       opt.undergroundBelts = opt.undergroundBelts == 'on';
@@ -437,6 +511,48 @@ module.exports = function(app) {
       opt.trackConcrete = (opt.modded && opt.customTrackConcrete) || CONVERT_TILE[opt.trackConcrete];
 
       const string = generator.outpost(req.body.blueprint, opt);
+      res.send('{"string": "'+string+'" }');
+      res.end();
+    } catch (e) {
+      LOG('Outpost error', e.message);
+      res.send('{"error": "'+e.message+'"}');
+      res.end();
+    }
+  });
+
+  app.post('/blueprint/string', (req, res) => {
+    try {
+      if (!req.body.blueprint) {
+        res.send('{"error": "You must provide a blueprint string." }');
+        res.end();
+        return;
+      }
+      const opt = {};
+      Object.keys(req.body).forEach(key => opt[key] = req.body[key]);
+
+      opt.flipX = opt.flipX == 'on';
+      opt.flipY = opt.flipY == 'on';
+      opt.modifiedOnly = opt.modifiedOnly == 'on';
+
+      ['entity', 'recipe', 'module'].forEach(replacer => {
+        const replacerOpt = opt[replacer+'Replacer'];
+        if (!replacerOpt) return;
+
+        opt[replacer+'Replace'] = [];
+        replacerOpt.split(' ').forEach(o => {
+          if (!o) return;
+          const arr = o.split(',');
+          if (arr.length < 2) return;
+          const obj = { to: arr[1] };
+
+          if (arr[0].startsWith('includes:')) obj.includes = arr[0].replace('includes:', '');
+          else obj.from = arr[0];
+
+          opt[replacer+'Replace'].push(obj);
+        });
+      });
+
+      const string = generator.blueprintTool(req.body.blueprint, opt);
       res.send('{"string": "'+string+'" }');
       res.end();
     } catch (e) {

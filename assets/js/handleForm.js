@@ -9,23 +9,31 @@ function submitForm(form) {
       });
     } else {
       var triedSelect = false;
+      var data = $(form).serializeArray();
+      
+      FORM_DATA.forEach(function(element) {
+        if (element.type == 'div') {
+          if (outputReplacer(element.name)) data.push({ name: element.name, value: outputReplacer(element.name) });
+        }
+      });
+
       BootstrapDialog.show({
-        title: 'Outpots Blueprint String',
+        title: 'Blueprint String',
         message: 'Loading...',
         onshow: function(dialog) {
           $.ajax({
             type: 'POST',
-            url: '/outpost/string',
-            data: $(form).serializeArray(),
+            url: document.location.pathname+'/string',
+            data: data,
             dataType: 'json',
             success: function(data) {
-              ga('send', 'event', 'request', 'outpost', data.error ? 'fail' : 'success');
+              ga('send', 'event', 'request', document.location.pathname.slice(1), data.error ? 'fail' : 'success');
               dialog.getModalBody().html('<textarea class="form-control" rows=10>'+(data.error || data.string)+'</textarea>');
               if (triedSelect) dialog.getModalBody().find('textarea').select();
             },
             error: function(data) {
               dialog.getModalBody().html('Error connecting to server!');
-              ga('send', 'event', 'request', 'outpost', 'error');
+              ga('send', 'event', 'request', document.location.pathname.slice(1), 'error');
             }
           });
         },
@@ -44,8 +52,12 @@ function getSettingsURL() {
     if (element.name == 'blueprint') return;
 
     if (element.name) {
-      $e = $('#'+element.name);
-      if ($e.val()) url += element.name+'='+encodeURI($e.val())+'&';
+      if (element.type != 'div') {
+        $e = $('#'+element.name);
+        if ($e.val()) url += element.name+'='+encodeURI($e.val())+'&';
+      } else {
+        if (outputReplacer(element.name).length) url += element.name+'='+encodeURI(outputReplacer(element.name))+'&';
+      }
     }
 
     if (element.checkbox) {
@@ -81,7 +93,10 @@ $(document).ready(function() {
   });
 
   FORM_DATA.forEach(function(element) {
-    if (getUrlParameter(element.name)) $('#'+element.name).val(getUrlParameter(element.name));
+    if (getUrlParameter(element.name)){
+      if (element.type != 'div') $('#'+element.name).val(getUrlParameter(element.name));
+      else loadReplacer(element.name, $('#'+element.name).data('replacer'), getUrlParameter(element.name));
+    }
     if (element.checkbox && getUrlParameter(element.checkbox.name)) $('#'+element.checkbox.name).prop('checked', getUrlParameter(element.checkbox.name) == 'true');
 
     if (element.checkbox && element.checkbox.activator) {
@@ -93,7 +108,6 @@ $(document).ready(function() {
           var notActivators = Object.keys(activators).map(function(key) {
             return !activators[key] ? '.'+key : '.not-'+key;
           }).join(',');
-          console.log(notActivators);
           $('.'+element.checkbox.activator).not(notActivators).slideDown();
           $('.not-'+element.checkbox.activator).slideUp();
         } else {
