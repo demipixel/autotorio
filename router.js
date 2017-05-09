@@ -44,6 +44,7 @@ module.exports = function(app) {
     res.render('form.html', {
       page: 'outpost',
       title: 'Outpost Generator',
+      exampleUsage: 'https://gfycat.com/VioletPoliteHomalocephale',
       submitButton: 'Get Outpost Blueprint',
       selections: {},
       formElements: [
@@ -336,6 +337,7 @@ module.exports = function(app) {
     res.render('form.html', {
       page: 'blueprint',
       title: 'Blueprint Tool',
+      exampleUsage: '',
       submitButton: 'Get Blueprint',
       selections: {
         entities: factorioItems,
