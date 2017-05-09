@@ -378,18 +378,19 @@ module.exports = function(app) {
               text: '<span aria-hidden="true" class="fa fa-plus fa-fw"></span>New Entity Replacer',
               type: 'success',
               onClick: 'createReplacer(\'entityReplacer\',\'entities\')'
-            },
+            }/*,
             {
               text: '<span aria-hidden="true" class="fa fa-plus fa-fw"></span>New Modded Entity Replacer',
               type: 'warning',
               onClick: 'createReplacer(\'entityReplacer\',\'entities\', true)'
-            },
+            }*/,
             {
               text: '<span aria-hidden="true" class="fa fa-arrow-circle-up fa-fw"></span>Upgrader Preset',
               type: 'info',
               onClick: 'loadReplacer(\'entityReplacer\',\'entities\', \''+ENTITY_REPLACER_DEFAULT+'\')'
             }
-          ]
+          ],
+          info: 'Modded entity/recipe/module replace coming soon'
         },
         {
           type: 'div',
@@ -403,12 +404,12 @@ module.exports = function(app) {
               text: '<span aria-hidden="true" class="fa fa-plus fa-fw"></span>New Recipe Replacer',
               type: 'success',
               onClick: 'createReplacer(\'recipeReplacer\',\'recipes\')'
-            },
+            }/*,
             {
               text: '<span aria-hidden="true" class="fa fa-plus fa-fw"></span>New Modded Recipe Replacer',
               type: 'warning',
               onClick: 'createReplacer(\'recipeReplacer\',\'recipes\', true)'
-            }
+            }*/
           ]
         },
         {
@@ -423,12 +424,12 @@ module.exports = function(app) {
               text: '<span aria-hidden="true" class="fa fa-plus fa-fw"></span>New Module Replacer',
               type: 'success',
               onClick: 'createReplacer(\'moduleReplacer\',\'modules\')'
-            },
+            }/*,
             {
               text: '<span aria-hidden="true" class="fa fa-plus fa-fw"></span>New Modded Module Replacer',
               type: 'warning',
               onClick: 'createReplacer(\'moduleReplacer\',\'modules\', true)'
-            }
+            }*/
           ]
         },
         {

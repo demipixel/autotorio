@@ -61,10 +61,11 @@ var OPTIONS = <%- JSON.stringify(selections) %>;
         <% if (e.buttons) {
           e.buttons.forEach(button => { %>
 
-          <button type="button" style="margin-left: 10px;" onClick="<%- button.onClick %>" class="btn btn-<%- button.type ? button.type : 'primary' %>"><%- button.text %></button>
+          <button type="button" style="margin-right: 10px;" onClick="<%- button.onClick %>" class="btn btn-<%- button.type ? button.type : 'primary' %>"><%- button.text %></button>
 
-        <% })
-        }
+        <% }) %>
+        <br>
+        <% }
         if (e.info) { %>
         <span class="info-block"><%- e.info %></span>
         <% }
