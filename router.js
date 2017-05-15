@@ -498,6 +498,7 @@ module.exports = function(app) {
 
       opt.module = (opt.modded && opt.customModule) || opt.module != 'None' ? ((opt.modded && customModule) || opt.module).split(' ').join('_').toLowerCase() : null;
 
+      opt.useStackInserters = opt.useStackInserters == 'on';
       opt.botBased = opt.botBased == 'on';
       opt.includeRadar = opt.includeRadar == 'on';
       opt.undergroundBelts = opt.undergroundBelts == 'on';
