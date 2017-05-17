@@ -85,10 +85,10 @@ $(document).ready(function() {
   $trainDirection.change(function() {
     if ($trainDirection.val() == 'Top' || $trainDirection.val() == 'Bottom') {
       $('#minedOreDirection option').show();
-      $('#minedOreDirection').val("Right").find('option[value=Up],[value=Down]').hide();
+      $('#minedOreDirection').val("Right").find('option[value=Top],[value=Bottom]').hide();
     } else if ($trainDirection.val() == 'Left' || $trainDirection.val() == 'Right') {
       $('#minedOreDirection option').show();
-      $('#minedOreDirection').val("Down").find('option[value=Left],[value=Right]').hide();
+      $('#minedOreDirection').val("Bottom").find('option[value=Left],[value=Right]').hide();
     }
   });
 
