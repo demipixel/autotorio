@@ -8,12 +8,16 @@ function submitForm(form) {
         message: !$('#blueprint').val() ? 'You must provide a blueprint string!' : 'You need to fix some errors!',
       });
     } else {
-      var triedSelect = false;
-      var data = $(form).serializeArray();
+      var dataArray = $(form).serializeArray();
+      var data = {};
+
+      dataArray.forEach(function(datum) {
+        data[datum.name] = datum.value;
+      });
       
       FORM_DATA.forEach(function(element) {
         if (element.type == 'div') {
-          if (outputReplacer(element.name)) data.push({ name: element.name, value: outputReplacer(element.name) });
+          if (outputReplacer(element.name)) data[element.name] = outputReplacer(element.name);
         }
       });
 
@@ -21,25 +25,19 @@ function submitForm(form) {
         title: 'Blueprint String',
         message: 'Loading...',
         onshow: function(dialog) {
-          $.ajax({
-            type: 'POST',
-            url: document.location.pathname+'/string',
-            data: data,
-            dataType: 'json',
-            success: function(data) {
-              ga('send', 'event', 'request', document.location.pathname.slice(1), data.error ? 'fail' : 'success');
-              dialog.getModalBody().html('<textarea class="form-control" rows=10>'+(data.error || data.string)+'</textarea>');
-              if (triedSelect) dialog.getModalBody().find('textarea').select();
-            },
-            error: function(data) {
-              dialog.getModalBody().html('Error connecting to server!');
-              ga('send', 'event', 'request', document.location.pathname.slice(1), 'error');
-            }
-          });
+          var str = '';
+          var err = false;
+          try {
+            str = generator(data);
+          } catch (e) {
+            str = 'Error: ' + e.message;
+            err = true;
+          }
+          ga('send', 'event', 'request', document.location.pathname.slice(1), err ? 'fail' : 'success');
+          dialog.getModalBody().html('<textarea class="form-control" rows=10>'+str+'</textarea>');
         },
         onshown: function(dialog) {
           dialog.getModalBody().find('textarea').select();
-          triedSelect = true;
         }
       })
     }

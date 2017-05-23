@@ -455,116 +455,16 @@ module.exports = function(app) {
     res.redirect('/outpost');
   });
 
-  const CONVERT_BELT_NAME = {
-    'Transport Belt': '',
-    'Fast Transport Belt': 'fast',
-    'Express Transport Belt': 'express'
-  };
-
-  const CONVERT_DIRECTIONS = {
-    Up: 0,
-    Top: 0,
-
-    Right: 1,
-
-    Down: 2,
-    Bottom: 2,
-
-    Left: 3
-  };
-
-  const CONVERT_TILE = {
-    'None': '',
-    'Stone Path': 'stone_path',
-    'Concrete': 'concrete',
-    'Hazard Concrete Left': 'hazard_concrete_left',
-    'Hazard Concrete Right': 'hazard_concrete_right'
-  };
-
   app.post('/outpost/string', (req, res) => {
-    LOG('Outpost request made');
-    try {
-      if (!req.body.blueprint) {
-        res.send('{"error": "You must provide a blueprint string." }');
-        res.end();
-        return;
-      }
-      const opt = {};
-      Object.keys(req.body).forEach(key => opt[key] = req.body[key]);
-
-      opt.beltName = (opt.modded && opt.custom_belt_type) || CONVERT_BELT_NAME[opt.belt_type];
-      opt.trainDirection = CONVERT_DIRECTIONS[opt.trainDirection];
-      opt.minedOreDirection = CONVERT_DIRECTIONS[opt.minedOreDirection];
-
-      opt.module = (opt.modded && opt.customModule) || opt.module != 'None' ? ((opt.modded && customModule) || opt.module).split(' ').join('_').toLowerCase() : null;
-
-      opt.useStackInserters = opt.useStackInserters == 'on';
-      opt.botBased = opt.botBased == 'on';
-      opt.includeRadar = opt.includeRadar == 'on';
-      opt.undergroundBelts = opt.undergroundBelts == 'on';
-      opt.walls = opt.walls == 'on';
-      opt.includeTrainStation = opt.includeTrainStation == 'on';
-      opt.exitRoute = opt.exitRoute == 'on';
-      opt.requestItem = (opt.modded && opt.customRequestItem) || (opt.requestItem || '').split(' ').join('_').toLowerCase();
-
-      opt.turrets = opt.turretType != 'None';
-      opt.laserTurrets = opt.turretType == 'Laser Turrets';
-
-      opt.concrete = (opt.modded && opt.customConcrete) || CONVERT_TILE[opt.concrete];
-      opt.borderConcrete = (opt.modded && opt.customBorderConcrete) || CONVERT_TILE[opt.borderConcrete];
-      opt.trackConcrete = (opt.modded && opt.customTrackConcrete) || CONVERT_TILE[opt.trackConcrete];
-
-      const string = generator.outpost(req.body.blueprint, opt);
-      res.send('{"string": "'+string+'" }');
-      res.end();
-    } catch (e) {
-      LOG('Outpost error', e.message);
-      res.send('{"error": "'+e.message+'"}');
-      res.end();
-    }
+    LOG('Outpost error', 'This is no longer a valid endpoint');
+    res.send('{"error": "This is no longer a valid endpoint"}');
+    res.end();
   });
 
   app.post('/blueprint/string', (req, res) => {
-    LOG('Blueprint Tool request made');
-    try {
-      if (!req.body.blueprint) {
-        res.send('{"error": "You must provide a blueprint string." }');
-        res.end();
-        return;
-      }
-      const opt = {};
-      Object.keys(req.body).forEach(key => opt[key] = req.body[key]);
-
-      opt.flipX = opt.flipX == 'on';
-      opt.flipY = opt.flipY == 'on';
-      opt.modifiedOnly = opt.modifiedOnly == 'on';
-
-      ['entity', 'recipe', 'module'].forEach(replacer => {
-        const replacerOpt = opt[replacer+'Replacer'];
-        if (!replacerOpt) return;
-
-        opt[replacer+'Replace'] = [];
-        replacerOpt.split(' ').forEach(o => {
-          if (!o) return;
-          const arr = o.split(',');
-          if (arr.length < 2) return;
-          const obj = { to: arr[1] };
-
-          if (arr[0].startsWith('includes:')) obj.includes = arr[0].replace('includes:', '');
-          else obj.from = arr[0];
-
-          opt[replacer+'Replace'].push(obj);
-        });
-      });
-
-      const string = generator.blueprintTool(req.body.blueprint, opt);
-      res.send('{"string": "'+string+'" }');
-      res.end();
-    } catch (e) {
-      LOG('Blueprint Tool error', e.message);
-      res.send('{"error": "'+e.message+'"}');
-      res.end();
-    }
+    LOG('Blueprint Tool error', 'This is no longer a valid endpoint');
+    res.send('{"error": "This is no longer a valid endpoint"}');
+    res.end();
   });
 
 }
