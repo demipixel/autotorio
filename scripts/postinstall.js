@@ -9,6 +9,11 @@ browserify('node_modules/factorio-generators', {
   standalone: 'factorioGenerators'
 })
   .transform('babelify', { presets: ['es2015'] })
-  .transform({ global: true }, 'uglifyify')
+  .transform(require('aliasify'), {
+    aliases: {
+      zlib: 'browserify-zlib-next'
+    }
+  })
+  // .transform({ global: true }, 'uglifyify')
   .bundle()
   .pipe(fs.createWriteStream('assets/build/factorio-generators.js'));
