@@ -75,18 +75,18 @@ function getSettingsURL() {
 }
 
 $(document).ready(function() {
-  $('#minedOreDirection').show().find('option[value=Left],[value=Right]').hide();
+  $('#trainDirection').show().find('option[value=Left],[value=Right]').hide();
 
   var activators = {};
 
-  $trainDirection = $('#trainDirection');
-  $trainDirection.change(function() {
-    if ($trainDirection.val() == 'Top' || $trainDirection.val() == 'Bottom') {
-      $('#minedOreDirection option').show();
-      $('#minedOreDirection').val("Right").find('option[value=Top],[value=Bottom]').hide();
-    } else if ($trainDirection.val() == 'Left' || $trainDirection.val() == 'Right') {
-      $('#minedOreDirection option').show();
-      $('#minedOreDirection').val("Bottom").find('option[value=Left],[value=Right]').hide();
+  $trainSide = $('#trainSide');
+  $trainSide.change(function() {
+    if ($trainSide.val() == 'Top' || $trainSide.val() == 'Bottom') {
+      $('#trainDirection option').show();
+      $('#trainDirection').val("Right").find('option[value=Top],[value=Bottom]').hide();
+    } else if ($trainSide.val() == 'Left' || $trainSide.val() == 'Right') {
+      $('#trainDirection option').show();
+      $('#trainDirection').val("Bottom").find('option[value=Left],[value=Right]').hide();
     }
   });
 

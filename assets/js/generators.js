@@ -56,6 +56,32 @@ function generateOutpost(form) {
   return factorioGenerators.outpost(form.blueprint, opt);
 }
 
+function generateOilOutpost(form) {
+  var opt = {};
+  Object.keys(form).forEach(function(key) {
+    opt[key] = form[key];
+  });
+
+  opt.trainSide = CONVERT_DIRECTIONS[opt.trainSide];
+  opt.trainDirection = CONVERT_DIRECTIONS[opt.trainDirection];
+
+  opt.module = (opt.modded && opt.customModule) || opt.module != 'None' ? ((opt.modded && customModule) || opt.module).split(' ').join('_').toLowerCase() : null;
+  opt.includeRadar = opt.includeRadar == 'on';
+
+  opt.includeTrainStation = opt.includeTrainStation == 'on';
+  opt.exitRoute = opt.exitRoute == 'on';
+
+  opt.turrets = opt.turretType != 'None';
+  opt.laserTurrets = opt.turretType == 'Laser Turrets';
+  opt.walls = opt.walls == 'on';
+
+  opt.concrete = (opt.modded && opt.customConcrete) || CONVERT_TILE[opt.concrete];
+  opt.borderConcrete = (opt.modded && opt.customBorderConcrete) || CONVERT_TILE[opt.borderConcrete];
+  opt.trackConcrete = (opt.modded && opt.customTrackConcrete) || CONVERT_TILE[opt.trackConcrete];
+
+  return factorioGenerators.oilOutpost(form.blueprint, opt);
+}
+
 function blueprintTool(form) {
   var opt = {};
   Object.keys(form).forEach(function(key) {

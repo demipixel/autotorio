@@ -43,9 +43,10 @@ module.exports = function(app) {
   app.get('/outpost', (req, res) => {
     res.render('form.html', {
       page: 'outpost',
-      title: 'Outpost Generator',
+      title: 'Ore Outpost Generator',
+      generatorName: 'generateOutpost',
       exampleUsage: 'https://gfycat.com/VioletPoliteHomalocephale',
-      submitButton: 'Get Outpost Blueprint',
+      submitButton: 'Get Ore Outpost Blueprint',
       selections: {},
       formElements: [
         {
@@ -337,6 +338,7 @@ module.exports = function(app) {
     res.render('form.html', {
       page: 'blueprint',
       title: 'Blueprint Tool',
+      generatorName: 'blueprintTool',
       exampleUsage: '',
       submitButton: 'Get Blueprint',
       selections: {
@@ -447,6 +449,221 @@ module.exports = function(app) {
             info: 'Only include entities in the blueprint that were modified'
           }
         }
+      ]
+    });
+  });
+
+  app.get('/oil', (req, res) => {
+    res.render('form.html', {
+      page: 'oil',
+      title: 'Oil Outpost Generator',
+      generatorName: 'generateOilOutpost',
+      exampleUsage: 'https://gfycat.com/PeskyPeskyGreendarnerdragonfly',
+      submitButton: 'Get Oil Outpost Blueprint',
+      selections: {},
+      formElements: [
+        {
+          type: 'textarea',
+          name: 'blueprint',
+          title: 'Blueprint String',
+          placeholder: 'Blueprint string here...',
+          info: 'Create a blueprint with your pumpjacks <b>and a single straight track placed anywhere.</b>'
+        },
+        {
+          title: 'Modded',
+          checkbox: {
+            name: 'modded',
+            info: '(Shows options for modded entity names)',
+            activator: 'mod'
+          }
+        },
+        {
+          type: 'select',
+          name: 'trainSide',
+          title: 'Train Station Side',
+          options: ['Right', 'Left', 'Top', 'Bottom']
+        },
+        {
+          type: 'select',
+          name: 'trainDirection',
+          title: 'Train Enter From',
+          options: ['Bottom', 'Top', 'Right', 'Left']
+        },
+        {
+          type: 'select',
+          name: 'module',
+          title: 'Modules',
+          options: ['None', 'Speed Module', 'Speed Module 2', 'Speed Module 3', 'Effectivity Module', 'Effectivity Module 2', 'Effectivity Module 3', 'Productivity Module', 'Productivity Module 2', 'Productivity Module 3'],
+          info: 'If chosen, inserts 3 of the selected module in each pumpjack.'
+        },
+        {
+          type: 'input',
+          name: 'customModule',
+          title: 'Custom Module Name',
+          placeholder: 'example_module_name_2',
+          info: 'Only necessary when using mods with custom module names.',
+          activate: 'mod'
+        },
+        {
+          title: 'Include Radar',
+          checkbox: {
+            name: 'includeRadar',
+            checked: true
+          }
+        },
+        {
+          type: 'header',
+          title: 'Defenses',
+          header: true
+        },
+        {
+          type: 'select',
+          name: 'turretType',
+          title: 'Turret Type',
+          options: ['None', 'Gun Turrets', 'Laser Turrets'],
+          default: 2
+        },
+        {
+          type: 'input',
+          name: 'turretSpacing',
+          title: 'Turret Spacing',
+          placeholder: '8',
+
+          number: true,
+          minimum: 2,
+          maximum: 9
+        },
+        {
+          title: 'Walls Enabled',
+          checkbox: {
+            name: 'walls',
+            checked: true,
+            activator: 'walls'
+          }
+        },
+        {
+          type: 'input',
+          name: 'wallThickness',
+          title: 'Wall Thickness',
+          placeholder: '1',
+          activate: 'walls',
+
+          number: true,
+          minimum: 1
+        },
+        {
+          type: 'input',
+          name: 'wallSpace',
+          title: 'Wall Space',
+          placeholder: '5',
+          info: 'Distance between edge of outpost and walls. Minimum 3 to support laser turrets.',
+
+          number: true,
+          minimum: 3
+        },
+        {
+          type: 'header',
+          title: 'Train Info',
+          header: true
+        },
+        {
+          title: 'Include Train Station',
+          checkbox: {
+            name: 'includeTrainStation',
+            checked: true,
+            activator: 'trainStation'
+          }
+        },
+        {
+          title: 'Provide exit route',
+          checkbox: {
+            name: 'exitRoute',
+            info: 'Useful for single-headed trains (with locomotives on a single side)'
+          },
+          activate: 'trainStation'
+        },
+        {
+          type: 'input',
+          name: 'locomotiveCount',
+          title: 'Locomotive Count',
+          info: 'Number of locomotives at the beginning of the train.',
+          placeholder: '1',
+          activate: 'trainStation',
+
+          number: true,
+          minimum: 1
+        },
+        {
+          type: 'input',
+          name: 'wagonCount',
+          title: 'Fluid Wagon Count',
+          placeholder: '2',
+          activate: 'trainStation',
+
+          number: true,
+          minimum: 1
+        },
+        {
+          type: 'input',
+          name: 'tanks',
+          title: 'Tank Count',
+          info: 'Number of buffer tanks before each fluid wagon.',
+          placeholder: '2',
+          activate: 'trainStation',
+
+          number: true,
+          minimum: 1
+        },
+        {
+          type: 'header',
+          title: 'Tiles',
+          header: true
+        },
+        {
+          type: 'select',
+          name: 'concrete',
+          title: 'Tiles',
+          options: ['None', 'Stone Path', 'Concrete', 'Hazard Concrete Left', 'Hazard Concrete Right'],
+          info: 'Covers the entire area surrounded by the walls in the specified tile type.'
+        },
+        {
+          type: 'input',
+          name: 'customConcrete',
+          title: 'Custom Tiles (Optional)',
+          placeholder: 'example_concrete',
+          info: 'Only necessary when using mods with custom tile names.',
+          activate: 'mod'
+        },
+        {
+          type: 'select',
+          name: 'borderConcrete',
+          title: 'Border Tiles',
+          options: ['None', 'Stone Path', 'Concrete', 'Hazard Concrete Left', 'Hazard Concrete Right'],
+          info: 'Covers the walls and tile inside with the specified tile type.'
+        },
+        {
+          type: 'input',
+          name: 'customBorderConcrete',
+          title: 'Custom Border Tiles (Optional)',
+          placeholder: 'example_concrete',
+          info: 'Only necessary when using mods with custom tile names.',
+          activate: 'mod'
+        },
+        {
+          type: 'select',
+          name: 'trackConcrete',
+          title: 'Track Tiles',
+          options: ['None', 'Stone Path', 'Concrete', 'Hazard Concrete Left', 'Hazard Concrete Right'],
+          info: 'Covers and surrounds tracks with the specified tile type.'
+        },
+        {
+          type: 'input',
+          name: 'customTrackConcrete',
+          title: 'Custom Track Tiles (Optional)',
+          placeholder: 'example_concrete',
+          info: 'Only necessary when using mods with custom tile names.',
+          activate: 'mod'
+        },
       ]
     });
   });

@@ -5,7 +5,7 @@
 var FORM_DATA = <%- JSON.stringify(formElements) %>;
 var OPTIONS = <%- JSON.stringify(selections) %>;
 
-var generator = window.<%= ({ outpost: 'generateOutpost', blueprint: 'blueprintTool' })[page] %>;
+var generator = window.<%= generatorName %>;
 
 </script>
 
