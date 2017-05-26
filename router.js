@@ -85,13 +85,13 @@ module.exports = function(app) {
         },
         {
           type: 'select',
-          name: 'trainDirection',
+          name: 'trainSide',
           title: 'Train Station Side',
           options: ['Right', 'Left', 'Top', 'Bottom']
         },
         {
           type: 'select',
-          name: 'minedOreDirection',
+          name: 'trainDirection',
           title: 'Train Enter From',
           options: ['Bottom', 'Top', 'Right', 'Left']
         },
