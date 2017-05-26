@@ -32,8 +32,8 @@ function generateOutpost(form) {
   });
 
   opt.beltName = (opt.modded && opt.custom_belt_type) || CONVERT_BELT_NAME[opt.belt_type];
+  opt.trainSide = CONVERT_DIRECTIONS[opt.trainSide];
   opt.trainDirection = CONVERT_DIRECTIONS[opt.trainDirection];
-  opt.minedOreDirection = CONVERT_DIRECTIONS[opt.minedOreDirection];
 
   opt.module = (opt.modded && opt.customModule) || opt.module != 'None' ? ((opt.modded && customModule) || opt.module).split(' ').join('_').toLowerCase() : null;
 
