@@ -188,6 +188,14 @@ module.exports = function(app) {
           activate: 'bots'
         },
         {
+          title: 'Include Roboports',
+          checkbox: {
+            name: 'roboports',
+            info: 'Roboports are only based behind the track.'
+          },
+          activate: 'bots'
+        },
+        {
           type: 'header',
           title: 'Defenses',
           header: true
