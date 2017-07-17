@@ -14,7 +14,7 @@ function submitForm(form) {
       dataArray.forEach(function(datum) {
         data[datum.name] = datum.value;
       });
-      
+
       FORM_DATA.forEach(function(element) {
         if (element.type == 'div') {
           if (outputReplacer(element.name)) data[element.name] = outputReplacer(element.name);
@@ -32,6 +32,7 @@ function submitForm(form) {
           } catch (e) {
             str = 'Error: ' + e.message;
             err = true;
+            console.log(e);
           }
           ga('send', 'event', 'request', document.location.pathname.slice(1), err ? 'fail' : 'success');
           dialog.getModalBody().html('<textarea class="form-control" rows=10>'+str+'</textarea>');

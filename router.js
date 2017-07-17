@@ -369,9 +369,9 @@ module.exports = function(app) {
         {
           type: 'textarea',
           name: 'blueprint',
-          title: 'Blueprint String',
-          placeholder: 'Blueprint string here...',
-          info: 'This is the blueprint to modify.'
+          title: 'Blueprint or Blueprint Book String',
+          placeholder: 'Blueprint or blueprint book string here...',
+          info: 'This is the blueprint(s) to modify.'
         },
         {
           title: 'Flip Along X Axis',
