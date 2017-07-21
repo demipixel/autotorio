@@ -72,7 +72,15 @@ module.exports = function(app) {
           default: 2,
           checkbox: {
             name: 'undergroundBelts',
-            info: 'Use underground belts'
+            info: 'Use underground belts',
+            activator: 'underground'
+          }
+        },
+        {
+          activate: 'underground',
+          checkbox: {
+            name: 'compact',
+            info: 'Compact miners (no horizontal spacing between miners, places electric poles inbetween underground belts)'
           }
         },
         {
