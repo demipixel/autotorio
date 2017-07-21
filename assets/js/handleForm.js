@@ -96,7 +96,10 @@ $(document).ready(function() {
       if (element.type != 'div') $('#'+element.name).val(getUrlParameter(element.name));
       else loadReplacer(element.name, $('#'+element.name).data('replacer'), getUrlParameter(element.name));
     }
-    if (element.checkbox && getUrlParameter(element.checkbox.name)) $('#'+element.checkbox.name).prop('checked', getUrlParameter(element.checkbox.name) == 'true');
+    if (element.checkbox && getUrlParameter(element.checkbox.name)) {
+      $('#'+element.checkbox.name).prop('checked', getUrlParameter(element.checkbox.name) == 'true');
+      element.checkbox.checked = true;
+    }
 
     if (element.checkbox && element.checkbox.activator) {
       activators[element.checkbox.activator] = element.checkbox.checked;
