@@ -35,7 +35,7 @@ function generateOutpost(form) {
   opt.trainSide = CONVERT_DIRECTIONS[opt.trainSide];
   opt.trainDirection = CONVERT_DIRECTIONS[opt.trainDirection];
 
-  opt.module = (opt.modded && opt.customModule) || opt.module != 'None' ? ((opt.modded && customModule) || opt.module).split(' ').join('_').toLowerCase() : null;
+  opt.module = (opt.modded && opt.customModule) || opt.module != 'None' ? ((opt.modded && opt.customModule) || opt.module).split(' ').join('_').toLowerCase() : null;
 
   opt.useStackInserters = opt.useStackInserters == 'on';
   opt.botBased = opt.botBased == 'on';
