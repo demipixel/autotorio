@@ -25,6 +25,8 @@ var CONVERT_TILE = {
   'Hazard Concrete Right': 'hazard_concrete_right'
 };
 
+const DONATORS = ['phono\'s', 'Goopsky\'s', 'Fahr', 'Autotorio Approved™']; // Okay, last one wasn't technically created by a donator...
+
 function generateOutpost(form) {
   var opt = {};
   Object.keys(form).forEach(function(key) {
@@ -54,6 +56,8 @@ function generateOutpost(form) {
   opt.borderConcrete = (opt.modded && opt.customBorderConcrete) || CONVERT_TILE[opt.borderConcrete];
   opt.trackConcrete = (opt.modded && opt.customTrackConcrete) || CONVERT_TILE[opt.trackConcrete];
 
+  opt.name = DONATORS[Math.floor(Math.random()*DONATORS.length)]+' Outpost - %drills% Drills';
+
   return factorioGenerators.outpost(form.blueprint, opt);
 }
 
@@ -79,6 +83,8 @@ function generateOilOutpost(form) {
   opt.concrete = (opt.modded && opt.customConcrete) || CONVERT_TILE[opt.concrete];
   opt.borderConcrete = (opt.modded && opt.customBorderConcrete) || CONVERT_TILE[opt.borderConcrete];
   opt.trackConcrete = (opt.modded && opt.customTrackConcrete) || CONVERT_TILE[opt.trackConcrete];
+
+  opt.name = DONATORS[Math.floor(Math.random()*DONATORS.length)]+'\'s Outpost - %pumpjacks% Pumpjacks';
 
   return factorioGenerators.oilOutpost(form.blueprint, opt);
 }
