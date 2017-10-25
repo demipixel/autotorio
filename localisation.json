@@ -2,373 +2,457 @@
   "navbar": {
     "outpost_generator": {
       "en": "Outpost Generator",
-      "es": "Generador Outpost"
+      "es": "Generador de Postos",
+      "pt-br": "Gerador de Postos"
     },
     "blueprint_tool": {
       "en": "Blueprint Tool",
-      "es": "Herramienta de Blueprint"
+      "es": "Herramienta de Planificación",
+      "pt-br":  "Ferramenta de Planejamento"
     },
     "oil_outpost_generator": {
       "en": "Oil Outpost Generator",
-      "es": "Generador Oil Outpost"
+      "es": "Generador de Postos Petroleros",
+      "pt-br": "Gerador de Postos Petroleiros"
     },
     "donate": {
       "en": "Donate",
-      "es": "Donar"
+      "es": "Donar",
+      "pt-br": "Doar"
     },
     "github": {
       "en": "Github",
-      "es": "Github"
+      "es": "Github",
+      "pt-br": "Github"
     }
   },
 
 
   "ore_outpost_generator": {
     "en": "Ore Output generator",
-    "es": "Generador de Outpost de Ore"
+    "es": "Generador de Postos de Minerales",
+    "pt-br": "Gerador de Postos de Minérios"
   },
-  "blueprint_tool": {
-    "en": "Blueprint Tool",
-    "es": "Herramienta de Blueprint"
+    "blueprint_tool": {
+     "en": "Blueprint Tool",
+      "es": "Herramienta de Planificación",
+      "pt-br":  "Ferramenta de Planejamento"
   },
 
   "submit_ore_outpost": {
     "en": "Get Ore Outpost Blueprint",
-    "es": "Obtener Ore Blueprint Outpost"
+    "es": "Obtener Planificación de Posto de Minerales",
+    "pt-br": "Obter Planejamento de Posto de Minérios"
   },
   "submit_blueprint": {
     "en": "Get Blueprint",
-    "es": "Obtener Blueprint"
+    "es": "Obtener Planificación",
+    "pt-br": "Obter Planejamento"
   },
 
   "blueprint_string": {
     "en": "Blueprint String",
-    "es": "Texto Blueprint"
+    "es": "Línea de Planificación",
+    "pt-br": "Linha de Planejamento"
   },
   "blueprint_string_placeholder": {
     "en": "Blueprint string here...",
-    "es": "Texto de Blueprint aquí ..."
+    "es": "Línea de Planificación aquí ...",
+    "pt-br": "Linha de Planejamento aqui..."
   },
   "blueprint_string_info": {
     "en": "Place two walls, one at each corner of the ore patch, and then place a blueprint string of the walls here.",
-    "es": "Coloque dos paredes, una en cada esquina del parche de mineral. Luego, coloque un texto blueprint de las paredes aquí."
+    "es": "Coloque dos paredes, una en cada esquina del parche de mineral, entonces coloque la línea de planificación de las paredes aquí.",
+    "pt-br": "Coloque duas paredes, uma em cada canto do campo de minérios, então coloque a linha de planejamento das paredes aqui."
   },
-
   "blueprint_string_or_book": {
     "en": "Blueprint or Blueprint Book String",
-    "es": "Texto de Blueprint o Blueprint Book"
+    "es": "Línea de Planificación o Libro de Planificación",
+    "pt-br": "Linha de Planejamento ou Livro de Planejamento"
   },
   "blueprint_string_or_book_placeholder": {
     "en": "Blueprint or blueprint book string here...",
-    "es": "Blueprint o Blueprint Book Text aquí ..."
+    "es": "Línea de Planificación o Libro de Planificación aquí ...",
+    "pt-br": "Linha de Planejamento ou Livro de Planejamento aqui..."
   },
   "blueprint_tool_info": {
     "en": "This is the blueprint(s) to modify.",
-    "es": "Este es el anteproyecto para modificar."
+    "es": "Este es una planificación para modificar.",
+    "pt-br": "Isto é um planejamento para modificar."
   },
 
   "oil_blueprint_info": {
     "en": "Create a blueprint with your pumpjacks <b>and a single straight track placed anywhere.</b>",
-    "es": "Cree un blueprint con sus gatos de bomba y una sola vía recta colocada en cualquier lugar."
+    "es": "Crea una planificación con sus bombas petroleras <b>y una sola vía recta colocada en cualquier lugar.</b>",
+    "pt-br": "Crie um planejamento com suas bombas de petróleo <b>e com uma única esteira reta colocada em qualquer lugar.</b>"
   },
 
 
 
   "modded": {
     "en": "Modded",
-    "es": "Modificado"
+    "es": "Modificado",
+    "pt-br": "Modificado"
   },
   "modded_info": {
     "en": "(Shows options for modded entity names)",
-    "es": "(Mostrar opciones para nombres de elementos modificados)"
+    "es": "(Mostra las opciones para nombres de elementos modificados)",
+    "pt-br": "(Mostra  as opções de nomes para elementos modificados)"
   },
 
   "belt_type": {
     "en": "Belt Type",
-    "es": "Tipo de Cinturón"
+    "es": "Tipo de Estera",
+    "pt-br": "Tipo de Esteira"
   },
   "underground_belts_info": {
     "en": "Use underground belts",
-    "es": "Use cinturones subterráneos"
+    "es": "Use esteras subterráneas",
+    "pt-br": "Use esteiras subterrâneas"
   },
   "compact": {
     "en": "Compact miners (no horizontal spacing between miners, places electric poles inbetween underground belts)",
-    "es": "Mineros compactos (sin espacios horizontales entre mineros, colocar postes eléctricos entre cinturones subterráneos)"
+    "es": "Mineros compactos (sin espacios horizontales entre mineros, colocar postes eléctricos entre esteras subterráneas)",
+    "pt-br": "Mineradores Compactos (sem espaços horizontais entre mineradores, coloque postes elétricos entre esteiras subterrâneas)"
   },
 
   "custom_belt_type": {
     "en": "Custom Belt Type (Optional)",
-    "es": "Tipo de Correa Personalizada (Opcional)"
+    "es": "Tipo de Estera Personalizada (Opcional)",
+    "pt-br": "Tipo de Esteira Personalizada (Opcional)"
   },
   "custom_belt_type_info": {
     "en": "Only necessary when using mods with custom belt names.",
-    "es": "Solo es necesario cuando se usan mods con nombres de cinturones personalizados."
+    "es": "Solo es necesario cuando se usan mods con nombres de esteras personalizadas.",
+    "pt-br": "Só é necessário quando usar mods com nomes de esteiras personalizadas"
   },
 
   "train_station_side": {
     "en": "Train Station Side",
-    "es": "Lado de la Estación de Tren"
+    "es": "Lado de la Estación de Tren",
+    "pt-br": "Lado da Estação de Trem"
   },
   "train_enter_from": {
     "en": "Train Enter From",
-    "es": "Entre en tren desde"
+    "es": "Donde el Tren entra",
+    "pt-br": "Onde o Trem entra"
   },
 
   "miner_space": {
     "en": "Miner Spacing",
-    "es": "Separación entre Taladros"
+    "es": "Separación entre Mineros",
+    "pt-br": "Espaçamento entre Mineradores"
   },
   "miner_space_info": {
     "en": "Side-by-side space between miners.",
-    "es": "Espacio entre taladros"
+    "es": "Espacio entre mineros",
+    "pt-br": "Espaço entre mineradores"
   },
   "custom_mining_drill": {
     "en": "Custom Mining Drill Name (Optional)",
-    "es": "Nombre del Taladro de Minería Personalizado (Opcional)"
+    "es": "Nombre del Mineros Personalizado (Opcional)",
+    "pt-br": "Nome de Mineradores Personalizados (Opcional)"
   },
   "custom_mining_drill_info": {
     "es": "Only necessary when using mods with custom mining drill names.",
-    "en": "Solo es necesario cuando se usan mods con nombres de minería personalizados."
+    "en": "Solo es necesario cuando se usan mods con nombres de mineros personalizados.",
+    "pt-br": "Só é necessário quando se usa mods com nomes de mineradores personalizados."
   },
 
   "modules": {
     "en": "Modules",
-    "es": "Módulo"
+    "es": "Módulo",
+    "pt-br": "Módulos"
   },
   "modules_info": {
     "en": "If chosen, inserts 3 of the selected module in each miner.",
-    "es": "Si se elige, inserta 3 del módulo seleccionado en cada minero."
+    "es": "Cuando seleccionado, inserta 3 módulos en cada minero.",
+    "pt-br": "Quando selecionado, insere 3 módulos em cada minerador"
   },
   "oil_modules_info": {
     "en": "If chosen, inserts 3 of the selected module in each pumpjack.",
-    "es": "Si se elige, inserta 3 del módulo seleccionado en cada toma de la bomba."
+    "es": "Quando seleccionado, inserta 3 módulos en cada bomba petrolera.",
+    "pt-br": "Quando selecionado, insere 3 módulos em cada bomba de petrólero"
   },
   "custom_module": {
     "en": "Custom Module Name",
-    "es": "Nombre del Módulo Personalizado"
+    "es": "Nombre del Módulo Personalizado",
+    "pt-br": "Nome do Módulo Personalizado"
   },
   "custom_module_info": {
     "en": "Only necessary when using mods with custom module names.",
-    "es": "Solo es necesario cuando se usan mods con nombres de módulos personalizados."
+    "es": "Solo es necesario cuando se usan mods con nombres de módulos personalizados.",
+    "pt-br": "Só é necessário quando se usa mods com nomes de módulos personalizado."
   },
 
   "stack_inserters": {
     "en": "Use Stack Inserters",
-    "es": "Usar Insertadores de Pila"
+    "es": "Usar Insertadores de Pila",
+    "pt-br": "Usar Inseridor de Pilhas"
   },
   "stack_inserters_info": {
     "en": "Use stack inserters between the buffer chests and the cargo wagon",
-    "es": "Use insertadores de pila entre los cofres de tope y el carro de carga"
+    "es": "Use insertadores de pila entre los cofres de guardia y el vagón de carga",
+    "pt-br": "Use inseridores de pilha entre os baús de guarda e o vagão de carga"
   },
 
   "radar": {
     "en": "Include Radar",
-    "es": "Incluye radar"
+    "es": "Incluye Radar",
+    "pt-br": "Inclúi Radar"
   },
   "balancer": {
     "en": "Balancer Blueprint String (Optional)",
-    "es": "Texto del Plan Equilibrador (Opcional)"
+    "es": "Línea de Planificación de Balanceador (Opcional)",
+    "pt-br": "Linha de Planejamento de Balanceador (Opcional)"
   },
   "balancer_placeholder": {
-    "en": "Blueprint string here...",
-    "es": "Texto blueprint aquí ..."
+    "en": "Blueprint String here...",
+    "es": "Línea de Planificación aquí...",
+    "pt-br": "Linha de Planejamento aqui..."
   },
   "balancer_info": {
     "en": "If a balancer of NxN is not available (where N is the # of cargo wagons), put a blueprint string of a balancer here.<br>Only balancers for 1, 2, and 4 cargo wagons are provided.<br>The balancer should be made of express belt and be facing upwards. If it is not \"inline\", make sure it sticks out to right and increase \"wall space\".<br>This is not required if bot-based.",
-    "es": "Si no está disponible un equilibrador de NxN (donde N es el número de vagones de carga), coloque aquí una cadena de un equilibrador.<br>Se proporcionan solo equilibradores para 1, 2 y 4 vagones de carga.<br>El equilibrador debe estar hecho de cinta exprés y mirar hacia arriba. Si no está \"en línea\", asegúrese de que sobresalga a la derecha y aumente \"espacio de pared\".<br>Esto no es necesario si está basado en bot."
+    "es": "Si no está disponible un balanceador de NxN (donde N es el número de vagones de carga), coloque aquí una linha de planificación de un balanceador.<br>Se proporcionan solo balanceadores para 1, 2 y 4 vagones de carga.<br>El balanceador debe estar hecho de estera exprés y mirar hacia arriba. Si no está \"en línea\", asegúrese de que sobresalga a la derecha y aumente \"espacio de pared\".<br>Esto no es necesario si está basado en bot.",
+    "pt-br": "Se um balanceador de NxN não está disponível (sendo N o número de vagões de carga), coloque aqui uma linha de planejamento de um balanceador.<br>Só serão providos balanceadores para 1, 2 e 4 vagões de carga.<br>O balanceador deve ser feito de esteiras expressas e estar voltado para cima. Se nào estiver \"em linha\", assegure-se de que se sobresaia para a direita e aumente \"espaço entre paredes\".<br>Não é necessário se estiver baseado em bot."
   },
 
   "bots": {
     "en": "Bots",
-    "es": "Bots"
+    "es": "Bots",
+    "pt-br": "Bots"
   },
   "bot_based": {
     "en": "Bot Based",
-    "es": "Sistema basado en Bot"
+    "es": "Basado en Bot",
+    "pt-br": "Baseado em Bot"
   },
   "bot_based_info": {
     "en": "Removes all belts and uses passive provider and requester chests instead. Does not include roboports.",
-    "es": "Elimina todos los cinturones y utiliza los cofres pasivos de proveedor y solicitante en su lugar. No incluye roboports."
+    "es": "Elimina todas las esteras y utiliza los cofres pasivos y solicitantes en su lugar. No incluye robopuerto.",
+    "pt-br": "Remove todas as esteiras e utiliza os baús passivos e baús soliticantes no lugar. Não inclui roboports"
   },
   "ore_type": {
     "en": "Ore Type",
-    "es": "Tipo de Mineral"
+    "es": "Tipo de Mineral",
+    "pt-br": "Tipo de Minério"
   },
   "ore_type_info": {
-    "en": "If \"bot based\" is enabled, you must provide an ore type for the requester chests.",
-    "es": "Si \"basado en bot\" está habilitado, debe proporcionar un tipo de mineral para los cofres de solicitante."
+    "en": "If \"Bot Based\" is enabled, you must provide an ore type for the requester chests.",
+    "es": "Si \"Basado en Bot\" está habilitado, debe proporcionar un tipo de mineral para los cofres solicitantes.",
+    "pt-br": "Se \"Baseado em Bot\" está habilitado, deve selecionar um tipo de minério para os baús solicitantes"
   },
   "custom_ore_type": {
     "en": "Custom Ore Type (Optional)",
-    "es": "Tipo de Mineral Personalizado (Opcional)"
+    "es": "Tipo de Mineral Personalizado (Opcional)",
+    "pt-br": "Tipo de Mineral Personalizado (Opcional)"
   },
   "custom_ore_type_info": {
     "en": "Only necessary when using mods with custom ore names.",
-    "es": "Solo es necesario cuando se usan mods con nombres de mineral personalizados."
+    "es": "Solo es necesario cuando se usan mods con nombres de mineral personalizados.",
+    "pt-br": "Só é necessário quando se usa mods com nomes de minérios personalizados"
   },
   "request_amount": {
     "en": "Request Amount",
-    "es": "Cantidad de solicitud"
+    "es": "Cantidad solicitada",
+    "pt-br": "Quantidade solicitada"
   },
 
   "roboports": {
     "en": "Include Roboports",
-    "es": "Incluir Roboports"
+    "es": "Incluir Robopuertos",
+    "pt-br": "Incluir Roboports"
   },
   "roboports_info": {
     "en": "Roboports are only based behind the track.",
-    "es": "Los Roboports solo están detrás de la pista."
+    "es": "Los Robopuertos solo están detrás de la pista.",
+    "pt-br": "Os Roboports estão somente atrás da pista"
   },
 
   "defenses": {
     "en": "Defenses",
-    "es": "Defensas"
+    "es": "Defensas",
+    "pt-br": "Defesas"
   },
   "turret_type": {
     "en": "Turret Type",
-    "es": "Tipo de Torreta"
+    "es": "Tipo de Torreta",
+    "pt-br": "Tipo de Turreta"
   },
   "turret_spacing": {
     "en": "Turret Spacing",
-    "es": "Espacio Entre las Torretas"
+    "es": "Espacio Entre las Torretas",
+    "pt-br": "Espaçamento Entre as Turretas"
   },
 
   "walls": {
     "en": "Walls Enabled",
-    "es": "Paredes habilitadas"
+    "es": "Paredes habilitadas",
+    "pt-br": "Paredes habilitadas"
   },
   "wall_thickness": {
     "en": "Wall Thickness",
-    "es": "Espesor de las Paredes"
+    "es": "Espesor de las Paredes",
+    "pt-br": "Espessura das Paredes"
   },
   "wall_space": {
     "en": "Wall Space",
-    "es": "Espacio de las paredes"
+    "es": "Espacio de las Paredes",
+    "pt-br": "Espaço entre as Paredes"
   },
   "wall_space_info": {
     "en": "Distance between edge of outpost and walls. Minimum 3 to support laser turrets.",
-    "es": "Distancia entre el borde de la avanzada y las paredes. Mínimo 3 para soportar torres láser."
+    "es": "Distancia entre el bordes de lo posto y las paredes. Mínimo 3 para soportar torretas láser.",
+    "pt-br": "Distância entre as bordas do posto e as paredes. Mínimo 3 para suportar turretas laser."
   },
 
   "train_info": {
     "en": "Train Info",
-    "es": "Información del Tren"
+    "es": "Información del Tren",
+    "pt-br": "Informação do Trem"
   },
   "train_station": {
     "en": "Include Train Station",
-    "es": "Incluir la estación de tren"
+    "es": "Incluir la estación de tren",
+    "pt-br": "Incluir a Estação de Trem"
   },
   "exit_route": {
     "en": "Provide Exit Route",
-    "es": "Proporcionar Ruta de Salida"
+    "es": "Proporcionar Ruta de Salida",
+    "pt-br": "Proporcionar Rota de Saída"
   },
   "exit_route_info": {
     "en": "Useful for single-headed trains (with locomotives on a single side)",
-    "es": "Útil para trenes de una sola cabeza (con locomotoras en un solo lado)"
+    "es": "Útil para trenes de una sola cabeza (con locomotoras en un solo lado)",
+    "pt-br": "Útil para trens de uma só ponta (com locomotivas em só um lado)"
   },
   "loco_count": {
     "en": "Locomotive Count",
-    "es": "Recuento de locomotoras"
+    "es": "Número de locomotoras",
+    "pt-br": "Número de Locomotivas"
   },
   "loco_count_info": {
     "en": "Number of locomotives at the beginning of the train.",
-    "es": "Número de locomotoras al comienzo del tren."
+    "es": "Número de locomotoras al comienzo del tren.",
+    "pt-br": "Número de locomotivas no começo do trem"
   },
   "wagon_count": {
     "en": "Cargo Wagon Count",
-    "es": "Número de Vagones de Carga"
+    "es": "Número de Vagones de Carga",
+    "pt-br": "Número de Vagões de Carga"
   },
   "fluid_wagon_count": {
     "en": "Fluid Wagon Count",
-    "es": "Cantidad de Vagones Fluidos"
+    "es": "Número de Vagones de Fluidos",
+    "pt-br": "Número de vagões de Fluídos"
   },
 
   "tank_count": {
     "en": "Tank Count",
-    "es": "Cantidad de tanques de fluido"
+    "es": "Número de tanques de fluido",
+    "pt-br": "Número de tanques de fluido"
   },
   "tank_count_info": {
     "en": "Number of buffer tanks before each fluid wagon.",
-    "es": "Cantidad de tanques de fluido de amortiguación antes de cada vagón de fluido."
+    "es": "Número de tanques de amortiguación antes de cada vagón de fluido.",
+    "pt-br": "Número de tanques de amortecimento antes de cada vagão de fluído"
   },
 
   "tiles": {
     "en": "Tiles",
-    "es": "Concreto"
+    "es": "Piso",
+    "pt-br": "Piso"
   },
   "tiles_info": {
     "en": "Covers the entire area surrounded by the walls in the specified tile type.",
-    "es": "Cubre toda el área rodeada por paredes en el tipo concreto especificado."
+    "es": "Cubre toda el área rodeada por paredes en el tipo piso especificado.",
+    "pt-br": "Cobre toda a área cercada por paredes no tipo de piso especificado."
   },
   "custom_tiles": {
     "en": "Custom Tiles (Optional)",
-    "es": "Concreto personalizado (opcional)"
+    "es": "Piso Personalizado (Opcional)",
+    "pt-br": "Piso Personalizado (Opcional)"
   },
   "custom_tiles_info": {
     "en": "Only necessary when using mods with custom tile names.",
-    "es": "Solo es necesario cuando se usan mods con nombres concretos personalizados."
+    "es": "Solo es necesario cuando se usan mods con nombres pisos personalizados.",
+    "pt-br": "Só é necessário quando se usa mods com nomes de pisos personalizados"
   },
 
   "border_tiles": {
     "en": "Border Tiles",
-    "es": "Hormigón de la Frontera"
+    "es": "Piso de Borde",
+    "pt-br": "Piso de Borda"
   },
   "border_tiles_info": {
     "en": "Covers the walls and tile inside with the specified tile type.",
-    "es": "Cubre las paredes y el azulejo en el interior con el tipo concreto especificado"
+    "es": "Cubre las paredes y el suelo en el interior con el tipo piso especificado",
+    "pt-br": "Cobre as paredes e o chão no interior com o tipo de piso especificado"
   },
   "custom_border_tiles": {
     "en": "Custom Border Tiles (Optional)",
-    "es": "Hormigón de Borde Personalizado (Opcional)"
+    "es": "Piso de Borde Personalizado (Opcional)",
+    "pt-br": "Piso de Borda Personalizado (Opcional)"
   },
 
   "track_tiles": {
     "en": "Track Tiles",
-    "es": "Concreto Bajo Pistas"
+    "es": "Piso del Rieles",
+    "pt-br": "Piso dos Trilhos"
   },
   "track_tiles_info": {
     "en": "Covers and surrounds tracks with the specified tile type.",
-    "es": "Cubre y rodea pistas con el tipo concreto especificado."
+    "es": "Cubre y rodea los rieles con el tipo piso especificado.",
+    "pt-br": "Cobre em volta dos trilhos com o tipo de piso especificado"
   },
   "custom_track_tiles": {
     "en": "Custom Track Tiles (Optional)",
-    "es": "Custom Track Concrete (Opcional)"
+    "es": "Piso de Rieles Personalizados (Opcional)",
+    "pt-br": "Piso dos Trilhos Personalizados (Opcional)"
   },
 
 
 
   "flip_x": {
     "en": "Flip Along X Axis",
-    "es": "Voltear a lo Largo del eje X"
+    "es": "Voltear a lo Largo del eje X",
+    "pt-br": "Gira ao longo do eixo X"
   },
   "flip_y": {
     "en": "Flip Along Y Axis",
-    "es": "Voltear a lo Largo del eje Y"
+    "es": "Voltear a lo Largo del eje Y",
+    "pt-br": "Gira ao longo do eixo Y"
   },
 
   "entity_replacer": {
     "en": "New Entity Replacer",
-    "es": "Nueva Entidad Reemplazante"
+    "es": "Repositor de Nuevas Entidads",
+    "pt-br": "Repositor de Novas Entidades"
   },
   "upgrader_preset": {
     "en": "Upgrader Preset",
-    "es": "Preestablecimiento de Actualización"
+    "es": "Preestablecimiento de Actualización",
+    "pt-br": "Atualizador Predefinido"
   },
   "recipe_replacer": {
     "en": "New Recipe Replacer",
-    "es": "Nuevo Sustituto de Recetas"
+    "es": "Repositor de Nuevas Recetas",
+    "pt-br": "Repositor de Novas Receitas"
   },
   "module_replacer": {
     "en": "New Module Replacer",
-    "es": "Nuevo Reemplazo de Nódulo"
+    "es": "Repositor de Nuevos Módulos",
+    "pt-br": "Repositor de Novos Módulos"
   },
 
   "modified_only": {
     "en": "Return Modified Only",
-    "es": "Solo se Devuelve Modificado"
+    "es": "Sólo Retorno Modificado",
+    "pt-br": "Apenas Retorno Modificado"
   },
   "modified_only_info": {
     "en": "Only include entities in the blueprint that were modified",
-    "es": "Solo incluir entidades en el blueprint que fueron modificadas"
+    "es": "Solo inclui entidades en el planificación que fueron modificadas",
+    "pt-br": "Só inclúi entidades no planejamento que foram modificadas"
   }
 }
