@@ -25,7 +25,7 @@ var CONVERT_TILE = {
   'Hazard Concrete Right': 'hazard_concrete_right'
 };
 
-const DONATORS = ['phono\'s', 'Goopsky\'s', 'Fahr', 'Dwarf\'s Foundry', 'Autotorio Approved™']; // Okay, last one wasn't technically created by a donator...
+const DONATORS = ['phono\'s', 'Goopsky\'s', 'Fahr', 'Dwarf\'s Foundry', 'Tupper\'s', 'Schorty\'s', 'Autotorio Approved™']; // Okay, last one wasn't technically created by a donator...
 
 function generateOutpost(form) {
   var opt = {};
