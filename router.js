@@ -45,7 +45,8 @@ module.exports = function(app) {
 
   app.get('/github', (req, res) => {
     res.render('github.html', {
-      page: 'github'
+      page: 'github',
+      navbar_lcl: getNavbarLocalisation(req.cookies.language || 'en'),
     });
   });
 
