@@ -32,6 +32,12 @@
     }
   },
 
+  "blueprint_tool": {
+    "en": "Blueprint Tool",
+    "es": "Herramienta de Planificación",
+    "pt-br":  "Ferramenta de Planejamento",
+    "fr": "Modificateur de planificateur"
+  },
 
   "ore_outpost_generator": {
     "en": "Ore Output generator",
