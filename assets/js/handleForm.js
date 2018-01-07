@@ -21,25 +21,33 @@ function submitForm(form) {
         }
       });
 
+      var err = false;
+      var str = 'Loading...';
+
+      try {
+        str = '<textarea class="form-control" rows=10>'+generator(data)+'</textarea>';
+      } catch (e) {
+        str = 'Error: ' + e.message;
+        err = true;
+        console.log(e);
+      }
+      ga('send', 'event', 'request', document.location.pathname.slice(1), err ? 'fail' : 'success');
+
       BootstrapDialog.show({
         title: 'Blueprint String',
-        message: 'Loading...',
-        onshow: function(dialog) {
-          var str = '';
-          var err = false;
-          try {
-            str = generator(data);
-          } catch (e) {
-            str = 'Error: ' + e.message;
-            err = true;
-            console.log(e);
-          }
-          ga('send', 'event', 'request', document.location.pathname.slice(1), err ? 'fail' : 'success');
-          dialog.getModalBody().html('<textarea class="form-control" rows=10>'+str+'</textarea>');
-        },
+        message: str,
         onshown: function(dialog) {
-          dialog.getModalBody().find('textarea').select();
-        }
+          if (!err) dialog.getModalBody().find('textarea').select();
+        },
+        buttons: [{
+          cssClass: 'btn-success',
+          label: 'Copy to Clipboard',
+          action: function(dialog) {
+            dialog.getModalBody().find('textarea').select();
+            document.execCommand('copy');
+            dialog.getModalDialog().find('.btn-success').html('<i class="fa fa-check" aria-hidden="true"></i> Successfully Copied');
+          }
+        }]
       })
     }
   } catch (e) { console.log(e); }
