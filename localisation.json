@@ -28,7 +28,7 @@
       "en": "Donate",
       "es": "Donar",
       "pt-br": "Doar",
-      "fr": "Donate",
+      "fr": "Don",
       "it": "Dona",
       "de": "Spenden"
     },
@@ -40,6 +40,82 @@
       "it": "Github",
       "de": "Github"
     }
+  },
+
+  "entities": {
+    "gun_turrets": {
+      "en": "Gun Turrets",
+      "fr": "Tourelles mitrailleuses"
+    },
+    "laser_turrets": {
+      "en": "Laser Turrets",
+      "fr": "Tourelles laser"
+    },
+
+    "transport_belt": {
+      "en": "Transport Belt",
+      "fr": "Convoyeur"
+    },
+    "fast_transport_belt": {
+      "en": "Fast Transport Belt",
+      "fr": "Convoyeur rapide"
+    },
+    "express_transport_belt": {
+      "en": "Express Transport Belt",
+      "fr": "Convoyeur express"
+    },
+    
+    "stone_path": {
+      "en": "Stone Path",
+      "fr": "Briques"
+    },
+    "concrete": {
+      "en": "Concrete",
+      "fr": "Béton"
+    },
+    "hazard_concrete_left": {
+      "en": "Hazard Concrete Left",
+      "fr": "Béton de danger (Gauche)"
+    },
+    "hazard_concrete_right": {
+      "en": "Hazard Concrete Right",
+      "fr": "Béton de danger (Droite)"
+    }
+  },
+
+  "none": {
+    "en": "None",
+    "fr": "Aucun(e)"
+  },
+
+  "right": {
+    "en": "Right",
+    "fr": "Droite"
+  },
+
+  "bottom": {
+    "en": "Bottom",
+    "fr": "Bas"
+  },
+
+  "down": {
+    "en": "Down",
+    "fr": "Bas"
+  },
+
+  "left": {
+    "en": "Left",
+    "fr": "Gauche"
+  },
+
+  "top": {
+    "en": "Top",
+    "fr": "Haut"
+  },
+
+  "up": {
+    "en": "Up",
+    "fr": "Haut"
   },
 
   "blueprint_tool": {

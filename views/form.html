@@ -28,9 +28,12 @@ var generator = window.<%= generatorName %>;
         <% } else if (e.type == 'select') { %>
 
         <select class="form-control" name="<%= e.name %>" id="<%= e.name %>">
-          <% e.options.forEach((o, i) => { %>
-          <option <%- e.default == i ? 'selected="selected"' : '' %> value="<%= o %>"><%= o %></option>
-          <% }) %>
+          <% e.options.forEach((o, i) => { 
+            if(typeof o === 'string') { %>
+            <option <%- e.default==i ? 'selected="selected"' : '' %> value="<%= o %>"><%= o %></option>
+          <% } else { %>
+            <option <%- e.default == i ? 'selected="selected"' : '' %> value="<%= o[0] %>"><%= o[1] %></option>
+          <% }}) %>
         </select>
 
         <% } else if (e.type == 'radio') { %>
