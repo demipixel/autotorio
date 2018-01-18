@@ -140,7 +140,9 @@ module.exports = function(app) {
           type: 'select',
           name: 'module',
           title: lcl('modules'),
-          options: ['None', 'Speed Module', 'Speed Module 2', 'Speed Module 3', 'Effectivity Module', 'Effectivity Module 2', 'Effectivity Module 3', 'Productivity Module', 'Productivity Module 2', 'Productivity Module 3'],
+          options: [['None', lcl('none')], ['Speed Module', ent_lcl('speed_module')], ['Speed Module 2', ent_lcl('speed_module') + ' 2'], ['Speed Module 3', ent_lcl('speed_module') + ' 3'], 
+            ['Effectivity Module', ent_lcl('effectivity_module')], ['Effectivity Module 2', ent_lcl('effectivity_module') + ' 2'], ['Effectivity Module 3', ent_lcl('effectivity_module') + ' 3'], 
+            ['Productivity Module', ent_lcl('productivity_module')], ['Productivity Module 2', ent_lcl('productivity_module') + ' 2'], ['Productivity Module 3', ent_lcl('productivity_module') + ' 3']],
           info: lcl('modules_info')
         },
         {
@@ -537,7 +539,9 @@ module.exports = function(app) {
           type: 'select',
           name: 'module',
           title: lcl('modules'),
-          options: ['None', 'Speed Module', 'Speed Module 2', 'Speed Module 3', 'Effectivity Module', 'Effectivity Module 2', 'Effectivity Module 3', 'Productivity Module', 'Productivity Module 2', 'Productivity Module 3'],
+          options: [['None', lcl('none')], ['Speed Module', ent_lcl('speed_module')], ['Speed Module 2', ent_lcl('speed_module') + ' 2'], ['Speed Module 3', ent_lcl('speed_module') + ' 3'],
+            ['Effectivity Module', ent_lcl('effectivity_module')], ['Effectivity Module 2', ent_lcl('effectivity_module') + ' 2'], ['Effectivity Module 3', ent_lcl('effectivity_module') + ' 3'],
+            ['Productivity Module', ent_lcl('productivity_module')], ['Productivity Module 2', ent_lcl('productivity_module') + ' 2'], ['Productivity Module 3', ent_lcl('productivity_module') + ' 3']],
           info: lcl('oil_modules_info')
         },
         {

@@ -80,6 +80,19 @@
     "hazard_concrete_right": {
       "en": "Hazard Concrete Right",
       "fr": "Béton de danger (Droite)"
+    },
+
+    "speed_module": {
+      "en": "Speed Module",
+      "fr": "Module de vitesse"
+    },
+    "effectivity_module": {
+      "en": "Effectivity Module",
+      "fr": "Module de d'efficacité"
+    },
+    "productivity_module": {
+      "en": "Productivity Module",
+      "fr": "Module de production"
     }
   },
 
