@@ -62,6 +62,7 @@ module.exports = function(app) {
       generatorName: 'generateOutpost',
       exampleUsage: 'https://gfycat.com/VioletPoliteHomalocephale',
       submitButton: lcl('submit_ore_outpost'),
+      settingsUrlButton: lcl('settings_url'),
       selections: {},
       navbar_lcl: getNavbarLocalisation(lng),
       formElements: [
@@ -375,6 +376,7 @@ module.exports = function(app) {
       generatorName: 'blueprintTool',
       exampleUsage: '',
       submitButton: lcl('submit_blueprint'),
+      settingsUrlButton: lcl('settings_url'),
       navbar_lcl: getNavbarLocalisation(lng),
       selections: {
         entities: factorioItems,
@@ -499,7 +501,8 @@ module.exports = function(app) {
       title: 'Oil Outpost Generator',
       generatorName: 'generateOilOutpost',
       exampleUsage: 'https://gfycat.com/PeskyPeskyGreendarnerdragonfly',
-      submitButton: 'Get Oil Outpost Blueprint',
+      submitButton: lcl('submit_oil_outpost'),
+      settingsUrlButton: lcl('settings_url'),
       selections: {},
       navbar_lcl: getNavbarLocalisation(lng),
       formElements: [

@@ -144,6 +144,12 @@
     "it": "Ottieni avamposto di minerali",
     "de": "Erz Außenposten Blaupause erstellen"
   },
+
+  "submit_oil_outpost": {
+    "en": "Get Oil Outpost Blueprint",
+    "fr": "Obtenir le planificateur d'avant-poste de pétrole"
+  },
+
   "submit_blueprint": {
     "en": "Get Blueprint",
     "es": "Obtener Planificación",
@@ -151,6 +157,11 @@
     "fr": "Obtenir le planificateur",
     "it": "Ottieni progetto",
     "de": "Blaupause erzeugen"
+  },
+
+  "settings_url": {
+    "en": "Get settings URL",
+    "fr": "Obtenir l'URL des paramètres"
   },
 
   "blueprint_string": {
