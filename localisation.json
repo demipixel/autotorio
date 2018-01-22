@@ -75,11 +75,11 @@
     },
     "hazard_concrete_left": {
       "en": "Hazard Concrete Left",
-      "fr": "Béton de danger (Gauche)"
+      "fr": "Zone de danger (Gauche)"
     },
     "hazard_concrete_right": {
       "en": "Hazard Concrete Right",
-      "fr": "Béton de danger (Droite)"
+      "fr": "Zone de danger (Droite)"
     },
 
     "speed_module": {
@@ -221,7 +221,7 @@
     "en": "This is the blueprint(s) to modify.",
     "es": "Este es una planificación para modificar.",
     "pt-br": "Isto é um planejamento para modificar.",
-    "fr": "Le(s) planificateu(s) à modifier.",
+    "fr": "Le(s) planificateur(s) à modifier.",
     "it": "Progetto(i) da modificare.",
     "de": "Diese Blaupause wird verändert."
   },
@@ -564,7 +564,7 @@
     "en": "Wall Space",
     "es": "Espacio de las Paredes",
     "pt-br": "Espaço entre as Paredes",
-    "fr": "Espace entre les murs",
+    "fr": "Marge intérieure",
     "it": "Spazio dalla muraglia",
     "de": "Mauerabstand"
   },
@@ -572,7 +572,7 @@
     "en": "Distance between edge of outpost and walls. Minimum 3 to support laser turrets.",
     "es": "Distancia entre el bordes de lo posto y las paredes. Mínimo 3 para soportar torretas láser.",
     "pt-br": "Distância entre as bordas do posto e as paredes. Mínimo 3 para suportar turretas laser.",
-    "fr": "Distance entre la bordure de l'avant-poste de minage et les murs. Minimum 3 si les tourelles sont activées.",
+    "fr": "Distance entre la limite des mineurs et la limite du planificateur. Minimum 3 si les tourelles sont activées.",
     "it": "Distanza fra il bordo dell'avamposto e la muraglia. Minimo 3 per la compatibilità con le torrette laser.",
     "de": "Abstand zwischen der Kante des Außenposten und den Mauern. Mindestens 3 um Lasergeschütztürme zu nutzen."
   },
@@ -806,7 +806,7 @@
     "en": "Only include entities in the blueprint that were modified",
     "es": "Solo inclui entidades en el planificación que fueron modificadas",
     "pt-br": "Só inclúi entidades no planejamento que foram modificadas",
-    "fr": "Inclus dans la chaîne de planificateur les entitées qui ont été modifiées",
+    "fr": "Inclus dans la chaîne de planificateur seulement les entitées qui ont été modifiées",
     "it": "Includi solo le entità del progetto che sono state modificate",
     "de": "Nur Entitäten in der Blaupause zurückgeben welche verändert wurden."
   }
