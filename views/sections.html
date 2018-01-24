@@ -1,0 +1,16 @@
+<% include header.html %>
+
+<legend><h4><%- title %></h4></legend>
+<div style='margin-left: 20px;'>
+    <p><b>Click on any picture to enlarge it in a new tab</b></p>
+    <%
+    sections.forEach((e, i) => {
+    %>
+        <div>
+            <legend><%- "Step " + (i+1) +": " + e.title %></legend>
+            <% if(e.image) { %><a target='_blank' href='<%- e.image %>'><img src='<%- e.image %>' alt='<%- "Step " + i %>' style='width: 720px;' /></a><% } %>
+            <p><%- e.text %></p>
+            <% if(e.link) { %><a href='<%- e.link[1] %>'><%- e.link[0] %></a><% } %>
+        </div>
+    <% }); %>
+</div>
