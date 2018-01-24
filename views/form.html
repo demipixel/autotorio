@@ -28,9 +28,12 @@ var generator = window.<%= generatorName %>;
         <% } else if (e.type == 'select') { %>
 
         <select class="form-control" name="<%= e.name %>" id="<%= e.name %>">
-          <% e.options.forEach((o, i) => { %>
-          <option <%- e.default == i ? 'selected="selected"' : '' %> value="<%= o %>"><%= o %></option>
-          <% }) %>
+          <% e.options.forEach((o, i) => { 
+            if(typeof o === 'string') { %>
+            <option <%- e.default==i ? 'selected="selected"' : '' %> value="<%= o %>"><%= o %></option>
+          <% } else { %>
+            <option <%- e.default == i ? 'selected="selected"' : '' %> value="<%= o[0] %>"><%= o[1] %></option>
+          <% }}) %>
         </select>
 
         <% } else if (e.type == 'radio') { %>
@@ -84,7 +87,7 @@ var generator = window.<%= generatorName %>;
       <div class="col-lg-10 col-lg-offset-2">
         <!-- <button type="reset" class="btn btn-default">Cancel</button> -->
         <button type="submit" class="btn btn-primary"><%= submitButton %></button>
-         <button type="button" style="margin-left: 10px;" onClick="getSettingsURL()" class="btn btn-info">Get Settings URL</button>
+         <button type="button" style="margin-left: 10px;" onClick="getSettingsURL()" class="btn btn-info"><%- settingsUrlButton %></button>
       </div>
     </div>
   </fieldset>

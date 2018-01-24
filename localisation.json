@@ -28,7 +28,7 @@
       "en": "Donate",
       "es": "Donar",
       "pt-br": "Doar",
-      "fr": "Donate",
+      "fr": "Don",
       "it": "Dona",
       "de": "Spenden"
     },
@@ -40,6 +40,95 @@
       "it": "Github",
       "de": "Github"
     }
+  },
+
+  "entities": {
+    "gun_turrets": {
+      "en": "Gun Turrets",
+      "fr": "Tourelles mitrailleuses"
+    },
+    "laser_turrets": {
+      "en": "Laser Turrets",
+      "fr": "Tourelles laser"
+    },
+
+    "transport_belt": {
+      "en": "Transport Belt",
+      "fr": "Convoyeur"
+    },
+    "fast_transport_belt": {
+      "en": "Fast Transport Belt",
+      "fr": "Convoyeur rapide"
+    },
+    "express_transport_belt": {
+      "en": "Express Transport Belt",
+      "fr": "Convoyeur express"
+    },
+    
+    "stone_path": {
+      "en": "Stone Path",
+      "fr": "Briques"
+    },
+    "concrete": {
+      "en": "Concrete",
+      "fr": "Béton"
+    },
+    "hazard_concrete_left": {
+      "en": "Hazard Concrete Left",
+      "fr": "Zone de danger (Gauche)"
+    },
+    "hazard_concrete_right": {
+      "en": "Hazard Concrete Right",
+      "fr": "Zone de danger (Droite)"
+    },
+
+    "speed_module": {
+      "en": "Speed Module",
+      "fr": "Module de vitesse"
+    },
+    "effectivity_module": {
+      "en": "Effectivity Module",
+      "fr": "Module de d'efficacité"
+    },
+    "productivity_module": {
+      "en": "Productivity Module",
+      "fr": "Module de production"
+    }
+  },
+
+  "none": {
+    "en": "None",
+    "fr": "Aucun(e)"
+  },
+
+  "right": {
+    "en": "Right",
+    "fr": "Droite"
+  },
+
+  "bottom": {
+    "en": "Bottom",
+    "fr": "Bas"
+  },
+
+  "down": {
+    "en": "Down",
+    "fr": "Bas"
+  },
+
+  "left": {
+    "en": "Left",
+    "fr": "Gauche"
+  },
+
+  "top": {
+    "en": "Top",
+    "fr": "Haut"
+  },
+
+  "up": {
+    "en": "Up",
+    "fr": "Haut"
   },
 
   "blueprint_tool": {
@@ -68,6 +157,12 @@
     "it": "Ottieni avamposto di minerali",
     "de": "Erz Außenposten Blaupause erstellen"
   },
+
+  "submit_oil_outpost": {
+    "en": "Get Oil Outpost Blueprint",
+    "fr": "Obtenir le planificateur d'avant-poste de pétrole"
+  },
+
   "submit_blueprint": {
     "en": "Get Blueprint",
     "es": "Obtener Planificación",
@@ -75,6 +170,11 @@
     "fr": "Obtenir le planificateur",
     "it": "Ottieni progetto",
     "de": "Blaupause erzeugen"
+  },
+
+  "settings_url": {
+    "en": "Get settings URL",
+    "fr": "Obtenir l'URL des paramètres"
   },
 
   "blueprint_string": {
@@ -121,7 +221,7 @@
     "en": "This is the blueprint(s) to modify.",
     "es": "Este es una planificación para modificar.",
     "pt-br": "Isto é um planejamento para modificar.",
-    "fr": "Le(s) planificateu(s) à modifier.",
+    "fr": "Le(s) planificateur(s) à modifier.",
     "it": "Progetto(i) da modificare.",
     "de": "Diese Blaupause wird verändert."
   },
@@ -464,7 +564,7 @@
     "en": "Wall Space",
     "es": "Espacio de las Paredes",
     "pt-br": "Espaço entre as Paredes",
-    "fr": "Espace entre les murs",
+    "fr": "Marge intérieure",
     "it": "Spazio dalla muraglia",
     "de": "Mauerabstand"
   },
@@ -472,7 +572,7 @@
     "en": "Distance between edge of outpost and walls. Minimum 3 to support laser turrets.",
     "es": "Distancia entre el bordes de lo posto y las paredes. Mínimo 3 para soportar torretas láser.",
     "pt-br": "Distância entre as bordas do posto e as paredes. Mínimo 3 para suportar turretas laser.",
-    "fr": "Distance entre la bordure de l'avant-poste de minage et les murs. Minimum 3 si les tourelles sont activées.",
+    "fr": "Distance entre la limite des mineurs et la limite du planificateur. Minimum 3 si les tourelles sont activées.",
     "it": "Distanza fra il bordo dell'avamposto e la muraglia. Minimo 3 per la compatibilità con le torrette laser.",
     "de": "Abstand zwischen der Kante des Außenposten und den Mauern. Mindestens 3 um Lasergeschütztürme zu nutzen."
   },
@@ -706,7 +806,7 @@
     "en": "Only include entities in the blueprint that were modified",
     "es": "Solo inclui entidades en el planificación que fueron modificadas",
     "pt-br": "Só inclúi entidades no planejamento que foram modificadas",
-    "fr": "Inclus dans la chaîne de planificateur les entitées qui ont été modifiées",
+    "fr": "Inclus dans la chaîne de planificateur seulement les entitées qui ont été modifiées",
     "it": "Includi solo le entità del progetto che sono state modificate",
     "de": "Nur Entitäten in der Blaupause zurückgeben welche verändert wurden."
   }

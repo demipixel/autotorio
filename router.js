@@ -35,7 +35,7 @@ fs.readdir('./assets/img/factorio-icons/', (err, files) => {
 function getNavbarLocalisation(lng) {
   const ret = {};
   Object.keys(localisation.navbar).forEach(key => {
-    ret[key] = localisation.navbar[key][lng];
+    ret[key] = localisation.navbar[key].hasOwnProperty(lng) ? localisation.navbar[key][lng] : localisation.navbar[key]["en"];
   });
   return ret;
 }
@@ -52,7 +52,9 @@ module.exports = function(app) {
 
   app.get('/outpost', (req, res) => {
     const lng = req.cookies.language || 'en';
-    const lcl = (name) => localisation[name][lng];
+
+    const lcl = (name) => localisation.hasOwnProperty(name) ? (localisation[name].hasOwnProperty(lng) ? localisation[name][lng] : localisation[name]["en"]) : "";
+    const ent_lcl = (entity) => localisation.entities.hasOwnProperty(entity) ? (localisation.entities[entity].hasOwnProperty(lng) ? localisation.entities[entity][lng] : localisation.entities[entity]["en"]) : "";
 
     res.render('form.html', {
       page: 'outpost',
@@ -60,6 +62,7 @@ module.exports = function(app) {
       generatorName: 'generateOutpost',
       exampleUsage: 'https://gfycat.com/VioletPoliteHomalocephale',
       submitButton: lcl('submit_ore_outpost'),
+      settingsUrlButton: lcl('settings_url'),
       selections: {},
       navbar_lcl: getNavbarLocalisation(lng),
       formElements: [
@@ -82,7 +85,7 @@ module.exports = function(app) {
           type: 'select',
           name: 'belt_type',
           title: lcl('belt_type'),
-          options: ['Transport Belt', 'Fast Transport Belt', 'Express Transport Belt'],
+          options: [['', ent_lcl('transport_belt')], ['fast', ent_lcl('fast_transport_belt')], ['express', ent_lcl('express_transport_belt')]],
           default: 2,
           checkbox: {
             name: 'undergroundBelts',
@@ -109,13 +112,13 @@ module.exports = function(app) {
           type: 'select',
           name: 'trainSide',
           title: lcl('train_station_side'),
-          options: ['Right', 'Left', 'Top', 'Bottom']
+          options: [[1, lcl('right')], [3, lcl('left')], [0, lcl('top')], [2, lcl('bottom')]]
         },
         {
           type: 'select',
           name: 'trainDirection',
           title: lcl('train_enter_from'),
-          options: ['Bottom', 'Top', 'Right', 'Left']
+          options: [[2, lcl('bottom')], [0, lcl('top')], [1, lcl('right')], [3, lcl('left')]]
         },
         {
           type: 'select',
@@ -137,7 +140,9 @@ module.exports = function(app) {
           type: 'select',
           name: 'module',
           title: lcl('modules'),
-          options: ['None', 'Speed Module', 'Speed Module 2', 'Speed Module 3', 'Effectivity Module', 'Effectivity Module 2', 'Effectivity Module 3', 'Productivity Module', 'Productivity Module 2', 'Productivity Module 3'],
+          options: [['None', lcl('none')], ['Speed Module', ent_lcl('speed_module')], ['Speed Module 2', ent_lcl('speed_module') + ' 2'], ['Speed Module 3', ent_lcl('speed_module') + ' 3'], 
+            ['Effectivity Module', ent_lcl('effectivity_module')], ['Effectivity Module 2', ent_lcl('effectivity_module') + ' 2'], ['Effectivity Module 3', ent_lcl('effectivity_module') + ' 3'], 
+            ['Productivity Module', ent_lcl('productivity_module')], ['Productivity Module 2', ent_lcl('productivity_module') + ' 2'], ['Productivity Module 3', ent_lcl('productivity_module') + ' 3']],
           info: lcl('modules_info')
         },
         {
@@ -223,7 +228,7 @@ module.exports = function(app) {
           type: 'select',
           name: 'turretType',
           title: lcl('turret_type'),
-          options: ['None', 'Gun Turrets', 'Laser Turrets'],
+          options: [['none', lcl('none')], ['gun_turrets', ent_lcl('gun_turrets')], ['laser_turrets', ent_lcl('laser_turrets')]],
           default: 2
         },
         {
@@ -315,7 +320,7 @@ module.exports = function(app) {
           type: 'select',
           name: 'concrete',
           title: lcl('tiles'),
-          options: ['None', 'Stone Path', 'Concrete', 'Hazard Concrete Left', 'Hazard Concrete Right'],
+          options: [['', lcl('none')], ['stone_path', ent_lcl('stone_path')], ['concrete', ent_lcl('concrete')], ['hazard_concrete_left', ent_lcl('hazard_concrete_left')], ['hazard_concrete_right', ent_lcl('hazard_concrete_right')]],
           info: lcl('tiles_info')
         },
         {
@@ -330,7 +335,7 @@ module.exports = function(app) {
           type: 'select',
           name: 'borderConcrete',
           title: lcl('border_tiles'),
-          options: ['None', 'Stone Path', 'Concrete', 'Hazard Concrete Left', 'Hazard Concrete Right'],
+          options: [['', lcl('none')], ['stone_path', ent_lcl('stone_path')], ['concrete', ent_lcl('concrete')], ['hazard_concrete_left', ent_lcl('hazard_concrete_left')], ['hazard_concrete_right', ent_lcl('hazard_concrete_right')]],
           info: lcl('border_tiles_info')
         },
         {
@@ -345,7 +350,7 @@ module.exports = function(app) {
           type: 'select',
           name: 'trackConcrete',
           title: lcl('track_tiles'),
-          options: ['None', 'Stone Path', 'Concrete', 'Hazard Concrete Left', 'Hazard Concrete Right'],
+          options: [['', lcl('none')], ['stone_path', ent_lcl('stone_path')], ['concrete', ent_lcl('concrete')], ['hazard_concrete_left', ent_lcl('hazard_concrete_left')], ['hazard_concrete_right', ent_lcl('hazard_concrete_right')]],
           info: lcl('track_tiles_info')
         },
         {
@@ -363,7 +368,9 @@ module.exports = function(app) {
   app.get('/blueprint', (req, res) => {
     const ENTITY_REPLACER_DEFAULT = 'inserter,fast-inserter includes:transport-belt,express-transport-belt includes:underground-belt,express-underground-belt includes:splitter,express-splitter small-electric-pole,medium-electric-pole';
     const lng = req.cookies.language || 'en';
-    const lcl = (name) => localisation[name][lng];
+    
+    const lcl = (name) => localisation.hasOwnProperty(name) ? (localisation[name].hasOwnProperty(lng) ? localisation[name][lng] : localisation[name]["en"]) : "";
+    const ent_lcl = (entity) => localisation.entities.hasOwnProperty(entity) ? (localisation.entities[entity].hasOwnProperty(lng) ? localisation.entities[entity][lng] : localisation.entities[entity]["en"]) : "";
 
     res.render('form.html', {
       page: 'blueprint',
@@ -371,6 +378,7 @@ module.exports = function(app) {
       generatorName: 'blueprintTool',
       exampleUsage: '',
       submitButton: lcl('submit_blueprint'),
+      settingsUrlButton: lcl('settings_url'),
       navbar_lcl: getNavbarLocalisation(lng),
       selections: {
         entities: factorioItems,
@@ -486,14 +494,17 @@ module.exports = function(app) {
 
   app.get('/oil', (req, res) => {
     const lng = req.cookies.language || 'en';
-    const lcl = (name) => localisation[name][lng];
+
+    const lcl = (name) => localisation.hasOwnProperty(name) ? (localisation[name].hasOwnProperty(lng) ? localisation[name][lng] : localisation[name]["en"]) : "";
+    const ent_lcl = (entity) => localisation.entities.hasOwnProperty(entity) ? (localisation.entities[entity].hasOwnProperty(lng) ? localisation.entities[entity][lng] : localisation.entities[entity]["en"]) : "";
 
     res.render('form.html', {
       page: 'oil',
       title: 'Oil Outpost Generator',
       generatorName: 'generateOilOutpost',
       exampleUsage: 'https://gfycat.com/PeskyPeskyGreendarnerdragonfly',
-      submitButton: 'Get Oil Outpost Blueprint',
+      submitButton: lcl('submit_oil_outpost'),
+      settingsUrlButton: lcl('settings_url'),
       selections: {},
       navbar_lcl: getNavbarLocalisation(lng),
       formElements: [
@@ -516,19 +527,21 @@ module.exports = function(app) {
           type: 'select',
           name: 'trainSide',
           title: lcl('train_station_side'),
-          options: ['Right', 'Left', 'Top', 'Bottom']
+          options: [[1, lcl('right')], [3, lcl('left')], [0, lcl('top')], [2, lcl('bottom')]]
         },
         {
           type: 'select',
           name: 'trainDirection',
           title: lcl('train_enter_from'),
-          options: ['Bottom', 'Top', 'Right', 'Left']
+          options: [[2, lcl('bottom')], [0, lcl('top')], [1, lcl('right')], [3, lcl('left')]]
         },
         {
           type: 'select',
           name: 'module',
           title: lcl('modules'),
-          options: ['None', 'Speed Module', 'Speed Module 2', 'Speed Module 3', 'Effectivity Module', 'Effectivity Module 2', 'Effectivity Module 3', 'Productivity Module', 'Productivity Module 2', 'Productivity Module 3'],
+          options: [['None', lcl('none')], ['Speed Module', ent_lcl('speed_module')], ['Speed Module 2', ent_lcl('speed_module') + ' 2'], ['Speed Module 3', ent_lcl('speed_module') + ' 3'],
+            ['Effectivity Module', ent_lcl('effectivity_module')], ['Effectivity Module 2', ent_lcl('effectivity_module') + ' 2'], ['Effectivity Module 3', ent_lcl('effectivity_module') + ' 3'],
+            ['Productivity Module', ent_lcl('productivity_module')], ['Productivity Module 2', ent_lcl('productivity_module') + ' 2'], ['Productivity Module 3', ent_lcl('productivity_module') + ' 3']],
           info: lcl('oil_modules_info')
         },
         {
@@ -555,7 +568,7 @@ module.exports = function(app) {
           type: 'select',
           name: 'turretType',
           title: lcl('turret_type'),
-          options: ['None', 'Gun Turrets', 'Laser Turrets'],
+          options: [['none', lcl('none')], ['gun_turrets', ent_lcl('gun_turrets')], ['laser_turrets', ent_lcl('laser_turrets')]],
           default: 2
         },
         {
@@ -658,7 +671,7 @@ module.exports = function(app) {
           type: 'select',
           name: 'concrete',
           title: lcl('tiles'),
-          options: ['None', 'Stone Path', 'Concrete', 'Hazard Concrete Left', 'Hazard Concrete Right'],
+          options: [['', lcl('none')], ['stone_path', ent_lcl('stone_path')], ['concrete', ent_lcl('concrete')], ['hazard_concrete_left', ent_lcl('hazard_concrete_left')], ['hazard_concrete_right', ent_lcl('hazard_concrete_right')]],
           info: 'Covers the entire area surrounded by the walls in the specified tile type.'
         },
         {
@@ -673,7 +686,7 @@ module.exports = function(app) {
           type: 'select',
           name: 'borderConcrete',
           title: lcl('border_tiles'),
-          options: ['None', 'Stone Path', 'Concrete', 'Hazard Concrete Left', 'Hazard Concrete Right'],
+          options: [['', lcl('none')], ['stone_path', ent_lcl('stone_path')], ['concrete', ent_lcl('concrete')], ['hazard_concrete_left', ent_lcl('hazard_concrete_left')], ['hazard_concrete_right', ent_lcl('hazard_concrete_right')]],
           info: lcl('border_tiles_info')
         },
         {
@@ -688,7 +701,7 @@ module.exports = function(app) {
           type: 'select',
           name: 'trackConcrete',
           title: lcl('track_tiles'),
-          options: ['None', 'Stone Path', 'Concrete', 'Hazard Concrete Left', 'Hazard Concrete Right'],
+          options: [['', lcl('none')], ['stone_path', ent_lcl('stone_path')], ['concrete', ent_lcl('concrete')], ['hazard_concrete_left', ent_lcl('hazard_concrete_left')], ['hazard_concrete_right', ent_lcl('hazard_concrete_right')]],
           info: lcl('track_tiles_info')
         },
         {

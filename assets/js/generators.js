@@ -1,31 +1,5 @@
 
-var CONVERT_BELT_NAME = {
-  'Transport Belt': '',
-  'Fast Transport Belt': 'fast',
-  'Express Transport Belt': 'express'
-};
-
-var CONVERT_DIRECTIONS = {
-  Up: 0,
-  Top: 0,
-
-  Right: 1,
-
-  Down: 2,
-  Bottom: 2,
-
-  Left: 3
-};
-
-var CONVERT_TILE = {
-  'None': '',
-  'Stone Path': 'stone_path',
-  'Concrete': 'concrete',
-  'Hazard Concrete Left': 'hazard_concrete_left',
-  'Hazard Concrete Right': 'hazard_concrete_right'
-};
-
-const DONATORS = ['phono\'s', 'Goopsky\'s', 'Fahr', 'Dwarf\'s Foundry', 'Tupper\'s', 'Schorty\'s', 'nerdkusi\'s', 'KrzysD\'s', 'Geo\'s', 'Brodo\'s', 'gigajum\'s', 'Autotorio Approved™']; // Okay, last one wasn't technically created by a donator...
+const DONATORS = ['phono\'s', 'Goopsky\'s', 'Fahr', 'Dwarf\'s Foundry', 'Tupper\'s', 'Schorty\'s', 'nerdkusi\'s', 'KrzysD\'s', 'Geo\'s', 'Brodo\'s', 'gigajum\'s', 'Tom\'s', 'Autotorio Approved™']; // Okay, last one wasn't technically created by a donator...
 
 function generateOutpost(form) {
   var opt = {};
@@ -33,9 +7,9 @@ function generateOutpost(form) {
     opt[key] = form[key];
   });
 
-  opt.beltName = (opt.modded && opt.custom_belt_type) || CONVERT_BELT_NAME[opt.belt_type];
-  opt.trainSide = CONVERT_DIRECTIONS[opt.trainSide];
-  opt.trainDirection = CONVERT_DIRECTIONS[opt.trainDirection];
+  opt.beltName = (opt.modded && opt.custom_belt_type) || opt.belt_type;
+  opt.trainSide = opt.trainSide;
+  opt.trainDirection = opt.trainDirection;
 
   opt.module = (opt.modded && opt.customModule) || opt.module != 'None' ? ((opt.modded && opt.customModule) || opt.module).split(' ').join('_').toLowerCase() : null;
 
@@ -52,9 +26,9 @@ function generateOutpost(form) {
   opt.turrets = opt.turretType != 'None';
   opt.laserTurrets = opt.turretType == 'Laser Turrets';
 
-  opt.concrete = (opt.modded && opt.customConcrete) || CONVERT_TILE[opt.concrete];
-  opt.borderConcrete = (opt.modded && opt.customBorderConcrete) || CONVERT_TILE[opt.borderConcrete];
-  opt.trackConcrete = (opt.modded && opt.customTrackConcrete) || CONVERT_TILE[opt.trackConcrete];
+  opt.concrete = (opt.modded && opt.customConcrete) || opt.concrete;
+  opt.borderConcrete = (opt.modded && opt.customBorderConcrete) || opt.borderConcrete;
+  opt.trackConcrete = (opt.modded && opt.customTrackConcrete) || opt.trackConcrete;
 
   opt.name = DONATORS[Math.floor(Math.random()*DONATORS.length)]+' Outpost - %drills% Drills';
 
@@ -67,8 +41,8 @@ function generateOilOutpost(form) {
     opt[key] = form[key];
   });
 
-  opt.trainSide = CONVERT_DIRECTIONS[opt.trainSide];
-  opt.trainDirection = CONVERT_DIRECTIONS[opt.trainDirection];
+  opt.trainSide = opt.trainSide;
+  opt.trainDirection = opt.trainDirection;
 
   opt.module = (opt.modded && opt.customModule) || opt.module != 'None' ? ((opt.modded && customModule) || opt.module).split(' ').join('_').toLowerCase() : null;
   opt.includeRadar = opt.includeRadar == 'on';
@@ -80,9 +54,9 @@ function generateOilOutpost(form) {
   opt.laserTurrets = opt.turretType == 'Laser Turrets';
   opt.walls = opt.walls == 'on';
 
-  opt.concrete = (opt.modded && opt.customConcrete) || CONVERT_TILE[opt.concrete];
-  opt.borderConcrete = (opt.modded && opt.customBorderConcrete) || CONVERT_TILE[opt.borderConcrete];
-  opt.trackConcrete = (opt.modded && opt.customTrackConcrete) || CONVERT_TILE[opt.trackConcrete];
+  opt.concrete = (opt.modded && opt.customConcrete) || opt.concrete;
+  opt.borderConcrete = (opt.modded && opt.customBorderConcrete) || opt.borderConcrete;
+  opt.trackConcrete = (opt.modded && opt.customTrackConcrete) || opt.trackConcrete;
 
   opt.name = DONATORS[Math.floor(Math.random()*DONATORS.length)]+'\'s Outpost - %pumpjacks% Pumpjacks';
 
