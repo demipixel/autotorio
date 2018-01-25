@@ -45,90 +45,109 @@
   "entities": {
     "gun_turrets": {
       "en": "Gun Turrets",
-      "fr": "Tourelles mitrailleuses"
+      "fr": "Tourelles mitrailleuses",
+      "de": "Geschütztürme"
     },
     "laser_turrets": {
       "en": "Laser Turrets",
-      "fr": "Tourelles laser"
+      "fr": "Tourelles laser",
+      "de": "Lasergeschütz"
     },
 
     "transport_belt": {
       "en": "Transport Belt",
-      "fr": "Convoyeur"
+      "fr": "Convoyeur",
+      "de": "Fleißband"
     },
     "fast_transport_belt": {
       "en": "Fast Transport Belt",
-      "fr": "Convoyeur rapide"
+      "fr": "Convoyeur rapide",
+      "de": "schnelles Fleißband"
     },
     "express_transport_belt": {
       "en": "Express Transport Belt",
-      "fr": "Convoyeur express"
+      "fr": "Convoyeur express",
+      "de": "Express-Fleißband"
     },
     
     "stone_path": {
       "en": "Stone Path",
-      "fr": "Briques"
+      "fr": "Briques",
+      "de": "Steinweg"
     },
     "concrete": {
       "en": "Concrete",
-      "fr": "Béton"
+      "fr": "Béton",
+      "de": "Beton"
     },
     "hazard_concrete_left": {
       "en": "Hazard Concrete Left",
-      "fr": "Zone de danger (Gauche)"
+      "fr": "Zone de danger (Gauche)",
+      "de": "Beton mit Gefahrenmarkierung (Links)"
     },
     "hazard_concrete_right": {
       "en": "Hazard Concrete Right",
-      "fr": "Zone de danger (Droite)"
+      "fr": "Zone de danger (Droite)",
+      "de": "Beton mit Gefahrenmarkierung (Rechts)"
     },
 
     "speed_module": {
       "en": "Speed Module",
-      "fr": "Module de vitesse"
+      "fr": "Module de vitesse",
+      "de": "Geschwindigkeitsmodul"
     },
     "effectivity_module": {
       "en": "Effectivity Module",
-      "fr": "Module de d'efficacité"
+      "fr": "Module de d'efficacité",
+      "de": "Effektivitätsmodul"
     },
     "productivity_module": {
       "en": "Productivity Module",
-      "fr": "Module de production"
+      "fr": "Module de production",
+      "de": "Produktivitätsmodul"
     }
   },
 
   "none": {
     "en": "None",
-    "fr": "Aucun(e)"
+    "fr": "Aucun(e)",
+    "de": "Nichts"
   },
 
   "right": {
     "en": "Right",
-    "fr": "Droite"
+    "fr": "Droite",
+    "de": "Rechts"
   },
 
   "bottom": {
     "en": "Bottom",
-    "fr": "Bas"
+    "fr": "Bas",
+    "de": "Unten"
   },
 
   "down": {
     "en": "Down",
-    "fr": "Bas"
+    "fr": "Bas",
+    "de": "Unten"
   },
 
   "left": {
     "en": "Left",
-    "fr": "Gauche"
+    "fr": "Gauche",
+    "de": "Links"
   },
 
   "top": {
     "en": "Top",
-    "fr": "Haut"
+    "fr": "Haut",
+    "de": "Oben"
   },
 
   "up": {
     "en": "Up",
-    "fr": "Haut"
+    "fr": "Haut",
+    "de": "Oben"
   },
 
   "blueprint_tool": {
@@ -160,7 +179,8 @@
 
   "submit_oil_outpost": {
     "en": "Get Oil Outpost Blueprint",
-    "fr": "Obtenir le planificateur d'avant-poste de pétrole"
+    "fr": "Obtenir le planificateur d'avant-poste de pétrole",
+    "de": "Öl Außenposten Blaupause erstellen"
   },
 
   "submit_blueprint": {
@@ -174,7 +194,8 @@
 
   "settings_url": {
     "en": "Get settings URL",
-    "fr": "Obtenir l'URL des paramètres"
+    "fr": "Obtenir l'URL des paramètres",
+    "de": "URL mit Einstellungen anzeigen"
   },
 
   "blueprint_string": {
@@ -665,7 +686,7 @@
     "pt-br": "Piso",
     "fr": "Sols",
     "it": "Mattonelle",
-    "de": "Bodenfließen"
+    "de": "Bodenfliesen"
   },
   "tiles_info": {
     "en": "Covers the entire area surrounded by the walls in the specified tile type.",
@@ -698,7 +719,7 @@
     "pt-br": "Piso de Borda",
     "fr": "Sols des bordures",
     "it": "Mattonelle dei bordi",
-    "de": "Randfliesen"
+    "de": "Fliesen am Rand"
   },
   "border_tiles_info": {
     "en": "Covers the walls and tile inside with the specified tile type.",
@@ -723,7 +744,7 @@
     "pt-br": "Piso dos Trilhos",
     "fr": "Sol des rails",
     "it": "Mattonella del tracciato",
-    "de": "Gleisfliesen"
+    "de": "Fliesen unter Gleisen"
   },
   "track_tiles_info": {
     "en": "Covers and surrounds tracks with the specified tile type.",
