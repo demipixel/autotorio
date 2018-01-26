@@ -23,8 +23,8 @@ function generateOutpost(form) {
   opt.exitRoute = opt.exitRoute == 'on';
   opt.requestItem = (opt.modded && opt.customRequestItem) || (opt.requestItem || '').split(' ').join('_').toLowerCase();
 
-  opt.turrets = opt.turretType != 'None';
-  opt.laserTurrets = opt.turretType == 'Laser Turrets';
+  opt.turrets = opt.turretType != 'none';
+  opt.laserTurrets = opt.turretType == 'laser_turrets';
 
   opt.concrete = (opt.modded && opt.customConcrete) || opt.concrete;
   opt.borderConcrete = (opt.modded && opt.customBorderConcrete) || opt.borderConcrete;
