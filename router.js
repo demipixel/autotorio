@@ -60,7 +60,7 @@ module.exports = function(app) {
       page: 'outpost',
       title: lcl('ore_outpost_generator'),
       generatorName: 'generateOutpost',
-      exampleUsage: 'https://gfycat.com/VioletPoliteHomalocephale',
+      exampleUsage: '/example/outpost',
       submitButton: lcl('submit_ore_outpost'),
       settingsUrlButton: lcl('settings_url'),
       selections: {},
@@ -502,7 +502,7 @@ module.exports = function(app) {
       page: 'oil',
       title: 'Oil Outpost Generator',
       generatorName: 'generateOilOutpost',
-      exampleUsage: 'https://gfycat.com/PeskyPeskyGreendarnerdragonfly',
+      exampleUsage: '/example/oil',
       submitButton: lcl('submit_oil_outpost'),
       settingsUrlButton: lcl('settings_url'),
       selections: {},
@@ -712,6 +712,83 @@ module.exports = function(app) {
           info: lcl('custom_tiles_info'),
           activate: 'mod'
         },
+      ]
+    });
+  });
+
+  app.get('/example/outpost', (req, res) => {
+    const lng = req.cookies.language || 'en';
+
+    const lcl = (name) => localisation.hasOwnProperty(name) ? (localisation[name].hasOwnProperty(lng) ? localisation[name][lng] : localisation[name]["en"]) : "";
+    const ent_lcl = (entity) => localisation.entities.hasOwnProperty(entity) ? (localisation.entities[entity].hasOwnProperty(lng) ? localisation.entities[entity][lng] : localisation.entities[entity]["en"]) : "";
+
+    res.render('sections.html', {
+      page: 'example',
+      title: 'Ore Outpost Example Usage',
+      exampleUsage: '',
+      navbar_lcl: getNavbarLocalisation(lng),
+      sections: [
+        {
+          title: 'Create a blueprint',
+          text: 'Place 2 walls at the corners of the ore patch.<br/>Take a new blueprint and select your 2 walls. Then, click on Export to string and copy the string into the textbox on the website.',
+          image: 'https://puu.sh/z8BiA/3688fa38bf.gif'
+        },
+        {
+          title: 'Fill in the form',
+          text: 'Select all of the options you want, like the position of the train station, belts...<br/>Turrets and walls can be useful if your ore patch is far from your base.',
+          image: 'https://puu.sh/z8Bsr/9e9371e376.gif'
+        },
+        {
+          title: 'Prepare your balancer',
+          text: 'If your number of cargo wagons is 1, 2 or 4, you can skip this step.<br/>Else you need to create a balancer blueprint.',
+          link: ['Create a balancer blueprint', '/example/balancerBlueprint']
+        },
+        {
+          title: 'Generate your outpost',
+          text: 'Now, you can click on Get Ore Outpost Blueprint. It will give you a string to use in Factorio, copy it.<br/>If you want to save your settings for a other use, you can click on Get Settings URL. It will give you an URL. When you will load it, the website will set all of his settings as you selected them.',
+          image: 'https://puu.sh/z8BuB/533ede1945.gif'
+        },
+        {
+          title: 'Import the blueprint in Factorio',
+          text: 'Now, you have your copied blueprint string. Open the Blueprint Library in Factorio and then click on Import string.<br/>In the textbox, paste the blueprint string and click on Import. It will give you a blueprint that you can place on your ore patch. Don\'t forget to remove your 2 walls.',
+          image: 'https://puu.sh/z8BA4/98bf879ecc.gif'
+        }
+      ]
+    });
+  });
+
+  app.get('/example/oil', (req, res) => {
+    const lng = req.cookies.language || 'en';
+
+    const lcl = (name) => localisation.hasOwnProperty(name) ? (localisation[name].hasOwnProperty(lng) ? localisation[name][lng] : localisation[name]["en"]) : "";
+    const ent_lcl = (entity) => localisation.entities.hasOwnProperty(entity) ? (localisation.entities[entity].hasOwnProperty(lng) ? localisation.entities[entity][lng] : localisation.entities[entity]["en"]) : "";
+
+    res.render('sections.html', {
+      page: 'example',
+      title: 'Oil Outpost Example Usage',
+      exampleUsage: '',
+      navbar_lcl: getNavbarLocalisation(lng),
+      sections: [
+        {
+          title: 'Create a blueprint',
+          text: 'Place your pumpjacks and a single track anywhere.<br/>Create a blueprint with the pumjacks and the track, then, click on Export to string and copy the string into the textbox on the website.',
+          image: 'https://puu.sh/z8BTs/5e1c054e30.gif'
+        },
+        {
+          title: 'Fill in the form',
+          text: 'Select all of the options you want, like the position of the train station, radar...<br/>Turrets and walls can be useful if your pumpjacks are far from your base.',
+          image: 'https://puu.sh/z8BXY/503f3c2567.gif'
+        },
+        {
+          title: 'Generate your outpost',
+          text: 'Now, you can click on Get Oil Outpost Blueprint. It will give you a string to use in Factorio, copy it.<br/>If you want to save your settings for a other use, you can click on Get Settings URL. It will give you an URL. When you will load it, the website will set all of his settings as you selected them.',
+          image: 'https://puu.sh/z8C0A/7a6c29f238.gif'
+        },
+        {
+          title: 'Import the blueprint in Factorio',
+          text: 'Now, you have your copied blueprint string. Open the Blueprint Library in Factorio and then click on Import string.<br/>In the textbox, paste the blueprint string and click on Import. It will give you a blueprint that you can place.',
+          image: 'https://puu.sh/z8C3G/4917376c36.gif'
+        }
       ]
     });
   });
