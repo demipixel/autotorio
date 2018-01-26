@@ -9,7 +9,7 @@ var generator = window.<%= generatorName %>;
 
 </script>
 
-<% if (exampleUsage) { %> <h4><a href="<%- exampleUsage %>">Example Usage</a></h4> <% } %>
+<% if (howToUse) { %> <h4><a href="<%- howToUse %>">How To Use</a></h4> <% } %>
 
 <form class="form-horizontal" onsubmit="submitForm(this); return false;">
   <fieldset>
@@ -28,7 +28,7 @@ var generator = window.<%= generatorName %>;
         <% } else if (e.type == 'select') { %>
 
         <select class="form-control" name="<%= e.name %>" id="<%= e.name %>">
-          <% e.options.forEach((o, i) => { 
+          <% e.options.forEach((o, i) => {
             if(typeof o === 'string') { %>
             <option <%- e.default==i ? 'selected="selected"' : '' %> value="<%= o %>"><%= o %></option>
           <% } else { %>
@@ -81,7 +81,7 @@ var generator = window.<%= generatorName %>;
         </div>
       </div>
       <% }) %>
-      
+
     </div>
     <div class="form-group">
       <div class="col-lg-10 col-lg-offset-2">
