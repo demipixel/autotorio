@@ -291,6 +291,14 @@ module.exports = function(app) {
           activate: 'trainStation'
         },
         {
+          title: lcl('double_loading'),
+          checkbox: {
+            name: 'doubleLoading',
+            info: lcl('double_loading_info')
+          },
+          activate: 'trainStation'
+        },
+        {
           type: 'input',
           name: 'locomotiveCount',
           title: lcl('loco_count'),

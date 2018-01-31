@@ -69,7 +69,7 @@
       "fr": "Convoyeur express",
       "de": "Express-Fließband"
     },
-    
+
     "stone_path": {
       "en": "Stone Path",
       "fr": "Briques",
@@ -629,6 +629,12 @@
     "fr": "Utile pour les trains sans locomotives d'un côté.",
     "it": "Utile per i treni a testa unica (con locomotive da un solo lato)",
     "de": "Sinnvoll für Züge mit nur einer Lokomotive"
+  },
+  "double_loading": {
+    "en": "Double Loading"
+  },
+  "double_loading_info": {
+    "en": "Load on both sides of each cargo wagon."
   },
   "loco_count": {
     "en": "Locomotive Count",
