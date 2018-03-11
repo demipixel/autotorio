@@ -3,7 +3,7 @@ const moment = require('moment');
 const fs = require('fs');
 const localisation = require('./localisation.json');
 
-const PREVENT_KEYWORD = [
+const PREVENT_KEYWORD = [ // Ignore icons for such items
   'worm', 'spitter', 'biter', 'alien',
   'coral', 'pita', 'grass', 'asterisk', 'bush', 'dirt', 'tree', 'fluff', 'cane', 'trunk', 'garballo', 'root',
   'remnants', 'loader', 'scorchmark', 'wreck', 'water',
@@ -38,6 +38,19 @@ function getNavbarLocalisation(lng) {
     ret[key] = localisation.navbar[key].hasOwnProperty(lng) ? localisation.navbar[key][lng] : localisation.navbar[key]["en"];
   });
   return ret;
+}
+
+function getTileOptions(lcl, ent_lcl) {
+  return [
+    ['', lcl('none')],
+    ['stone_path', ent_lcl('stone_path')],
+    ['concrete', ent_lcl('concrete')],
+    ['hazard_concrete_left', ent_lcl('hazard_concrete_left')],
+    ['hazard_concrete_right', ent_lcl('hazard_concrete_right')],
+    ['refined_concrete', ent_lcl('refined_concrete')],
+    ['refined_hazard_concrete_left', ent_lcl('refined_hazard_concrete_left')],
+    ['refined_hazard_concrete_right', ent_lcl('refined_hazard_concrete_right')]
+  ];
 }
 
 
@@ -328,7 +341,7 @@ module.exports = function(app) {
           type: 'select',
           name: 'concrete',
           title: lcl('tiles'),
-          options: [['', lcl('none')], ['stone_path', ent_lcl('stone_path')], ['concrete', ent_lcl('concrete')], ['hazard_concrete_left', ent_lcl('hazard_concrete_left')], ['hazard_concrete_right', ent_lcl('hazard_concrete_right')]],
+          options: getTileOptions(lcl, ent_lcl),
           info: lcl('tiles_info')
         },
         {
@@ -343,7 +356,7 @@ module.exports = function(app) {
           type: 'select',
           name: 'borderConcrete',
           title: lcl('border_tiles'),
-          options: [['', lcl('none')], ['stone_path', ent_lcl('stone_path')], ['concrete', ent_lcl('concrete')], ['hazard_concrete_left', ent_lcl('hazard_concrete_left')], ['hazard_concrete_right', ent_lcl('hazard_concrete_right')]],
+          options: getTileOptions(lcl, ent_lcl),
           info: lcl('border_tiles_info')
         },
         {
@@ -358,7 +371,7 @@ module.exports = function(app) {
           type: 'select',
           name: 'trackConcrete',
           title: lcl('track_tiles'),
-          options: [['', lcl('none')], ['stone_path', ent_lcl('stone_path')], ['concrete', ent_lcl('concrete')], ['hazard_concrete_left', ent_lcl('hazard_concrete_left')], ['hazard_concrete_right', ent_lcl('hazard_concrete_right')]],
+          options: getTileOptions(lcl, ent_lcl),
           info: lcl('track_tiles_info')
         },
         {
@@ -679,7 +692,7 @@ module.exports = function(app) {
           type: 'select',
           name: 'concrete',
           title: lcl('tiles'),
-          options: [['', lcl('none')], ['stone_path', ent_lcl('stone_path')], ['concrete', ent_lcl('concrete')], ['hazard_concrete_left', ent_lcl('hazard_concrete_left')], ['hazard_concrete_right', ent_lcl('hazard_concrete_right')]],
+          options: getTileOptions(lcl, ent_lcl),
           info: 'Covers the entire area surrounded by the walls in the specified tile type.'
         },
         {
@@ -694,7 +707,7 @@ module.exports = function(app) {
           type: 'select',
           name: 'borderConcrete',
           title: lcl('border_tiles'),
-          options: [['', lcl('none')], ['stone_path', ent_lcl('stone_path')], ['concrete', ent_lcl('concrete')], ['hazard_concrete_left', ent_lcl('hazard_concrete_left')], ['hazard_concrete_right', ent_lcl('hazard_concrete_right')]],
+          options: getTileOptions(lcl, ent_lcl),
           info: lcl('border_tiles_info')
         },
         {
@@ -709,7 +722,7 @@ module.exports = function(app) {
           type: 'select',
           name: 'trackConcrete',
           title: lcl('track_tiles'),
-          options: [['', lcl('none')], ['stone_path', ent_lcl('stone_path')], ['concrete', ent_lcl('concrete')], ['hazard_concrete_left', ent_lcl('hazard_concrete_left')], ['hazard_concrete_right', ent_lcl('hazard_concrete_right')]],
+          options: getTileOptions(lcl, ent_lcl),
           info: lcl('track_tiles_info')
         },
         {

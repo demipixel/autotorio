@@ -101,6 +101,15 @@
       "de": "Beton mit Gefahrenmarkierung (Rechts)",
       "cn": "标识混凝土 (右)"
     },
+    "refined_concrete": {
+      "en": "Refined Concrete"
+    },
+    "refined_hazard_concrete_left": {
+      "en": "Refined Hazard Concrete Left"
+    },
+    "refined_hazard_concrete_right" : {
+      "en": "Refined Hazard Concrete Right"
+    },
     "speed_module": {
       "en": "Speed Module",
       "fr": "Module de vitesse",
