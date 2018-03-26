@@ -50,7 +50,7 @@ function generateOilOutpost(form) {
   opt.includeTrainStation = opt.includeTrainStation == 'on';
   opt.exitRoute = opt.exitRoute == 'on';
 
-  opt.turrets = opt.turretType != 'None';
+  opt.turrets = opt.turretType != 'none';
   opt.laserTurrets = opt.turretType == 'laser_turrets';
   opt.walls = opt.walls == 'on';
 
