@@ -1,55 +1,112 @@
 <html>
+
 <head>
-<title>Autotorio</title>
+  <title>Autotorio</title>
 
-<script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 
-<!-- Bootstrap -->
-<script src="/assets/bootstrap/js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+  <!-- Bootstrap -->
+  <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
 
-<!-- Bootstrap Dialog -->
-<link rel="stylesheet" href="/assets/bootstrap-dialog/bootstrap-dialog.min.css">
-<script src="/assets/bootstrap-dialog/bootstrap-dialog.min.js"></script>
+  <!-- Bootstrap Dialog -->
+  <link rel="stylesheet" href="/assets/bootstrap-dialog/bootstrap-dialog.min.css">
+  <script src="/assets/bootstrap-dialog/bootstrap-dialog.min.js"></script>
 
-<!-- Font Awesome -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<!-- Bootstrap-Select -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
+  <!-- Bootstrap-Select -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
 
-<!-- Custom JS -->
-<script src="/assets/js/handleForm.js"></script>
-<script src="/assets/js/replacer.js"></script>
+  <!-- Custom JS -->
+  <script src="/assets/js/handleForm.js"></script>
+  <script src="/assets/js/replacer.js"></script>
 
-<script src="/assets/build/factorio-generators.js"></script>
-<script src="/assets/js/generators.js"></script>
+  <script src="/assets/build/factorio-generators.js"></script>
+  <script src="/assets/js/generators.js"></script>
+
+  <style>
+    body.dark-mode,
+    body.dark-mode legend,
+    body.dark-mode h4 {
+      background-color: #14181d;
+      color: #ddd;
+    }
+
+    body.dark-mode .navbar-inverse,
+    body.dark-mode .navbar-collapse {
+      background-color: #181d23;
+    }
+
+    body.dark-mode .nav .active a,
+    body.dark-mode .nav .active a:hover {
+      background-color: #313b47;
+    }
+
+    body.dark-mode .modal-content {
+      background-color: #313b47;
+    }
+
+    body.dark-mode .form-control {
+      color: #ccc;
+    }
+
+    body.dark-mode .btn-default,
+    body.dark-mode .dropdown-menu {
+      background-color: #313b47 !important;
+      color: #ddd;
+    }
+
+    body.dark-mode .dropdown-menu>li>a {
+      color: #ddd;
+    }
+
+    body.dark-mode .dropdown-menu>li>a:hover,
+    body.dark-mode .dropdown-menu>li>a:focus {
+      background-color: #2196f3;
+    }
+
+    body.dark-mode .fa {
+      color: #ddd !important;
+    }
+  </style>
 
 </head>
-<body>
 
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="/">Autotorio</a>
-    </div>
+<body class="<%= dark ? 'dark-mode' : '' %>">
 
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
-      <ul class="nav navbar-nav">
-        <li class="<%= page == 'outpost' ? 'active' : ''%>"><a href="/"><%= navbar_lcl.outpost_generator %></a></li>
-        <li class="<%= page == 'blueprint' ? 'active' : ''%>"><a href="/blueprint"><%= navbar_lcl.blueprint_tool %></a></li>
-        <li class="<%= page == 'oil' ? 'active' : ''%>"><a href="/oil"><%= navbar_lcl.oil_outpost_generator %></a></li>
-        <!-- <li><a href="#">Link</a></li>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">Autotorio</a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+        <ul class="nav navbar-nav">
+          <li class="<%= page == 'outpost' ? 'active' : ''%>">
+            <a href="/">
+              <%= navbar_lcl.outpost_generator %>
+            </a>
+          </li>
+          <li class="<%= page == 'blueprint' ? 'active' : ''%>">
+            <a href="/blueprint">
+              <%= navbar_lcl.blueprint_tool %>
+            </a>
+          </li>
+          <li class="<%= page == 'oil' ? 'active' : ''%>">
+            <a href="/oil">
+              <%= navbar_lcl.oil_outpost_generator %>
+            </a>
+          </li>
+          <!-- <li><a href="#">Link</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
@@ -62,31 +119,67 @@
             <li><a href="#">One more separated link</a></li>
           </ul>
         </li>-->
-      </ul>
-      <!--<form class="navbar-form navbar-left" role="search">
+        </ul>
+        <!--<form class="navbar-form navbar-left" role="search">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Search">
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
       </form>-->
-      <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Language <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#" onclick="document.cookie='language=en';location.reload()">English</a></li>
-            <li><a href="#" onclick="document.cookie='language=es';location.reload()">Spanish</a></li>
-            <li><a href="#" onclick="document.cookie='language=pt-br';location.reload()">Portuguese (Brazilian)</a></li>
-            <li><a href="#" onclick="document.cookie='language=fr';location.reload()">French</a></li>
-            <li><a href="#" onclick="document.cookie='language=it';location.reload()">Italian</a></li>
-            <li><a href="#" onclick="document.cookie='language=de';location.reload()">German</a></li>
-            <li><a href="#" onclick="document.cookie='language=cn';location.reload()">中文 (Chinese)</a></li>
-            <li><a href="https://github.com/demipixel/autotorio/blob/master/localisation.json">Help out!</a></li>
-          </ul>
-        </li>
-        <li><a href="https://www.paypal.me/DemiPixel"><%= navbar_lcl.donate %></a></li>
-        <li class="<%= page == 'github' ? 'active' : ''%>"><a href="/github"><%= navbar_lcl.github %></a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Language
+              <span class="caret"></span>
+            </a>
 
-<div class="container">
+            <script>
+              var dark = document.cookie.indexOf('dark') != -1 ? document.cookie.slice(document.cookie.indexOf('dark') + 5, document.cookie.length).indexOf('true') == 0 : false;
+            </script>
+
+            <li>
+              <a href="#" onClick="dark = !dark; $('body').toggleClass('dark-mode'); document.cookie='dark='+dark">Toggle Dark Mode</a>
+            </li>
+
+            <ul class="dropdown-menu">
+              <li>
+                <a href="#" onclick="document.cookie='language=en';location.reload()">English</a>
+              </li>
+              <li>
+                <a href="#" onclick="document.cookie='language=es';location.reload()">Spanish</a>
+              </li>
+              <li>
+                <a href="#" onclick="document.cookie='language=pt-br';location.reload()">Portuguese (Brazilian)</a>
+              </li>
+              <li>
+                <a href="#" onclick="document.cookie='language=fr';location.reload()">French</a>
+              </li>
+              <li>
+                <a href="#" onclick="document.cookie='language=it';location.reload()">Italian</a>
+              </li>
+              <li>
+                <a href="#" onclick="document.cookie='language=de';location.reload()">German</a>
+              </li>
+              <li>
+                <a href="#" onclick="document.cookie='language=cn';location.reload()">中文 (Chinese)</a>
+              </li>
+              <li>
+                <a href="https://github.com/demipixel/autotorio/blob/master/localisation.json">Help out!</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="https://www.paypal.me/DemiPixel">
+              <%= navbar_lcl.donate %>
+            </a>
+          </li>
+          <li class="<%= page == 'github' ? 'active' : ''%>">
+            <a href="/github">
+              <%= navbar_lcl.github %>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
