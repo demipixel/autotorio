@@ -636,6 +636,12 @@ module.exports = function(app) {
           }
         },
         {
+          title: lcl('beacons'),
+          checkbox: {
+            name: 'beacons'
+          }
+        },
+        {
           type: 'header',
           title: lcl('defenses'),
           header: true

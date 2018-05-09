@@ -1,5 +1,6 @@
-
-const DONATORS = ['phono\'s', 'Goopsky\'s', 'Fahr', 'Dwarf\'s Foundry', 'Tupper\'s', 'Schorty\'s', 'nerdkusi\'s', 'KrzysD\'s', 'Geo\'s', 'Brodo\'s', 'gigajum\'s', 'Tom\'s', 'SickHippie', 'Autotorio Approved™']; // Okay, last one wasn't technically created by a donator...
+const DONATORS = ['phono\'s', 'Goopsky\'s', 'Fahr', 'Dwarf\'s Foundry', 'Tupper\'s', 'Schorty\'s', 'nerdkusi\'s', 'KrzysD\'s', 'Geo\'s', 'Brodo\'s',
+  'gigajum\'s', 'Tom\'s', 'SickHippie', 'Autotorio Approved™'
+]; // Okay, last one wasn't technically created by a donator...
 
 function generateOutpost(form) {
   var opt = {};
@@ -11,7 +12,8 @@ function generateOutpost(form) {
   opt.trainSide = opt.trainSide;
   opt.trainDirection = opt.trainDirection;
 
-  opt.module = (opt.modded && opt.customModule) || opt.module != 'None' ? ((opt.modded && opt.customModule) || opt.module).split(' ').join('_').toLowerCase() : null;
+  opt.module = (opt.modded && opt.customModule) || opt.module != 'None' ? ((opt.modded && opt.customModule) || opt.module).split(' ').join('_').toLowerCase() :
+    null;
 
   opt.useStackInserters = opt.useStackInserters == 'on';
   opt.botBased = opt.botBased == 'on';
@@ -30,7 +32,7 @@ function generateOutpost(form) {
   opt.borderConcrete = (opt.modded && opt.customBorderConcrete) || opt.borderConcrete;
   opt.trackConcrete = (opt.modded && opt.customTrackConcrete) || opt.trackConcrete;
 
-  opt.name = DONATORS[Math.floor(Math.random()*DONATORS.length)]+' Outpost - %drills% Drills';
+  opt.name = DONATORS[Math.floor(Math.random() * DONATORS.length)] + ' Outpost - %drills% Drills';
 
   return factorioGenerators.outpost(form.blueprint, opt);
 }
@@ -44,8 +46,10 @@ function generateOilOutpost(form) {
   opt.trainSide = opt.trainSide;
   opt.trainDirection = opt.trainDirection;
 
-  opt.module = (opt.modded && opt.customModule) || opt.module != 'None' ? ((opt.modded && customModule) || opt.module).split(' ').join('_').toLowerCase() : null;
+  opt.module = (opt.modded && opt.customModule) || opt.module != 'None' ? ((opt.modded && customModule) || opt.module).split(' ').join('_').toLowerCase() :
+    null;
   opt.includeRadar = opt.includeRadar == 'on';
+  opt.beacons = opt.beacons == 'on';
 
   opt.includeTrainStation = opt.includeTrainStation == 'on';
   opt.exitRoute = opt.exitRoute == 'on';
@@ -58,7 +62,7 @@ function generateOilOutpost(form) {
   opt.borderConcrete = (opt.modded && opt.customBorderConcrete) || opt.borderConcrete;
   opt.trackConcrete = (opt.modded && opt.customTrackConcrete) || opt.trackConcrete;
 
-  opt.name = DONATORS[Math.floor(Math.random()*DONATORS.length)]+'\'s Outpost - %pumpjacks% Pumpjacks';
+  opt.name = DONATORS[Math.floor(Math.random() * DONATORS.length)] + '\'s Outpost - %pumpjacks% Pumpjacks';
 
   return factorioGenerators.oilOutpost(form.blueprint, opt);
 }
@@ -74,10 +78,10 @@ function blueprintTool(form) {
   opt.modifiedOnly = opt.modifiedOnly == 'on';
 
   ['entity', 'recipe', 'module'].forEach(replacer => {
-    var replacerOpt = opt[replacer+'Replacer'];
+    var replacerOpt = opt[replacer + 'Replacer'];
     if (!replacerOpt) return;
 
-    opt[replacer+'Replace'] = [];
+    opt[replacer + 'Replace'] = [];
     replacerOpt.split(' ').forEach(o => {
       if (!o) return;
       var arr = o.split(',');
@@ -87,7 +91,7 @@ function blueprintTool(form) {
       if (arr[0].startsWith('includes:')) obj.includes = arr[0].replace('includes:', '');
       else obj.from = arr[0];
 
-      opt[replacer+'Replace'].push(obj);
+      opt[replacer + 'Replace'].push(obj);
     });
   });
 
