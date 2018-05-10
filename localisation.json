@@ -391,8 +391,8 @@
     "cn": "自定义采矿机名称 (可选)"
   },
   "custom_mining_drill_info": {
-    "es": "Only necessary when using mods with custom mining drill names.",
-    "en": "Solo es necesario cuando se usan mods con nombres de mineros personalizados.",
+    "en": "Only necessary when using mods with custom mining drill names.",
+    "es": "Solo es necesario cuando se usan mods con nombres de mineros personalizados.",
     "pt-br": "Só é necessário quando se usa mods com nomes de mineradores personalizados.",
     "fr": "Seulement si des mods sont utilisés avec des mineurs spéciaux.",
     "it": "Necessario solo quando si usano mod con nomi degli estrattori personalizzati.",
