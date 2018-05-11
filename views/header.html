@@ -132,14 +132,6 @@
               <span class="caret"></span>
             </a>
 
-            <script>
-              var dark = document.cookie.indexOf('dark') != -1 ? document.cookie.slice(document.cookie.indexOf('dark') + 5, document.cookie.length).indexOf('true') == 0 : false;
-            </script>
-
-            <li>
-              <a href="#" onClick="dark = !dark; $('body').toggleClass('dark-mode'); document.cookie='dark='+dark">Toggle Dark Mode</a>
-            </li>
-
             <ul class="dropdown-menu">
               <li>
                 <a href="#" onclick="document.cookie='language=en';location.reload()">English</a>
@@ -166,6 +158,13 @@
                 <a href="https://github.com/demipixel/autotorio/blob/master/localisation.json">Help out!</a>
               </li>
             </ul>
+          </li>
+          <script>
+            var dark = document.cookie.indexOf('dark') != -1 ? document.cookie.slice(document.cookie.indexOf('dark') + 5, document.cookie.length).indexOf('true') == 0 : false;
+          </script>
+
+          <li>
+            <a href="#" onClick="dark = !dark; $('body').toggleClass('dark-mode'); document.cookie='dark='+dark">Toggle Dark Mode</a>
           </li>
           <li>
             <a href="https://www.paypal.me/DemiPixel">
