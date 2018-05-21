@@ -71,6 +71,33 @@
     body.dark-mode .fa {
       color: #ddd !important;
     }
+
+    input#flipX,
+    input#flipY {
+      position: relative;
+      transition: 0.2s ease-in-out;
+    }
+
+    input#flipX {
+      transform: scale(-1, 1);
+      top: 0px;
+      left: -6px;
+    }
+
+    input#flipY {
+      transform: scale(1, -1);
+      top: -6px;
+      left: 0px;
+    }
+
+    input#flipX:hover,
+    input#flipX:checked,
+    input#flipY:hover,
+    input#flipY:checked {
+      transform: scale(1, 1);
+      top: 0px;
+      left: 0px;
+    }
   </style>
 
 </head>
