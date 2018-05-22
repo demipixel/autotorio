@@ -462,6 +462,12 @@
     "de": "Stapelgreifarme zwischen Pufferkiste und Güterwaggon benutzen.",
     "cn": "在主动存货箱(绿箱)和货运车厢中使用集装机械臂"
   },
+  "filter_inserters": {
+    "en": "Use Filter Inserters"
+  },
+  "filter_inserters_info": {
+    "en": "Use filter inserters between the buffer chests and the cargo wagon"
+  },
   "radar": {
     "en": "Include Radar",
     "es": "Incluye Radar",
