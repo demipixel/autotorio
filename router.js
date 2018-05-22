@@ -201,6 +201,14 @@ module.exports = function(app) {
           }
         },
         {
+          title: lcl('filter_inserters'),
+          checkbox: {
+            name: 'useFilterInserters',
+            info: lcl('filter_inserters_info'),
+            checked: false
+          }
+        },
+        {
           title: lcl('radar'),
           checkbox: {
             name: 'includeRadar',

@@ -16,6 +16,7 @@ function generateOutpost(form) {
     null;
 
   opt.useStackInserters = opt.useStackInserters == 'on';
+  opt.useFilterInserters = opt.useFilterInserters == 'on';
   opt.botBased = opt.botBased == 'on';
   opt.roboports = opt.botBased && opt.roboports == 'on';
   opt.includeRadar = opt.includeRadar == 'on';
