@@ -16,15 +16,15 @@ let modules = ['includes:module', 'includes:effectivity-module', 'includes:produ
 fs.readdir('./assets/img/factorio-icons/', (err, files) => {
   const items =
     files.filter(file => file.slice(-4) == '.png')
-         .filter(file => {
-          let ret = true;
-          PREVENT_KEYWORD.forEach(keyword => {
-            if (!ret) return;
-            if (file.includes(keyword)) ret = false;
-          });
-          return ret;
-         })
-         .map(file => file.slice(0, -4));
+    .filter(file => {
+      let ret = true;
+      PREVENT_KEYWORD.forEach(keyword => {
+        if (!ret) return;
+        if (file.includes(keyword)) ret = false;
+      });
+      return ret;
+    })
+    .map(file => file.slice(0, -4));
 
   factorioItems = factorioItems.concat(items);
   factorioRecipes = factorioRecipes.concat(items);
@@ -60,26 +60,29 @@ module.exports = function(app) {
     res.render('github.html', {
       page: 'github',
       navbar_lcl: getNavbarLocalisation(req.cookies.language || 'en'),
+      dark: req.cookies.dark == 'true'
     });
   });
 
   app.get('/outpost', (req, res) => {
     const lng = req.cookies.language || 'en';
 
-    const lcl = (name) => localisation.hasOwnProperty(name) ? (localisation[name].hasOwnProperty(lng) ? localisation[name][lng] : localisation[name]["en"]) : "";
-    const ent_lcl = (entity) => localisation.entities.hasOwnProperty(entity) ? (localisation.entities[entity].hasOwnProperty(lng) ? localisation.entities[entity][lng] : localisation.entities[entity]["en"]) : "";
+    const lcl = (name) => localisation.hasOwnProperty(name) ? (localisation[name].hasOwnProperty(lng) ? localisation[name][lng] : localisation[
+      name]["en"]) : "";
+    const ent_lcl = (entity) => localisation.entities.hasOwnProperty(entity) ? (localisation.entities[entity].hasOwnProperty(lng) ?
+      localisation.entities[entity][lng] : localisation.entities[entity]["en"]) : "";
 
     res.render('form.html', {
       page: 'outpost',
       title: lcl('ore_outpost_generator'),
+      dark: req.cookies.dark == 'true',
       generatorName: 'generateOutpost',
       howToUse: '/example/outpost',
       submitButton: lcl('submit_ore_outpost'),
       settingsUrlButton: lcl('settings_url'),
       selections: {},
       navbar_lcl: getNavbarLocalisation(lng),
-      formElements: [
-        {
+      formElements: [{
           type: 'textarea',
           name: 'blueprint',
           title: lcl('blueprint_string'),
@@ -98,7 +101,11 @@ module.exports = function(app) {
           type: 'select',
           name: 'belt_type',
           title: lcl('belt_type'),
-          options: [['', ent_lcl('transport_belt')], ['fast', ent_lcl('fast_transport_belt')], ['express', ent_lcl('express_transport_belt')]],
+          options: [
+            ['', ent_lcl('transport_belt')],
+            ['fast', ent_lcl('fast_transport_belt')],
+            ['express', ent_lcl('express_transport_belt')]
+          ],
           default: 2,
           checkbox: {
             name: 'undergroundBelts',
@@ -125,13 +132,23 @@ module.exports = function(app) {
           type: 'select',
           name: 'trainSide',
           title: lcl('train_station_side'),
-          options: [[1, lcl('right')], [3, lcl('left')], [0, lcl('top')], [2, lcl('bottom')]]
+          options: [
+            [1, lcl('right')],
+            [3, lcl('left')],
+            [0, lcl('top')],
+            [2, lcl('bottom')]
+          ]
         },
         {
           type: 'select',
           name: 'trainDirection',
           title: lcl('train_enter_from'),
-          options: [[2, lcl('bottom')], [0, lcl('top')], [1, lcl('right')], [3, lcl('left')]]
+          options: [
+            [2, lcl('bottom')],
+            [0, lcl('top')],
+            [1, lcl('right')],
+            [3, lcl('left')]
+          ]
         },
         {
           type: 'select',
@@ -153,9 +170,18 @@ module.exports = function(app) {
           type: 'select',
           name: 'module',
           title: lcl('modules'),
-          options: [['None', lcl('none')], ['Speed Module', ent_lcl('speed_module')], ['Speed Module 2', ent_lcl('speed_module') + ' 2'], ['Speed Module 3', ent_lcl('speed_module') + ' 3'],
-            ['Effectivity Module', ent_lcl('effectivity_module')], ['Effectivity Module 2', ent_lcl('effectivity_module') + ' 2'], ['Effectivity Module 3', ent_lcl('effectivity_module') + ' 3'],
-            ['Productivity Module', ent_lcl('productivity_module')], ['Productivity Module 2', ent_lcl('productivity_module') + ' 2'], ['Productivity Module 3', ent_lcl('productivity_module') + ' 3']],
+          options: [
+            ['None', lcl('none')],
+            ['Speed Module', ent_lcl('speed_module')],
+            ['Speed Module 2', ent_lcl('speed_module') + ' 2'],
+            ['Speed Module 3', ent_lcl('speed_module') + ' 3'],
+            ['Effectivity Module', ent_lcl('effectivity_module')],
+            ['Effectivity Module 2', ent_lcl('effectivity_module') + ' 2'],
+            ['Effectivity Module 3', ent_lcl('effectivity_module') + ' 3'],
+            ['Productivity Module', ent_lcl('productivity_module')],
+            ['Productivity Module 2', ent_lcl('productivity_module') + ' 2'],
+            ['Productivity Module 3', ent_lcl('productivity_module') + ' 3']
+          ],
           info: lcl('modules_info')
         },
         {
@@ -172,6 +198,14 @@ module.exports = function(app) {
             name: 'useStackInserters',
             info: lcl('stack_inserters_info'),
             checked: true
+          }
+        },
+        {
+          title: lcl('filter_inserters'),
+          checkbox: {
+            name: 'useFilterInserters',
+            info: lcl('filter_inserters_info'),
+            checked: false
           }
         },
         {
@@ -248,7 +282,11 @@ module.exports = function(app) {
           type: 'select',
           name: 'turretType',
           title: lcl('turret_type'),
-          options: [['none', lcl('none')], ['gun_turrets', ent_lcl('gun_turrets')], ['laser_turrets', ent_lcl('laser_turrets')]],
+          options: [
+            ['none', lcl('none')],
+            ['gun_turrets', ent_lcl('gun_turrets')],
+            ['laser_turrets', ent_lcl('laser_turrets')]
+          ],
           default: 2
         },
         {
@@ -394,15 +432,19 @@ module.exports = function(app) {
   });
 
   app.get('/blueprint', (req, res) => {
-    const ENTITY_REPLACER_DEFAULT = 'inserter,fast-inserter includes:transport-belt,express-transport-belt includes:underground-belt,express-underground-belt includes:splitter,express-splitter small-electric-pole,medium-electric-pole';
+    const ENTITY_REPLACER_DEFAULT =
+      'inserter,fast-inserter includes:transport-belt,express-transport-belt includes:underground-belt,express-underground-belt includes:splitter,express-splitter small-electric-pole,medium-electric-pole';
     const lng = req.cookies.language || 'en';
 
-    const lcl = (name) => localisation.hasOwnProperty(name) ? (localisation[name].hasOwnProperty(lng) ? localisation[name][lng] : localisation[name]["en"]) : "";
-    const ent_lcl = (entity) => localisation.entities.hasOwnProperty(entity) ? (localisation.entities[entity].hasOwnProperty(lng) ? localisation.entities[entity][lng] : localisation.entities[entity]["en"]) : "";
+    const lcl = (name) => localisation.hasOwnProperty(name) ? (localisation[name].hasOwnProperty(lng) ? localisation[name][lng] : localisation[
+      name]["en"]) : "";
+    const ent_lcl = (entity) => localisation.entities.hasOwnProperty(entity) ? (localisation.entities[entity].hasOwnProperty(lng) ?
+      localisation.entities[entity][lng] : localisation.entities[entity]["en"]) : "";
 
     res.render('form.html', {
       page: 'blueprint',
       title: lcl('blueprint_tool'),
+      dark: req.cookies.dark == 'true',
       generatorName: 'blueprintTool',
       howToUse: '',
       submitButton: lcl('submit_blueprint'),
@@ -424,8 +466,7 @@ module.exports = function(app) {
           'includes:speed-module': 'All Speed Modules'
         }
       },
-      formElements: [
-        {
+      formElements: [{
           type: 'textarea',
           name: 'blueprint',
           title: lcl('blueprint_string_or_book'),
@@ -443,22 +484,23 @@ module.exports = function(app) {
           checkbox: {
             name: 'flipY'
           }
-        },{
-          buttons: [
-            {
-              text: '<span aria-hidden="true" class="fa fa-plus fa-fw"></span>'+lcl('entity_replacer'),
+        }, {
+          buttons: [{
+              text: '<span aria-hidden="true" class="fa fa-plus fa-fw"></span>' + lcl('entity_replacer'),
               type: 'success',
               onClick: 'createReplacer(\'entityReplacer\',\'entities\')'
-            }/*,
+            }
+            /*,
+                        {
+                          text: '<span aria-hidden="true" class="fa fa-plus fa-fw"></span>New Modded Entity Replacer',
+                          type: 'warning',
+                          onClick: 'createReplacer(\'entityReplacer\',\'entities\', true)'
+                        }*/
+            ,
             {
-              text: '<span aria-hidden="true" class="fa fa-plus fa-fw"></span>New Modded Entity Replacer',
-              type: 'warning',
-              onClick: 'createReplacer(\'entityReplacer\',\'entities\', true)'
-            }*/,
-            {
-              text: '<span aria-hidden="true" class="fa fa-arrow-circle-up fa-fw"></span>'+lcl('upgrader_preset'),
+              text: '<span aria-hidden="true" class="fa fa-arrow-circle-up fa-fw"></span>' + lcl('upgrader_preset'),
               type: 'info',
-              onClick: 'loadReplacer(\'entityReplacer\',\'entities\', \''+ENTITY_REPLACER_DEFAULT+'\')'
+              onClick: 'loadReplacer(\'entityReplacer\',\'entities\', \'' + ENTITY_REPLACER_DEFAULT + '\')'
             }
           ],
           info: 'Modded entity/recipe/module replace coming soon'
@@ -470,17 +512,17 @@ module.exports = function(app) {
         },
         { hr: true },
         {
-          buttons: [
-            {
-              text: '<span aria-hidden="true" class="fa fa-plus fa-fw"></span>'+lcl('recipe_replacer'),
+          buttons: [{
+              text: '<span aria-hidden="true" class="fa fa-plus fa-fw"></span>' + lcl('recipe_replacer'),
               type: 'success',
               onClick: 'createReplacer(\'recipeReplacer\',\'recipes\')'
-            }/*,
-            {
-              text: '<span aria-hidden="true" class="fa fa-plus fa-fw"></span>New Modded Recipe Replacer',
-              type: 'warning',
-              onClick: 'createReplacer(\'recipeReplacer\',\'recipes\', true)'
-            }*/
+            }
+            /*,
+                        {
+                          text: '<span aria-hidden="true" class="fa fa-plus fa-fw"></span>New Modded Recipe Replacer',
+                          type: 'warning',
+                          onClick: 'createReplacer(\'recipeReplacer\',\'recipes\', true)'
+                        }*/
           ]
         },
         {
@@ -490,17 +532,17 @@ module.exports = function(app) {
         },
         { hr: true },
         {
-          buttons: [
-            {
-              text: '<span aria-hidden="true" class="fa fa-plus fa-fw"></span>'+lcl('module_replacer'),
+          buttons: [{
+              text: '<span aria-hidden="true" class="fa fa-plus fa-fw"></span>' + lcl('module_replacer'),
               type: 'success',
               onClick: 'createReplacer(\'moduleReplacer\',\'modules\')'
-            }/*,
-            {
-              text: '<span aria-hidden="true" class="fa fa-plus fa-fw"></span>New Modded Module Replacer',
-              type: 'warning',
-              onClick: 'createReplacer(\'moduleReplacer\',\'modules\', true)'
-            }*/
+            }
+            /*,
+                        {
+                          text: '<span aria-hidden="true" class="fa fa-plus fa-fw"></span>New Modded Module Replacer',
+                          type: 'warning',
+                          onClick: 'createReplacer(\'moduleReplacer\',\'modules\', true)'
+                        }*/
           ]
         },
         {
@@ -523,20 +565,22 @@ module.exports = function(app) {
   app.get('/oil', (req, res) => {
     const lng = req.cookies.language || 'en';
 
-    const lcl = (name) => localisation.hasOwnProperty(name) ? (localisation[name].hasOwnProperty(lng) ? localisation[name][lng] : localisation[name]["en"]) : "";
-    const ent_lcl = (entity) => localisation.entities.hasOwnProperty(entity) ? (localisation.entities[entity].hasOwnProperty(lng) ? localisation.entities[entity][lng] : localisation.entities[entity]["en"]) : "";
+    const lcl = (name) => localisation.hasOwnProperty(name) ? (localisation[name].hasOwnProperty(lng) ? localisation[name][lng] : localisation[
+      name]["en"]) : "";
+    const ent_lcl = (entity) => localisation.entities.hasOwnProperty(entity) ? (localisation.entities[entity].hasOwnProperty(lng) ?
+      localisation.entities[entity][lng] : localisation.entities[entity]["en"]) : "";
 
     res.render('form.html', {
       page: 'oil',
       title: 'Oil Outpost Generator',
+      dark: req.cookies.dark == 'true',
       generatorName: 'generateOilOutpost',
       howToUse: '/example/oil',
       submitButton: lcl('submit_oil_outpost'),
       settingsUrlButton: lcl('settings_url'),
       selections: {},
       navbar_lcl: getNavbarLocalisation(lng),
-      formElements: [
-        {
+      formElements: [{
           type: 'textarea',
           name: 'blueprint',
           title: lcl('blueprint_string'),
@@ -555,21 +599,40 @@ module.exports = function(app) {
           type: 'select',
           name: 'trainSide',
           title: lcl('train_station_side'),
-          options: [[1, lcl('right')], [3, lcl('left')], [0, lcl('top')], [2, lcl('bottom')]]
+          options: [
+            [1, lcl('right')],
+            [3, lcl('left')],
+            [0, lcl('top')],
+            [2, lcl('bottom')]
+          ]
         },
         {
           type: 'select',
           name: 'trainDirection',
           title: lcl('train_enter_from'),
-          options: [[2, lcl('bottom')], [0, lcl('top')], [1, lcl('right')], [3, lcl('left')]]
+          options: [
+            [2, lcl('bottom')],
+            [0, lcl('top')],
+            [1, lcl('right')],
+            [3, lcl('left')]
+          ]
         },
         {
           type: 'select',
           name: 'module',
           title: lcl('modules'),
-          options: [['None', lcl('none')], ['Speed Module', ent_lcl('speed_module')], ['Speed Module 2', ent_lcl('speed_module') + ' 2'], ['Speed Module 3', ent_lcl('speed_module') + ' 3'],
-            ['Effectivity Module', ent_lcl('effectivity_module')], ['Effectivity Module 2', ent_lcl('effectivity_module') + ' 2'], ['Effectivity Module 3', ent_lcl('effectivity_module') + ' 3'],
-            ['Productivity Module', ent_lcl('productivity_module')], ['Productivity Module 2', ent_lcl('productivity_module') + ' 2'], ['Productivity Module 3', ent_lcl('productivity_module') + ' 3']],
+          options: [
+            ['None', lcl('none')],
+            ['Speed Module', ent_lcl('speed_module')],
+            ['Speed Module 2', ent_lcl('speed_module') + ' 2'],
+            ['Speed Module 3', ent_lcl('speed_module') + ' 3'],
+            ['Effectivity Module', ent_lcl('effectivity_module')],
+            ['Effectivity Module 2', ent_lcl('effectivity_module') + ' 2'],
+            ['Effectivity Module 3', ent_lcl('effectivity_module') + ' 3'],
+            ['Productivity Module', ent_lcl('productivity_module')],
+            ['Productivity Module 2', ent_lcl('productivity_module') + ' 2'],
+            ['Productivity Module 3', ent_lcl('productivity_module') + ' 3']
+          ],
           info: lcl('oil_modules_info')
         },
         {
@@ -588,6 +651,12 @@ module.exports = function(app) {
           }
         },
         {
+          title: lcl('beacons'),
+          checkbox: {
+            name: 'beacons'
+          }
+        },
+        {
           type: 'header',
           title: lcl('defenses'),
           header: true
@@ -596,7 +665,11 @@ module.exports = function(app) {
           type: 'select',
           name: 'turretType',
           title: lcl('turret_type'),
-          options: [['none', lcl('none')], ['gun_turrets', ent_lcl('gun_turrets')], ['laser_turrets', ent_lcl('laser_turrets')]],
+          options: [
+            ['none', lcl('none')],
+            ['gun_turrets', ent_lcl('gun_turrets')],
+            ['laser_turrets', ent_lcl('laser_turrets')]
+          ],
           default: 2
         },
         {
@@ -747,16 +820,18 @@ module.exports = function(app) {
   app.get('/example/outpost', (req, res) => {
     const lng = req.cookies.language || 'en';
 
-    const lcl = (name) => localisation.hasOwnProperty(name) ? (localisation[name].hasOwnProperty(lng) ? localisation[name][lng] : localisation[name]["en"]) : "";
-    const ent_lcl = (entity) => localisation.entities.hasOwnProperty(entity) ? (localisation.entities[entity].hasOwnProperty(lng) ? localisation.entities[entity][lng] : localisation.entities[entity]["en"]) : "";
+    const lcl = (name) => localisation.hasOwnProperty(name) ? (localisation[name].hasOwnProperty(lng) ? localisation[name][lng] : localisation[
+      name]["en"]) : "";
+    const ent_lcl = (entity) => localisation.entities.hasOwnProperty(entity) ? (localisation.entities[entity].hasOwnProperty(lng) ?
+      localisation.entities[entity][lng] : localisation.entities[entity]["en"]) : "";
 
     res.render('sections.html', {
       page: 'example',
       title: 'How To Use the Outpost Generator',
+      dark: req.cookies.dark == 'true',
       howToUse: '',
       navbar_lcl: getNavbarLocalisation(lng),
-      sections: [
-        {
+      sections: [{
           title: 'Create a blueprint',
           text: 'Place 2 walls at the corners of the ore patch.<br/>Take a new blueprint and select your 2 walls. Then, click on Export to string and copy the string into the textbox on the website.',
           image: 'https://puu.sh/z8BiA/3688fa38bf.gif'
@@ -788,16 +863,18 @@ module.exports = function(app) {
   app.get('/example/oil', (req, res) => {
     const lng = req.cookies.language || 'en';
 
-    const lcl = (name) => localisation.hasOwnProperty(name) ? (localisation[name].hasOwnProperty(lng) ? localisation[name][lng] : localisation[name]["en"]) : "";
-    const ent_lcl = (entity) => localisation.entities.hasOwnProperty(entity) ? (localisation.entities[entity].hasOwnProperty(lng) ? localisation.entities[entity][lng] : localisation.entities[entity]["en"]) : "";
+    const lcl = (name) => localisation.hasOwnProperty(name) ? (localisation[name].hasOwnProperty(lng) ? localisation[name][lng] : localisation[
+      name]["en"]) : "";
+    const ent_lcl = (entity) => localisation.entities.hasOwnProperty(entity) ? (localisation.entities[entity].hasOwnProperty(lng) ?
+      localisation.entities[entity][lng] : localisation.entities[entity]["en"]) : "";
 
     res.render('sections.html', {
       page: 'example',
       title: 'How To Use the Oil Outpost Generator',
+      dark: req.cookies.dark == 'true',
       howToUse: '',
       navbar_lcl: getNavbarLocalisation(lng),
-      sections: [
-        {
+      sections: [{
           title: 'Create a blueprint',
           text: 'Place your pumpjacks and a single track anywhere.<br/>Create a blueprint with the pumjacks and the track, then, click on Export to string and copy the string into the textbox on the website.',
           image: 'https://puu.sh/z8BTs/5e1c054e30.gif'
@@ -827,5 +904,5 @@ module.exports = function(app) {
 }
 
 function LOG(...args) {
-  console.log('['+moment().format('MMMM Do YYYY, h:mm:ss a')+']', ...args);
+  console.log('[' + moment().format('MMMM Do YYYY, h:mm:ss a') + ']', ...args);
 }

@@ -107,7 +107,7 @@
     "refined_hazard_concrete_left": {
       "en": "Refined Hazard Concrete Left"
     },
-    "refined_hazard_concrete_right" : {
+    "refined_hazard_concrete_right": {
       "en": "Refined Hazard Concrete Right"
     },
     "speed_module": {
@@ -391,8 +391,8 @@
     "cn": "自定义采矿机名称 (可选)"
   },
   "custom_mining_drill_info": {
-    "es": "Only necessary when using mods with custom mining drill names.",
-    "en": "Solo es necesario cuando se usan mods con nombres de mineros personalizados.",
+    "en": "Only necessary when using mods with custom mining drill names.",
+    "es": "Solo es necesario cuando se usan mods con nombres de mineros personalizados.",
     "pt-br": "Só é necessário quando se usa mods com nomes de mineradores personalizados.",
     "fr": "Seulement si des mods sont utilisés avec des mineurs spéciaux.",
     "it": "Necessario solo quando si usano mod con nomi degli estrattori personalizzati.",
@@ -462,6 +462,12 @@
     "de": "Stapelgreifarme zwischen Pufferkiste und Güterwaggon benutzen.",
     "cn": "在主动存货箱(绿箱)和货运车厢中使用集装机械臂"
   },
+  "filter_inserters": {
+    "en": "Use Filter Inserters"
+  },
+  "filter_inserters_info": {
+    "en": "Use filter inserters between the buffer chests and the cargo wagon"
+  },
   "radar": {
     "en": "Include Radar",
     "es": "Incluye Radar",
@@ -473,6 +479,9 @@
   },
   "lights": {
     "en": "Include Lights"
+  },
+  "beacons": {
+    "en": "Beacons"
   },
   "balancer": {
     "en": "Balancer Blueprint String (Optional)",

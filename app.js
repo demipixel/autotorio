@@ -6,7 +6,7 @@ const cookieParser = require('cookie-parser');
 
 const PORT = process.env.NODE_ENV != 'production' ? 5000 : 80;
 
-const app = new express();
+const app = express();
 
 app.set('views', __dirname + '/views');
 app.engine('html', require('ejs').renderFile);
