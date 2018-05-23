@@ -471,6 +471,9 @@
     "de": "Radar beifügen",
     "cn": "带雷达"
   },
+  "lights": {
+    "en": "Include Lights"
+  },
   "balancer": {
     "en": "Balancer Blueprint String (Optional)",
     "es": "Línea de Planificación de Balanceador (Opcional)",

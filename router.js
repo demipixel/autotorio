@@ -182,6 +182,13 @@ module.exports = function(app) {
           }
         },
         {
+          title: lcl('lights'),
+          checkbox: {
+            name: 'includeLights',
+            checked: true
+          }
+        },
+        {
           type: 'textarea',
           name: 'balancer',
           title: lcl('balancer'),

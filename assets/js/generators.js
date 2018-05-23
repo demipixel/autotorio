@@ -17,6 +17,7 @@ function generateOutpost(form) {
   opt.botBased = opt.botBased == 'on';
   opt.roboports = opt.botBased && opt.roboports == 'on';
   opt.includeRadar = opt.includeRadar == 'on';
+  opt.includeLights = opt.includeLights == 'on';
   opt.undergroundBelts = opt.undergroundBelts == 'on';
   opt.walls = opt.walls == 'on';
   opt.includeTrainStation = opt.includeTrainStation == 'on';
@@ -46,6 +47,7 @@ function generateOilOutpost(form) {
 
   opt.module = (opt.modded && opt.customModule) || opt.module != 'None' ? ((opt.modded && customModule) || opt.module).split(' ').join('_').toLowerCase() : null;
   opt.includeRadar = opt.includeRadar == 'on';
+  opt.includeLights = opt.includeLights == 'on';
 
   opt.includeTrainStation = opt.includeTrainStation == 'on';
   opt.exitRoute = opt.exitRoute == 'on';
