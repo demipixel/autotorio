@@ -216,6 +216,13 @@ module.exports = function(app) {
           }
         },
         {
+          title: lcl('lights'),
+          checkbox: {
+            name: 'includeLights',
+            checked: true
+          }
+        },
+        {
           type: 'textarea',
           name: 'balancer',
           title: lcl('balancer'),
@@ -640,6 +647,13 @@ module.exports = function(app) {
           title: lcl('radar'),
           checkbox: {
             name: 'includeRadar',
+            checked: true
+          }
+        },
+        {
+          title: lcl('lights'),
+          checkbox: {
+            name: 'includeLights',
             checked: true
           }
         },
