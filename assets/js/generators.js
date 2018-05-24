@@ -1,5 +1,5 @@
 const DONATORS = ['phono\'s', 'Goopsky\'s', 'Fahr', 'Dwarf\'s Foundry', 'Tupper\'s', 'Schorty\'s', 'nerdkusi\'s', 'KrzysD\'s', 'Geo\'s', 'Brodo\'s',
-  'gigajum\'s', 'Tom\'s', 'SickHippie', 'Autotorio Approved™'
+  'gigajum\'s', 'Tom\'s', 'SickHippie', 'Cyberboss', 'Autotorio Approved™'
 ]; // Okay, last one wasn't technically created by a donator...
 
 function generateOutpost(form) {
