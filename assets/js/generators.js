@@ -1,6 +1,9 @@
-const DONATORS = ['phono\'s', 'Goopsky\'s', 'Fahr', 'Dwarf\'s Foundry', 'Tupper\'s', 'Schorty\'s', 'nerdkusi\'s', 'KrzysD\'s', 'Geo\'s', 'Brodo\'s',
-  'gigajum\'s', 'Tom\'s', 'SickHippie', 'Cyberboss', 'Autotorio Approved™'
-]; // Okay, last one wasn't technically created by a donator...
+const CONTRIBUTORS = ['phono\'s', 'Goopsky\'s', 'Fahr', 'Dwarf\'s Foundry', 'Tupper\'s', 'Schorty\'s', 'nerdkusi\'s', 'KrzysD\'s', 'Geo\'s', 'Brodo\'s',
+  'gigajum\'s', 'Tom\'s', 'SickHippie', 'TheTostu\'s', 'Cyberboss', 'Autotorio Approved™'];
+// Okay, last one wasn't technically created by a contributor
+
+// ^ Above is everyone who has donated to the project or helped work on it.
+// Thank you so much, everyone!
 
 function generateOutpost(form) {
   var opt = {};
@@ -34,7 +37,7 @@ function generateOutpost(form) {
   opt.borderConcrete = (opt.modded && opt.customBorderConcrete) || opt.borderConcrete;
   opt.trackConcrete = (opt.modded && opt.customTrackConcrete) || opt.trackConcrete;
 
-  opt.name = DONATORS[Math.floor(Math.random() * DONATORS.length)] + ' Outpost - %drills% Drills';
+  opt.name = CONTRIBUTORS[Math.floor(Math.random() * CONTRIBUTORS.length)] + ' Outpost - %drills% Drills';
 
   return factorioGenerators.outpost(form.blueprint, opt);
 }
@@ -65,7 +68,7 @@ function generateOilOutpost(form) {
   opt.borderConcrete = (opt.modded && opt.customBorderConcrete) || opt.borderConcrete;
   opt.trackConcrete = (opt.modded && opt.customTrackConcrete) || opt.trackConcrete;
 
-  opt.name = DONATORS[Math.floor(Math.random() * DONATORS.length)] + '\'s Outpost - %pumpjacks% Pumpjacks';
+  opt.name = CONTRIBUTORS[Math.floor(Math.random() * CONTRIBUTORS.length)] + '\'s Outpost - %pumpjacks% Pumpjacks';
 
   return factorioGenerators.oilOutpost(form.blueprint, opt);
 }
