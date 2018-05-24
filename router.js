@@ -651,6 +651,13 @@ module.exports = function(app) {
           }
         },
         {
+          title: lcl('lights'),
+          checkbox: {
+            name: 'includeLights',
+            checked: true
+          }
+        },
+        {
           title: lcl('beacons'),
           checkbox: {
             name: 'beacons'
