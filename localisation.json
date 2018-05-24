@@ -120,11 +120,11 @@
       "pl": "Ulepszony beton"
     },
     "refined_hazard_concrete_left": {
-      "en": "Refined Hazard Concrete Left"
+      "en": "Refined Hazard Concrete Left",
       "pl": "Ulepszony beton ostrzegawszy (Lewo)"
     },
     "refined_hazard_concrete_right": {
-      "en": "Refined Hazard Concrete Right"
+      "en": "Refined Hazard Concrete Right",
       "pl": "Ulepszony beton ostrzegawszy (Prawo)"
     },
     "speed_module": {
