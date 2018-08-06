@@ -117,15 +117,18 @@
     },
     "refined_concrete": {
       "en": "Refined Concrete",
-      "pl": "Ulepszony beton"
+      "pl": "Ulepszony beton",
+      "cn": "钢筋混凝土"
     },
     "refined_hazard_concrete_left": {
       "en": "Refined Hazard Concrete Left",
-      "pl": "Ulepszony beton ostrzegawszy (Lewo)"
+      "pl": "Ulepszony beton ostrzegawszy (Lewo)"，
+      "cn": "钢筋混凝土 (左)"
     },
     "refined_hazard_concrete_right": {
       "en": "Refined Hazard Concrete Right",
-      "pl": "Ulepszony beton ostrzegawszy (Prawo)"
+      "pl": "Ulepszony beton ostrzegawszy (Prawo)"，
+      "cn": "钢筋混凝土 (右)"
     },
     "speed_module": {
       "en": "Speed Module",
