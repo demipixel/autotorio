@@ -126,19 +126,19 @@
     },
     "refined_concrete": {
       "en": "Refined Concrete",
-      "it", "Cemento raffinato",
+      "it": "Cemento raffinato",
       "pl": "Ulepszony beton",
       "cn": "钢筋混凝土"
     },
     "refined_hazard_concrete_left": {
       "en": "Refined Hazard Concrete Left",
-      "it", "Cemento raffinato con disegni di pericolo a sinistra",
+      "it": "Cemento raffinato con disegni di pericolo a sinistra",
       "pl": "Ulepszony beton ostrzegawszy (Lewo)",
       "cn": "钢筋标识混凝土 (左)"
     },
     "refined_hazard_concrete_right": {
       "en": "Refined Hazard Concrete Right",
-      "it", "Cemento raffinato con disegni di pericolo a destra",
+      "it": "Cemento raffinato con disegni di pericolo a destra",
       "pl": "Ulepszony beton ostrzegawszy (Prawo)",
       "cn": "钢筋标识混凝土 (右)"
     },
