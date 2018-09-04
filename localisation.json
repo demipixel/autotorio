@@ -186,7 +186,7 @@
   "bottom": {
     "en": "Bottom",
     "fr": "Bas",
-    "it": "Inferiore",
+    "it": "Sotto",
     "de": "Unten",
     "cn": "底部",
     "pl": "Na dole"
@@ -210,7 +210,7 @@
   "top": {
     "en": "Top",
     "fr": "Haut",
-    "it": "Superiore",
+    "it": "Sopra",
     "de": "Oben",
     "cn": "顶部",
     "pl": "Na górze"
