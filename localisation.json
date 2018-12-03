@@ -117,15 +117,18 @@
     },
     "refined_concrete": {
       "en": "Refined Concrete",
-      "pl": "Ulepszony beton"
+      "pl": "Ulepszony beton",
+      "cn": "钢筋混凝土"
     },
     "refined_hazard_concrete_left": {
       "en": "Refined Hazard Concrete Left",
-      "pl": "Ulepszony beton ostrzegawszy (Lewo)"
+      "pl": "Ulepszony beton ostrzegawszy (Lewo)",
+      "cn": "钢筋标识混凝土 (左)"
     },
     "refined_hazard_concrete_right": {
       "en": "Refined Hazard Concrete Right",
-      "pl": "Ulepszony beton ostrzegawszy (Prawo)"
+      "pl": "Ulepszony beton ostrzegawszy (Prawo)",
+      "cn": "钢筋标识混凝土 (右)"
     },
     "speed_module": {
       "en": "Speed Module",
@@ -523,10 +526,12 @@
     "pl": "Użyj grupowych inserterów przy ładowaniu skrzyń i wagonów"
   },
   "filter_inserters": {
-    "en": "Use Filter Inserters"
+    "en": "Use Filter Inserters",
+    "cn": "使用筛选机械臂"
   },
   "filter_inserters_info": {
-    "en": "Use filter inserters between the buffer chests and the cargo wagon"
+    "en": "Use filter inserters between the buffer chests and the cargo wagon",
+    "cn": "在主动存货箱与货运车厢之间使用筛选机械臂"
   },
   "radar": {
     "en": "Include Radar",
@@ -539,10 +544,12 @@
     "pl": "Dołącz do blueprintu radar"
   },
   "lights": {
-    "en": "Include Lights"
+    "en": "Include Lights",
+     "cn": "包含灯在内"
   },
   "beacons": {
-    "en": "Beacons"
+    "en": "Beacons",
+    "cn": "插件效果分享塔"
   },
   "balancer": {
     "en": "Balancer Blueprint String (Optional)",
