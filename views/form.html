@@ -9,11 +9,9 @@ var generator = window.<%= generatorName %>;
 
 </script>
 
-<% if (howToUse) { %> <h4><a href="<%- howToUse %>">How To Use</a></h4> <% } %>
-
 <form class="form-horizontal" onsubmit="submitForm(this); return false;">
   <fieldset>
-    <legend><%- title %></legend>
+    <legend><%- title %> <% if (howToUse) { %><a href="<%- howToUse %>">(Click here for a tutorial)</a><% } %></legend>
       <%
       formElements.forEach(e => {
       %>
