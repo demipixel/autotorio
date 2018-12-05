@@ -31,7 +31,7 @@ const keyPath = '/etc/letsencrypt/live/autotorio.com/privkey.pem';
 const server = (process.env.NODE_ENV == 'production' ? https.createServer({
   cert: fs.existsSync(certPath) ? fs.readFileSync(certPath) : undefined,
   key: fs.existsSync(keyPath) ? fs.readFileSync(keyPath) : undefined
-}) : http.createServer(app)).listen(PORT, () => {
+}, app) : http.createServer(app)).listen(PORT, () => {
   console.log('Server live on port ' + PORT);
 });
 
