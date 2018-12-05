@@ -35,4 +35,16 @@ const server = (process.env.NODE_ENV == 'production' ? https.createServer({
   console.log('Server live on port ' + PORT);
 });
 
+function requireHTTPS(req, res, next) {
+  if (!req.secure && process.env.NODE_ENV == 'production') {
+    return res.redirect('https://' + req.get('host') + req.url);
+  }
+  next();
+}
+
+if (process.env.NODE_ENV == 'production') {
+  app.listen(80);
+  app.use(requireHTTPS);
+}
+
 require('./router')(app);
