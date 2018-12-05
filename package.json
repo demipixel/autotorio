@@ -16,6 +16,7 @@
     "ejs": "^2.6.1",
     "express": "^4.16.3",
     "factorio-generators": "git+https://github.com/demipixel/factorio-generators.git",
+    "https": "^1.0.0",
     "moment": "^2.22.1"
   },
   "devDependencies": {

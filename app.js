@@ -2,6 +2,9 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
 const cookieParser = require('cookie-parser');
+const http = require('http');
+const https = require('https');
+const fs = require('fs');
 
 
 const PORT = process.env.NODE_ENV != 'production' ? 5000 : 80;
@@ -22,8 +25,14 @@ app.use(bodyParser.urlencoded({
 
 app.use(cookieParser());
 
-const server = app.listen(PORT, () => {
-  console.log('Server live on port ' + server.address().port);
+const certPath = '/etc/letsencrypt/live/autotorio.com/fullchain.pem';
+const keyPath = '/etc/letsencrypt/live/autotorio.com/privkey.pem';
+
+const server = (process.env.NODE_ENV == 'production' ? https.createServer({
+  cert: fs.existsSync(certPath) ? fs.readFileSync(certPath) : undefined,
+  key: fs.existsSync(keyPath) ? fs.readFileSync(keyPath) : undefined
+}) : http.createServer(app)).listen(PORT, () => {
+  console.log('Server live on port ' + PORT);
 });
 
 require('./router')(app);
