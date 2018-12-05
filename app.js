@@ -7,7 +7,7 @@ const https = require('https');
 const fs = require('fs');
 
 
-const PORT = process.env.NODE_ENV != 'production' ? 5000 : 80;
+const PORT = process.env.NODE_ENV != 'production' ? 5000 : 443;
 
 const app = express();
 
