@@ -13,6 +13,7 @@ app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 
 app.use('/assets', express.static(path.join(__dirname, 'assets')));
+app.use('/favicon.ico', express.static('assets/img/favicon.ico'));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
