@@ -55,6 +55,7 @@
     "gun_turrets": {
       "en": "Gun Turrets",
       "fr": "Tourelles mitrailleuses",
+      "it": "Torretta difensiva",
       "de": "Geschütztürme",
       "cn": "机枪炮塔",
       "pl": "Działka maszynowe"
@@ -62,6 +63,7 @@
     "laser_turrets": {
       "en": "Laser Turrets",
       "fr": "Tourelles laser",
+      "it": "Torretta laser",
       "de": "Lasergeschütz",
       "cn": "激光炮塔",
       "pl": "Działka laserowe"
@@ -69,6 +71,7 @@
     "transport_belt": {
       "en": "Transport Belt",
       "fr": "Convoyeur",
+      "it": "Rullo di trasporto",
       "de": "Fließband",
       "cn": "传送带",
       "pl": "Pas transmisyjny"
@@ -76,6 +79,7 @@
     "fast_transport_belt": {
       "en": "Fast Transport Belt",
       "fr": "Convoyeur rapide",
+      "it": "Rullo di trasporto veloce",
       "de": "schnelles Fließband",
       "cn": "高速传送带",
       "pl": "Szybki pas transmisyjny"
@@ -83,6 +87,7 @@
     "express_transport_belt": {
       "en": "Express Transport Belt",
       "fr": "Convoyeur express",
+      "it": "Rullo di trasporto ultraveloce",
       "de": "Express-Fließband",
       "cn": "极速传送带",
       "pl": "Ekspresowy pas transmisyjny"
@@ -90,6 +95,7 @@
     "stone_path": {
       "en": "Stone Path",
       "fr": "Briques",
+      "it": "Strada di pietra",
       "de": "Steinweg",
       "cn": "石基路",
       "pl": "Kamienna ścieżka"
@@ -97,6 +103,7 @@
     "concrete": {
       "en": "Concrete",
       "fr": "Béton",
+      "it": "Cemento",
       "de": "Beton",
       "cn": "混凝土",
       "pl": "Beton"
@@ -104,6 +111,7 @@
     "hazard_concrete_left": {
       "en": "Hazard Concrete Left",
       "fr": "Zone de danger (Gauche)",
+      "it": "Cemento con disegni di pericolo a sinistra",
       "de": "Beton mit Gefahrenmarkierung (Links)",
       "cn": "标识混凝土 (左)",
       "pl": "Beton ostrzegawczy (Lewo)"
@@ -111,28 +119,33 @@
     "hazard_concrete_right": {
       "en": "Hazard Concrete Right",
       "fr": "Zone de danger (Droite)",
+      "it": "Cemento con disegni di pericolo a destra",
       "de": "Beton mit Gefahrenmarkierung (Rechts)",
       "cn": "标识混凝土 (右)",
       "pl": "Beton ostrzegawszy (Prawo)"
     },
     "refined_concrete": {
       "en": "Refined Concrete",
+      "it": "Cemento raffinato",
       "pl": "Ulepszony beton",
       "cn": "钢筋混凝土"
     },
     "refined_hazard_concrete_left": {
       "en": "Refined Hazard Concrete Left",
+      "it": "Cemento raffinato con disegni di pericolo a sinistra",
       "pl": "Ulepszony beton ostrzegawszy (Lewo)",
       "cn": "钢筋标识混凝土 (左)"
     },
     "refined_hazard_concrete_right": {
       "en": "Refined Hazard Concrete Right",
+      "it": "Cemento raffinato con disegni di pericolo a destra",
       "pl": "Ulepszony beton ostrzegawszy (Prawo)",
       "cn": "钢筋标识混凝土 (右)"
     },
     "speed_module": {
       "en": "Speed Module",
       "fr": "Module de vitesse",
+      "it": "Modulo velocità",
       "de": "Geschwindigkeitsmodul",
       "cn": "速度插件",
       "pl": "Moduł szybkości"
@@ -140,6 +153,7 @@
     "effectivity_module": {
       "en": "Effectivity Module",
       "fr": "Module de d'efficacité",
+      "it": "Modulo efficienza",
       "de": "Effektivitätsmodul",
       "cn": "节能插件",
       "pl": "Moduł efektywności"
@@ -147,6 +161,7 @@
     "productivity_module": {
       "en": "Productivity Module",
       "fr": "Module de production",
+      "it": "Modulo produttività",
       "de": "Produktivitätsmodul",
       "cn": "产能插件",
       "pl": "Moduł prodyktywności"
@@ -155,6 +170,7 @@
   "none": {
     "en": "None",
     "fr": "Aucun(e)",
+    "it": "Nessuno",
     "de": "Nichts",
     "cn": "无",
     "pl": "Nic"
@@ -162,6 +178,7 @@
   "right": {
     "en": "Right",
     "fr": "Droite",
+    "it": "Destra",
     "de": "Rechts",
     "cn": "右",
     "pl": "Po prawej"
@@ -169,6 +186,7 @@
   "bottom": {
     "en": "Bottom",
     "fr": "Bas",
+    "it": "Sotto",
     "de": "Unten",
     "cn": "底部",
     "pl": "Na dole"
@@ -176,6 +194,7 @@
   "down": {
     "en": "Down",
     "fr": "Bas",
+    "it": "Giù",
     "de": "Unten",
     "cn": "下",
     "pl": "Na dole"
@@ -183,6 +202,7 @@
   "left": {
     "en": "Left",
     "fr": "Gauche",
+    "it": "Sinistra",
     "de": "Links",
     "cn": "左",
     "pl": "Po lewej"
@@ -190,6 +210,7 @@
   "top": {
     "en": "Top",
     "fr": "Haut",
+    "it": "Sopra",
     "de": "Oben",
     "cn": "顶部",
     "pl": "Na górze"
@@ -197,6 +218,7 @@
   "up": {
     "en": "Up",
     "fr": "Haut",
+    "it": "Su",
     "de": "Oben",
     "cn": "上",
     "pl": "Na górze"
@@ -234,6 +256,7 @@
   "submit_oil_outpost": {
     "en": "Get Oil Outpost Blueprint",
     "fr": "Obtenir le planificateur d'avant-poste de pétrole",
+    "it": "Ottieni avamposto petrolifero",
     "de": "Öl Außenposten Blaupause erstellen",
     "cn": "获取石油前哨站蓝图",
     "pl": "Wygeneruj blueprint pola naftowego"
@@ -251,6 +274,7 @@
   "settings_url": {
     "en": "Get settings URL",
     "fr": "Obtenir l'URL des paramètres",
+    "it": "Ottieni URL con impostazioni",
     "de": "URL mit Einstellungen anzeigen",
     "cn": "获取设定URL",
     "pl": "Zdobądź URL"
@@ -350,7 +374,7 @@
     "es": "Tipo de Estera",
     "pt-br": "Tipo de Esteira",
     "fr": "Type de convoyeur",
-    "it": "Tipo di nastro trasportatore",
+    "it": "Tipo di rullo di trasporto",
     "de": "Fließbandtyp",
     "cn": "传送带类型",
     "pl": "Rodzaj pasa"
@@ -360,7 +384,7 @@
     "es": "Use esteras subterráneas",
     "pt-br": "Use esteiras subterrâneas",
     "fr": "Utiliser les convoyeurs souterrains",
-    "it": "Usa nastri trasportatori sotterranei",
+    "it": "Usa rulli di trasporto sotterranei",
     "de": "Benutze unterirdische Fließbänder",
     "cn": "使用地下传送带",
     "pl": "Użyj pasów podziemnych"
@@ -370,7 +394,7 @@
     "es": "Mineros compactos (sin espacios horizontales entre mineros, colocar postes eléctricos entre esteras subterráneas)",
     "pt-br": "Mineradores Compactos (sem espaços horizontais entre mineradores, coloque postes elétricos entre esteiras subterrâneas)",
     "fr": "Mineurs compacts (pas d'espace horizontal entre les mineurs et avec des poteaux électriques entres les convoyeurs souterrains)",
-    "it": "Estrattori compatti (nessuno spazio tra gli estrattori, posiziona i pali elettrici tra i nastri trasportatori sotterranei)",
+    "it": "Estrattori compatti (nessuno spazio tra gli estrattori, posiziona i pali elettrici tra i rulli di trasporto sotterranei)",
     "de": "kompakte Erzförderer (kein horizonaler Abstand zwischen Erzförderern, platziert Strommasten zwischen den unterirdischen Fließbändern)",
     "cn": "采矿机分布更加紧凑 (在采矿机间没有水平间隔，在地下传送带中间放置电线杆)",
     "pl": "Kompaktowe kopalnie (brak miejsc między kopalniami, słupy elektryczne są ściśnięte między nie z podziemnymi pasami)"
@@ -380,7 +404,7 @@
     "es": "Tipo de Estera Personalizada (Opcional)",
     "pt-br": "Tipo de Esteira Personalizada (Opcional)",
     "fr": "Convoyeur spécial (Optionnel)",
-    "it": "Tipo di nastro trasportatore personalizzato (Opzionale)",
+    "it": "Tipo di rullo di trasporto personalizzato (Opzionale)",
     "de": "benutzerdefiniertes Fließband (Optional)",
     "cn": "自定义传送带类型 (可选)",
     "pl": "Niestandardowy typ pasów (Opcjonalne)"
@@ -390,7 +414,7 @@
     "es": "Solo es necesario cuando se usan mods con nombres de esteras personalizadas.",
     "pt-br": "Só é necessário quando usar mods com nomes de esteiras personalizadas",
     "fr": "Seulement si des mods sont utilisés avec des convoyeurs moddés.",
-    "it": "Necessario solo quando si usano mod con nomi dei nastri trasportatori personalizzati.",
+    "it": "Necessario solo quando si usano mod con nomi dei rulli di trasporto personalizzati.",
     "de": "Nur notwendig bei Benutzung von Modifikationen mit eigenen Fließbändern",
     "cn": "仅在你使用mod后使用自定义传送带时需要使用",
     "pl": "Opcję wybierz tylko, jeśli używasz modyfikacji z niestandardowymi nazwami pasów."
@@ -520,17 +544,19 @@
     "es": "Use insertadores de pila entre los cofres de guardia y el vagón de carga",
     "pt-br": "Use inseridores de pilha entre os baús de guarda e o vagão de carga",
     "fr": "Utilise des bras robotisés haute-capacité entre les coffres tampons et les wagons.",
-    "it": "Usa inseritori multipli fra le ceste di buffer e il vagone merci",
+    "it": "Usa inseritori multipli fra le casse buffer e il vagone merci",
     "de": "Stapelgreifarme zwischen Pufferkiste und Güterwaggon benutzen.",
     "cn": "在主动存货箱(绿箱)和货运车厢中使用集装机械臂",
     "pl": "Użyj grupowych inserterów przy ładowaniu skrzyń i wagonów"
   },
   "filter_inserters": {
     "en": "Use Filter Inserters",
+    "it": "Inseritore filtrante",
     "cn": "使用筛选机械臂"
   },
   "filter_inserters_info": {
     "en": "Use filter inserters between the buffer chests and the cargo wagon",
+    "it": "Usa gli inseritori filtranti fra le casse buffer e il vagone merci",
     "cn": "在主动存货箱与货运车厢之间使用筛选机械臂"
   },
   "radar": {
@@ -545,10 +571,12 @@
   },
   "lights": {
     "en": "Include Lights",
-     "cn": "包含灯在内"
+    "it": "Includi luci",
+    "cn": "包含灯在内"
   },
   "beacons": {
     "en": "Beacons",
+    "it": "Faro",
     "cn": "插件效果分享塔"
   },
   "balancer": {
@@ -576,7 +604,7 @@
     "es": "Si no está disponible un balanceador de NxN (donde N es el número de vagones de carga), coloque aquí una linha de planificación de un balanceador.<br>Se proporcionan solo balanceadores para 1, 2 y 4 vagones de carga.<br>El balanceador debe estar hecho de estera exprés y mirar hacia arriba. Si no está \"en línea\", asegúrese de que sobresalga a la derecha y aumente \"espacio de pared\".<br>Esto no es necesario si está basado en bot.",
     "pt-br": "Se um balanceador de NxN não está disponível (sendo N o número de vagões de carga), coloque aqui uma linha de planejamento de um balanceador.<br>Só serão providos balanceadores para 1, 2 e 4 vagões de carga.<br>O balanceador deve ser feito de esteiras expressas e estar voltado para cima. Se nào estiver \"em linha\", assegure-se de que se sobresaia para a direita e aumente \"espaço entre paredes\".<br>Não é necessário se estiver baseado em bot.",
     "fr": "Si le balanceur NxN n'est pas disponible (où N est le nombre de wagons), place une chaîne de planificateur du balanceur NxN ici.<br>Les balanceurs pour 1, 2 et 4 wagons sont déjà proposés.<br>Le balanceur doit être fait de convoyeurs express et doit viser le haut. Si il n'est pas \"en ligne\", aligne-le sur la droite du planificateur et augmente l'espace entre les murs.<br>Inutile si basé sur les robots.",
-    "it": "Se un bilanciatore NxN non è disponibile (dove N sta per il numero di vagoni merci), incolla qui la stringa del progetto di un bilanciatore.<br>Sono disponibili solo bilanciatori per 1, 2 e 4 vagoni merci.<br>I bilanciatori dovrebbero essere fatti con nastri trasportatori ultraveloci e orientati verso l'alto. Se non è \"in linea\", assicurati che rimanga a destra e aumenta la \"distanza muri\".<br>Ciò non è necessario se l'avamposto si basa sui robot logistici.",
+    "it": "Se un bilanciatore NxN non è disponibile (dove N sta per il numero di vagoni merci), incolla qui la stringa del progetto di un bilanciatore.<br>Sono disponibili solo bilanciatori per 1, 2 e 4 vagoni merci.<br>I bilanciatori dovrebbero essere fatti con rulli di trasporto ultraveloci e orientati verso l'alto. Se non è \"in linea\", assicurati che rimanga a destra e aumenta la \"distanza muri\".<br>Ciò non è necessario se l'avamposto si basa sui robot logistici.",
     "de": "Wenn kein Balancer mit NxN verfügbar ist (N ist die Anzahl der Güterwaggons), gib hier einen Balancer Blaupausen Code ein<br>Es werden nur Balancer für 1, 2 und 4 Güterwaggons bereitgestellt.<br>Der Balancer sollte aus Express-Fließbändern bestehen und nach oben ausgerichtet sein. Wenn der Balancer nicht \"inline\" ist, stell sicher, dass er auf der rechten seite heraus steht und erhöhe den \"Mauerabstand\".<br>Dies wird nicht benötigt wenn Roboterbasiert",
     "cn": "如果 NxN 的分流器无法使用 (N是车厢的数目), 在这里输入分流器的蓝图代码。仅提供对1，2，4个车厢的分流器修改，分流器应该使用极速并且朝上。<br> 如果并非 \"一行\" 的情况下，请确保向右突出并且增加石墙选择出的空间。<br> 如果是基于机器人使用则不需要修改。 ",
     "pl": "Jeśli nie istnieje balancer NxN (Gdzie N jest # wagonów), dodaj string blueprintu własnego balancera.<br>Tylko balancery przeznaczone dla 1, 2 i 4 wagonów są zapewnione.<br>Balancer powinien być stworzony z ekspresowych beltów i przepuszczać elementy W GÓRĘ. Jeśli nie mieści się \"w jednej linii\", upewnij się, że elementy wystające poza główną linię wystają na prawo.<br>Opcja nie jest wymagana, jeśli wybrano ładowanie botami."
@@ -606,7 +634,7 @@
     "es": "Elimina todas las esteras y utiliza los cofres pasivos y solicitantes en su lugar. No incluye robopuerto.",
     "pt-br": "Remove todas as esteiras e utiliza os baús passivos e baús soliticantes no lugar. Não inclui roboports",
     "fr": "Supprime tous les convoyeurs et utilise des coffres de demande et d'approvisionnement logistique. N'inclus pas les roboports.",
-    "it": "Rimuove tutti i nastri trasportatori e usa invece casse fornitrici passive e di richiesta. Non include roboport.",
+    "it": "Rimuove tutti i rulli di trasporto e usa invece casse fornitrici passive e di richiesta. Non include roboport.",
     "de": "Entfernt alle Fließbänder und benutzt stattdessen passive Anbieterkisten und Anforderungskisten. Dies beinhaltet keine Roboterhangar",
     "cn": "移除所有传送带并且使用被动供货箱(红箱)和优先集货箱(蓝箱)替代。不会添加机器人指令平台。",
     "pl": "Usuwa wszystkie pasy i używa skrzyń dostawczych. Nie wymaa budowy roboportu."
@@ -793,11 +821,13 @@
   },
   "double_loading": {
     "en": "Double Loading",
+    "it": "Doppio caricamento",
     "cn": "双倍装载",
     "pl": "Załadunek z obu stron"
   },
   "double_loading_info": {
     "en": "Load on both sides of each cargo wagon.",
+    "it": "Carica da entrambi i lati di ogni vagone merci.",
     "cn": "在每个车厢的两侧装载",
     "pl": "Ładuj złoże z obu stron wagonu."
   },
