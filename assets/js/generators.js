@@ -1,5 +1,5 @@
 const CONTRIBUTORS = ['phono\'s', 'Goopsky\'s', 'Fahr', 'Dwarf\'s Foundry', 'Tupper\'s', 'Schorty\'s', 'nerdkusi\'s', 'KrzysD\'s', 'Geo\'s', 'Brodo\'s',
-  'gigajum\'s', 'Tom\'s', 'SickHippie', 'TheTostu\'s', 'Cyberboss', 'Autotorio Approved™'];
+  'gigajum\'s', 'Tom\'s', 'SickHippie', 'TheTostu\'s', 'Cyberboss', 'Autotorio Approved™', 'THE FACTORY'];
 // Okay, last one wasn't technically created by a contributor
 
 // ^ Above is everyone who has donated to the project or helped work on it.
