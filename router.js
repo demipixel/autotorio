@@ -596,6 +596,14 @@ module.exports = function(app) {
           }
         },
         {
+          type: 'input',
+          name: 'pumpjackName',
+          title: lcl('custom_pumpjack'),
+          placeholder: 'example_pumpjack_name_2',
+          info: lcl('custom_pumpjack_info'),
+          activate: 'mod'
+        },
+        {
           type: 'select',
           name: 'trainSide',
           title: lcl('train_station_side'),
@@ -898,7 +906,7 @@ module.exports = function(app) {
         },
         {
           title: 'Import the blueprint in Factorio',
-          text: 'Now, you have your copied blueprint string. Open the Blueprint Library in Factorio and then click on Import string.<br/>In the textbox, paste the blueprint string and click on Import. It will give you a blueprint that you can place.',
+          text: 'Now, you have your copied blueprint string. Open the Blueprint Library in Factorio and then click on Import string.<br/>In the textbox, paste the blueprint string and click on Import. It will give you a blueprint that you can place. Don\'t forget to delete the rail you placed down!',
           image: 'https://puu.sh/z8C3G/4917376c36.gif'
         }
       ]

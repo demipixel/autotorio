@@ -509,6 +509,12 @@
     "cn": "选择后会在每个抽油机插入三个选择的插件",
     "pl": "Jeśli wybierzesz te opcję, do każdego kiwaka wstawione zostaną 3 wybrane moduły"
   },
+  "custom_pumpjack": {
+    "en": "Modded Pumpjack Name"
+  },
+  "custom_pumpjack_info": {
+    "en": "If your blueprint contains modded pumpjacks, specify the internal name of the pumpjack (use underscores, not dashes)"
+  },
   "custom_module": {
     "en": "Custom Module Name",
     "es": "Nombre del Módulo Personalizado",
