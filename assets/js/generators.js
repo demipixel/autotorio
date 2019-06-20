@@ -53,6 +53,7 @@ function generateOilOutpost(form) {
 
   opt.module = (opt.modded && opt.customModule) || opt.module != 'None' ? ((opt.modded && customModule) || opt.module).split(' ').join('_').toLowerCase() :
     null;
+  opt.pumpjackName = opt.modded && opt.pumpjackName ? opt.pumpjackName : null;
   opt.includeRadar = opt.includeRadar == 'on';
   opt.includeLights = opt.includeLights == 'on';
   opt.beacons = opt.beacons == 'on';
