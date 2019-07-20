@@ -2,7 +2,7 @@
   "navbar": {
     "outpost_generator": {
       "en": "Outpost Generator",
-      "es": "Generador de Postos",
+      "es": "Generador de Puestos",
       "pt-br": "Gerador de Postos",
       "fr": "Générateur d'avant-poste de minage",
       "it": "Generatore di avamposti",
@@ -24,7 +24,7 @@
     },
     "oil_outpost_generator": {
       "en": "Oil Outpost Generator",
-      "es": "Generador de Postos Petroleros",
+      "es": "Generador de Puestos Petroleros",
       "pt-br": "Gerador de Postos Petroleiros",
       "fr": "Générateur d'avant-poste de pétrole",
       "it": "Generatore di avamposti petroliferi",
@@ -59,6 +59,7 @@
   "entities": {
     "gun_turrets": {
       "en": "Gun Turrets",
+      "es": "Torreta",
       "fr": "Tourelles mitrailleuses",
       "it": "Torretta difensiva",
       "de": "Geschütztürme",
@@ -68,6 +69,7 @@
     },
     "laser_turrets": {
       "en": "Laser Turrets",
+      "es": "Torreta Laser",
       "fr": "Tourelles laser",
       "it": "Torretta laser",
       "de": "Lasergeschütz",
@@ -77,6 +79,7 @@
     },
     "transport_belt": {
       "en": "Transport Belt",
+      "es": "Cinta transportadora",
       "fr": "Convoyeur",
       "it": "Rullo di trasporto",
       "de": "Fließband",
@@ -86,6 +89,7 @@
     },
     "fast_transport_belt": {
       "en": "Fast Transport Belt",
+      "es": "Cinta transportadora rápida",
       "fr": "Convoyeur rapide",
       "it": "Rullo di trasporto veloce",
       "de": "schnelles Fließband",
@@ -95,6 +99,7 @@
     },
     "express_transport_belt": {
       "en": "Express Transport Belt",
+      "es": "Cinta transportadora exprés",
       "fr": "Convoyeur express",
       "it": "Rullo di trasporto ultraveloce",
       "de": "Express-Fließband",
@@ -104,6 +109,7 @@
     },
     "stone_path": {
       "en": "Stone Path",
+      "es": "Ladrillo de piedra",
       "fr": "Briques",
       "it": "Strada di pietra",
       "de": "Steinweg",
@@ -113,6 +119,7 @@
     },
     "concrete": {
       "en": "Concrete",
+      "es": "Concreto",
       "fr": "Béton",
       "it": "Cemento",
       "de": "Beton",
@@ -122,6 +129,7 @@
     },
     "hazard_concrete_left": {
       "en": "Hazard Concrete Left",
+      "es": "Hormigón de señal de peligro (izquierda)",
       "fr": "Zone de danger (Gauche)",
       "it": "Cemento con disegni di pericolo a sinistra",
       "de": "Beton mit Gefahrenmarkierung (Links)",
@@ -131,6 +139,7 @@
     },
     "hazard_concrete_right": {
       "en": "Hazard Concrete Right",
+      "es": "Hormigón de señal de peligro (derecha)",
       "fr": "Zone de danger (Droite)",
       "it": "Cemento con disegni di pericolo a destra",
       "de": "Beton mit Gefahrenmarkierung (Rechts)",
@@ -140,6 +149,7 @@
     },
     "refined_concrete": {
       "en": "Refined Concrete",
+      "es": "Concreto refinado",
       "it": "Cemento raffinato",
       "pl": "Ulepszony beton",
       "cn": "钢筋混凝土",
@@ -147,6 +157,7 @@
     },
     "refined_hazard_concrete_left": {
       "en": "Refined Hazard Concrete Left",
+      "es": "Concreto refinado de señal de peligro (izquierda)",
       "it": "Cemento raffinato con disegni di pericolo a sinistra",
       "pl": "Ulepszony beton ostrzegawszy (Lewo)",
       "cn": "钢筋标识混凝土 (左)",
@@ -154,6 +165,7 @@
     },
     "refined_hazard_concrete_right": {
       "en": "Refined Hazard Concrete Right",
+      "es": "Concreto refinado de señal de peligro (derecha)",
       "it": "Cemento raffinato con disegni di pericolo a destra",
       "pl": "Ulepszony beton ostrzegawszy (Prawo)",
       "cn": "钢筋标识混凝土 (右)",
@@ -161,6 +173,7 @@
     },
     "speed_module": {
       "en": "Speed Module",
+      "es": "Módulo de velocidad",
       "fr": "Module de vitesse",
       "it": "Modulo velocità",
       "de": "Geschwindigkeitsmodul",
@@ -170,6 +183,7 @@
     },
     "effectivity_module": {
       "en": "Effectivity Module",
+      "es": "Módulo de eficiencia",
       "fr": "Module de d'efficacité",
       "it": "Modulo efficienza",
       "de": "Effektivitätsmodul",
@@ -179,6 +193,7 @@
     },
     "productivity_module": {
       "en": "Productivity Module",
+      "es": "Módulo de productividad",
       "fr": "Module de production",
       "it": "Modulo produttività",
       "de": "Produktivitätsmodul",
@@ -189,6 +204,7 @@
   },
   "none": {
     "en": "None",
+    "es": "Nada",
     "fr": "Aucun(e)",
     "it": "Nessuno",
     "de": "Nichts",
@@ -198,6 +214,7 @@
   },
   "right": {
     "en": "Right",
+    "es": "Derecha",
     "fr": "Droite",
     "it": "Destra",
     "de": "Rechts",
@@ -207,6 +224,7 @@
   },
   "bottom": {
     "en": "Bottom",
+    "es": "Fondo",
     "fr": "Bas",
     "it": "Sotto",
     "de": "Unten",
@@ -216,6 +234,7 @@
   },
   "down": {
     "en": "Down",
+    "es": "Abajo",
     "fr": "Bas",
     "it": "Giù",
     "de": "Unten",
@@ -225,6 +244,7 @@
   },
   "left": {
     "en": "Left",
+    "es": "Izquierda",
     "fr": "Gauche",
     "it": "Sinistra",
     "de": "Links",
@@ -234,6 +254,7 @@
   },
   "top": {
     "en": "Top",
+    "es": "Arriba",
     "fr": "Haut",
     "it": "Sopra",
     "de": "Oben",
@@ -243,6 +264,7 @@
   },
   "up": {
     "en": "Up",
+    "es": "Arriba",
     "fr": "Haut",
     "it": "Su",
     "de": "Oben",
@@ -263,7 +285,7 @@
   },
   "ore_outpost_generator": {
     "en": "Ore Outpost Generator",
-    "es": "Generador de Postos de Minerales",
+    "es": "Generador de Puestos de Minerales",
     "pt-br": "Gerador de Postos de Minérios",
     "fr": "Générateur d'avant-poste de minage",
     "it": "Generatore di avamposti di minerali",
@@ -274,7 +296,7 @@
   },
   "submit_ore_outpost": {
     "en": "Get Ore Outpost Blueprint",
-    "es": "Obtener Planificación de Posto de Minerales",
+    "es": "Obtener Planificación de Puesto de Minerales",
     "pt-br": "Obter Planejamento de Posto de Minérios",
     "fr": "Obtenir le planificateur de minage",
     "it": "Ottieni avamposto di minerali",
@@ -285,6 +307,7 @@
   },
   "submit_oil_outpost": {
     "en": "Get Oil Outpost Blueprint",
+    "es": "Obtener Planificación de Puesto Petrolifero",
     "fr": "Obtenir le planificateur d'avant-poste de pétrole",
     "it": "Ottieni avamposto petrolifero",
     "de": "Öl Außenposten Blaupause erstellen",
@@ -305,6 +328,7 @@
   },
   "settings_url": {
     "en": "Get settings URL",
+    "es": "Obtener URL de los parámetros",
     "fr": "Obtenir l'URL des paramètres",
     "it": "Ottieni URL con impostazioni",
     "de": "URL mit Einstellungen anzeigen",
@@ -402,7 +426,7 @@
   },
   "modded_info": {
     "en": "(Shows options for modded entity names)",
-    "es": "(Mostra las opciones para nombres de elementos modificados)",
+    "es": "(Muestra las opciones para nombres de elementos modificados)",
     "pt-br": "(Mostra  as opções de nomes para elementos modificados)",
     "fr": "(Monter les options pour les noms des entitées moddées)",
     "it": "(Mostra opzioni per i nomi delle entità moddate)",
@@ -413,7 +437,7 @@
   },
   "belt_type": {
     "en": "Belt Type",
-    "es": "Tipo de Estera",
+    "es": "Tipo de Cinta transportadora",
     "pt-br": "Tipo de Esteira",
     "fr": "Type de convoyeur",
     "it": "Tipo di rullo di trasporto",
@@ -424,7 +448,7 @@
   },
   "underground_belts_info": {
     "en": "Use underground belts",
-    "es": "Use esteras subterráneas",
+    "es": "Use Cintas transportadoras subterráneas",
     "pt-br": "Use esteiras subterrâneas",
     "fr": "Utiliser les convoyeurs souterrains",
     "it": "Usa rulli di trasporto sotterranei",
@@ -435,7 +459,7 @@
   },
   "compact": {
     "en": "Compact miners (no horizontal spacing between miners, places electric poles inbetween underground belts)",
-    "es": "Mineros compactos (sin espacios horizontales entre mineros, colocar postes eléctricos entre esteras subterráneas)",
+    "es": "Mineros compactos (sin espacios horizontales entre mineros, colocar postes eléctricos entre cintas transportadoras subterráneas)",
     "pt-br": "Mineradores Compactos (sem espaços horizontais entre mineradores, coloque postes elétricos entre esteiras subterrâneas)",
     "fr": "Mineurs compacts (pas d'espace horizontal entre les mineurs et avec des poteaux électriques entres les convoyeurs souterrains)",
     "it": "Estrattori compatti (nessuno spazio tra gli estrattori, posiziona i pali elettrici tra i rulli di trasporto sotterranei)",
@@ -446,7 +470,7 @@
   },
   "custom_belt_type": {
     "en": "Custom Belt Type (Optional)",
-    "es": "Tipo de Estera Personalizada (Opcional)",
+    "es": "Tipo de Cinta transportadora Personalizada (Opcional)",
     "pt-br": "Tipo de Esteira Personalizada (Opcional)",
     "fr": "Convoyeur spécial (Optionnel)",
     "it": "Tipo di rullo di trasporto personalizzato (Opzionale)",
@@ -457,7 +481,7 @@
   },
   "custom_belt_type_info": {
     "en": "Only necessary when using mods with custom belt names.",
-    "es": "Solo es necesario cuando se usan mods con nombres de esteras personalizadas.",
+    "es": "Solo es necesario cuando se usan mods con nombres de cintas transportadoras personalizadas.",
     "pt-br": "Só é necessário quando usar mods com nomes de esteiras personalizadas",
     "fr": "Seulement si des mods sont utilisés avec des convoyeurs moddés.",
     "it": "Necessario solo quando si usano mod con nomi dei rulli di trasporto personalizzati.",
@@ -479,7 +503,7 @@
   },
   "train_enter_from": {
     "en": "Train Enter From",
-    "es": "Donde el Tren entra",
+    "es": "Dónde el Tren entra",
     "pt-br": "Onde o Trem entra",
     "fr": "Entrée du train par",
     "it": "Entrata dei treni da",
@@ -512,7 +536,7 @@
   },
   "custom_mining_drill": {
     "en": "Custom Mining Drill Name (Optional)",
-    "es": "Nombre del Mineros Personalizado (Opcional)",
+    "es": "Nombre de Mineros Personalizado (Opcional)",
     "pt-br": "Nome de Mineradores Personalizados (Opcional)",
     "fr": "Mineurs spéciaux (Optionnel)",
     "it": "Tipo di estrattore personalizzato (Opzionale)",
@@ -556,7 +580,7 @@
   },
   "oil_modules_info": {
     "en": "If chosen, inserts 3 of the selected module in each pumpjack.",
-    "es": "Quando seleccionado, inserta 3 módulos en cada bomba petrolera.",
+    "es": "Cuando seleccionado, inserta 3 módulos en cada bomba petrolera.",
     "pt-br": "Quando selecionado, insere 3 módulos em cada bomba de petrólero",
     "fr": "Si choisi, insère 3 modules du type sélectionné dans chaque pompe.",
     "it": "Se selezionato, inserisce 3 dei moduli scelti in ogni pompa petrolifera.",
@@ -608,7 +632,7 @@
   },
   "stack_inserters_info": {
     "en": "Use stack inserters between the buffer chests and the cargo wagon",
-    "es": "Use insertadores de pila entre los cofres de guardia y el vagón de carga",
+    "es": "Usar insertadores de pila entre los cofres de guardia y el vagón de carga",
     "pt-br": "Use inseridores de pilha entre os baús de guarda e o vagão de carga",
     "fr": "Utilise des bras robotisés haute-capacité entre les coffres tampons et les wagons.",
     "it": "Usa inseritori multipli fra le casse buffer e il vagone merci",
@@ -619,12 +643,14 @@
   },
   "filter_inserters": {
     "en": "Use Filter Inserters",
+    "es": "Usar Insertadores con filtro",
     "it": "Inseritore filtrante",
     "cn": "使用筛选机械臂",
     "ru": "Использовать фильтрующие манипуляторы"
   },
   "filter_inserters_info": {
     "en": "Use filter inserters between the buffer chests and the cargo wagon",
+    "es": "Usar insertadores con filtro entre los cofres de guardia y el vagón de carga",
     "it": "Usa gli inseritori filtranti fra le casse buffer e il vagone merci",
     "cn": "在主动存货箱与货运车厢之间使用筛选机械臂",
     "ru": "Использовать фильтрующие манипуляторы между буферными сундуками и грузовыми вагонами"
@@ -642,12 +668,14 @@
   },
   "lights": {
     "en": "Include Lights",
+    "es": "Incluye luces",
     "it": "Includi luci",
     "cn": "包含灯在内",
     "ru": "Включить фонари в чертёж"
   },
   "beacons": {
     "en": "Beacons",
+    "es": "Faros",
     "it": "Faro",
     "cn": "插件效果分享塔",
     "ru": "Маяки"
@@ -676,7 +704,7 @@
   },
   "balancer_info": {
     "en": "If a balancer of NxN is not available (where N is the # of cargo wagons), put a blueprint string of a balancer here.<br>Only balancers for 1, 2, and 4 cargo wagons are provided.<br>The balancer should be made of express belt and be facing upwards. If it is not \"inline\", make sure it sticks out to right and increase \"wall space\".<br>This is not required if bot-based.",
-    "es": "Si no está disponible un balanceador de NxN (donde N es el número de vagones de carga), coloque aquí una linha de planificación de un balanceador.<br>Se proporcionan solo balanceadores para 1, 2 y 4 vagones de carga.<br>El balanceador debe estar hecho de estera exprés y mirar hacia arriba. Si no está \"en línea\", asegúrese de que sobresalga a la derecha y aumente \"espacio de pared\".<br>Esto no es necesario si está basado en bot.",
+    "es": "Si no está disponible un balanceador de NxN (donde N es el número de vagones de carga), coloque aquí una linea de planificación de un balanceador.<br>Se proporcionan solo balanceadores para 1, 2 y 4 vagones de carga.<br>El balanceador debe estar hecho de cinta transportadora exprés y mirar hacia arriba. Si no está \"en línea\", asegúrese de que sobresalga a la derecha y aumente el \"espacio de pared\".<br>Esto no es necesario si está basado en robots.",
     "pt-br": "Se um balanceador de NxN não está disponível (sendo N o número de vagões de carga), coloque aqui uma linha de planejamento de um balanceador.<br>Só serão providos balanceadores para 1, 2 e 4 vagões de carga.<br>O balanceador deve ser feito de esteiras expressas e estar voltado para cima. Se nào estiver \"em linha\", assegure-se de que se sobresaia para a direita e aumente \"espaço entre paredes\".<br>Não é necessário se estiver baseado em bot.",
     "fr": "Si le balanceur NxN n'est pas disponible (où N est le nombre de wagons), place une chaîne de planificateur du balanceur NxN ici.<br>Les balanceurs pour 1, 2 et 4 wagons sont déjà proposés.<br>Le balanceur doit être fait de convoyeurs express et doit viser le haut. Si il n'est pas \"en ligne\", aligne-le sur la droite du planificateur et augmente l'espace entre les murs.<br>Inutile si basé sur les robots.",
     "it": "Se un bilanciatore NxN non è disponibile (dove N sta per il numero di vagoni merci), incolla qui la stringa del progetto di un bilanciatore.<br>Sono disponibili solo bilanciatori per 1, 2 e 4 vagoni merci.<br>I bilanciatori dovrebbero essere fatti con rulli di trasporto ultraveloci e orientati verso l'alto. Se non è \"in linea\", assicurati che rimanga a destra e aumenta la \"distanza muri\".<br>Ciò non è necessario se l'avamposto si basa sui robot logistici.",
@@ -687,7 +715,7 @@
   },
   "bots": {
     "en": "Bots",
-    "es": "Bots",
+    "es": "Robots",
     "pt-br": "Bots",
     "fr": "Robots",
     "it": "Robot",
@@ -698,7 +726,7 @@
   },
   "bot_based": {
     "en": "Bot Based",
-    "es": "Basado en Bot",
+    "es": "Basado en Robots",
     "pt-br": "Baseado em Bot",
     "fr": "Basé sur les robots",
     "it": "Basato sui robot",
@@ -709,7 +737,7 @@
   },
   "bot_based_info": {
     "en": "Removes all belts and uses passive provider and requester chests instead. Does not include roboports.",
-    "es": "Elimina todas las esteras y utiliza los cofres pasivos y solicitantes en su lugar. No incluye robopuerto.",
+    "es": "Elimina todas las cintas transportadoras y utiliza los cofres pasivos y solicitantes en su lugar. No incluye robopuerto.",
     "pt-br": "Remove todas as esteiras e utiliza os baús passivos e baús soliticantes no lugar. Não inclui roboports",
     "fr": "Supprime tous les convoyeurs et utilise des coffres de demande et d'approvisionnement logistique. N'inclus pas les roboports.",
     "it": "Rimuove tutti i rulli di trasporto e usa invece casse fornitrici passive e di richiesta. Non include roboport.",
@@ -731,7 +759,7 @@
   },
   "ore_type_info": {
     "en": "If \"Bot Based\" is enabled, you must provide an ore type for the requester chests.",
-    "es": "Si \"Basado en Bot\" está habilitado, debe proporcionar un tipo de mineral para los cofres solicitantes.",
+    "es": "Si \"Basado en Robot\" está habilitado, debe proporcionar un tipo de mineral para los cofres solicitantes.",
     "pt-br": "Se \"Baseado em Bot\" está habilitado, deve selecionar um tipo de minério para os baús solicitantes",
     "fr": "Si basé sur les robots, il faut indiquer le type de minerai pour les coffres logistiques.",
     "it": "Se \"Basato sui robot\" è attivo, devi specificare il tipo di minerale per la cassa di richiesta.",
@@ -786,7 +814,7 @@
   },
   "roboports_info": {
     "en": "Roboports are only based behind the track.",
-    "es": "Los Robopuertos solo están detrás de la pista.",
+    "es": "Los Robopuertos solo están detrás de la vía.",
     "pt-br": "Os Roboports estão somente atrás da pista",
     "fr": "Les roboports se trouvent derrière les rails.",
     "it": "Le roboport sono posizionate solo dietro il tracciato.",
@@ -863,7 +891,7 @@
   },
   "wall_space_info": {
     "en": "Distance between edge of outpost and walls. Minimum 3 to support laser turrets.",
-    "es": "Distancia entre el bordes de lo posto y las paredes. Mínimo 3 para soportar torretas láser.",
+    "es": "Distancia entre el bordes del puesto y las paredes. Mínimo 3 para soportar torretas láser.",
     "pt-br": "Distância entre as bordas do posto e as paredes. Mínimo 3 para suportar turretas laser.",
     "fr": "Distance entre la limite des mineurs et la limite du planificateur. Minimum 3 si les tourelles sont activées.",
     "it": "Distanza fra il bordo dell'avamposto e la muraglia. Minimo 3 per la compatibilità con le torrette laser.",
@@ -918,6 +946,7 @@
   },
   "double_loading": {
     "en": "Double Loading",
+    "es": "Doble carga",
     "it": "Doppio caricamento",
     "cn": "双倍装载",
     "pl": "Załadunek z obu stron",
@@ -925,6 +954,7 @@
   },
   "double_loading_info": {
     "en": "Load on both sides of each cargo wagon.",
+    "es": "Cargar en ambos lados de cada vagón",
     "it": "Carica da entrambi i lati di ogni vagone merci.",
     "cn": "在每个车厢的两侧装载",
     "pl": "Ładuj złoże z obu stron wagonu.",
@@ -1009,7 +1039,7 @@
   },
   "tiles_info": {
     "en": "Covers the entire area surrounded by the walls in the specified tile type.",
-    "es": "Cubre toda el área rodeada por paredes en el tipo piso especificado.",
+    "es": "Cubre toda el área rodeada por paredes con el tipo piso especificado.",
     "pt-br": "Cobre toda a área cercada por paredes no tipo de piso especificado.",
     "fr": "Couvre tout la zone délimitée par les murs avec le sol spécifié.",
     "it": "Copre l'intera area circoscritta dalla muraglia col tipo di mattonella specificato.",
@@ -1075,7 +1105,7 @@
   },
   "track_tiles": {
     "en": "Track Tiles",
-    "es": "Piso del Rieles",
+    "es": "Piso de los Rieles",
     "pt-br": "Piso dos Trilhos",
     "fr": "Sol des rails",
     "it": "Mattonella del tracciato",
@@ -1086,7 +1116,7 @@
   },
   "track_tiles_info": {
     "en": "Covers and surrounds tracks with the specified tile type.",
-    "es": "Cubre y rodea los rieles con el tipo piso especificado.",
+    "es": "Cubre y rodea los rieles con el tipo de piso especificado.",
     "pt-br": "Cobre em volta dos trilhos com o tipo de piso especificado",
     "fr": "Sol à utiliser sous les rails",
     "it": "Copre e circonda il tracciato dei treni con il tipo di mattonella specificato.",
@@ -1130,7 +1160,7 @@
   },
   "entity_replacer": {
     "en": "New Entity Replacer",
-    "es": "Repositor de Nuevas Entidads",
+    "es": "Repositor de Nuevas Entidades",
     "pt-br": "Repositor de Novas Entidades",
     "fr": "Nouvelle règle de remplacement d'entité",
     "it": "Nuova regola di sostituzione delle entità",
@@ -1185,7 +1215,7 @@
   },
   "modified_only_info": {
     "en": "Only include entities in the blueprint that were modified",
-    "es": "Solo inclui entidades en el planificación que fueron modificadas",
+    "es": "Solo incluir entidades en el planificación que fueron modificadas",
     "pt-br": "Só inclúi entidades no planejamento que foram modificadas",
     "fr": "Inclus dans la chaîne de planificateur seulement les entitées qui ont été modifiées",
     "it": "Includi solo le entità del progetto che sono state modificate",
