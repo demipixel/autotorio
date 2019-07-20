@@ -152,6 +152,7 @@
       "es": "Concreto refinado",
       "it": "Cemento raffinato",
       "pl": "Ulepszony beton",
+      "de": "Verbesserter Beton",
       "cn": "钢筋混凝土",
       "ru": "Железобетон"
     },
@@ -160,6 +161,7 @@
       "es": "Concreto refinado de señal de peligro (izquierda)",
       "it": "Cemento raffinato con disegni di pericolo a sinistra",
       "pl": "Ulepszony beton ostrzegawszy (Lewo)",
+      "de": "Verbesserter Beton mit Gefahrenmarkierung (Links)",
       "cn": "钢筋标识混凝土 (左)",
       "ru": "Железобетон в предупреждающей окраске (Левый)"
     },
@@ -168,6 +170,7 @@
       "es": "Concreto refinado de señal de peligro (derecha)",
       "it": "Cemento raffinato con disegni di pericolo a destra",
       "pl": "Ulepszony beton ostrzegawszy (Prawo)",
+      "de": "Verbesserter Beton mit Gefahrenmarkierung (Rechts)",
       "cn": "钢筋标识混凝土 (右)",
       "ru": "Железобетон в предупреждающей окраске (Правый)"
     },
@@ -645,6 +648,7 @@
     "en": "Use Filter Inserters",
     "es": "Usar Insertadores con filtro",
     "it": "Inseritore filtrante",
+    "de": "Filternde Greifarme benutzen.",
     "cn": "使用筛选机械臂",
     "ru": "Использовать фильтрующие манипуляторы"
   },
@@ -652,6 +656,7 @@
     "en": "Use filter inserters between the buffer chests and the cargo wagon",
     "es": "Usar insertadores con filtro entre los cofres de guardia y el vagón de carga",
     "it": "Usa gli inseritori filtranti fra le casse buffer e il vagone merci",
+    "de": "Filternde Greifarme zwischen Pufferkiste und Güterwaggon benutzen.",
     "cn": "在主动存货箱与货运车厢之间使用筛选机械臂",
     "ru": "Использовать фильтрующие манипуляторы между буферными сундуками и грузовыми вагонами"
   },
@@ -661,7 +666,7 @@
     "pt-br": "Inclúi Radar",
     "fr": "Inclure un radar",
     "it": "Includi radar",
-    "de": "Radar beifügen",
+    "de": "Radar aufbauen",
     "cn": "带雷达",
     "pl": "Dołącz do blueprintu radar",
     "ru": "Включить радар в чертёж"
@@ -670,6 +675,7 @@
     "en": "Include Lights",
     "es": "Incluye luces",
     "it": "Includi luci",
+    "de": "Lichter aufbauen",
     "cn": "包含灯在内",
     "ru": "Включить фонари в чертёж"
   },
@@ -677,6 +683,7 @@
     "en": "Beacons",
     "es": "Faros",
     "it": "Faro",
+    "de": "Effektverteiler aufbauen",
     "cn": "插件效果分享塔",
     "ru": "Маяки"
   },
@@ -948,6 +955,7 @@
     "en": "Double Loading",
     "es": "Doble carga",
     "it": "Doppio caricamento",
+    "de": "Zweiseitig laden",
     "cn": "双倍装载",
     "pl": "Załadunek z obu stron",
     "ru": "Загрузка с обеиз сторон"
@@ -956,6 +964,7 @@
     "en": "Load on both sides of each cargo wagon.",
     "es": "Cargar en ambos lados de cada vagón",
     "it": "Carica da entrambi i lati di ogni vagone merci.",
+    "de": "Güterwaggon von beiden Seiten beladen",
     "cn": "在每个车厢的两侧装载",
     "pl": "Ładuj złoże z obu stron wagonu.",
     "ru": "Загружать вагоны с обеих сторон"
