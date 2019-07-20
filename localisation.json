@@ -8,7 +8,8 @@
       "it": "Generatore di avamposti",
       "de": "Außenposten Generator",
       "cn": "哨站生成器",
-      "pl": "Generator kopalni"
+      "pl": "Generator kopalni",
+      "ru": "Генератор рудных аванпостов"
     },
     "blueprint_tool": {
       "en": "Blueprint Tool",
@@ -18,7 +19,8 @@
       "it": "Strumento di pianificazione",
       "de": "Blaupausen Werkzeug",
       "cn": "蓝图工具",
-      "pl": "Transformacja blueprintów"
+      "pl": "Transformacja blueprintów",
+      "ru": "Преобразователь чертежей"
     },
     "oil_outpost_generator": {
       "en": "Oil Outpost Generator",
@@ -28,7 +30,8 @@
       "it": "Generatore di avamposti petroliferi",
       "de": "Öl Außenposten Generator",
       "cn": "石油前哨生成器",
-      "pl": "Generator pól naftowych"
+      "pl": "Generator pól naftowych",
+      "ru": "Генератор нефтяных аванпостов"
     },
     "donate": {
       "en": "Donate",
@@ -38,7 +41,8 @@
       "it": "Dona",
       "de": "Spenden",
       "cn": "捐赠",
-      "pl": "Dotacje"
+      "pl": "Dotacje",
+      "ru": "Пожертвовать"
     },
     "github": {
       "en": "Github",
@@ -48,7 +52,8 @@
       "it": "Github",
       "de": "Github",
       "cn": "Github",
-      "pl": "Github"
+      "pl": "Github",
+      "ru": "Github"
     }
   },
   "entities": {
@@ -58,7 +63,8 @@
       "it": "Torretta difensiva",
       "de": "Geschütztürme",
       "cn": "机枪炮塔",
-      "pl": "Działka maszynowe"
+      "pl": "Działka maszynowe",
+      "ru": "Пулемётные турели"
     },
     "laser_turrets": {
       "en": "Laser Turrets",
@@ -66,7 +72,8 @@
       "it": "Torretta laser",
       "de": "Lasergeschütz",
       "cn": "激光炮塔",
-      "pl": "Działka laserowe"
+      "pl": "Działka laserowe",
+      "ru": "Лазерные турели"
     },
     "transport_belt": {
       "en": "Transport Belt",
@@ -74,7 +81,8 @@
       "it": "Rullo di trasporto",
       "de": "Fließband",
       "cn": "传送带",
-      "pl": "Pas transmisyjny"
+      "pl": "Pas transmisyjny",
+      "ru": "Конвейер"
     },
     "fast_transport_belt": {
       "en": "Fast Transport Belt",
@@ -82,7 +90,8 @@
       "it": "Rullo di trasporto veloce",
       "de": "schnelles Fließband",
       "cn": "高速传送带",
-      "pl": "Szybki pas transmisyjny"
+      "pl": "Szybki pas transmisyjny",
+      "ru": "Быстрый конвейер"
     },
     "express_transport_belt": {
       "en": "Express Transport Belt",
@@ -90,7 +99,8 @@
       "it": "Rullo di trasporto ultraveloce",
       "de": "Express-Fließband",
       "cn": "极速传送带",
-      "pl": "Ekspresowy pas transmisyjny"
+      "pl": "Ekspresowy pas transmisyjny",
+      "ru": "Экспресс-конвейер"
     },
     "stone_path": {
       "en": "Stone Path",
@@ -98,7 +108,8 @@
       "it": "Strada di pietra",
       "de": "Steinweg",
       "cn": "石基路",
-      "pl": "Kamienna ścieżka"
+      "pl": "Kamienna ścieżka",
+      "ru": "Каменная дорога"
     },
     "concrete": {
       "en": "Concrete",
@@ -106,7 +117,8 @@
       "it": "Cemento",
       "de": "Beton",
       "cn": "混凝土",
-      "pl": "Beton"
+      "pl": "Beton",
+      "ru": "Бетон"
     },
     "hazard_concrete_left": {
       "en": "Hazard Concrete Left",
@@ -114,7 +126,8 @@
       "it": "Cemento con disegni di pericolo a sinistra",
       "de": "Beton mit Gefahrenmarkierung (Links)",
       "cn": "标识混凝土 (左)",
-      "pl": "Beton ostrzegawczy (Lewo)"
+      "pl": "Beton ostrzegawczy (Lewo)",
+      "ru": "Бетон в предупреждающей окраске (Левый)"
     },
     "hazard_concrete_right": {
       "en": "Hazard Concrete Right",
@@ -122,25 +135,29 @@
       "it": "Cemento con disegni di pericolo a destra",
       "de": "Beton mit Gefahrenmarkierung (Rechts)",
       "cn": "标识混凝土 (右)",
-      "pl": "Beton ostrzegawszy (Prawo)"
+      "pl": "Beton ostrzegawszy (Prawo)",
+      "ru": "Бетон в предупреждающей окраске (Правый)"
     },
     "refined_concrete": {
       "en": "Refined Concrete",
       "it": "Cemento raffinato",
       "pl": "Ulepszony beton",
-      "cn": "钢筋混凝土"
+      "cn": "钢筋混凝土",
+      "ru": "Железобетон"
     },
     "refined_hazard_concrete_left": {
       "en": "Refined Hazard Concrete Left",
       "it": "Cemento raffinato con disegni di pericolo a sinistra",
       "pl": "Ulepszony beton ostrzegawszy (Lewo)",
-      "cn": "钢筋标识混凝土 (左)"
+      "cn": "钢筋标识混凝土 (左)",
+      "ru": "Железобетон в предупреждающей окраске (Левый)"
     },
     "refined_hazard_concrete_right": {
       "en": "Refined Hazard Concrete Right",
       "it": "Cemento raffinato con disegni di pericolo a destra",
       "pl": "Ulepszony beton ostrzegawszy (Prawo)",
-      "cn": "钢筋标识混凝土 (右)"
+      "cn": "钢筋标识混凝土 (右)",
+      "ru": "Железобетон в предупреждающей окраске (Правый)"
     },
     "speed_module": {
       "en": "Speed Module",
@@ -148,7 +165,8 @@
       "it": "Modulo velocità",
       "de": "Geschwindigkeitsmodul",
       "cn": "速度插件",
-      "pl": "Moduł szybkości"
+      "pl": "Moduł szybkości",
+      "ru": "Модуль скорости"
     },
     "effectivity_module": {
       "en": "Effectivity Module",
@@ -156,7 +174,8 @@
       "it": "Modulo efficienza",
       "de": "Effektivitätsmodul",
       "cn": "节能插件",
-      "pl": "Moduł efektywności"
+      "pl": "Moduł efektywności",
+      "ru": "Модуль эффективности"
     },
     "productivity_module": {
       "en": "Productivity Module",
@@ -164,7 +183,8 @@
       "it": "Modulo produttività",
       "de": "Produktivitätsmodul",
       "cn": "产能插件",
-      "pl": "Moduł prodyktywności"
+      "pl": "Moduł prodyktywności",
+      "ru": "Модуль продуктивности"
     }
   },
   "none": {
@@ -173,7 +193,8 @@
     "it": "Nessuno",
     "de": "Nichts",
     "cn": "无",
-    "pl": "Nic"
+    "pl": "Nic",
+    "ru": "Нет"
   },
   "right": {
     "en": "Right",
@@ -181,7 +202,8 @@
     "it": "Destra",
     "de": "Rechts",
     "cn": "右",
-    "pl": "Po prawej"
+    "pl": "Po prawej",
+    "ru": "Справа"
   },
   "bottom": {
     "en": "Bottom",
@@ -189,7 +211,8 @@
     "it": "Sotto",
     "de": "Unten",
     "cn": "底部",
-    "pl": "Na dole"
+    "pl": "Na dole",
+    "ru": "Снизу"
   },
   "down": {
     "en": "Down",
@@ -197,7 +220,8 @@
     "it": "Giù",
     "de": "Unten",
     "cn": "下",
-    "pl": "Na dole"
+    "pl": "Na dole",
+    "ru": "Вниз"
   },
   "left": {
     "en": "Left",
@@ -205,7 +229,8 @@
     "it": "Sinistra",
     "de": "Links",
     "cn": "左",
-    "pl": "Po lewej"
+    "pl": "Po lewej",
+    "ru": "Слева"
   },
   "top": {
     "en": "Top",
@@ -213,7 +238,8 @@
     "it": "Sopra",
     "de": "Oben",
     "cn": "顶部",
-    "pl": "Na górze"
+    "pl": "Na górze",
+    "ru": "Сверху"
   },
   "up": {
     "en": "Up",
@@ -221,7 +247,8 @@
     "it": "Su",
     "de": "Oben",
     "cn": "上",
-    "pl": "Na górze"
+    "pl": "Na górze",
+    "ru": "Вверх"
   },
   "blueprint_tool": {
     "en": "Blueprint Tool",
@@ -231,7 +258,8 @@
     "it": "Strumento di pianificazione",
     "de": "Blaupausen Werkzeug",
     "cn": "蓝图工具",
-    "pl": "Transformacja blueprintów"
+    "pl": "Transformacja blueprintów",
+    "ru": "Преобразователь чертежей"
   },
   "ore_outpost_generator": {
     "en": "Ore Outpost Generator",
@@ -241,7 +269,8 @@
     "it": "Generatore di avamposti di minerali",
     "de": "Erz Außenposten Generator",
     "cn": "矿石前哨生成器",
-    "pl": "Generator pól naftowych"
+    "pl": "Generator pól naftowych",
+    "ru": "Генератор нефтяных аванпостов"
   },
   "submit_ore_outpost": {
     "en": "Get Ore Outpost Blueprint",
@@ -251,7 +280,8 @@
     "it": "Ottieni avamposto di minerali",
     "de": "Erz Außenposten Blaupause erstellen",
     "cn": "获取矿石前哨站蓝图",
-    "pl": "Wygeneruj blueprint kopalni"
+    "pl": "Wygeneruj blueprint kopalni",
+    "ru": "Получить чертёж рудного аванпоста"
   },
   "submit_oil_outpost": {
     "en": "Get Oil Outpost Blueprint",
@@ -259,7 +289,8 @@
     "it": "Ottieni avamposto petrolifero",
     "de": "Öl Außenposten Blaupause erstellen",
     "cn": "获取石油前哨站蓝图",
-    "pl": "Wygeneruj blueprint pola naftowego"
+    "pl": "Wygeneruj blueprint pola naftowego",
+    "ru": "Получить чертёж нефтяного аванпоста"
   },
   "submit_blueprint": {
     "en": "Get Blueprint",
@@ -269,7 +300,8 @@
     "it": "Ottieni progetto",
     "de": "Blaupause erzeugen",
     "cn": "获取蓝图",
-    "pl": "Wygeneruj blueprint"
+    "pl": "Wygeneruj blueprint",
+    "ru": "Получить чертёж"
   },
   "settings_url": {
     "en": "Get settings URL",
@@ -277,7 +309,8 @@
     "it": "Ottieni URL con impostazioni",
     "de": "URL mit Einstellungen anzeigen",
     "cn": "获取设定URL",
-    "pl": "Zdobądź URL"
+    "pl": "Zdobądź URL",
+    "ru": "Получить URL настроек"
   },
   "blueprint_string": {
     "en": "Blueprint String",
@@ -287,7 +320,8 @@
     "it": "Stringa del progetto",
     "de": "Blaupausen Code",
     "cn": "蓝图代码",
-    "pl": "String blueprintu"
+    "pl": "String blueprintu",
+    "ru": "Строка чертежа"
   },
   "blueprint_string_placeholder": {
     "en": "Blueprint string here...",
@@ -297,7 +331,8 @@
     "it": "Incolla qui la stringa del progetto...",
     "de": "Blaupausen Code hier...",
     "cn": "请输入蓝图代码",
-    "pl": "Tu wprowadź string blueprintu"
+    "pl": "Tu wprowadź string blueprintu",
+    "ru": "Вставьте строку чертежа..."
   },
   "blueprint_string_info": {
     "en": "Place two walls, one at each corner of the ore patch, and then place a blueprint string of the walls here.",
@@ -307,7 +342,8 @@
     "it": "Piazza due muri, uno per ogni angolo della zona mineraria, poi incolla la stringa del progetto dei due muri qui.",
     "de": "Platzier zwei Steinmauern, je eine in jeder Ecke des Erzfeldes, danach füge den Blaupausen Code hier ein.",
     "cn": "在矿物的对角线放置 2 个石墙，选择这两个石墙生成蓝图。之后，导出蓝图代码并且复制到网站的蓝图代码输入框中。",
-    "pl": "Umieść dwa kawałki muru, po jednym na rogach złoża, a potem umieść tu string twojego blueprintu."
+    "pl": "Umieść dwa kawałki muru, po jednym na rogach złoża, a potem umieść tu string twojego blueprintu.",
+    "ru": "Расположите две стены на противоположных краях месторождения руды, создайте чертёж и вставьте его строку сюда"
   },
   "blueprint_string_or_book": {
     "en": "Blueprint or Blueprint Book String",
@@ -317,7 +353,8 @@
     "it": "Stringa del progetto o del libro dei progetti",
     "de": "Blaupause oder Blaupausenbuch Code",
     "cn": "蓝图代码或蓝图簿代码",
-    "pl": "String blueprintu albo książki z blueprintami"
+    "pl": "String blueprintu albo książki z blueprintami",
+    "ru": "Строка чертежа или книги чертежей"
   },
   "blueprint_string_or_book_placeholder": {
     "en": "Blueprint or blueprint book string here...",
@@ -327,7 +364,8 @@
     "it": "Incolla qui la stringa del progetto o del libro dei progetti...",
     "de": "Blaupause oder Blaupausenbuch Code hier...",
     "cn": "在这输入蓝图代码或者蓝图簿代码...",
-    "pl": "String blueprintu albo książki tutaj..."
+    "pl": "String blueprintu albo książki tutaj...",
+    "ru": "Вставьте строку чертежа или книги..."
   },
   "blueprint_tool_info": {
     "en": "This is the blueprint(s) to modify.",
@@ -337,7 +375,8 @@
     "it": "Progetto(i) da modificare.",
     "de": "Diese Blaupause wird verändert.",
     "cn": "在这里可对一个或多个蓝图代码进行编辑。",
-    "pl": "Blueprint(y) do modyfikacji."
+    "pl": "Blueprint(y) do modyfikacji.",
+    "ru": "Преобразовываемые чертежи"
   },
   "oil_blueprint_info": {
     "en": "Create a blueprint with your pumpjacks <b>and a single straight track placed anywhere.</b>",
@@ -347,7 +386,8 @@
     "it": "Crea un progetto con le tue pompe petrolifere <b>e una singola linea retta di distribuzione posizionata ovunque</b>",
     "de": "Erstelle eine Blaupause mit Rohöl-Förderpumpen <br>und einem einzelnen Gleis</b>",
     "cn": "用你的抽油机创建一张蓝图 <b>并且在区域内任何地方放置一个直线轨道。</b>",
-    "pl": "Stwórz blueprint z kiwakami rozstawionymi na złożu <b>i pojedynczym, prostym kawałkiem toru w dowolnym miejscu.</b>"
+    "pl": "Stwórz blueprint z kiwakami rozstawionymi na złożu <b>i pojedynczym, prostym kawałkiem toru w dowolnym miejscu.</b>",
+    "ru": "Создайте чертёж, содержащий нефтяные вышки <b>и одиночный участок пути, расположенный в любом месте</b>"
   },
   "modded": {
     "en": "Modded",
@@ -357,7 +397,8 @@
     "it": "Moddato",
     "de": "Modifikationen",
     "cn": "使用mod",
-    "pl": "Zmodyfikowane"
+    "pl": "Zmodyfikowane",
+    "ru": "Модификации"
   },
   "modded_info": {
     "en": "(Shows options for modded entity names)",
@@ -367,7 +408,8 @@
     "it": "(Mostra opzioni per i nomi delle entità moddate)",
     "de": "(Zeigt Optionen für Entitäten aus Modifikationen)",
     "cn": "(展示mod中实体名称的选项)",
-    "pl": "(Pokazuje opcje dla zmodyfikowanych elementów)"
+    "pl": "(Pokazuje opcje dla zmodyfikowanych elementów)",
+    "ru": "(Показывает опции с учётом предметов из модификаций)"
   },
   "belt_type": {
     "en": "Belt Type",
@@ -377,7 +419,8 @@
     "it": "Tipo di rullo di trasporto",
     "de": "Fließbandtyp",
     "cn": "传送带类型",
-    "pl": "Rodzaj pasa"
+    "pl": "Rodzaj pasa",
+    "ru": "Тип конвейера"
   },
   "underground_belts_info": {
     "en": "Use underground belts",
@@ -387,7 +430,8 @@
     "it": "Usa rulli di trasporto sotterranei",
     "de": "Benutze unterirdische Fließbänder",
     "cn": "使用地下传送带",
-    "pl": "Użyj pasów podziemnych"
+    "pl": "Użyj pasów podziemnych",
+    "ru": "Использовать подземные конвейеры"
   },
   "compact": {
     "en": "Compact miners (no horizontal spacing between miners, places electric poles inbetween underground belts)",
@@ -397,7 +441,8 @@
     "it": "Estrattori compatti (nessuno spazio tra gli estrattori, posiziona i pali elettrici tra i rulli di trasporto sotterranei)",
     "de": "kompakte Erzförderer (kein horizonaler Abstand zwischen Erzförderern, platziert Strommasten zwischen den unterirdischen Fließbändern)",
     "cn": "采矿机分布更加紧凑 (在采矿机间没有水平间隔，在地下传送带中间放置电线杆)",
-    "pl": "Kompaktowe kopalnie (brak miejsc między kopalniami, słupy elektryczne są ściśnięte między nie z podziemnymi pasami)"
+    "pl": "Kompaktowe kopalnie (brak miejsc między kopalniami, słupy elektryczne są ściśnięte między nie z podziemnymi pasami)",
+    "ru": "Компактное размещение буров (без промежутков, опоры ЛЭП размещаются между подземными конвейерами)"
   },
   "custom_belt_type": {
     "en": "Custom Belt Type (Optional)",
@@ -407,7 +452,8 @@
     "it": "Tipo di rullo di trasporto personalizzato (Opzionale)",
     "de": "benutzerdefiniertes Fließband (Optional)",
     "cn": "自定义传送带类型 (可选)",
-    "pl": "Niestandardowy typ pasów (Opcjonalne)"
+    "pl": "Niestandardowy typ pasów (Opcjonalne)",
+    "ru": "Тип конвейера из модификации (необязательно)"
   },
   "custom_belt_type_info": {
     "en": "Only necessary when using mods with custom belt names.",
@@ -417,7 +463,8 @@
     "it": "Necessario solo quando si usano mod con nomi dei rulli di trasporto personalizzati.",
     "de": "Nur notwendig bei Benutzung von Modifikationen mit eigenen Fließbändern",
     "cn": "仅在你使用mod后使用自定义传送带时需要使用",
-    "pl": "Opcję wybierz tylko, jeśli używasz modyfikacji z niestandardowymi nazwami pasów."
+    "pl": "Opcję wybierz tylko, jeśli używasz modyfikacji z niestandardowymi nazwami pasów.",
+    "ru": "Требуется только в случае использования модификаций, добавляющих конвейеры"
   },
   "train_station_side": {
     "en": "Train Station Side",
@@ -427,7 +474,8 @@
     "it": "Lato della stazione dei treni",
     "de": "Seite der Zughaltestelle",
     "cn": "火车站放置哪一侧",
-    "pl": "Stacja kolejowa na stronie"
+    "pl": "Stacja kolejowa na stronie",
+    "ru": "Сторона расположения станции"
   },
   "train_enter_from": {
     "en": "Train Enter From",
@@ -437,7 +485,8 @@
     "it": "Entrata dei treni da",
     "de": "Einfahrt des Zuges",
     "cn": "火车进入方向",
-    "pl": "Pociąg nadjeżdża ze strony"
+    "pl": "Pociąg nadjeżdża ze strony",
+    "ru": "Сторона въезда поезда"
   },
   "miner_space": {
     "en": "Miner Spacing",
@@ -447,7 +496,8 @@
     "it": "Spazio tra gli estrattori",
     "de": "Abstand zwischen Erzförderern",
     "cn": "采矿机间距",
-    "pl": "Odstępy między kopalniami"
+    "pl": "Odstępy między kopalniami",
+    "ru": "Расстояние между бурами"
   },
   "miner_space_info": {
     "en": "Side-by-side space between miners.",
@@ -457,7 +507,8 @@
     "it": "Spazio tra estrattori adiacenti",
     "de": "Seitlicher Abstand zwischen Erzförderern",
     "cn": "每两个临近的采矿机的间距",
-    "pl": "Odstępy między poszczególnymi kopalniami"
+    "pl": "Odstępy między poszczególnymi kopalniami",
+    "ru": "Горизонтальный промежуток между бурами"
   },
   "custom_mining_drill": {
     "en": "Custom Mining Drill Name (Optional)",
@@ -467,7 +518,8 @@
     "it": "Tipo di estrattore personalizzato (Opzionale)",
     "de": "Benutzerdefinierter Erzförderer Name (optional)",
     "cn": "自定义采矿机名称 (可选)",
-    "pl": "Niestandardowe kopalnie (Opcjonalne)"
+    "pl": "Niestandardowe kopalnie (Opcjonalne)",
+    "ru": "Название бура из модификации (необязательно)"
   },
   "custom_mining_drill_info": {
     "en": "Only necessary when using mods with custom mining drill names.",
@@ -477,7 +529,8 @@
     "it": "Necessario solo quando si usano mod con nomi degli estrattori personalizzati.",
     "de": "Nur notwendig bei Benutzung von Modifikationen mit eigenen Erzförderer.",
     "cn": "仅在你使用mod后使用自定义采矿机需要使用",
-    "pl": "Użyj tej opcji tylko, jeśli korzystasz z modyfikacji posiadającej niestandardowe nazwy kopalni"
+    "pl": "Użyj tej opcji tylko, jeśli korzystasz z modyfikacji posiadającej niestandardowe nazwy kopalni",
+    "ru": "Требуется только в случае использования модификаций, добавляющих буры"
   },
   "modules": {
     "en": "Modules",
@@ -487,7 +540,8 @@
     "it": "Moduli",
     "de": "Module",
     "cn": "插件",
-    "pl": "Moduły"
+    "pl": "Moduły",
+    "ru": "Модули"
   },
   "modules_info": {
     "en": "If chosen, inserts 3 of the selected module in each miner.",
@@ -497,7 +551,8 @@
     "it": "Se selezionato, inserisce 3 dei moduli scelti in ogni estrattore.",
     "de": "Wenn gewählt, bekommt jeder Erzförderer 3 des ausgewählten Modules.",
     "cn": "选择后会在每个采矿机插入三个选择的插件。",
-    "pl": "Jeśli wybierzesz te opcję, włożymy po 3 wybrane moduły do każdej kopalni"
+    "pl": "Jeśli wybierzesz te opcję, włożymy po 3 wybrane moduły do każdej kopalni",
+    "ru": "Если тип модуля выбран, 3 его экземпляра будут установлены в каждый бур"
   },
   "oil_modules_info": {
     "en": "If chosen, inserts 3 of the selected module in each pumpjack.",
@@ -507,13 +562,16 @@
     "it": "Se selezionato, inserisce 3 dei moduli scelti in ogni pompa petrolifera.",
     "de": "Wenn gewählt, bekommt jede Rohöl-Förderpumpe 3 des ausgewählten Modules.",
     "cn": "选择后会在每个抽油机插入三个选择的插件",
-    "pl": "Jeśli wybierzesz te opcję, do każdego kiwaka wstawione zostaną 3 wybrane moduły"
+    "pl": "Jeśli wybierzesz te opcję, do każdego kiwaka wstawione zostaną 3 wybrane moduły",
+    "ru": "Если тип модуля выбран, 3 его экземпляра будут установлены в каждую нефтяную вышку"
   },
   "custom_pumpjack": {
-    "en": "Modded Pumpjack Name"
+    "en": "Modded Pumpjack Name",
+    "ru": "Название нефтяной вышки из модификации"
   },
   "custom_pumpjack_info": {
-    "en": "If your blueprint contains modded pumpjacks, specify the internal name of the pumpjack (use underscores, not dashes)"
+    "en": "If your blueprint contains modded pumpjacks, specify the internal name of the pumpjack (use underscores, not dashes)",
+    "ru": "Если Ваш чертёж содержит нефтяные вышки из модификаций, укажите их внутреннее название (используйте подчёркивания)"
   },
   "custom_module": {
     "en": "Custom Module Name",
@@ -523,7 +581,8 @@
     "it": "Tipo di modulo personalizzato (Opzionale)",
     "de": "benutzerdefinierter Modulname",
     "cn": "自定义插件名称",
-    "pl": "Niestandardowy moduł (Opcjonalny)"
+    "pl": "Niestandardowy moduł (Opcjonalny)",
+    "ru": "Название модуля из модификации (необязательно)"
   },
   "custom_module_info": {
     "en": "Only necessary when using mods with custom module names.",
@@ -533,7 +592,8 @@
     "it": "Necessario solo quando si usano mod con nomi dei moduli personalizzati.",
     "de": "Nur notwendig bei Benutzung von Modifikationen mit eigenen Modulen.",
     "cn": "仅在你使用mod后使用自定义插件需要使用",
-    "pl": "Użyj tej opcji tylko, jeśli korzystasz z modyfikacji posiadającej niestandardowe nazwy modułów"
+    "pl": "Użyj tej opcji tylko, jeśli korzystasz z modyfikacji posiadającej niestandardowe nazwy modułów",
+    "ru": "Требуется только в случае использования модификаций, добавляющих модули"
   },
   "stack_inserters": {
     "en": "Use Stack Inserters",
@@ -543,7 +603,8 @@
     "it": "Usa inseritori multipli",
     "de": "Stapelgreifarme verwenden",
     "cn": "使用集装机械臂",
-    "pl": "Używaj grupowych inserterów"
+    "pl": "Używaj grupowych inserterów",
+    "ru": "Использовать пакетные манипуляторы"
   },
   "stack_inserters_info": {
     "en": "Use stack inserters between the buffer chests and the cargo wagon",
@@ -553,17 +614,20 @@
     "it": "Usa inseritori multipli fra le casse buffer e il vagone merci",
     "de": "Stapelgreifarme zwischen Pufferkiste und Güterwaggon benutzen.",
     "cn": "在主动存货箱(绿箱)和货运车厢中使用集装机械臂",
-    "pl": "Użyj grupowych inserterów przy ładowaniu skrzyń i wagonów"
+    "pl": "Użyj grupowych inserterów przy ładowaniu skrzyń i wagonów",
+    "ru": "Использовать пакетные манипуляторы между буферными сундуками и грузовыми вагонами"
   },
   "filter_inserters": {
     "en": "Use Filter Inserters",
     "it": "Inseritore filtrante",
-    "cn": "使用筛选机械臂"
+    "cn": "使用筛选机械臂",
+    "ru": "Использовать фильтрующие манипуляторы"
   },
   "filter_inserters_info": {
     "en": "Use filter inserters between the buffer chests and the cargo wagon",
     "it": "Usa gli inseritori filtranti fra le casse buffer e il vagone merci",
-    "cn": "在主动存货箱与货运车厢之间使用筛选机械臂"
+    "cn": "在主动存货箱与货运车厢之间使用筛选机械臂",
+    "ru": "Использовать фильтрующие манипуляторы между буферными сундуками и грузовыми вагонами"
   },
   "radar": {
     "en": "Include Radar",
@@ -573,17 +637,20 @@
     "it": "Includi radar",
     "de": "Radar beifügen",
     "cn": "带雷达",
-    "pl": "Dołącz do blueprintu radar"
+    "pl": "Dołącz do blueprintu radar",
+    "ru": "Включить радар в чертёж"
   },
   "lights": {
     "en": "Include Lights",
     "it": "Includi luci",
-    "cn": "包含灯在内"
+    "cn": "包含灯在内",
+    "ru": "Включить фонари в чертёж"
   },
   "beacons": {
     "en": "Beacons",
     "it": "Faro",
-    "cn": "插件效果分享塔"
+    "cn": "插件效果分享塔",
+    "ru": "Маяки"
   },
   "balancer": {
     "en": "Balancer Blueprint String (Optional)",
@@ -593,7 +660,8 @@
     "it": "Stringa del progetto del bilanciatore (Opzionale)",
     "de": "Balancer Blaupausen Code (Optional)",
     "cn": "分流器蓝图代码 (可选)",
-    "pl": "String blueprintu z Balancerem (Opcjonalny)"
+    "pl": "String blueprintu z Balancerem (Opcjonalny)",
+    "ru": "Строка чертежа с балансировщиком (необязательно)"
   },
   "balancer_placeholder": {
     "en": "Blueprint String here...",
@@ -603,7 +671,8 @@
     "it": "Incolla qui la stringa del progetto...",
     "de": "Blaupausen Code hier...",
     "cn": "输入蓝图代码...",
-    "pl": "String blueprintu tutaj..."
+    "pl": "String blueprintu tutaj...",
+    "ru": "Вставьте строку чертежа..."
   },
   "balancer_info": {
     "en": "If a balancer of NxN is not available (where N is the # of cargo wagons), put a blueprint string of a balancer here.<br>Only balancers for 1, 2, and 4 cargo wagons are provided.<br>The balancer should be made of express belt and be facing upwards. If it is not \"inline\", make sure it sticks out to right and increase \"wall space\".<br>This is not required if bot-based.",
@@ -613,7 +682,8 @@
     "it": "Se un bilanciatore NxN non è disponibile (dove N sta per il numero di vagoni merci), incolla qui la stringa del progetto di un bilanciatore.<br>Sono disponibili solo bilanciatori per 1, 2 e 4 vagoni merci.<br>I bilanciatori dovrebbero essere fatti con rulli di trasporto ultraveloci e orientati verso l'alto. Se non è \"in linea\", assicurati che rimanga a destra e aumenta la \"distanza muri\".<br>Ciò non è necessario se l'avamposto si basa sui robot logistici.",
     "de": "Wenn kein Balancer mit NxN verfügbar ist (N ist die Anzahl der Güterwaggons), gib hier einen Balancer Blaupausen Code ein<br>Es werden nur Balancer für 1, 2 und 4 Güterwaggons bereitgestellt.<br>Der Balancer sollte aus Express-Fließbändern bestehen und nach oben ausgerichtet sein. Wenn der Balancer nicht \"inline\" ist, stell sicher, dass er auf der rechten seite heraus steht und erhöhe den \"Mauerabstand\".<br>Dies wird nicht benötigt wenn Roboterbasiert",
     "cn": "如果 NxN 的分流器无法使用 (N是车厢的数目), 在这里输入分流器的蓝图代码。仅提供对1，2，4个车厢的分流器修改，分流器应该使用极速并且朝上。<br> 如果并非 \"一行\" 的情况下，请确保向右突出并且增加石墙选择出的空间。<br> 如果是基于机器人使用则不需要修改。 ",
-    "pl": "Jeśli nie istnieje balancer NxN (Gdzie N jest # wagonów), dodaj string blueprintu własnego balancera.<br>Tylko balancery przeznaczone dla 1, 2 i 4 wagonów są zapewnione.<br>Balancer powinien być stworzony z ekspresowych beltów i przepuszczać elementy W GÓRĘ. Jeśli nie mieści się \"w jednej linii\", upewnij się, że elementy wystające poza główną linię wystają na prawo.<br>Opcja nie jest wymagana, jeśli wybrano ładowanie botami."
+    "pl": "Jeśli nie istnieje balancer NxN (Gdzie N jest # wagonów), dodaj string blueprintu własnego balancera.<br>Tylko balancery przeznaczone dla 1, 2 i 4 wagonów są zapewnione.<br>Balancer powinien być stworzony z ekspresowych beltów i przepuszczać elementy W GÓRĘ. Jeśli nie mieści się \"w jednej linii\", upewnij się, że elementy wystające poza główną linię wystają na prawo.<br>Opcja nie jest wymagana, jeśli wybrano ładowanie botami.",
+    "ru": "Если балансировщик NxN недоступен (где N - количество вагонов), вставьте сюда строку чертежа такого балансировщика.<br>Инструмент предоставляет только балансировщики 1x1, 2x2 и 4x4.<br>Балансировщик должен быть сделан из экспресс-конвейера и направлен вверх. Если у него есть выступы, удостоверьтесь, что они расположены только справа и увеличьте отступ стен.<br>Не требуется в случае, если аванпост использует дронов."
   },
   "bots": {
     "en": "Bots",
@@ -623,7 +693,8 @@
     "it": "Robot",
     "de": "Roboter",
     "cn": "机器人",
-    "pl": "Boty"
+    "pl": "Boty",
+    "ru": "Дроны"
   },
   "bot_based": {
     "en": "Bot Based",
@@ -633,7 +704,8 @@
     "it": "Basato sui robot",
     "de": "Roboterbasiert",
     "cn": "基于机器人",
-    "pl": "Załadunek przy pomocy botów"
+    "pl": "Załadunek przy pomocy botów",
+    "ru": "Использовать дронов"
   },
   "bot_based_info": {
     "en": "Removes all belts and uses passive provider and requester chests instead. Does not include roboports.",
@@ -643,7 +715,8 @@
     "it": "Rimuove tutti i rulli di trasporto e usa invece casse fornitrici passive e di richiesta. Non include roboport.",
     "de": "Entfernt alle Fließbänder und benutzt stattdessen passive Anbieterkisten und Anforderungskisten. Dies beinhaltet keine Roboterhangar",
     "cn": "移除所有传送带并且使用被动供货箱(红箱)和优先集货箱(蓝箱)替代。不会添加机器人指令平台。",
-    "pl": "Usuwa wszystkie pasy i używa skrzyń dostawczych. Nie wymaa budowy roboportu."
+    "pl": "Usuwa wszystkie pasy i używa skrzyń dostawczych. Nie wymaa budowy roboportu.",
+    "ru": "Не добавляет конвейеры, используя вместо них сундуки пассивного снабжения и сундуки запроса. Не добавляет дронстанции."
   },
   "ore_type": {
     "en": "Ore Type",
@@ -653,7 +726,8 @@
     "it": "Tipo di minerale",
     "de": "Erztyp",
     "cn": "矿石种类",
-    "pl": "Rodzaj złoża"
+    "pl": "Rodzaj złoża",
+    "ru": "Тип руды"
   },
   "ore_type_info": {
     "en": "If \"Bot Based\" is enabled, you must provide an ore type for the requester chests.",
@@ -663,7 +737,8 @@
     "it": "Se \"Basato sui robot\" è attivo, devi specificare il tipo di minerale per la cassa di richiesta.",
     "de": "Wenn \"Roboterbasiert\" aktiviert ist, muss ein Erztyp angebenen werden für die Anforderungskiste",
     "cn": "如果设置了 \"基于机器人\", 你必须为了优先集货箱(蓝箱)指定矿石类型。",
-    "pl": "Jeśli \"Załadunek przy pomocy botów\" został wybrany, musisz poinformować generator o rodzaju złoża."
+    "pl": "Jeśli \"Załadunek przy pomocy botów\" został wybrany, musisz poinformować generator o rodzaju złoża.",
+    "ru": "Если включено использование дронов, требуется указать тип руды для сундуков запроса"
   },
   "custom_ore_type": {
     "en": "Custom Ore Type (Optional)",
@@ -673,7 +748,8 @@
     "it": "Tipo di minerale personalizzato (Opzionale)",
     "de": "Benutzerdefinierter Erztyp (Optional)",
     "cn": "自定义矿石类型 (可选)",
-    "pl": "Niestandardowe złoże (Opcjonalne)"
+    "pl": "Niestandardowe złoże (Opcjonalne)",
+    "ru": "Название руды из модификации (необязательно)"
   },
   "custom_ore_type_info": {
     "en": "Only necessary when using mods with custom ore names.",
@@ -683,7 +759,8 @@
     "it": "Necessario solo quando si usano mod con nomi dei minerali personalizzati.",
     "de": "Nur notwendig bei Benutzung von Modifikationen mit eigenen Erzen.",
     "cn": "仅在你使用mod后使用自定义矿石时需要使用",
-    "pl": "Niezbędne tylko, jeśli używasz modów z niestandardowym rodzajem złoża"
+    "pl": "Niezbędne tylko, jeśli używasz modów z niestandardowym rodzajem złoża",
+    "ru": "Требуется только в случае использования модификаций, добавляющих руды"
   },
   "request_amount": {
     "en": "Request Amount",
@@ -693,7 +770,8 @@
     "it": "Quantità della richiesta",
     "de": "Anforderbetrag",
     "cn": "需求数量",
-    "pl": "Żądana ilość"
+    "pl": "Żądana ilość",
+    "ru": "Объём запроса"
   },
   "roboports": {
     "en": "Include Roboports",
@@ -703,7 +781,8 @@
     "it": "Includi roboport",
     "de": "Roboterhangars verwenden",
     "cn": "带机器人指令平台",
-    "pl": "Dodaj roboport"
+    "pl": "Dodaj roboport",
+    "ru": "Добавить дронстанции"
   },
   "roboports_info": {
     "en": "Roboports are only based behind the track.",
@@ -713,7 +792,8 @@
     "it": "Le roboport sono posizionate solo dietro il tracciato.",
     "de": "Roboterhangars werden nur hinter den Gleisen platziert",
     "cn": "机器人仅在轨道中间放置",
-    "pl": "Roboporty umieszczamy po drugiej stronie torów"
+    "pl": "Roboporty umieszczamy po drugiej stronie torów",
+    "ru": "Дронстанции добавляются только за железнодорожными путями"
   },
   "defenses": {
     "en": "Defenses",
@@ -723,7 +803,8 @@
     "it": "Difese",
     "de": "Verteidigung",
     "cn": "防御模块",
-    "pl": "Działka obronne"
+    "pl": "Działka obronne",
+    "ru": "Оборона"
   },
   "turret_type": {
     "en": "Turret Type",
@@ -733,7 +814,8 @@
     "it": "Tipo di torretta",
     "de": "Geschützturmtyp",
     "cn": "炮塔类型",
-    "pl": "Rodzaj działek"
+    "pl": "Rodzaj działek",
+    "ru": "Тип турелей"
   },
   "turret_spacing": {
     "en": "Turret Spacing",
@@ -743,7 +825,8 @@
     "it": "Spazio tra le torrette",
     "de": "Abstand zwischen Geschütztürmen",
     "cn": "炮塔间距",
-    "pl": "Odległości między działkami"
+    "pl": "Odległości między działkami",
+    "ru": "Расстояние между турелями"
   },
   "walls": {
     "en": "Walls Enabled",
@@ -753,7 +836,8 @@
     "it": "Muraglia abilitata",
     "de": "Mauern aktiviert",
     "cn": "使用墙",
-    "pl": "Mury"
+    "pl": "Mury",
+    "ru": "Добавить стены"
   },
   "wall_thickness": {
     "en": "Wall Thickness",
@@ -763,7 +847,8 @@
     "it": "Spessore della muraglia",
     "de": "Mauerdicke",
     "cn": "墙的厚度",
-    "pl": "Grubość murów"
+    "pl": "Grubość murów",
+    "ru": "Толщина стен"
   },
   "wall_space": {
     "en": "Wall Space",
@@ -773,7 +858,8 @@
     "it": "Spazio dalla muraglia",
     "de": "Mauerabstand",
     "cn": "墙内空间",
-    "pl": "Odstęp murów"
+    "pl": "Odstęp murów",
+    "ru": "Отступ стен"
   },
   "wall_space_info": {
     "en": "Distance between edge of outpost and walls. Minimum 3 to support laser turrets.",
@@ -783,7 +869,8 @@
     "it": "Distanza fra il bordo dell'avamposto e la muraglia. Minimo 3 per la compatibilità con le torrette laser.",
     "de": "Abstand zwischen der Kante des Außenposten und den Mauern. Mindestens 3 um Lasergeschütztürme zu nutzen.",
     "cn": "墙和哨站中间的间距，如果使用激光炮塔则至少设置为3。",
-    "pl": "Odległość między murami, a kopalniami. Minimum 3, żeby umieścić laserowe wieżyczki."
+    "pl": "Odległość między murami, a kopalniami. Minimum 3, żeby umieścić laserowe wieżyczki.",
+    "ru": "Расстояние между границей аванпоста и стенами. Минимум - 3, для обеспечения возможности установки лазерных турелей"
   },
   "train_info": {
     "en": "Train Info",
@@ -793,7 +880,8 @@
     "it": "Informazione treno",
     "de": "Zuginformationen",
     "cn": "火车信息",
-    "pl": "Informacje o pociągu"
+    "pl": "Informacje o pociągu",
+    "ru": "Информация о поездах"
   },
   "train_station": {
     "en": "Include Train Station",
@@ -803,7 +891,8 @@
     "it": "Includi la stazione del treno",
     "de": "Zughaltestelle beifügen",
     "cn": "火车站",
-    "pl": "Stacja pociągu"
+    "pl": "Stacja pociągu",
+    "ru": "Добавить железнодорожную станцию"
   },
   "exit_route": {
     "en": "Provide Exit Route",
@@ -813,7 +902,8 @@
     "it": "Includi una strada d'uscita",
     "de": "Ausfahrt bereitstellen",
     "cn": "提供离开路线",
-    "pl": "Tor wyjazdowy"
+    "pl": "Tor wyjazdowy",
+    "ru": "Включить выездной путь"
   },
   "exit_route_info": {
     "en": "Useful for single-headed trains (with locomotives on a single side)",
@@ -823,19 +913,22 @@
     "it": "Utile per i treni a testa unica (con locomotive da un solo lato)",
     "de": "Sinnvoll für Züge mit nur einer Lokomotive",
     "cn": "对于单头列车比较有用 (仅在一边有火车头)",
-    "pl": "Wybierz, jeśli używasz torów jednokierunkowych (z lokomotywą z jednej strony)"
+    "pl": "Wybierz, jeśli używasz torów jednokierunkowych (z lokomotywą z jednej strony)",
+    "ru": "Полезно для поездов с одной \"головой\" (локомотив только с одной стороны)"
   },
   "double_loading": {
     "en": "Double Loading",
     "it": "Doppio caricamento",
     "cn": "双倍装载",
-    "pl": "Załadunek z obu stron"
+    "pl": "Załadunek z obu stron",
+    "ru": "Загрузка с обеиз сторон"
   },
   "double_loading_info": {
     "en": "Load on both sides of each cargo wagon.",
     "it": "Carica da entrambi i lati di ogni vagone merci.",
     "cn": "在每个车厢的两侧装载",
-    "pl": "Ładuj złoże z obu stron wagonu."
+    "pl": "Ładuj złoże z obu stron wagonu.",
+    "ru": "Загружать вагоны с обеих сторон"
   },
   "loco_count": {
     "en": "Locomotive Count",
@@ -845,7 +938,8 @@
     "it": "Numero di locomotive",
     "de": "Lokomotivanzahl",
     "cn": "火车头数量",
-    "pl": "Liczba lokomotyw"
+    "pl": "Liczba lokomotyw",
+    "ru": "Количество локомотивов"
   },
   "loco_count_info": {
     "en": "Number of locomotives at the beginning of the train.",
@@ -855,7 +949,8 @@
     "it": "Numero di locomotive all'inizio del treno.",
     "de": "Anzahl an Lokomotiven am Anfang des Zuges",
     "cn": "在火车开始的地方的火车头数量",
-    "pl": "Liczba lokomotyw na czole pociągu"
+    "pl": "Liczba lokomotyw na czole pociągu",
+    "ru": "Количество локомотивов в \"голове\" состава"
   },
   "wagon_count": {
     "en": "Cargo Wagon Count",
@@ -865,7 +960,8 @@
     "it": "Numero di vagoni merci",
     "de": "Anzahl an Güterwaggons",
     "cn": "货运车厢数量",
-    "pl": "Liczba wagonów"
+    "pl": "Liczba wagonów",
+    "ru": "Количество грузовых вагонов"
   },
   "fluid_wagon_count": {
     "en": "Fluid Wagon Count",
@@ -875,7 +971,8 @@
     "it": "Numero di vagoni cisterna",
     "de": "Anzahl an Tankwaggons",
     "cn": "液罐车厢",
-    "pl": "Liczba wagonów na płyny"
+    "pl": "Liczba wagonów na płyny",
+    "ru": "Количество вагонов-цистерн"
   },
   "tank_count": {
     "en": "Tank Count",
@@ -885,7 +982,8 @@
     "it": "Numero di serbatoi",
     "de": "Anzahl an Lagertanks",
     "cn": "储液罐数量",
-    "pl": "Liczba zbiorników na płyny"
+    "pl": "Liczba zbiorników na płyny",
+    "ru": "Количество цистерн"
   },
   "tank_count_info": {
     "en": "Number of buffer tanks before each fluid wagon.",
@@ -895,7 +993,8 @@
     "it": "Numero di serbatoi buffer prima di ogni vagone cisterna.",
     "de": "Anzahl an Lagertankreihen vor jedem Tankwaggon",
     "cn": "每个液罐车厢前的储液罐数量",
-    "pl": "Liczba buforowych zbiorników na płyny postawionych obok stacji"
+    "pl": "Liczba buforowych zbiorników na płyny postawionych obok stacji",
+    "ru": "Количество буферных цистерн на каждый вагон-цистерну"
   },
   "tiles": {
     "en": "Tiles",
@@ -905,7 +1004,8 @@
     "it": "Mattonelle",
     "de": "Bodenfliesen",
     "cn": "铺设",
-    "pl": "Płytki"
+    "pl": "Płytki",
+    "ru": "Покрытие"
   },
   "tiles_info": {
     "en": "Covers the entire area surrounded by the walls in the specified tile type.",
@@ -915,7 +1015,8 @@
     "it": "Copre l'intera area circoscritta dalla muraglia col tipo di mattonella specificato.",
     "de": "Bedeckt die komplette Fläche umgeben von Mauern im angegebenen Fliesentyp.",
     "cn": "使用指定砖块铺设整个区域(墙包围范围)",
-    "pl": "Wypełnia całą powierzchnię płytkami wybranego typu"
+    "pl": "Wypełnia całą powierzchnię płytkami wybranego typu",
+    "ru": "Добавляет покрытие указанного типа на всю площадь, ограниченную стенами"
   },
   "custom_tiles": {
     "en": "Custom Tiles (Optional)",
@@ -925,7 +1026,8 @@
     "it": "Tipo di mattonella personalizzato (Opzionale)",
     "de": "Benutzerdefinierte Fliesen (Optional)",
     "cn": "自定义地面 (可选)",
-    "pl": "Niestandardowe płytki (Opcjonalne)"
+    "pl": "Niestandardowe płytki (Opcjonalne)",
+    "ru": "Название покрытия из модификации (необязательно)"
   },
   "custom_tiles_info": {
     "en": "Only necessary when using mods with custom tile names.",
@@ -935,7 +1037,8 @@
     "it": "Necessario solo quando si usano mod con nomi delle mattonelle personalizzate.",
     "de": "Nur notwendig bei Benutzung von Modifikationen mit eigenen Bodenfliesen.",
     "cn": "仅在你使用mod后使用自定义地面时需要使用",
-    "pl": "Wypełnij tylko, jeśli używasz modów z niestandardowymi płytkami."
+    "pl": "Wypełnij tylko, jeśli używasz modów z niestandardowymi płytkami.",
+    "ru": "Требуется только в случае использования модификаций, добавляющих покрытия"
   },
   "border_tiles": {
     "en": "Border Tiles",
@@ -945,7 +1048,8 @@
     "it": "Mattonelle dei bordi",
     "de": "Fliesen am Rand",
     "cn": "边框地面种类",
-    "pl": "Płytki graniczne"
+    "pl": "Płytki graniczne",
+    "ru": "Покрытие границы"
   },
   "border_tiles_info": {
     "en": "Covers the walls and tile inside with the specified tile type.",
@@ -955,7 +1059,8 @@
     "it": "Copre i muri e la parte interna con il tipo di mattonella specificato.",
     "de": "Bedeckt die Mauern und Fliesen innerhalb mit dem angegebenen Fliesentyp",
     "cn": "使用指定地面种类铺设墙和待铺设地面的中间",
-    "pl": "Otacza mury i cały posterunek wybranym rodzajem płytki"
+    "pl": "Otacza mury i cały posterunek wybranym rodzajem płytki",
+    "ru": "Покрывает стены и клетки внутри них указанным типом покрытия"
   },
   "custom_border_tiles": {
     "en": "Custom Border Tiles (Optional)",
@@ -965,7 +1070,8 @@
     "it": "Tipo di mattonella dei bordi personalizzato (Opzionale)",
     "de": "Benutzerdefinierte Randfliesen (Optional)",
     "cn": "自定义边缘地面 (可选)",
-    "pl": "Niestandardowe płytki graniczne (Opcjonalne)"
+    "pl": "Niestandardowe płytki graniczne (Opcjonalne)",
+    "ru": "Название покрытия из модификации (необязательно)"
   },
   "track_tiles": {
     "en": "Track Tiles",
@@ -975,7 +1081,8 @@
     "it": "Mattonella del tracciato",
     "de": "Fliesen unter Gleisen",
     "cn": "轨道地面",
-    "pl": "Płytki pod tory"
+    "pl": "Płytki pod tory",
+    "ru": "Покрытие для железнодорожных путей"
   },
   "track_tiles_info": {
     "en": "Covers and surrounds tracks with the specified tile type.",
@@ -985,7 +1092,8 @@
     "it": "Copre e circonda il tracciato dei treni con il tipo di mattonella specificato.",
     "de": "Bedeckt und umschließt Gleise mit dem angegebenen Fliesentyp.",
     "cn": "使用指定地面种类铺设轨道和轨道周围的地面。",
-    "pl": "Wypełnia powierzchnię pod torami wybranym rodzajem płytek."
+    "pl": "Wypełnia powierzchnię pod torami wybranym rodzajem płytek.",
+    "ru": "Добавляет покрытие указанного типа на пути и вокруг них"
   },
   "custom_track_tiles": {
     "en": "Custom Track Tiles (Optional)",
@@ -995,7 +1103,8 @@
     "it": "Tipo mattonella del tracciato personalizzato (Opzionale)",
     "de": "Benutzerdefinierte Gleisfliesen (Optional)",
     "cn": "自定义轨道地面 (可选)",
-    "pl": "Wypełnij tylko, jeśli używasz modów z niestandardowymi płytkami."
+    "pl": "Wypełnij tylko, jeśli używasz modów z niestandardowymi płytkami.",
+    "ru": "Требуется только в случае использования модификаций, добавляющих покрытия"
   },
   "flip_x": {
     "en": "Flip Along X Axis",
@@ -1005,7 +1114,8 @@
     "it": "Specchia sull'asse X",
     "de": "Spiegeln an der X Achse",
     "cn": "沿X轴翻转",
-    "pl": "Odbij w osi X."
+    "pl": "Odbij w osi X.",
+    "ru": "Отразить по оси X"
   },
   "flip_y": {
     "en": "Flip Along Y Axis",
@@ -1015,7 +1125,8 @@
     "it": "Specchia sull'asse Y",
     "de": "Spiegeln an der Y Achse",
     "cn": "沿Y轴翻转",
-    "pl": "Odbij w osi Y."
+    "pl": "Odbij w osi Y.",
+    "ru": "Отразить по оси Y"
   },
   "entity_replacer": {
     "en": "New Entity Replacer",
@@ -1025,7 +1136,8 @@
     "it": "Nuova regola di sostituzione delle entità",
     "de": "Neuer Entitätenersetzer",
     "cn": "新增实体替换",
-    "pl": "Podmień przedmioty"
+    "pl": "Podmień przedmioty",
+    "ru": "Новый шаблон для замены объектов"
   },
   "upgrader_preset": {
     "en": "Upgrader Preset",
@@ -1035,7 +1147,8 @@
     "it": "Aggiornamento predefinito",
     "de": "Aufrüstvoreinstellung",
     "cn": "升级预设",
-    "pl": "Ulepsz wszystko"
+    "pl": "Ulepsz wszystko",
+    "ru": "Шаблон для улучшения"
   },
   "recipe_replacer": {
     "en": "New Recipe Replacer",
@@ -1045,7 +1158,8 @@
     "it": "Nuova regola di sostituzione delle ricette",
     "de": "Neues Rezeptersetzer",
     "cn": "新增配方替换",
-    "pl": "Podmień receptury"
+    "pl": "Podmień receptury",
+    "ru": "Новый шаблон для замены рецепта производства"
   },
   "module_replacer": {
     "en": "New Module Replacer",
@@ -1055,7 +1169,8 @@
     "it": "Nuova regola di sostituzione dei moduli",
     "de": "Neuer Modulersetzer",
     "cn": "新增插件替换",
-    "pl": "Podmień moduły"
+    "pl": "Podmień moduły",
+    "ru": "Новый шаблон для замены модулей"
   },
   "modified_only": {
     "en": "Return Modified Only",
@@ -1065,7 +1180,8 @@
     "it": "Restituisci solo le entità modificate",
     "de": "Nur verändertes zurückgeben",
     "cn": "仅修改返回的蓝图代码",
-    "pl": "Zwróć tylko zmodyfikowane elementy."
+    "pl": "Zwróć tylko zmodyfikowane elementy.",
+    "ru": "Возвращать только изменения"
   },
   "modified_only_info": {
     "en": "Only include entities in the blueprint that were modified",
@@ -1075,6 +1191,7 @@
     "it": "Includi solo le entità del progetto che sono state modificate",
     "de": "Nur Entitäten in der Blaupause zurückgeben welche verändert wurden.",
     "cn": "仅包含在蓝图中被修改的实体",
-    "pl": "Do blueprintu dodajemy tylko te elementy, które zostały zmodyfikowane."
+    "pl": "Do blueprintu dodajemy tylko te elementy, które zostały zmodyfikowane.",
+    "ru": "Включает в чертёж только изменённые объекты"
   }
 }
