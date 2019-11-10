@@ -1167,6 +1167,9 @@
     "pl": "Odbij w osi Y.",
     "ru": "Отразить по оси Y"
   },
+  "landfill_entities": {
+    "en": "Landfill under entities"
+  },
   "entity_replacer": {
     "en": "New Entity Replacer",
     "es": "Repositor de Nuevas Entidades",

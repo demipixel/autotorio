@@ -484,6 +484,12 @@ module.exports = function(app) {
           checkbox: {
             name: 'flipY'
           }
+        },
+        {
+          title: lcl('landfill_entities'),
+          checkbox: {
+            name: 'landfillEntities'
+          }
         }, {
           buttons: [{
               text: '<span aria-hidden="true" class="fa fa-plus fa-fw"></span>' + lcl('entity_replacer'),
