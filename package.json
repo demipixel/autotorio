@@ -2,7 +2,6 @@
   "name": "autotorio",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "node scripts/postinstall.js"
@@ -15,7 +14,7 @@
     "cookie-parser": "^1.4.3",
     "ejs": "^2.6.1",
     "express": "^4.16.3",
-    "factorio-generators": "git+https://github.com/demipixel/factorio-generators.git",
+    "factorio-generators": "github:demipixel/factorio-generators",
     "https": "^1.0.0",
     "moment": "^2.22.1"
   },
