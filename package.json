@@ -15,7 +15,7 @@
     "express": "^4.16.3",
     "factorio-generators": "github:demipixel/factorio-generators",
     "https": "^1.0.0",
-    "moment": "^2.22.1"
+    "moment": "^2.29.2"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.18.2",
