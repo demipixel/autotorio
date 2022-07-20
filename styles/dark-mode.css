@@ -1,0 +1,43 @@
+body.dark-mode,
+body.dark-mode legend,
+body.dark-mode h4 {
+  background-color: #14181d;
+  color: #ddd;
+}
+
+body.dark-mode .navbar-inverse,
+body.dark-mode .navbar-collapse {
+  background-color: #181d23;
+}
+
+body.dark-mode .nav .active a,
+body.dark-mode .nav .active a:hover {
+  background-color: #313b47;
+}
+
+body.dark-mode .modal-content {
+  background-color: #313b47;
+}
+
+body.dark-mode .form-control {
+  color: #ccc;
+}
+
+body.dark-mode .btn-default,
+body.dark-mode .dropdown-menu {
+  background-color: #313b47 !important;
+  color: #ddd;
+}
+
+body.dark-mode .dropdown-menu > li > a {
+  color: #ddd;
+}
+
+body.dark-mode .dropdown-menu > li > a:hover,
+body.dark-mode .dropdown-menu > li > a:focus {
+  background-color: #2196f3;
+}
+
+body.dark-mode .fa {
+  color: #ddd !important;
+}

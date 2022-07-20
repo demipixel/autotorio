@@ -1,0 +1,49 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+#flipX span,
+#flipY span {
+  position: relative;
+  transition: transform 0.2s ease-in-out;
+}
+
+#flipX span {
+  transform: scale(-1, 1);
+}
+
+#flipY span {
+  transform: scale(1, -1);
+}
+
+#flipX:hover span,
+/* Check if has input inside that is checked */
+#flipX.checked span,
+#flipY:hover span,
+#flipY.checked span {
+  transform: scale(1, 1);
+  top: 0px;
+  left: 0px;
+}
+
+.nav li a {
+  font-size: 14px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.not-activated {
+  max-height: 0px;
+}
+
+.activated {
+  max-height: 130px;
+}
+
+.dark-mode .invert-color {
+  filter: invert(100%);
+}
