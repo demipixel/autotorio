@@ -30,7 +30,7 @@
     "@types/node": "^18.0.0",
     "@types/react": "^18.0.14",
     "eslint": "^8.18.0",
-    "eslint-config-next": "^12.1.6"
+    "eslint-config-next": "^13.1.1"
   },
   "browserslist": "> 0.25%, not dead"
 }
