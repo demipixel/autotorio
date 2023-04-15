@@ -1,3 +1,5 @@
+import React, { Fragment } from 'react';
+
 import { useI18n } from 'next-localization';
 
 import { TextField } from '@mui/material';
@@ -26,7 +28,7 @@ export default function FormTextarea({ elem, value, onChange }: Props) {
           .t(elem.info)
           .split('<br>')
           .map((line, index, arr) => (
-            <>
+            <Fragment key={line}>
               {line
                 .split('**')
                 .filter((part) => !!part)
@@ -38,7 +40,7 @@ export default function FormTextarea({ elem, value, onChange }: Props) {
                   ),
                 )}
               {index !== arr.length - 1 && <br />}
-            </>
+            </Fragment>
           ))
       }
       value={value}

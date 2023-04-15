@@ -18,7 +18,7 @@
     "@mui/material": "^5.8.5",
     "cookie": "^0.5.0",
     "cookies-next": "^2.0.5",
-    "factorio-blueprint": "github:demipixel/factorio-blueprint",
+    "factorio-blueprint": "^2.6.3",
     "factorio-generators": "github:demipixel/factorio-generators",
     "next": "^12.1.6",
     "next-localization": "^0.12.0",
