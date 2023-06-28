@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useCookies } from 'react-cookie';
+import ReactGA from 'react-ga4';
 
 import { ArrowDropDown } from '@mui/icons-material';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -18,6 +19,8 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
+
+ReactGA.initialize('G-63G9G48L19');
 
 const pages = [
   {
