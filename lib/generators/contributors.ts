@@ -15,5 +15,6 @@ export const CONTRIBUTORS = [
   "TheTostu's",
   'Cyberboss',
   'THE FACTORY',
+  "George's",
   'Autotorio Approved™',
 ];
