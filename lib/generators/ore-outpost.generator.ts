@@ -10,6 +10,16 @@ export function generateOreOutpost(form: { [key: string]: any }) {
 
   opt.beltName = (opt.modded && opt.custom_belt_type) || opt.belt_type || '';
 
+  // Handle miner type selection
+  if (opt.minerType === 'big') {
+    opt.minerSize = 4;
+    opt.miningDrillName = 'big_mining_drill';
+  } else if (opt.minerType === 'standard') {
+    opt.minerSize = 3;
+    opt.miningDrillName = undefined;
+  }
+  // For custom, use the values provided in minerSize and miningDrillName
+
   opt.module =
     (opt.modded && opt.customModule) || opt.module != 'None'
       ? ((opt.modded && opt.customModule) || opt.module)

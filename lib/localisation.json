@@ -526,6 +526,17 @@
     "pl": "Odstępy między kopalniami",
     "ru": "Расстояние между бурами"
   },
+  "miner_type": {
+    "en": "Miner Type",
+    "es": "Tipo de Minero",
+    "pt-br": "Tipo de Minerador",
+    "fr": "Type de mineur",
+    "it": "Tipo di estrattore",
+    "de": "Erzförderer Typ",
+    "cn": "采矿机类型",
+    "pl": "Typ kopalni",
+    "ru": "Тип бура"
+  },
   "miner_space_info": {
     "en": "Side-by-side space between miners.",
     "es": "Espacio entre mineros",
@@ -536,6 +547,39 @@
     "cn": "每两个临近的采矿机的间距",
     "pl": "Odstępy między poszczególnymi kopalniami",
     "ru": "Горизонтальный промежуток между бурами"
+  },
+  "standard": {
+    "en": "Standard",
+    "es": "Estándar",
+    "pt-br": "Padrão",
+    "fr": "Standard",
+    "it": "Standard",
+    "de": "Standard",
+    "cn": "标准",
+    "pl": "Standardowy",
+    "ru": "Стандартный"
+  },
+  "big": {
+    "en": "Big",
+    "es": "Grande",
+    "pt-br": "Grande",
+    "fr": "Grand",
+    "it": "Grande",
+    "de": "Groß",
+    "cn": "大",
+    "pl": "Duży",
+    "ru": "Большой"
+  },
+  "custom": {
+    "en": "Custom",
+    "es": "Personalizado",
+    "pt-br": "Personalizado",
+    "fr": "Personnalisé",
+    "it": "Personalizzato",
+    "de": "Benutzerdefiniert",
+    "cn": "自定义",
+    "pl": "Niestandardowy",
+    "ru": "Пользовательский"
   },
   "custom_mining_drill_size": {
     "en": "Custom Mining Drill Size",

@@ -93,11 +93,24 @@ export default function Outpost() {
           },
           {
             type: 'select',
+            name: 'minerType',
+            title: 'miner_type',
+            options: [
+              ['standard', 'standard', ' (3x3)'],
+              ['big', 'big', ' (4x4)'],
+              ['custom', 'custom'],
+            ],
+            default: 0,
+            info: 'miner_type_info',
+          },
+          {
+            type: 'select',
             name: 'minerSize',
             title: 'custom_mining_drill_size',
             options: ['3', '4', '5'],
-            default: 3,
+            default: 0,
             info: 'custom_mining_drill_size_info',
+            activate: 'minerType:2',
           },
           {
             type: 'input',
@@ -105,7 +118,7 @@ export default function Outpost() {
             title: 'custom_mining_drill',
             placeholder: 'example_mining_drill',
             info: 'custom_mining_drill_info',
-            activate: 'modded',
+            activate: 'minerType:2',
           },
           {
             type: 'select',
