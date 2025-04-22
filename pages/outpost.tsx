@@ -92,6 +92,15 @@ export default function Outpost() {
             info: 'miner_space_info',
           },
           {
+            type: 'select',
+            name: 'minerSize',
+            title: 'custom_mining_drill_size',
+            options: ['3', '4', '5'],
+            default: 3,
+            info: 'custom_mining_drill_size_info',
+            activate: 'modded',
+          },
+          {
             type: 'input',
             name: 'miningDrillName',
             title: 'custom_mining_drill',
