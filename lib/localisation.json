@@ -537,6 +537,28 @@
     "pl": "Odstępy między poszczególnymi kopalniami",
     "ru": "Горизонтальный промежуток между бурами"
   },
+  "custom_mining_drill_size": {
+    "en": "Custom Mining Drill Size",
+    "es": "Tamaño del Minero Personalizado",
+    "pt-br": "Tamanho do Minerador Personalizado",
+    "fr": "Taille de mineur spécial",
+    "it": "Dimensione dell'estrattore personalizzato",
+    "de": "Benutzerdefinierte Erzförderer Größe",
+    "cn": "自定义采矿机尺寸",
+    "pl": "Rozmiar niestandardowej kopalni",
+    "ru": "Размер бура из модификации"
+  },
+  "custom_mining_drill_size_info": {
+    "en": "Width/length of a mining drill.",
+    "es": "Ancho/largo del minero.",
+    "pt-br": "Largura/comprimento do minerador.",
+    "fr": "Largeur/longueur du mineur.",
+    "it": "Larghezza/lunghezza dell'estrattore.",
+    "de": "Breite/Länge eines Erzförderers.",
+    "cn": "采矿机的宽度/长度。",
+    "pl": "Szerokość/długość kopalni.",
+    "ru": "Ширина/длина бура."
+  },
   "custom_mining_drill": {
     "en": "Custom Mining Drill Name (Optional)",
     "es": "Nombre de Mineros Personalizado (Opcional)",
