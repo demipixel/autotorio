@@ -98,7 +98,6 @@ export default function Outpost() {
             options: ['3', '4', '5'],
             default: 3,
             info: 'custom_mining_drill_size_info',
-            activate: 'modded',
           },
           {
             type: 'input',
