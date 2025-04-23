@@ -68,7 +68,7 @@ export default function SettingsUrlButton({ values }: Props) {
             value={urlToCopy}
             inputRef={inputRef}
           />
-          <div css={{ marginTop: '10px', opacity: '70%' }}>
+          <div style={{ marginTop: '10px', opacity: '70%' }}>
             Save or share this link to get back to this page with all the same
             settings :)
           </div>

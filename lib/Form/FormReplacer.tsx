@@ -44,9 +44,9 @@ export default function FormReplacer({
           New {replacerType[0].toUpperCase() + replacerType.slice(1)} Replacer
         </Button>
       </ButtonGroup>
-      <div css={{ marginTop: '20px' }}>
+      <div style={{ marginTop: '20px' }}>
         {value.map(({ from, to }, index) => (
-          <div key={index} css={{ display: 'flex', alignItems: 'center' }}>
+          <div key={index} style={{ display: 'flex', alignItems: 'center' }}>
             <FactorioItemSelect
               items={fromItems}
               value={from}
@@ -57,7 +57,7 @@ export default function FormReplacer({
               }}
             />
             <ArrowRightAltIcon
-              css={{ margin: 'auto 20px', fontSize: '50px' }}
+              style={{ margin: 'auto 20px', fontSize: '50px' }}
             />
             <FactorioItemSelect
               items={toItems}
@@ -69,7 +69,7 @@ export default function FormReplacer({
               }}
             />
             <Button
-              css={{ marginLeft: '10px', fontSize: '30px' }}
+              style={{ marginLeft: '10px', fontSize: '30px' }}
               onClick={() => {
                 const newValue = [...value];
                 newValue.splice(index, 1);
@@ -99,13 +99,15 @@ const FactorioItemSelect = ({
   return (
     <FormControl>
       <Autocomplete
-        css={{ width: '300px', marginTop: '10px', marginBottom: '10px' }}
+        style={{ width: '300px', marginTop: '10px', marginBottom: '10px' }}
         options={items}
         getOptionLabel={(item) => getFactorioItemLabel(item)}
         renderOption={(props, item) => (
-          <li css={{ display: 'flex', alignItems: 'center' }} {...props}>
+          <li style={{ display: 'flex', alignItems: 'center' }} {...props}>
             <FactorioItemIcon items={items} item={item} />
-            <div css={{ marginLeft: '10px' }}>{getFactorioItemLabel(item)}</div>
+            <div style={{ marginLeft: '10px' }}>
+              {getFactorioItemLabel(item)}
+            </div>
           </li>
         )}
         value={value}
@@ -153,7 +155,7 @@ const FactorioItemIcon = ({ item, items }: { item: string; items: string[] }) =>
         .map((otherItem, i) => (
           <div
             key={otherItem}
-            css={{
+            style={{
               position: 'absolute',
               top: '0px',
               left: i * 5 + 'px',

@@ -93,7 +93,7 @@ export default function FormElement(props: Props) {
 
   return (
     <div
-      css={{
+      style={{
         overflow: 'hidden',
         transition: 'max-height 0.5s ease-in-out',
       }}
@@ -105,7 +105,7 @@ export default function FormElement(props: Props) {
           : ''
       }
     >
-      <Grid container spacing={5} css={{ marginBottom: '20px' }}>
+      <Grid container spacing={5} style={{ marginBottom: '20px' }}>
         <Grid
           item
           xs={12}
@@ -117,7 +117,7 @@ export default function FormElement(props: Props) {
         >
           <Typography
             variant={elem.type === 'header' ? 'h6' : 'body2'}
-            css={{
+            style={{
               opacity: '70%',
               marginTop: '11px',
             }}
@@ -138,7 +138,7 @@ export default function FormElement(props: Props) {
           <FormControl sx={{ minWidth: 120 }} error={!!error} fullWidth>
             {innerElem}
             {'checkbox' in elem && (
-              <div css={{ display: 'flex', alignItems: 'center' }}>
+              <div style={{ display: 'flex', alignItems: 'center' }}>
                 <div
                   id={
                     elem.checkbox.name.startsWith('flip')

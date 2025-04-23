@@ -57,7 +57,7 @@ export default function SubmitButton({
   };
 
   return (
-    <div css={{ marginRight: '10px' }}>
+    <div style={{ marginRight: '10px' }}>
       <Button variant="contained" color="primary" onClick={handleClickOpen}>
         {i18n.t(submitButtonText)}
       </Button>
@@ -69,7 +69,7 @@ export default function SubmitButton({
         aria-describedby="alert-dialog-slide-description"
       >
         <DialogTitle>Final Blueprint</DialogTitle>
-        <DialogContent css={{ minWidth: '500px' }}>
+        <DialogContent style={{ minWidth: '500px' }}>
           {bpToCopy ? (
             <div>
               <TextField
@@ -81,7 +81,7 @@ export default function SubmitButton({
             </div>
           ) : error ? (
             <div
-              css={{
+              style={{
                 color: 'rgb(255, 38, 38)',
                 fontWeight: 'bold',
                 textAlign: 'center',
@@ -92,7 +92,9 @@ export default function SubmitButton({
           ) : (
             // Loading
             <div>
-              <div css={{ marginTop: '10px', opacity: '70%' }}>Loading...</div>
+              <div style={{ marginTop: '10px', opacity: '70%' }}>
+                Loading...
+              </div>
             </div>
           )}
         </DialogContent>

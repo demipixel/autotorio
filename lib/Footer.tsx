@@ -5,7 +5,7 @@ import { Link } from '@mui/material';
 export default function Footer() {
   return (
     <div
-      css={{
+      style={{
         marginTop: '50px',
         marginBottom: '50px',
         textAlign: 'center',
@@ -17,7 +17,7 @@ export default function Footer() {
       <Link
         href="https://www.reddit.com/user/DemiPixel"
         target="_blank"
-        css={{ paddingRight: '15px', display: 'flex', alignItems: 'center' }}
+        style={{ paddingRight: '15px', display: 'flex', alignItems: 'center' }}
       >
         <Image
           src="/img/reddit.png"
@@ -26,9 +26,9 @@ export default function Footer() {
           height="16px"
           className="invert-color"
         />{' '}
-        <div css={{ marginLeft: '5px' }}>/u/DemiPixel</div>
+        <div style={{ marginLeft: '5px' }}>/u/DemiPixel</div>
       </Link>
-      <div css={{ display: 'flex', alignItems: 'center' }}>
+      <div style={{ display: 'flex', alignItems: 'center' }}>
         <Image
           src="/img/discord.png"
           alt="Discord"
@@ -36,7 +36,7 @@ export default function Footer() {
           height="16px"
           className="invert-color"
         />
-        <div css={{ marginLeft: '5px' }}>DemiPixel#5243</div>
+        <div style={{ marginLeft: '5px' }}>DemiPixel#5243</div>
       </div>
     </div>
   );

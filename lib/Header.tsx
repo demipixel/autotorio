@@ -77,7 +77,7 @@ export default function Header() {
   };
 
   return (
-    <AppBar position="static" css={{ backgroundColor: '#0c84e4' }}>
+    <AppBar position="static" style={{ backgroundColor: '#0c84e4' }}>
       <GlobalStyles styles={{ helperText: { color: '#f00' } }} />
       <Container maxWidth="xl">
         <Toolbar disableGutters>
@@ -87,7 +87,7 @@ export default function Header() {
               alt="Autotorio"
               width={978 / 5}
               height={201 / 5}
-              css={{ cursor: 'pointer' }}
+              style={{ cursor: 'pointer' }}
             />
           </Link>
 
@@ -186,7 +186,7 @@ export default function Header() {
                 href="https://github.com/demipixel/autotorio/blob/master/localisation.json"
                 target="_blank"
                 rel="noreferrer"
-                css={{ all: 'unset' }}
+                style={{ all: 'unset' }}
               >
                 <MenuItem onClick={handleCloseNavMenu}>
                   <Typography textAlign="center">Help out!</Typography>
@@ -206,7 +206,7 @@ export default function Header() {
             href="https://www.buymeacoffee.com/DemiPixel"
             target="_blank"
             rel="noreferrer"
-            css={{ all: 'unset' }}
+            style={{ all: 'unset' }}
           >
             <HeaderButton>Donate</HeaderButton>
           </a>

@@ -31,7 +31,7 @@ export default function FormSelect({ elem, value, onChange }: Props) {
           );
         })}
       </Select>
-      <FormHelperText css={{ marginX: '7px' }}>
+      <FormHelperText style={{ marginLeft: '7px', marginRight: '7px' }}>
         {elem.info && i18n.t(elem.info)}
       </FormHelperText>
     </div>

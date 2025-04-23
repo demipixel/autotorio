@@ -23,7 +23,7 @@ export default function Form({ content, submitButton, generatorFunc }: Props) {
   } = useForm(content);
 
   return (
-    <div css={{ marginTop: '100px' }}>
+    <div style={{ marginTop: '100px' }}>
       <form>
         {content.map((elem, index) => (
           <FormElement
@@ -42,7 +42,7 @@ export default function Form({ content, submitButton, generatorFunc }: Props) {
             }}
           />
         ))}
-        <Grid container spacing={5} css={{ marginBottom: '20px' }}>
+        <Grid container spacing={5} style={{ marginBottom: '20px' }}>
           <Grid item xs={3} />
           <Grid item>
             <ButtonGroup>
