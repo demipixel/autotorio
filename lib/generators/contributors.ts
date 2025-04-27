@@ -1,7 +1,7 @@
 export const CONTRIBUTORS = [
   "phono's",
   "Goopsky's",
-  'Fahr',
+  "Fahr's",
   "Dwarf's Foundry",
   "Tupper's",
   "Schorty's",
@@ -11,10 +11,11 @@ export const CONTRIBUTORS = [
   "Brodo's",
   "gigajum's",
   "Tom's",
-  'SickHippie',
+  "SickHippie's",
   "TheTostu's",
-  'Cyberboss',
-  'THE FACTORY',
+  "Cyberboss's",
+  "THE FACTORY's",
   "George's",
+  "gcho's"
   'Autotorio Approved™',
 ];
