@@ -1024,7 +1024,7 @@
     "de": "Zweiseitig laden",
     "cn": "双倍装载",
     "pl": "Załadunek z obu stron",
-    "ru": "Загрузка с обеиз сторон"
+    "ru": "Загрузка с обеих сторон"
   },
   "double_loading_info": {
     "en": "Load on both sides of each cargo wagon.",
@@ -1234,7 +1234,8 @@
     "ru": "Отразить по оси Y"
   },
   "landfill_entities": {
-    "en": "Landfill under entities"
+    "en": "Landfill under entities",
+    "ru": "Укладывать отсыпку под объектами"
   },
   "entity_replacer": {
     "en": "New Entity Replacer",
