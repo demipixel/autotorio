@@ -54,9 +54,9 @@ export default function Header() {
   const [cookie, setCookie] = useCookies(['dark', 'language']);
 
   useEffect(() => {
-    document.body.classList[cookie.dark === 'true' ? 'add' : 'remove'](
-      'dark-mode',
-    );
+    const mode = cookie.dark === 'true' ? 'add' : 'remove';
+    document.body.classList[mode]('dark-mode');
+    document.documentElement.classList[mode]('dark-mode');
   }, [cookie.dark]);
 
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
