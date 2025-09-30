@@ -13,7 +13,7 @@
     },
     "blueprint_tool": {
       "en": "Blueprint Tool",
-      "es": "Herramienta de Planificación",
+      "es": "Herramienta de Planos",
       "pt-br": "Ferramenta de Planejamento",
       "fr": "Modificateur de planificateur",
       "it": "Strumento di pianificazione",
@@ -65,7 +65,8 @@
       "de": "Geschütztürme",
       "cn": "机枪炮塔",
       "pl": "Działka maszynowe",
-      "ru": "Пулемётные турели"
+      "ru": "Пулемётные турели",
+      "pt-br": "Torres de tiro"
     },
     "laser_turrets": {
       "en": "Laser Turrets",
@@ -75,7 +76,8 @@
       "de": "Lasergeschütz",
       "cn": "激光炮塔",
       "pl": "Działka laserowe",
-      "ru": "Лазерные турели"
+      "ru": "Лазерные турели",
+      "pt-br": "Torres laser"
     },
     "transport_belt": {
       "en": "Transport Belt",
@@ -85,7 +87,8 @@
       "de": "Fließband",
       "cn": "传送带",
       "pl": "Pas transmisyjny",
-      "ru": "Конвейер"
+      "ru": "Конвейер",
+      "pt-br": "Correia transportadora"
     },
     "fast_transport_belt": {
       "en": "Fast Transport Belt",
@@ -95,7 +98,8 @@
       "de": "schnelles Fließband",
       "cn": "高速传送带",
       "pl": "Szybki pas transmisyjny",
-      "ru": "Быстрый конвейер"
+      "ru": "Быстрый конвейер",
+      "pt-br": "Correia transportadora rápida"
     },
     "express_transport_belt": {
       "en": "Express Transport Belt",
@@ -105,7 +109,8 @@
       "de": "Express-Fließband",
       "cn": "极速传送带",
       "pl": "Ekspresowy pas transmisyjny",
-      "ru": "Экспресс-конвейер"
+      "ru": "Экспресс-конвейер",
+      "pt-br": "Correia transportadora expressa"
     },
     "stone_path": {
       "en": "Stone Path",
@@ -115,7 +120,8 @@
       "de": "Steinweg",
       "cn": "石基路",
       "pl": "Kamienna ścieżka",
-      "ru": "Каменная дорога"
+      "ru": "Каменная дорога",
+      "pt-br": "Caminho de pedra"
     },
     "concrete": {
       "en": "Concrete",
@@ -125,7 +131,8 @@
       "de": "Beton",
       "cn": "混凝土",
       "pl": "Beton",
-      "ru": "Бетон"
+      "ru": "Бетон",
+      "pt-br": "Concreto"
     },
     "hazard_concrete_left": {
       "en": "Hazard Concrete Left",
@@ -135,7 +142,8 @@
       "de": "Beton mit Gefahrenmarkierung (Links)",
       "cn": "标识混凝土 (左)",
       "pl": "Beton ostrzegawczy (Lewo)",
-      "ru": "Бетон в предупреждающей окраске (Левый)"
+      "ru": "Бетон в предупреждающей окраске (Левый)",
+      "pt-br": "Concreto sinalizado (esquerda)"
     },
     "hazard_concrete_right": {
       "en": "Hazard Concrete Right",
@@ -144,8 +152,9 @@
       "it": "Cemento con disegni di pericolo a destra",
       "de": "Beton mit Gefahrenmarkierung (Rechts)",
       "cn": "标识混凝土 (右)",
-      "pl": "Beton ostrzegawszy (Prawo)",
-      "ru": "Бетон в предупреждающей окраске (Правый)"
+      "pl": "Beton ostrzegawczy (Prawo)",
+      "ru": "Бетон в предупреждающей окраске (Правый)",
+      "pt-br": "Concreto sinalizado (direita)"
     },
     "refined_concrete": {
       "en": "Refined Concrete",
@@ -154,25 +163,31 @@
       "pl": "Ulepszony beton",
       "de": "Verbesserter Beton",
       "cn": "钢筋混凝土",
-      "ru": "Железобетон"
+      "ru": "Железобетон",
+      "fr": "Béton raffiné",
+      "pt-br": "Concreto refinado"
     },
     "refined_hazard_concrete_left": {
       "en": "Refined Hazard Concrete Left",
       "es": "Concreto refinado de señal de peligro (izquierda)",
       "it": "Cemento raffinato con disegni di pericolo a sinistra",
-      "pl": "Ulepszony beton ostrzegawszy (Lewo)",
+      "pl": "Ulepszony beton ostrzegawczy (Lewo)",
       "de": "Verbesserter Beton mit Gefahrenmarkierung (Links)",
       "cn": "钢筋标识混凝土 (左)",
-      "ru": "Железобетон в предупреждающей окраске (Левый)"
+      "ru": "Железобетон в предупреждающей окраске (Левый)",
+      "fr": "Béton raffiné avec marquage de danger (Gauche)",
+      "pt-br": "Concreto refinado sinalizado (esquerda)"
     },
     "refined_hazard_concrete_right": {
       "en": "Refined Hazard Concrete Right",
       "es": "Concreto refinado de señal de peligro (derecha)",
       "it": "Cemento raffinato con disegni di pericolo a destra",
-      "pl": "Ulepszony beton ostrzegawszy (Prawo)",
+      "pl": "Ulepszony beton ostrzegawczy (Prawo)",
       "de": "Verbesserter Beton mit Gefahrenmarkierung (Rechts)",
       "cn": "钢筋标识混凝土 (右)",
-      "ru": "Железобетон в предупреждающей окраске (Правый)"
+      "ru": "Железобетон в предупреждающей окраске (Правый)",
+      "fr": "Béton raffiné avec marquage de danger (Droite)",
+      "pt-br": "Concreto refinado sinalizado (direita)"
     },
     "speed_module": {
       "en": "Speed Module",
@@ -182,17 +197,19 @@
       "de": "Geschwindigkeitsmodul",
       "cn": "速度插件",
       "pl": "Moduł szybkości",
-      "ru": "Модуль скорости"
+      "ru": "Модуль скорости",
+      "pt-br": "Módulo de velocidade"
     },
     "effectivity_module": {
       "en": "Effectivity Module",
       "es": "Módulo de eficiencia",
-      "fr": "Module de d'efficacité",
+      "fr": "Module d'efficacité",
       "it": "Modulo efficienza",
       "de": "Effektivitätsmodul",
       "cn": "节能插件",
       "pl": "Moduł efektywności",
-      "ru": "Модуль эффективности"
+      "ru": "Модуль эффективности",
+      "pt-br": "Módulo de eficiência"
     },
     "productivity_module": {
       "en": "Productivity Module",
@@ -201,8 +218,9 @@
       "it": "Modulo produttività",
       "de": "Produktivitätsmodul",
       "cn": "产能插件",
-      "pl": "Moduł prodyktywności",
-      "ru": "Модуль продуктивности"
+      "pl": "Moduł produktywności",
+      "ru": "Модуль продуктивности",
+      "pt-br": "Módulo de produtividade"
     }
   },
   "none": {
@@ -213,7 +231,8 @@
     "de": "Nichts",
     "cn": "无",
     "pl": "Nic",
-    "ru": "Нет"
+    "ru": "Нет",
+    "pt-br": "Nenhum"
   },
   "right": {
     "en": "Right",
@@ -223,7 +242,8 @@
     "de": "Rechts",
     "cn": "右",
     "pl": "Po prawej",
-    "ru": "Справа"
+    "ru": "Справа",
+    "pt-br": "Direita"
   },
   "bottom": {
     "en": "Bottom",
@@ -233,7 +253,8 @@
     "de": "Unten",
     "cn": "底部",
     "pl": "Na dole",
-    "ru": "Снизу"
+    "ru": "Снизу",
+    "pt-br": "Inferior"
   },
   "down": {
     "en": "Down",
@@ -243,7 +264,8 @@
     "de": "Unten",
     "cn": "下",
     "pl": "Na dole",
-    "ru": "Вниз"
+    "ru": "Вниз",
+    "pt-br": "Para baixo"
   },
   "left": {
     "en": "Left",
@@ -253,7 +275,8 @@
     "de": "Links",
     "cn": "左",
     "pl": "Po lewej",
-    "ru": "Слева"
+    "ru": "Слева",
+    "pt-br": "Esquerda"
   },
   "top": {
     "en": "Top",
@@ -263,7 +286,8 @@
     "de": "Oben",
     "cn": "顶部",
     "pl": "Na górze",
-    "ru": "Сверху"
+    "ru": "Сверху",
+    "pt-br": "Superior"
   },
   "up": {
     "en": "Up",
@@ -273,11 +297,12 @@
     "de": "Oben",
     "cn": "上",
     "pl": "Na górze",
-    "ru": "Вверх"
+    "ru": "Вверх",
+    "pt-br": "Para cima"
   },
   "blueprint_tool": {
     "en": "Blueprint Tool",
-    "es": "Herramienta de Planificación",
+    "es": "Herramienta de Planos",
     "pt-br": "Ferramenta de Planejamento",
     "fr": "Modificateur de planificateur",
     "it": "Strumento di pianificazione",
@@ -299,7 +324,7 @@
   },
   "submit_ore_outpost": {
     "en": "Get Ore Outpost Blueprint",
-    "es": "Obtener Planificación de Puesto de Minerales",
+    "es": "Obtener Plano de Puesto de Minerales",
     "pt-br": "Obter Planejamento de Posto de Minérios",
     "fr": "Obtenir le planificateur de minage",
     "it": "Ottieni avamposto di minerali",
@@ -310,17 +335,18 @@
   },
   "submit_oil_outpost": {
     "en": "Get Oil Outpost Blueprint",
-    "es": "Obtener Planificación de Puesto Petrolifero",
+    "es": "Obtener plano de puesto petrolífero",
     "fr": "Obtenir le planificateur d'avant-poste de pétrole",
     "it": "Ottieni avamposto petrolifero",
     "de": "Öl Außenposten Blaupause erstellen",
     "cn": "获取石油前哨站蓝图",
     "pl": "Wygeneruj blueprint pola naftowego",
-    "ru": "Получить чертёж нефтяного аванпоста"
+    "ru": "Получить чертёж нефтяного аванпоста",
+    "pt-br": "Obter plano de posto petrolífero"
   },
   "submit_blueprint": {
     "en": "Get Blueprint",
-    "es": "Obtener Planificación",
+    "es": "Obtener Plano",
     "pt-br": "Obter Planejamento",
     "fr": "Obtenir le planificateur",
     "it": "Ottieni progetto",
@@ -331,17 +357,18 @@
   },
   "settings_url": {
     "en": "Get settings URL",
-    "es": "Obtener URL de los parámetros",
+    "es": "Obtener URL de configuración",
     "fr": "Obtenir l'URL des paramètres",
     "it": "Ottieni URL con impostazioni",
     "de": "URL mit Einstellungen anzeigen",
     "cn": "获取设定URL",
     "pl": "Zdobądź URL",
-    "ru": "Получить URL настроек"
+    "ru": "Получить URL настроек",
+    "pt-br": "Obter URL das configurações"
   },
   "blueprint_string": {
     "en": "Blueprint String",
-    "es": "Línea de Planificación",
+    "es": "Cadena del Plano",
     "pt-br": "Linha de Planejamento",
     "fr": "Chaîne du planificateur",
     "it": "Stringa del progetto",
@@ -352,7 +379,7 @@
   },
   "blueprint_string_placeholder": {
     "en": "Blueprint string here...",
-    "es": "Línea de Planificación aquí ...",
+    "es": "Cadena del Plano aquí...",
     "pt-br": "Linha de Planejamento aqui...",
     "fr": "Placer la chaîne du planificateur ici...",
     "it": "Incolla qui la stringa del progetto...",
@@ -363,7 +390,7 @@
   },
   "blueprint_string_info": {
     "en": "Place two walls, one at each corner of the ore patch, and then place a blueprint string of the walls here.",
-    "es": "Coloque dos paredes, una en cada esquina del parche de mineral, entonces coloque la línea de planificación de las paredes aquí.",
+    "es": "Coloca dos paredes, una en cada esquina del parche de mineral, y pega aquí la cadena del plano de esas paredes.",
     "pt-br": "Coloque duas paredes, uma em cada canto do campo de minérios, então coloque a linha de planejamento das paredes aqui.",
     "fr": "Place deux murs, un à chaque coin du gissement de minerai, puis place la chaîne du planificateur des murs ici.",
     "it": "Piazza due muri, uno per ogni angolo della zona mineraria, poi incolla la stringa del progetto dei due muri qui.",
@@ -374,7 +401,7 @@
   },
   "blueprint_string_or_book": {
     "en": "Blueprint or Blueprint Book String",
-    "es": "Línea de Planificación o Libro de Planificación",
+    "es": "Cadena del Plano o del Libro de Planos",
     "pt-br": "Linha de Planejamento ou Livro de Planejamento",
     "fr": "Chaîne de planificateur ou d'un livre de planificateurs",
     "it": "Stringa del progetto o del libro dei progetti",
@@ -385,7 +412,7 @@
   },
   "blueprint_string_or_book_placeholder": {
     "en": "Blueprint or blueprint book string here...",
-    "es": "Línea de Planificación o Libro de Planificación aquí ...",
+    "es": "Cadena del Plano o del Libro de Planos aquí...",
     "pt-br": "Linha de Planejamento ou Livro de Planejamento aqui...",
     "fr": "Place ici la chaîne du planificateur ou d'un livre de planificateurs...",
     "it": "Incolla qui la stringa del progetto o del libro dei progetti...",
@@ -396,7 +423,7 @@
   },
   "blueprint_tool_info": {
     "en": "This is the blueprint(s) to modify.",
-    "es": "Este es una planificación para modificar.",
+    "es": "Estos son los planos que se van a modificar.",
     "pt-br": "Isto é um planejamento para modificar.",
     "fr": "Le(s) planificateur(s) à modifier.",
     "it": "Progetto(i) da modificare.",
@@ -407,7 +434,7 @@
   },
   "oil_blueprint_info": {
     "en": "Create a blueprint with your pumpjacks **and a single straight track placed anywhere.**",
-    "es": "Crea una planificación con sus bombas petroleras **y una sola vía recta colocada en cualquier lugar.**",
+    "es": "Crea un plano con tus bombas petroleras **y una sola vía recta colocada en cualquier lugar.**",
     "pt-br": "Crie um planejamento com suas bombas de petróleo **e com uma única esteira reta colocada em qualquer lugar.**",
     "fr": "Créé un planificateur avec les pompes à pétrole **et un seul rail droit placé n'importe où.**",
     "it": "Crea un progetto con le tue pompe petrolifere **e una singola linea retta di distribuzione posizionata ovunque**",
@@ -660,11 +687,25 @@
   },
   "custom_pumpjack": {
     "en": "Modded Pumpjack Name",
-    "ru": "Название нефтяной вышки из модификации"
+    "ru": "Название нефтяной вышки из модификации",
+    "es": "Nombre de bomba extractora modificada",
+    "pt-br": "Nome da bomba de petróleo modificada",
+    "fr": "Nom de pompe à pétrole moddée",
+    "it": "Nome della pompa petrolifera moddata",
+    "de": "Name der modifizierten Ölpumpe",
+    "cn": "模组抽油机名称",
+    "pl": "Nazwa zmodyfikowanej pompy naftowej"
   },
   "custom_pumpjack_info": {
     "en": "If your blueprint contains modded pumpjacks, specify the internal name of the pumpjack (use underscores, not dashes)",
-    "ru": "Если Ваш чертёж содержит нефтяные вышки из модификаций, укажите их внутреннее название (используйте подчёркивания)"
+    "ru": "Если Ваш чертёж содержит нефтяные вышки из модификаций, укажите их внутреннее название (используйте подчёркивания)",
+    "es": "Si tu plano contiene bombas extractoras modificadas, especifica el nombre interno de la bomba (usa guiones bajos en lugar de guiones).",
+    "pt-br": "Se o seu blueprint tiver bombas de petróleo de mods, informe o nome interno da bomba (use sublinhados, não hífens).",
+    "fr": "Si votre plan contient des pompes moddées, indiquez le nom interne de la pompe (utilisez des tirets bas, pas des tirets).",
+    "it": "Se il tuo progetto contiene pompe petrolifere moddate, specifica il nome interno della pompa (usa trattini bassi, non trattini).",
+    "de": "Wenn deine Blaupause modifizierte Ölpumpen enthält, gib den internen Namen der Pumpe an (verwende Unterstriche statt Bindestrichen).",
+    "cn": "如果蓝图包含模组抽油机，请填写其内部名称（使用下划线，不要使用短横线）。",
+    "pl": "Jeśli blueprint zawiera zmodyfikowane pompy naftowe, podaj ich wewnętrzną nazwę (używaj znaków podkreślenia zamiast łączników)."
   },
   "custom_module": {
     "en": "Custom Module Name",
@@ -716,7 +757,10 @@
     "it": "Inseritore filtrante",
     "de": "Filternde Greifarme benutzen.",
     "cn": "使用筛选机械臂",
-    "ru": "Использовать фильтрующие манипуляторы"
+    "ru": "Использовать фильтрующие манипуляторы",
+    "fr": "Utiliser des bras filtrants",
+    "pl": "Użyj podajników filtrujących",
+    "pt-br": "Usar braços robóticos filtradores"
   },
   "filter_inserters_info": {
     "en": "Use filter inserters between the buffer chests and the cargo wagon",
@@ -724,7 +768,10 @@
     "it": "Usa gli inseritori filtranti fra le casse buffer e il vagone merci",
     "de": "Filternde Greifarme zwischen Pufferkiste und Güterwaggon benutzen.",
     "cn": "在主动存货箱与货运车厢之间使用筛选机械臂",
-    "ru": "Использовать фильтрующие манипуляторы между буферными сундуками и грузовыми вагонами"
+    "ru": "Использовать фильтрующие манипуляторы между буферными сундуками и грузовыми вагонами",
+    "fr": "Utilisez des bras filtrants entre les coffres tampons et le wagon de marchandises.",
+    "pl": "Użyj podajników filtrujących między skrzyniami buforowymi a wagonem towarowym.",
+    "pt-br": "Use braços robóticos filtradores entre os baús tampão e o vagão de carga."
   },
   "radar": {
     "en": "Include Radar",
@@ -743,7 +790,10 @@
     "it": "Includi luci",
     "de": "Lichter aufbauen",
     "cn": "包含灯在内",
-    "ru": "Включить фонари в чертёж"
+    "ru": "Включить фонари в чертёж",
+    "fr": "Inclure des lampes",
+    "pl": "Dodaj lampy",
+    "pt-br": "Incluir postes de luz"
   },
   "beacons": {
     "en": "Beacons",
@@ -751,11 +801,14 @@
     "it": "Faro",
     "de": "Effektverteiler aufbauen",
     "cn": "插件效果分享塔",
-    "ru": "Маяки"
+    "ru": "Маяки",
+    "fr": "Diffuseurs d'effets",
+    "pl": "Nadajniki efektów",
+    "pt-br": "Transmissores de efeito"
   },
   "balancer": {
     "en": "Balancer Blueprint String (Optional)",
-    "es": "Línea de Planificación de Balanceador (Opcional)",
+    "es": "Cadena del Plano del Balanceador (Opcional)",
     "pt-br": "Linha de Planejamento de Balanceador (Opcional)",
     "fr": "Chaîne de planificateur du balanceur NxN (Optionnel)",
     "it": "Stringa del progetto del bilanciatore (Opzionale)",
@@ -766,7 +819,7 @@
   },
   "balancer_placeholder": {
     "en": "Blueprint String here...",
-    "es": "Línea de Planificación aquí...",
+    "es": "Cadena del Plano aquí...",
     "pt-br": "Linha de Planejamento aqui...",
     "fr": "Place la chaîne de planificateur du balanceur ici...",
     "it": "Incolla qui la stringa del progetto...",
@@ -777,7 +830,7 @@
   },
   "balancer_info": {
     "en": "If a balancer of NxN is not available (where N is the # of cargo wagons), put a blueprint string of a balancer here.<br>Only balancers for 1, 2, and 4 cargo wagons are provided.<br>The balancer should be made of express belt and be facing upwards. If it is not \"inline\", make sure it sticks out to right and increase \"wall space\".<br>This is not required if bot-based.",
-    "es": "Si no está disponible un balanceador de NxN (donde N es el número de vagones de carga), coloque aquí una linea de planificación de un balanceador.<br>Se proporcionan solo balanceadores para 1, 2 y 4 vagones de carga.<br>El balanceador debe estar hecho de cinta transportadora exprés y mirar hacia arriba. Si no está \"en línea\", asegúrese de que sobresalga a la derecha y aumente el \"espacio de pared\".<br>Esto no es necesario si está basado en robots.",
+    "es": "Si no tienes disponible un balanceador de NxN (donde N es el número de vagones de carga), pega aquí la cadena del plano de un balanceador.<br>Solo se proporcionan balanceadores para 1, 2 y 4 vagones de carga.<br>El balanceador debe estar hecho de cinta transportadora exprés y orientado hacia arriba. Si no queda alineado, asegúrate de que sobresalga hacia la derecha y aumenta el \"espacio de pared\".<br>Esto no es necesario si se basa en robots.",
     "pt-br": "Se um balanceador de NxN não está disponível (sendo N o número de vagões de carga), coloque aqui uma linha de planejamento de um balanceador.<br>Só serão providos balanceadores para 1, 2 e 4 vagões de carga.<br>O balanceador deve ser feito de esteiras expressas e estar voltado para cima. Se nào estiver \"em linha\", assegure-se de que se sobresaia para a direita e aumente \"espaço entre paredes\".<br>Não é necessário se estiver baseado em bot.",
     "fr": "Si le balanceur NxN n'est pas disponible (où N est le nombre de wagons), place une chaîne de planificateur du balanceur NxN ici.<br>Les balanceurs pour 1, 2 et 4 wagons sont déjà proposés.<br>Le balanceur doit être fait de convoyeurs express et doit viser le haut. Si il n'est pas \"en ligne\", aligne-le sur la droite du planificateur et augmente l'espace entre les murs.<br>Inutile si basé sur les robots.",
     "it": "Se un bilanciatore NxN non è disponibile (dove N sta per il numero di vagoni merci), incolla qui la stringa del progetto di un bilanciatore.<br>Sono disponibili solo bilanciatori per 1, 2 e 4 vagoni merci.<br>I bilanciatori dovrebbero essere fatti con rulli di trasporto ultraveloci e orientati verso l'alto. Se non è \"in linea\", assicurati che rimanga a destra e aumenta la \"distanza muri\".<br>Ciò non è necessario se l'avamposto si basa sui robot logistici.",
@@ -1024,7 +1077,9 @@
     "de": "Zweiseitig laden",
     "cn": "双倍装载",
     "pl": "Załadunek z obu stron",
-    "ru": "Загрузка с обеих сторон"
+    "ru": "Загрузка с обеих сторон",
+    "fr": "Chargement double",
+    "pt-br": "Carregamento duplo"
   },
   "double_loading_info": {
     "en": "Load on both sides of each cargo wagon.",
@@ -1033,7 +1088,9 @@
     "de": "Güterwaggon von beiden Seiten beladen",
     "cn": "在每个车厢的两侧装载",
     "pl": "Ładuj złoże z obu stron wagonu.",
-    "ru": "Загружать вагоны с обеих сторон"
+    "ru": "Загружать вагоны с обеих сторон",
+    "fr": "Charger chaque wagon de marchandises des deux côtés.",
+    "pt-br": "Carregue ambos os lados de cada vagão de carga."
   },
   "loco_count": {
     "en": "Locomotive Count",
@@ -1235,7 +1292,14 @@
   },
   "landfill_entities": {
     "en": "Landfill under entities",
-    "ru": "Укладывать отсыпку под объектами"
+    "ru": "Укладывать отсыпку под объектами",
+    "es": "Colocar relleno bajo las entidades",
+    "pt-br": "Aplicar aterro sob as entidades",
+    "fr": "Placer du remblai sous les entités",
+    "it": "Posa discarica sotto le entità",
+    "de": "Platziere Aufschüttung unter den Entitäten",
+    "cn": "在实体下方铺设填海地面",
+    "pl": "Wypełnij teren pod obiektami nasypem"
   },
   "entity_replacer": {
     "en": "New Entity Replacer",
@@ -1294,7 +1358,7 @@
   },
   "modified_only_info": {
     "en": "Only include entities in the blueprint that were modified",
-    "es": "Solo incluir entidades en el planificación que fueron modificadas",
+    "es": "Incluye solo las entidades del plano que fueron modificadas",
     "pt-br": "Só inclúi entidades no planejamento que foram modificadas",
     "fr": "Inclus dans la chaîne de planificateur seulement les entitées qui ont été modifiées",
     "it": "Includi solo le entità del progetto che sono state modificate",
