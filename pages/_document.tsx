@@ -4,15 +4,20 @@ const setInitialTheme = `
 (function() {
   try {
     var match = document.cookie.match(/(?:^|;\\s*)dark=([^;]+)/);
-    if (match && decodeURIComponent(match[1]) === 'true') {
-      document.documentElement.classList.add('dark-mode');
+    var isDark = match && decodeURIComponent(match[1]) === 'true';
+    var theme = isDark ? 'dark' : 'light';
+
+    var applyTheme = function() {
+      document.documentElement.dataset.theme = theme;
       if (document.body) {
-        document.body.classList.add('dark-mode');
-      } else {
-        document.addEventListener('DOMContentLoaded', function() {
-          document.body.classList.add('dark-mode');
-        });
+        document.body.dataset.theme = theme;
       }
+    };
+
+    applyTheme();
+
+    if (!document.body) {
+      document.addEventListener('DOMContentLoaded', applyTheme);
     }
   } catch (e) {
     // ignore errors and fall back to default theme

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 import { useI18n } from 'next-localization';
 import Image from 'next/image';
@@ -52,12 +52,6 @@ const languages = [
 export default function Header() {
   const i18n = useI18n();
   const [cookie, setCookie] = useCookies(['dark', 'language']);
-
-  useEffect(() => {
-    const mode = cookie.dark === 'true' ? 'add' : 'remove';
-    document.body.classList[mode]('dark-mode');
-    document.documentElement.classList[mode]('dark-mode');
-  }, [cookie.dark]);
 
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
   const [anchorElLang, setAnchorElLang] = useState<null | HTMLElement>(null);
@@ -196,8 +190,8 @@ export default function Header() {
           </Box>
           <HeaderButton
             onClick={() => {
-              const cur = document.body.classList.contains('dark-mode');
-              setCookie('dark', !cur);
+              const isDark = cookie.dark === 'true';
+              setCookie('dark', (!isDark).toString(), { path: '/' });
             }}
           >
             Dark Mode

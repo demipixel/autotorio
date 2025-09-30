@@ -44,6 +44,20 @@ body {
   max-height: 130px;
 }
 
-.dark-mode .invert-color {
+html[data-theme='dark'] {
+  color-scheme: dark;
+}
+
+html[data-theme='dark'] body {
+  background-color: #14181d;
+  color: #ddd;
+}
+
+html[data-theme='dark'] h4,
+html[data-theme='dark'] legend {
+  color: #ddd;
+}
+
+html[data-theme='dark'] .invert-color {
   filter: invert(100%);
 }
