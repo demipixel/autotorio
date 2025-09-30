@@ -675,15 +675,15 @@
     "ru": "Если тип модуля выбран, 3 его экземпляра будут установлены в каждый бур"
   },
   "oil_modules_info": {
-    "en": "If chosen, inserts 3 of the selected module in each pumpjack.",
-    "es": "Cuando seleccionado, inserta 3 módulos en cada bomba petrolera.",
-    "pt-br": "Quando selecionado, insere 3 módulos em cada bomba de petrólero",
-    "fr": "Si choisi, insère 3 modules du type sélectionné dans chaque pompe.",
-    "it": "Se selezionato, inserisce 3 dei moduli scelti in ogni pompa petrolifera.",
-    "de": "Wenn gewählt, bekommt jede Rohöl-Förderpumpe 3 des ausgewählten Modules.",
-    "cn": "选择后会在每个抽油机插入三个选择的插件",
-    "pl": "Jeśli wybierzesz te opcję, do każdego kiwaka wstawione zostaną 3 wybrane moduły",
-    "ru": "Если тип модуля выбран, 3 его экземпляра будут установлены в каждую нефтяную вышку"
+    "en": "If chosen, inserts 2 of the selected module in each pumpjack.",
+    "es": "Cuando seleccionado, inserta 2 módulos en cada bomba petrolera.",
+    "pt-br": "Quando selecionado, insere 2 módulos em cada bomba de petrólero",
+    "fr": "Si choisi, insère 2 modules du type sélectionné dans chaque pompe.",
+    "it": "Se selezionato, inserisce 2 dei moduli scelti in ogni pompa petrolifera.",
+    "de": "Wenn gewählt, bekommt jede Rohöl-Förderpumpe 2 des ausgewählten Modules.",
+    "cn": "选择后会在每个抽油机插入两个选择的插件",
+    "pl": "Jeśli wybierzesz te opcję, do każdego kiwaka wstawione zostaną 2 wybrane moduły",
+    "ru": "Если тип модуля выбран, 2 его экземпляра будут установлены в каждую нефтяную вышку"
   },
   "custom_pumpjack": {
     "en": "Modded Pumpjack Name",
