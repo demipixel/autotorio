@@ -1,4 +1,5 @@
 import '../styles/globals.css';
+import '../styles/dark-mode.css';
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
@@ -22,53 +23,12 @@ const lightTheme = createTheme({
     mode: 'light',
     primary: { main: primaryColor },
   },
-  components: {
-    MuiCssBaseline: {
-      styleOverrides: {
-        ':root': {
-          colorScheme: 'light',
-        },
-      },
-    },
-  },
 });
 
 const darkTheme = createTheme({
   palette: {
     mode: 'dark',
     primary: { main: primaryColor },
-    background: {
-      default: '#14181d',
-      paper: '#313b47',
-    },
-    text: {
-      primary: '#ddd',
-      secondary: 'rgba(221, 221, 221, 0.7)',
-    },
-  },
-  components: {
-    MuiOutlinedInput: {
-      styleOverrides: {
-        root: ({ theme }) => ({
-          backgroundColor: '#1f2833',
-          '& .MuiOutlinedInput-notchedOutline': {
-            borderColor: '#44515f',
-          },
-          '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-            borderColor: primaryColor,
-          },
-          '&.Mui-error .MuiOutlinedInput-notchedOutline': {
-            borderColor: theme.palette.error.main,
-          },
-        }),
-        input: {
-          '::placeholder': {
-            color: 'rgba(221, 221, 221, 0.7)',
-            opacity: 1,
-          },
-        },
-      },
-    },
   },
 });
 
