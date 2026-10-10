@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 
-import Blueprint from '../blueprintLibrary';
+import Blueprint from 'factorio-blueprint';
 
 import { blueprintTool } from '../generators/blueprint-tool.generator';
 import { ToolApi } from '../kit/controls';

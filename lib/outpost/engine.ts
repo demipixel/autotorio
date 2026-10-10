@@ -1,4 +1,4 @@
-import Blueprint from '../blueprintLibrary';
+import Blueprint from 'factorio-blueprint';
 
 import { generateOreOutpost } from '../generators/ore-outpost.generator';
 import { decode, OutpostMap, Outcome } from '../preview/decode';
