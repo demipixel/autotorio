@@ -12,7 +12,8 @@ export function generateOreOutpost(form: { [key: string]: any }) {
 
   // Handle miner type selection
   if (opt.minerType === 'big') {
-    opt.minerSize = 4;
+    // Space Age's big mining drill covers 5x5 tiles
+    opt.minerSize = 5;
     opt.miningDrillName = 'big_mining_drill';
   } else if (opt.minerType === 'standard') {
     opt.minerSize = 3;

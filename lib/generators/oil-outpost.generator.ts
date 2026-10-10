@@ -17,6 +17,8 @@ export function generateOilOutpost(form: { [key: string]: any }) {
       : null;
   opt.pumpjackName = opt.modded && opt.pumpjackName ? opt.pumpjackName : null;
 
+  opt.beacons = opt.beacons === 'none' ? false : opt.beacons;
+
   opt.turrets = opt.turretType !== 'none';
   opt.laserTurrets = opt.turretType === 'laser_turrets';
 

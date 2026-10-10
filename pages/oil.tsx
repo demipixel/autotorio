@@ -1,262 +1,126 @@
-import Footer from '../lib/Footer';
-import Form from '../lib/Form/Form';
-import { generateOilOutpost } from '../lib/generators/oil-outpost.generator';
-import Header from '../lib/Header';
-import { TILE_OPT } from '../lib/util/tileOpt';
+import { useI18n } from 'next-localization';
+
+import { KitProvider, useKit } from '../lib/kit/controls';
+import * as F from '../lib/kit/fields';
+import { useOil } from '../lib/oil/useOil';
+import { PreviewFrame } from '../lib/preview/PreviewFrame';
+import { Disclaimer, Frame, s, Shell } from '../lib/site/Shell';
+
+// The oil outpost generator: pipes from your pumpjacks to a fluid train
+// station, with the same live map and defenses as the ore outposts.
+
+// entity names a modded game may need, as [setting, label key, label, placeholder]
+const MOD_NAMES: [string, string, string, string][] = [
+  ['pumpjackName', 'ui.mod_pumpjack', 'Pumpjack', 'example_pumpjack_name_2'],
+  ['customModule', 'ui.mod_module', 'Module', 'example_module_name_2'],
+  ['customConcrete', 'ui.mod_tiles', 'Tiles', 'example_concrete'],
+  ['customBorderConcrete', 'ui.mod_border', 'Border tiles', 'example_concrete'],
+  ['customTrackConcrete', 'ui.mod_track', 'Track tiles', 'example_concrete'],
+];
 
 export default function OilOutpost() {
+  const oil = useOil();
+  const i18n = useI18n();
   return (
-    <div>
-      <Header />
-      <Form
-        submitButton="submit_oil_outpost"
-        generatorFunc={generateOilOutpost}
-        content={[
-          {
-            type: 'textarea',
-            name: 'blueprint',
-            title: 'blueprint_string',
-            placeholder: 'blueprint_string_placeholder',
-            info: 'oil_blueprint_info',
-          },
-          {
-            title: 'modded',
-            checkbox: {
-              name: 'modded',
-              info: 'modded_info',
-            },
-          },
-          {
-            type: 'input',
-            name: 'pumpjackName',
-            title: 'custom_pumpjack',
-            placeholder: 'example_pumpjack_name_2',
-            info: 'custom_pumpjack_info',
-            activate: 'modded',
-          },
-          {
-            type: 'select',
-            name: 'trainSide',
-            title: 'train_station_side',
-            options: [
-              [1, 'right'],
-              [3, 'left'],
-              [0, 'top'],
-              [2, 'bottom'],
-            ],
-          },
-          {
-            type: 'select',
-            name: 'trainDirection',
-            title: 'train_enter_from',
-            options: [
-              [2, 'bottom'],
-              [0, 'top'],
-              [1, 'right'],
-              [3, 'left'],
-            ],
-          },
-          {
-            type: 'select',
-            name: 'module',
-            title: 'modules',
-            options: [
-              ['None', 'none'],
-              ['Speed Module', 'entities.speed_module'],
-              ['Speed Module 2', 'entities.speed_module', ' 2'],
-              ['Speed Module 3', 'entities.speed_module', ' 3'],
-              ['Effectivity Module', 'entities.effectivity_module'],
-              ['Effectivity Module 2', 'entities.effectivity_module', ' 2'],
-              ['Effectivity Module 3', 'entities.effectivity_module', ' 3'],
-              ['Productivity Module', 'entities.productivity_module'],
-              ['Productivity Module 2', 'entities.productivity_module', ' 2'],
-              ['Productivity Module 3', 'entities.productivity_module', ' 3'],
-            ],
-            info: 'oil_modules_info',
-          },
-          {
-            type: 'input',
-            name: 'customModule',
-            title: 'custom_module',
-            placeholder: 'example_module_name_2',
-            info: 'custom_module_info',
-            activate: 'modded',
-          },
-          {
-            title: 'radar',
-            checkbox: {
-              name: 'includeRadar',
-              checked: true,
-            },
-          },
-          {
-            title: 'lights',
-            checkbox: {
-              name: 'includeLights',
-              checked: true,
-            },
-          },
-          {
-            title: 'beacons',
-            checkbox: {
-              name: 'beacons',
-            },
-          },
-          {
-            type: 'header',
-            title: 'defenses',
-          },
-          {
-            type: 'select',
-            name: 'turretType',
-            title: 'turret_type',
-            options: [
-              ['none', 'none'],
-              ['gun_turrets', 'entities.gun_turrets'],
-              ['laser_turrets', 'entities.laser_turrets'],
-            ],
-            default: 2,
-          },
-          {
-            type: 'input',
-            name: 'turretSpacing',
-            title: 'turret_spacing',
-            placeholder: '8',
+    <KitProvider styles={s} tool={oil}>
+      <Shell title={i18n.t('navbar.oil_outpost_generator') || 'Oil Outpost Generator'}>
+        <aside className={s.panel}>
+          <Settings />
+          <Disclaimer />
+        </aside>
+        <main className={s.stage}>
+          <Preview />
+          <F.Bom limit={40} modulesEach={2} />
+          <F.ConfirmBar />
+        </main>
+      </Shell>
+    </KitProvider>
+  );
+}
 
-            number: true,
-            minimum: 2,
-            maximum: 9,
-          },
-          {
-            title: 'walls',
-            checkbox: {
-              name: 'walls',
-              checked: true,
-            },
-          },
-          {
-            type: 'input',
-            name: 'wallThickness',
-            title: 'wall_thickness',
-            placeholder: '1',
-            activate: 'walls',
+function Settings() {
+  const { o, t } = useKit();
+  const v = o.values;
 
-            number: true,
-            minimum: 1,
-          },
-          {
-            type: 'input',
-            name: 'wallSpace',
-            title: 'wall_space',
-            placeholder: '5',
-            info: 'wall_space_info',
+  return (
+    <>
+      <Frame title={t('ui.oil_field', 'Oil field')}>
+        <div className={s.patchHelp}>
+          <img src="/img/factorio-icons/pumpjack.png" alt="" width={48} height={48} />
+          <p>
+            {t(
+              'ui.oil_help',
+              'Blueprint your pumpjacks together with one piece of straight track placed anywhere (it lines the station up with your rails), and paste the string below.',
+            )}
+          </p>
+        </div>
+        <F.PasteBox rows={2} />
+        <F.InputStatus />
+      </Frame>
 
-            number: true,
-            minimum: 3,
-          },
-          {
-            type: 'header',
-            title: 'train_info',
-          },
-          {
-            title: 'train_station',
-            checkbox: {
-              name: 'includeTrainStation',
-              checked: true,
-            },
-          },
-          {
-            title: 'exit_route',
-            checkbox: {
-              name: 'exitRoute',
-              info: 'exit_route_info',
-            },
-            activate: 'includeTrainStation',
-          },
-          {
-            type: 'input',
-            name: 'locomotiveCount',
-            title: 'loco_count',
-            info: 'loco_count_info',
-            placeholder: '1',
-            activate: 'includeTrainStation',
+      <Frame title={t('ui.pumpjacks', 'Pumpjacks')}>
+        <F.UndergroundPipes />
+        <F.Modules
+          infoKey="oil_modules_info"
+          info="If chosen, inserts 2 of the selected module in each pumpjack."
+        />
+        <F.Beacons />
+      </Frame>
 
-            number: true,
-            minimum: 1,
-          },
-          {
-            type: 'input',
-            name: 'wagonCount',
-            title: 'fluid_wagon_count',
-            placeholder: '2',
-            activate: 'includeTrainStation',
+      <Frame title={t('ui.train_station', 'Train station')}>
+        <F.StationToggle />
+        <F.StationPlacement centre="pumpjack" belts={false} />
+        {v.includeTrainStation && (
+          <>
+            <F.TrainStrip wagons="wagonCount" wagonIcon="fluid-wagon" />
+            <div className={s.two}>
+              <F.Locomotives />
+              <F.FluidWagons />
+            </div>
+            <F.Tanks />
+            <F.ExitRoute />
+          </>
+        )}
+      </Frame>
 
-            number: true,
-            minimum: 1,
-          },
-          {
-            type: 'input',
-            name: 'tanks',
-            title: 'tank_count',
-            info: 'tank_count_info',
-            placeholder: '2',
-            activate: 'includeTrainStation',
+      <Frame title={t('defenses', 'Defenses')}>
+        <F.Turrets />
+        {v.turretType !== 'none' && <F.TurretSpacing />}
+        <F.Walls />
+        {v.walls && <F.WallThickness />}
+        {(v.walls || v.turretType !== 'none') && <F.WallSpace />}
+      </Frame>
 
-            number: true,
-            minimum: 1,
-          },
-          {
-            type: 'header',
-            title: 'tiles',
-          },
-          {
-            type: 'select',
-            name: 'concrete',
-            title: 'tiles',
-            options: TILE_OPT,
-            info: 'Covers the entire area surrounded by the walls in the specified tile type.',
-          },
-          {
-            type: 'input',
-            name: 'customConcrete',
-            title: 'custom_tiles',
-            placeholder: 'example_concrete',
-            info: 'custom_tiles_info',
-            activate: 'modded',
-          },
-          {
-            type: 'select',
-            name: 'borderConcrete',
-            title: 'border_tiles',
-            options: TILE_OPT,
-            info: 'border_tiles_info',
-          },
-          {
-            type: 'input',
-            name: 'customBorderConcrete',
-            title: 'custom_border_tiles',
-            placeholder: 'example_concrete',
-            info: 'custom_tiles_info',
-            activate: 'modded',
-          },
-          {
-            type: 'select',
-            name: 'trackConcrete',
-            title: 'track_tiles',
-            options: TILE_OPT,
-            info: 'track_tiles_info',
-          },
-          {
-            type: 'input',
-            name: 'customTrackConcrete',
-            title: 'custom_track_tiles',
-            placeholder: 'example_concrete',
-            info: 'custom_tiles_info',
-            activate: 'modded',
-          },
-        ]}
-      />
-      <Footer />
-    </div>
+      <Frame title={t('tiles', 'Tiles')}>
+        <F.Tiles which="concrete" />
+        <F.Tiles which="borderConcrete" />
+        <F.Tiles which="trackConcrete" />
+      </Frame>
+
+      <Frame title={t('ui.extras', 'Extras')}>
+        <F.Radar />
+        <F.Lights />
+        <F.GameVersion />
+        <F.Modded names={MOD_NAMES} />
+      </Frame>
+    </>
+  );
+}
+
+function Preview() {
+  const { o, t } = useKit();
+  const outcome = o.outcome;
+  return (
+    <PreviewFrame
+      readout={
+        outcome?.width
+          ? t('ui.oil_readout', '{{count}} pumpjacks · {{w}} × {{h}} tiles', {
+              count: outcome.machines,
+              w: outcome.width,
+              h: outcome.height,
+            })
+          : ''
+      }
+    />
   );
 }

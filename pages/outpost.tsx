@@ -1,384 +1,171 @@
-import Head from 'next/head';
+import { useI18n } from 'next-localization';
 
-import Footer from '../lib/Footer';
-import Form from '../lib/Form/Form';
-import { generateOreOutpost } from '../lib/generators/ore-outpost.generator';
-import Header from '../lib/Header';
-import { TILE_OPT } from '../lib/util/tileOpt';
+import { KitProvider, useKit } from '../lib/kit/controls';
+import * as F from '../lib/kit/fields';
+import { needsBalancer } from '../lib/outpost/model';
+import { useOutpost } from '../lib/outpost/useOutpost';
+import { PreviewFrame } from '../lib/preview/PreviewFrame';
+import { Disclaimer, Frame, s, Shell } from '../lib/site/Shell';
+
+// The ore outpost generator: settings scroll on the left, the outpost (drawn
+// with the game's sprites, regenerated on every change) takes the rest, with
+// its materials and the confirm button below.
+
+// entity names a modded game may need, as [setting, label key, label, placeholder]
+const BELT_NAMES: [string, string, string, string][] = [
+  ['custom_belt_type', 'ui.mod_belt', 'Belt', 'example_transport_belt'],
+];
+const ORE_NAMES: [string, string, string, string][] = [
+  ['customRequestItem', 'ui.mod_ore', 'Ore', 'example_ore'],
+];
+const SHARED_NAMES: [string, string, string, string][] = [
+  ['customModule', 'ui.mod_module', 'Module', 'example_module_name_2'],
+  ['customConcrete', 'ui.mod_tiles', 'Tiles', 'example_concrete'],
+  ['customBorderConcrete', 'ui.mod_border', 'Border tiles', 'example_concrete'],
+  ['customTrackConcrete', 'ui.mod_track', 'Track tiles', 'example_concrete'],
+];
 
 export default function Outpost() {
+  const outpost = useOutpost();
+  const i18n = useI18n();
   return (
-    <div>
-      <Header />
-      <Head>
-        <title>Oil Outpost Generator</title>
-      </Head>
-      <Form
-        submitButton="submit_ore_outpost"
-        generatorFunc={generateOreOutpost}
-        content={[
-          {
-            type: 'textarea',
-            name: 'blueprint',
-            title: 'blueprint_string',
-            placeholder: 'blueprint_string_placeholder',
-            info: 'blueprint_string_info',
-          },
-          {
-            title: 'modded',
-            checkbox: {
-              name: 'modded',
-              info: 'modded_info',
-            },
-          },
-          {
-            type: 'select',
-            name: 'belt_type',
-            title: 'belt_type',
-            options: [
-              [0, 'entities.transport_belt'],
-              ['fast', 'entities.fast_transport_belt'],
-              ['express', 'entities.express_transport_belt'],
-            ],
-            default: 2,
-            checkbox: {
-              name: 'undergroundBelts',
-              info: 'underground_belts_info',
-            },
-          },
-          {
-            activate: 'undergroundBelts',
-            checkbox: {
-              name: 'compact',
-              info: 'compact',
-            },
-          },
-          {
-            type: 'input',
-            name: 'custom_belt_type',
-            title: 'custom_belt_type',
-            placeholder: 'example_transport_belt',
-            info: 'custom_belt_type_info',
-            activate: 'modded',
-          },
-          {
-            type: 'select',
-            name: 'trainSide',
-            title: 'train_station_side',
-            options: [
-              [1, 'right'],
-              [3, 'left'],
-              [0, 'top'],
-              [2, 'bottom'],
-            ],
-          },
-          {
-            type: 'select',
-            name: 'trainDirection',
-            title: 'train_enter_from',
-            options: [
-              [2, 'bottom'],
-              [0, 'top'],
-              [1, 'right'],
-              [3, 'left'],
-            ],
-          },
-          {
-            type: 'select',
-            name: 'minerSpace',
-            title: 'miner_space',
-            options: ['0', '1', '2', '3', '4', '5'],
-            default: 1,
-            info: 'miner_space_info',
-          },
-          {
-            type: 'select',
-            name: 'minerType',
-            title: 'miner_type',
-            options: [
-              ['standard', 'standard', ' (3x3)'],
-              ['big', 'big', ' (4x4)'],
-              ['custom', 'custom'],
-            ],
-            default: 0,
-            info: 'miner_type_info',
-          },
-          {
-            type: 'select',
-            name: 'minerSize',
-            title: 'custom_mining_drill_size',
-            options: ['3', '4', '5'],
-            default: 0,
-            info: 'custom_mining_drill_size_info',
-            activate: 'minerType:2',
-          },
-          {
-            type: 'input',
-            name: 'miningDrillName',
-            title: 'custom_mining_drill',
-            placeholder: 'example_mining_drill',
-            info: 'custom_mining_drill_info',
-            activate: 'minerType:2',
-          },
-          {
-            type: 'select',
-            name: 'module',
-            title: 'modules',
-            options: [
-              ['None', 'none'],
-              ['Speed Module', 'entities.speed_module'],
-              ['Speed Module 2', 'entities.speed_module', ' 2'],
-              ['Speed Module 3', 'entities.speed_module', ' 3'],
-              ['Effectivity Module', 'entities.effectivity_module'],
-              ['Effectivity Module 2', 'entities.effectivity_module', ' 2'],
-              ['Effectivity Module 3', 'entities.effectivity_module', ' 3'],
-              ['Productivity Module', 'entities.productivity_module'],
-              ['Productivity Module 2', 'entities.productivity_module', ' 2'],
-              ['Productivity Module 3', 'entities.productivity_module', ' 3'],
-            ],
-            info: 'modules_info',
-          },
-          {
-            type: 'input',
-            name: 'customModule',
-            title: 'custom_module',
-            placeholder: 'example_module_name_2',
-            info: 'custom_module_info',
-            activate: 'modded',
-          },
-          {
-            title: 'stack_inserters',
-            checkbox: {
-              name: 'useStackInserters',
-              info: 'stack_inserters_info',
-              checked: true,
-            },
-          },
-          {
-            title: 'filter_inserters',
-            checkbox: {
-              name: 'useFilterInserters',
-              info: 'filter_inserters_info',
-              checked: false,
-            },
-          },
-          {
-            title: 'radar',
-            checkbox: {
-              name: 'includeRadar',
-              checked: true,
-            },
-          },
-          {
-            title: 'lights',
-            checkbox: {
-              name: 'includeLights',
-              checked: true,
-            },
-          },
-          {
-            type: 'textarea',
-            name: 'balancer',
-            title: 'balancer',
-            placeholder: 'balancer_placeholder',
-            info: 'balancer_info',
-          },
-          {
-            type: 'header',
-            title: 'bots',
-          },
-          {
-            title: 'bot_based',
-            checkbox: {
-              name: 'botBased',
-              info: 'bot_based_info',
-            },
-          },
-          {
-            type: 'select',
-            name: 'requestItem',
-            title: 'ore_type',
-            options: ['Iron Ore', 'Copper Ore', 'Coal', 'Stone', 'Uranium Ore'],
-            info: 'ore_type_info',
-            activate: 'botBased',
-          },
-          {
-            type: 'input',
-            name: 'customRequestItem',
-            title: 'custom_ore_type',
-            placeholder: 'example_ore',
-            info: 'custom_ore_type_info',
-            activate: 'mod bots',
-          },
-          {
-            type: 'input',
-            name: 'requestAmount',
-            title: 'request_amount',
-            placeholder: '4800',
-            number: true,
-            minimum: 1,
-            activate: 'botBased',
-          },
-          {
-            title: 'roboports',
-            checkbox: {
-              name: 'roboports',
-              info: 'roboports_info',
-            },
-            activate: 'botBased',
-          },
-          {
-            type: 'header',
-            title: 'defenses',
-          },
-          {
-            type: 'select',
-            name: 'turretType',
-            title: 'turret_type',
-            options: [
-              ['none', 'none'],
-              ['gun_turrets', 'entities.gun_turrets'],
-              ['laser_turrets', 'entities.laser_turrets'],
-            ],
-            default: 2,
-          },
-          {
-            type: 'input',
-            name: 'turretSpacing',
-            title: 'turret_spacing',
-            placeholder: '8',
+    <KitProvider styles={s} tool={outpost}>
+      <Shell title={i18n.t('navbar.outpost_generator') || 'Outpost Generator'}>
+        <aside className={s.panel}>
+          <Settings />
+          <Disclaimer />
+        </aside>
+        <main className={s.stage}>
+          <Preview />
+          <F.Bom limit={40} />
+          <F.ConfirmBar />
+        </main>
+      </Shell>
+    </KitProvider>
+  );
+}
 
-            number: true,
-            minimum: 2,
-            maximum: 9,
-          },
-          {
-            title: 'walls',
-            checkbox: {
-              name: 'walls',
-              checked: true,
-            },
-          },
-          {
-            type: 'input',
-            name: 'wallThickness',
-            title: 'wall_thickness',
-            placeholder: '1',
-            activate: 'walls',
+function Settings() {
+  const { o, t } = useKit();
+  const v = o.values;
+  const balancer = needsBalancer(v) || !!v.balancer;
 
-            number: true,
-            minimum: 1,
-          },
-          {
-            type: 'input',
-            name: 'wallSpace',
-            title: 'wall_space',
-            placeholder: '5',
-            info: 'wall_space_info',
+  return (
+    <>
+      <Frame title={t('ui.ore_patch', 'Ore patch')}>
+        <div className={s.patchHelp}>
+          <F.PatchDiagram size={64} />
+          <p>
+            {t(
+              'ui.patch_help',
+              'Place a wall on two opposite corners of the ore patch, blueprint the two walls, and paste the string below.',
+            )}
+          </p>
+        </div>
+        <F.PasteBox rows={2} />
+        <F.InputStatus />
+        <div className={s.row}>
+          <span className={s.caption}>
+            {o.outcome?.inputSource === 'paste'
+              ? t('ui.patch_size', 'Patch size')
+              : t('ui.or_set_size', 'Or set the size')}
+          </span>
+          <F.PatchSize />
+        </div>
+      </Frame>
 
-            number: true,
-            minimum: 3,
-          },
-          {
-            type: 'header',
-            title: 'train_info',
-          },
-          {
-            title: 'train_station',
-            checkbox: {
-              name: 'includeTrainStation',
-              checked: true,
-            },
-          },
-          {
-            title: 'exit_route',
-            checkbox: {
-              name: 'exitRoute',
-              info: 'exit_route_info',
-            },
-            activate: 'includeTrainStation',
-          },
-          {
-            title: 'double_loading',
-            checkbox: {
-              name: 'doubleLoading',
-              info: 'double_loading_info',
-            },
-            activate: 'includeTrainStation',
-          },
-          {
-            type: 'input',
-            name: 'locomotiveCount',
-            title: 'loco_count',
-            info: 'loco_count_info',
-            placeholder: '2',
-            activate: 'includeTrainStation',
+      <Frame title={t('ui.presets', 'Presets')}>
+        <F.Presets />
+      </Frame>
 
-            number: true,
-            minimum: 1,
-          },
-          {
-            type: 'input',
-            name: 'cargoWagonCount',
-            title: 'wagon_count',
-            placeholder: '4',
-            activate: 'includeTrainStation',
+      <Frame title={t('ui.mining', 'Mining')}>
+        <F.MinerType />
+        <F.MinerSpace />
+        <F.Modules />
+      </Frame>
 
-            number: true,
-            minimum: 1,
-          },
-          {
-            type: 'header',
-            title: 'tiles',
-          },
-          {
-            type: 'select',
-            name: 'concrete',
-            title: 'tiles',
-            options: TILE_OPT,
-            info: 'tiles_info',
-          },
-          {
-            type: 'input',
-            name: 'customConcrete',
-            title: 'custom_tiles',
-            placeholder: 'example_concrete',
-            info: 'custom_tiles_info',
-            activate: 'modded',
-          },
-          {
-            type: 'select',
-            name: 'borderConcrete',
-            title: 'border_tiles',
-            options: TILE_OPT,
-            info: 'border_tiles_info',
-          },
-          {
-            type: 'input',
-            name: 'customBorderConcrete',
-            title: 'custom_border_tiles',
-            placeholder: 'example_concrete',
-            info: 'custom_tiles_info',
-            activate: 'modded',
-          },
-          {
-            type: 'select',
-            name: 'trackConcrete',
-            title: 'track_tiles',
-            options: TILE_OPT,
-            info: 'track_tiles_info',
-          },
-          {
-            type: 'input',
-            name: 'customTrackConcrete',
-            title: 'custom_track_tiles',
-            placeholder: 'example_concrete',
-            info: 'custom_tiles_info',
-            activate: 'modded',
-          },
-        ]}
-      />
-      <Footer />
-    </div>
+      <Frame title={t('ui.transport', 'Transport')}>
+        <F.TransportMode />
+        {v.botBased ? (
+          <>
+            <F.Ore />
+            <F.RequestAmount />
+          </>
+        ) : (
+          <>
+            <F.BeltTier />
+            <F.Underground />
+            {v.undergroundBelts && <F.Compact />}
+          </>
+        )}
+      </Frame>
+
+      <Frame title={t('ui.train_station', 'Train station')}>
+        <F.StationToggle />
+        <F.StationPlacement />
+        {v.includeTrainStation ? (
+          <>
+            <F.TrainStrip />
+            <div className={s.two}>
+              <F.Locomotives />
+              <F.Wagons />
+            </div>
+            {balancer && <F.Balancer />}
+            <F.Inserters />
+            <F.DoubleLoading />
+            <F.ExitRoute />
+            {v.botBased && <F.Roboports />}
+          </>
+        ) : (
+          !v.botBased && (
+            <>
+              <F.OutputLanes />
+              {balancer && <F.Balancer />}
+            </>
+          )
+        )}
+      </Frame>
+
+      <Frame title={t('defenses', 'Defenses')}>
+        <F.Turrets />
+        {v.turretType !== 'none' && <F.TurretSpacing />}
+        <F.Walls />
+        {v.walls && <F.WallThickness />}
+        {(v.walls || v.turretType !== 'none') && <F.WallSpace />}
+      </Frame>
+
+      <Frame title={t('tiles', 'Tiles')}>
+        <F.Tiles which="concrete" />
+        <F.Tiles which="borderConcrete" />
+        <F.Tiles which="trackConcrete" />
+      </Frame>
+
+      <Frame title={t('ui.extras', 'Extras')}>
+        <F.Radar />
+        <F.Lights />
+        <F.GameVersion />
+        <F.Modded names={[...(v.botBased ? ORE_NAMES : BELT_NAMES), ...SHARED_NAMES]} />
+      </Frame>
+    </>
+  );
+}
+
+function Preview() {
+  const { o, t } = useKit();
+  const outcome = o.outcome;
+  return (
+    <PreviewFrame
+      readout={
+        outcome?.width
+          ? t('ui.readout', '{{pw}} × {{ph}} patch · {{w}} × {{h}} tiles · {{drills}} drills', {
+              pw: outcome.patch.w,
+              ph: outcome.patch.h,
+              w: outcome.width,
+              h: outcome.height,
+              drills: outcome.machines,
+            })
+          : ''
+      }
+    />
   );
 }

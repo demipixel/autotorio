@@ -1,0 +1,194 @@
+/* Page layouts on top of the look in factorio.module.css.
+
+   .app is a tool: one window filling the screen, settings on the left and the
+   result on the right. .doc is a plain page: a narrow column of frames.
+   Selectors start from the layout class so they win over the look. */
+
+.app {
+  height: 100vh;
+  padding: 10px;
+}
+
+.app .window {
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto auto minmax(0, 1fr);
+}
+
+.app .titlebar {
+  gap: 10px;
+}
+
+.app .brand {
+  gap: 9px;
+}
+
+.app .content {
+  grid-template-columns: 404px minmax(0, 1fr);
+  align-items: stretch;
+  min-height: 0;
+}
+
+.app .panel {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  min-height: 0;
+  padding-right: 10px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #8e8e8e #1b1b1b;
+}
+
+.app .panel::-webkit-scrollbar {
+  width: 12px;
+}
+
+.app .panel::-webkit-scrollbar-track {
+  background: #1b1b1b;
+  border-radius: 3px;
+  box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.8);
+}
+
+.app .panel::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #a0a0a0, #868686);
+  border: 1px solid #141414;
+  border-radius: 3px;
+}
+
+.app .panel::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(90deg, #ffc56e, #f6a233);
+}
+
+.app .stage {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr) auto auto;
+  gap: 10px;
+  min-width: 0;
+  min-height: 0;
+}
+
+.app .previewFrame {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  min-height: 0;
+}
+
+.app .previewFrame .frameBody {
+  min-height: 0;
+  padding: 8px;
+}
+
+.app .mapFrame {
+  height: 100%;
+  min-height: 0;
+}
+
+.app .readout {
+  font-weight: 400;
+  color: #d8d8d8;
+}
+
+.app .bom {
+  min-height: 50px;
+  max-height: 50px;
+  overflow: hidden;
+}
+
+.app .confirmBar {
+  margin-top: 0;
+}
+
+/* ---------- smaller screens: map on top, settings below ---------- */
+
+@media (max-width: 1000px) {
+  .app {
+    height: auto;
+    min-height: 100vh;
+    padding: 6px;
+  }
+
+  .app .window {
+    height: auto;
+    display: block;
+    padding: 0 8px 8px;
+  }
+
+  .app .content {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 8px;
+  }
+
+  .app .stage {
+    order: -1;
+    grid-template-rows: auto auto auto;
+  }
+
+  /* a tool that starts from pasted input shows the input first: its
+     settings join the page's own column, so the result can sit between
+     them and the small print */
+  .app .panel.first {
+    display: contents;
+  }
+
+  .app .stage.after {
+    order: 1;
+  }
+
+  .app .panel.first .disclaimer {
+    order: 2;
+  }
+
+  /* every material stays visible: the page scrolls anyway */
+  .app .bom {
+    max-height: none;
+    overflow: visible;
+  }
+
+  .app .confirmBar {
+    flex-wrap: wrap;
+  }
+
+  .app .confirmBar .grooves {
+    display: none;
+  }
+
+  .app .confirmBar .primary {
+    flex: 1 1 auto;
+  }
+
+  .app .mapFrame {
+    height: 46vh;
+    min-height: 260px;
+  }
+
+  .app .panel {
+    padding-right: 0;
+    overflow: visible;
+  }
+
+  .app .readout {
+    display: none;
+  }
+
+  .app .chromeBtn span {
+    display: none;
+  }
+}
+
+/* ---------- plain pages ---------- */
+
+.doc {
+  min-height: 100vh;
+  padding: 10px;
+}
+
+.doc .window {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.doc .content {
+  align-content: start;
+}

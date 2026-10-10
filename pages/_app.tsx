@@ -1,111 +1,54 @@
 import '../styles/globals.css';
-import '../styles/dark-mode.css';
-import '@fontsource/roboto/300.css';
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/500.css';
-import '@fontsource/roboto/700.css';
-
-import { useEffect, useMemo } from 'react';
+// Titillium Web is the game's own interface font; JetBrains Mono is for
+// blueprint strings
+import '@fontsource/jetbrains-mono/400.css';
+import '@fontsource/titillium-web/400.css';
+import '@fontsource/titillium-web/600.css';
+import '@fontsource/titillium-web/700.css';
 
 import { I18nProvider } from 'next-localization';
-import App, { AppContext, AppProps } from 'next/app';
-import { Cookies, CookiesProvider, useCookies } from 'react-cookie';
-
-import CssBaseline from '@mui/material/CssBaseline';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
+import type { AppProps } from 'next/app';
+import { CookiesProvider, useCookies } from 'react-cookie';
+import ReactGA from 'react-ga4';
 
 import Localisations from '../lib/localisation.json';
+import { useHydrated } from '../lib/site/useHydrated';
 
-const primaryColor = '#0c84e4';
+ReactGA.initialize('G-63G9G48L19');
 
-const lightTheme = createTheme({
-  palette: {
-    mode: 'light',
-    primary: { main: primaryColor },
-  },
-});
-
-const darkTheme = createTheme({
-  palette: {
-    mode: 'dark',
-    primary: { main: primaryColor },
-  },
-});
-
-type Extra = { cookieHeader?: string };
-type Props = AppProps & Extra;
-
-function MyApp({ Component, pageProps, cookieHeader }: Props) {
-  const cookies = useMemo(
-    () =>
-      typeof window === 'undefined'
-        ? new Cookies(cookieHeader) // server
-        : new Cookies(), // browser
-    [cookieHeader],
-  );
-
+export default function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <CookiesProvider cookies={cookies}>
-      <InsideCookieProvider>
+    <CookiesProvider>
+      <Translated>
         <Component {...pageProps} />
-      </InsideCookieProvider>
+      </Translated>
     </CookiesProvider>
   );
 }
 
-MyApp.getInitialProps = async (appCtx: AppContext) => {
-  const appProps = await App.getInitialProps(appCtx);
-  const cookieHeader = appCtx.ctx.req?.headers.cookie ?? '';
-  return { ...appProps, cookieHeader };
-};
-
-export default MyApp;
-
-function InsideCookieProvider({ children }: { children: JSX.Element }) {
-  const [cookie] = useCookies(['language', 'dark']);
-
-  const theme = useMemo(
-    () => (cookie.dark === 'true' ? darkTheme : lightTheme),
-    [cookie.dark],
-  );
-
-  useEffect(() => {
-    const themeName = cookie.dark === 'true' ? 'dark' : 'light';
-    if (typeof document === 'undefined') {
-      return;
-    }
-
-    document.documentElement.dataset.theme = themeName;
-    if (document.body) {
-      document.body.dataset.theme = themeName;
-    }
-  }, [cookie.dark]);
-
-  const locale = cookie.language ?? 'en';
+function Translated({ children }: { children: React.ReactNode }) {
+  const [cookie] = useCookies(['language']);
+  // Pages are built in English. The visitor's language is only known in the
+  // browser, so it applies once the built page has been hydrated.
+  const locale = (useHydrated() && cookie.language) || 'en';
 
   return (
-    <I18nProvider
-      lngDict={getLocaleForLang(Localisations, locale) as Locale}
-      locale={locale}
-    >
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        {children}
-      </ThemeProvider>
+    <I18nProvider lngDict={getLocaleForLang(Localisations, locale) as Locale} locale={locale}>
+      {children}
     </I18nProvider>
   );
 }
 
 type Locale = { [key: string]: Locale | string };
+
+// The translations file nests every text under its language; this picks one
+// language out of the whole tree.
 function getLocaleForLang(locale: Locale, lang: string): Locale | string {
   const firstKey = Object.keys(locale)[0];
   if (typeof locale[firstKey] === 'string') {
-    return locale[lang];
+    return locale[lang] ?? locale.en;
   }
   return Object.fromEntries(
-    Object.entries(locale).map(([key, value]) => [
-      key,
-      getLocaleForLang(value as Locale, lang),
-    ]),
+    Object.entries(locale).map(([key, value]) => [key, getLocaleForLang(value as Locale, lang)]),
   );
 }
