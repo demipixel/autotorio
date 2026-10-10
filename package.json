@@ -4,32 +4,33 @@
   "description": "",
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
-    "start": "next start",
-    "lint": "next lint"
+    "build": "next build",
+    "start": "npx serve out",
+    "lint": "eslint .",
+    "sprites": "python3 scripts/build-sprites.py",
+    "icons": "python3 scripts/build-icons.py"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@fontsource/roboto": "^4.5.7",
-    "@mui/icons-material": "^5.8.4",
-    "@mui/material": "^5.8.5",
-    "cookie": "^0.5.0",
-    "cookies-next": "^2.0.5",
-    "factorio-blueprint": "^2.6.5",
-    "factorio-generators": "github:demipixel/factorio-generators",
-    "next": "^12.1.6",
+    "@fontsource/jetbrains-mono": "^4.5.12",
+    "@fontsource/titillium-web": "^4.5.9",
+    "factorio-blueprint": "file:vendor/factorio-blueprint-2.7.0.tgz",
+    "factorio-generators": "file:vendor/factorio-generators-2.0.0.tgz",
+    "next": "^16.4.0",
     "next-localization": "^0.12.0",
-    "react": "^18.2.0",
-    "react-cookie": "^4.1.1",
-    "react-dom": "^18.2.0",
+    "react": "^19.3.0",
+    "react-cookie": "^8.1.2",
+    "react-dom": "^19.3.0",
     "react-ga4": "^2.1.0"
   },
   "devDependencies": {
-    "@types/node": "^18.0.0",
-    "@types/react": "^18.0.14",
-    "eslint": "^8.18.0",
-    "eslint-config-next": "^12.1.6"
+    "@types/node": "^22.20.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.4.0",
+    "typescript": "^5.9.3"
   },
   "browserslist": "> 0.25%, not dead"
 }

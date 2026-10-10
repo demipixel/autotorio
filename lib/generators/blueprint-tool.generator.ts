@@ -6,7 +6,7 @@ export function blueprintTool(form: { [key: string]: any }) {
     opt[key] = form[key];
   });
 
-  opt.modifiedOnly = opt.modifiedOnly == 'on';
+  opt.modifiedOnly = !!opt.modifiedOnly;
 
   ['entity', 'recipe', 'module'].forEach((replacer) => {
     var replacerOpt = opt[replacer + 'Replacer'];
