@@ -186,37 +186,3 @@ export const SPEC: Spec<Values> = {
     useFilterInserters: v.gameVersion === '1.1' && v.useFilterInserters,
   }),
 };
-
-// Starting points for common situations. Each one is applied on top of the
-// defaults.
-export const PRESETS: { key: string; label: string; hint: string; values: Partial<Values> }[] = [
-  {
-    key: 'ui.preset_starter',
-    label: 'Starter',
-    hint: 'Yellow belts, gun turrets, a short train',
-    values: {
-      belt_type: 0,
-      turretType: 'gun_turrets',
-      useStackInserters: false,
-      locomotiveCount: 1,
-      cargoWagonCount: 2,
-    },
-  },
-  { key: 'ui.preset_standard', label: 'Standard', hint: 'Express belts, lasers, a 2-4 train', values: {} },
-  {
-    key: 'ui.preset_megabase',
-    label: 'Megabase',
-    hint: 'Packed drills with speed modules, an 8 wagon train, thick walls',
-    values: {
-      minerSpace: 0,
-      module: 'Speed Module 3',
-      undergroundBelts: true,
-      compact: true,
-      cargoWagonCount: 8,
-      turretSpacing: 4,
-      wallThickness: 2,
-      concrete: 'refined_concrete',
-      borderConcrete: 'hazard_concrete_left',
-    },
-  },
-];

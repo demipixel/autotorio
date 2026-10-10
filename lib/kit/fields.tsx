@@ -12,7 +12,6 @@ import {
   MINERS,
   needsBalancer,
   ORES,
-  PRESETS,
 } from '../outpost/model';
 import { useCopy } from '../site/useSettings';
 import {
@@ -185,34 +184,6 @@ export function PatchDiagram({ size = 96 }: { size?: number }) {
       <rect className={s.diagramWall} x={8} y={6} width={13} height={13} rx={2.5} />
       <rect className={s.diagramWall} x={79} y={81} width={13} height={13} rx={2.5} />
     </svg>
-  );
-}
-
-// Starting points for the ore outpost; the one in effect is highlighted.
-export function Presets() {
-  const { s, o, t } = useKit();
-  const { blueprint, ...base } = DEFAULTS;
-  const full = (values: { [key: string]: unknown }) => ({ ...base, ...values });
-  const current = PRESETS.find((preset) => {
-    const want = full(preset.values);
-    return Object.keys(want).every((key) => o.values[key] === want[key]);
-  });
-
-  return (
-    <div className={s.seg} role="group" aria-label={t('ui.presets', 'Presets')}>
-      {PRESETS.map((preset) => (
-        <button
-          key={preset.key}
-          type="button"
-          className={cx(s.segOpt, preset === current && s.on)}
-          title={t(preset.key + '_hint', preset.hint)}
-          aria-pressed={preset === current}
-          onClick={() => o.patch(full(preset.values))}
-        >
-          <span className={s.segLabel}>{t(preset.key, preset.label)}</span>
-        </button>
-      ))}
-    </div>
   );
 }
 

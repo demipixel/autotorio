@@ -74,10 +74,6 @@ function Settings() {
         </div>
       </Frame>
 
-      <Frame title={t('ui.presets', 'Presets')}>
-        <F.Presets />
-      </Frame>
-
       <Frame title={t('ui.mining', 'Mining')}>
         <F.MinerType />
         <F.MinerSpace />
