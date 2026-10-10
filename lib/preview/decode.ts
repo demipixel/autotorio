@@ -1,4 +1,4 @@
-import Blueprint from 'factorio-blueprint';
+import Blueprint from '../blueprintLibrary';
 
 // Turns a generated blueprint string into plain data for the preview: what
 // stands where, and how much of everything there is.

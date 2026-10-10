@@ -1,4 +1,4 @@
-import Blueprint from 'factorio-blueprint';
+import Blueprint from '../blueprintLibrary';
 
 import { generateOilOutpost } from '../generators/oil-outpost.generator';
 import { decode, Outcome } from '../preview/decode';
