@@ -15,8 +15,8 @@
   "dependencies": {
     "@fontsource/jetbrains-mono": "^4.5.12",
     "@fontsource/titillium-web": "^4.5.9",
-    "factorio-blueprint": "file:vendor/factorio-blueprint-2.7.0.tgz",
-    "factorio-generators": "file:vendor/factorio-generators-2.0.0.tgz",
+    "factorio-blueprint": "^2.7.0",
+    "factorio-generators": "^2.0.0",
     "next": "^16.4.0",
     "next-localization": "^0.12.0",
     "react": "^19.3.0",
