@@ -2478,6 +2478,17 @@
       "cn": "集装筛选机械臂",
       "pl": "Podajnik grupowy filtrujący",
       "ru": "Пакетный фильтрующий манипулятор"
+    },
+    "compact_bots_hint": {
+      "en": "No gap between miner columns; poles and lamps stand next to the chests.",
+      "es": "Sin hueco entre columnas de perforadoras; los postes eléctricos y las lámparas van junto a los cofres.",
+      "pt-br": "Sem espaço entre as colunas de mineradoras; os postes e as lâmpadas ficam ao lado dos baús.",
+      "fr": "Aucun espace entre les colonnes de foreuses ; les poteaux électriques et les lampes se placent à côté des coffres.",
+      "it": "Nessuno spazio tra le colonne di trivelle; i pali dell'elettricità e le lampade stanno accanto alle casse.",
+      "de": "Kein Abstand zwischen den Spalten der Erzförderer; Strommasten und Lampen stehen neben den Kisten.",
+      "cn": "采矿机各列之间不留间隔，电线杆和灯放在箱子旁边。",
+      "pl": "Bez odstępów między kolumnami wiertnic; słupy elektryczne i lampy stoją obok skrzyń.",
+      "ru": "Без промежутков между столбцами буров; опоры ЛЭП и лампы стоят рядом с сундуками."
     }
   }
 }

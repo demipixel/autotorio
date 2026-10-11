@@ -338,7 +338,11 @@ export function Compact() {
   return (
     <Toggle
       label={t('ui.compact', 'Compact miners')}
-      hint={t('ui.compact_hint', 'No gap between miner columns; poles sit between the underground belts.')}
+      hint={
+        o.values.botBased
+          ? t('ui.compact_bots_hint', 'No gap between miner columns; poles and lamps stand next to the chests.')
+          : t('ui.compact_hint', 'No gap between miner columns; poles sit between the underground belts.')
+      }
       checked={o.values.compact}
       onChange={(checked) => o.set('compact', checked)}
     />

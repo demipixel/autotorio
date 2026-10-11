@@ -86,6 +86,7 @@ function Settings() {
           <>
             <F.Ore />
             <F.RequestAmount />
+            <F.Compact />
           </>
         ) : (
           <>
