@@ -61,6 +61,10 @@ export type World = {
   y0: number;
   w: number;
   h: number;
+  // what is actually drawn, in tiles: the outpost's footprint grown by however
+  // far its sprites reach beyond it (a pole stands three tiles tall). Shadows,
+  // ore and the ground do not count.
+  view: { x0: number; y0: number; x1: number; y1: number };
 };
 
 // extra tiles drawn around the outpost so tall sprites and shadows fit
@@ -133,9 +137,21 @@ export function renderWorld(
   ctx.globalAlpha = 1;
   ctx.imageSmoothingQuality = 'high';
 
+  const view = { x0: map.x0, y0: map.y0, x1: map.x1, y1: map.y1 };
+  // off while the ground, the ore and the shadows are drawn
+  let measuring = false;
+
   const draw = (name: string, cx: number, cy: number, scale = 1) => {
     const s = SPRITES[name];
     if (!s) return false;
+    if (measuring) {
+      const left = cx + s[4] * scale;
+      const top = cy + s[5] * scale;
+      view.x0 = Math.min(view.x0, left);
+      view.y0 = Math.min(view.y0, top);
+      view.x1 = Math.max(view.x1, left + (s[2] / ATLAS_PPT) * scale);
+      view.y1 = Math.max(view.y1, top + (s[3] / ATLAS_PPT) * scale);
+    }
     ctx.drawImage(
       sprites,
       s[0],
@@ -333,6 +349,7 @@ export function renderWorld(
     draw(name, cx, cy, e.kind === 'drill' ? e.w / 3 : 1);
   });
   ctx.globalAlpha = 1;
+  measuring = true;
 
   /* ---- things that lie flat on the ground ---- */
   map.entities.forEach((e) => {
@@ -452,5 +469,11 @@ export function renderWorld(
   map.train.forEach((car) => draw(car.sprite, car.x, car.y));
   ctx.globalAlpha = 1;
 
-  return { canvas, x0, y0, w, h };
+  // nothing is drawn beyond the canvas, so there is nothing to show there
+  view.x0 = Math.max(view.x0, x0);
+  view.y0 = Math.max(view.y0, y0);
+  view.x1 = Math.min(view.x1, x0 + w);
+  view.y1 = Math.min(view.y1, y0 + h);
+
+  return { canvas, x0, y0, w, h, view };
 }

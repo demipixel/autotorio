@@ -73,15 +73,18 @@ export default function OutpostMap({
   const fitted = useCallback((): Camera => {
     const canvas = canvasRef.current;
     const { map, padding, maxScale } = props.current;
-    const { anchor } = state.current;
+    const { anchor, world, worldOf } = state.current;
     const W = canvas?.clientWidth ?? 0;
     const H = canvas?.clientHeight ?? 0;
     if (!map) return { x: 0, y: 0, scale: Math.max(Math.min(W, H) / 60, 0.5) };
+    // frame what is drawn, not just the tiles the outpost stands on, so tall
+    // sprites at the edge (poles, the radar) are not cut off
+    const box = world && worldOf === map ? world.view : map;
     const pad = Math.min(padding, W / 5, H / 5);
-    const scale = Math.min((W - pad * 2) / (map.x1 - map.x0), (H - pad * 2) / (map.y1 - map.y0), maxScale);
+    const scale = Math.min((W - pad * 2) / (box.x1 - box.x0), (H - pad * 2) / (box.y1 - box.y0), maxScale);
     return {
-      x: (map.x0 + map.x1) / 2 - anchor.x,
-      y: (map.y0 + map.y1) / 2 - anchor.y,
+      x: (box.x0 + box.x1) / 2 - anchor.x,
+      y: (box.y0 + box.y1) / 2 - anchor.y,
       scale: Math.max(scale, 0.5),
     };
   }, []);
